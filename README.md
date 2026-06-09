@@ -1,4 +1,4 @@
-# North-Star
+# North-Star (WIP)
 An architecture for AI organizations with institutional memory.
 
 ## Why North Star Exists

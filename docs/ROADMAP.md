@@ -1,201 +1,142 @@
-# Roadmap
+# North Star — Roadmap
 
-*How North Star evolves from philosophy to operational infrastructure.*
+## Product Strategy
 
-## Overview
+North Star ships in two tiers:
 
-North Star is built in six phases. Each phase produces usable, shippable output. No phase creates debt that blocks the next.
+**North Star** (this repository, MIT license)
+Targets solo developers, freelancers, and small teams. Full-featured memory
+architecture. Free forever. The reference implementation the community builds on.
 
-```
-Phase 1 → Foundations          (Month 0–1)
-Phase 2 → Reference Stack      (Month 1–3)
-Phase 3 → Agent Ecosystem      (Month 3–6)
-Phase 4 → Retrieval Engine     (Month 6–9)
-Phase 5 → Developer Experience (Month 9–12)
-Phase 6 → Scaling & Governance (Month 12–24)
-```
+**North Star Enterprise** (future, commercial license)
+Targets organizations running multiple agents, multiple teams, and compliance
+requirements. Built on top of North Star with additional governance, auth,
+audit, and scale layers. Revenue funds continued development of the open-source core.
+
+The open-source version is never crippled to sell the Enterprise version.
+Enterprise features are genuinely different problems (multi-tenancy, audit
+compliance, SSO) that most solo users do not need.
 
 ---
 
-## Phase 1 — Foundations (Month 0–1)
+## Phase 1 — Architecture & Documentation (Month 1–2) ✅
 
-**Goal:** Establish the conceptual and structural backbone. Make the architecture clear enough that a developer can implement it without asking questions.
+**Goal:** Define the memory model and architecture before writing code.
 
 **Deliverables:**
-- `docs/NORTH_STAR.md` — manifesto & purpose ✓
-- `docs/PHILOSOPHY.md` — core beliefs ✓
-- `docs/ARCHITECTURE.md` — system overview ✓
-- `docs/MEMORY_MODEL.md` — ontology ✓
-- Directory structure under `/docs` ✓
-- MIT license ✓
-
-**Success Criteria:**
-- Architecture is clear, opinionated, and stable
-- Contributors understand the philosophy without reading code
-- A developer can start implementing the schema from docs alone
+- `docs/NORTH_STAR.md` — core principles and North Star rule
+- `docs/PHILOSOPHY.md` — why curated memory beats raw context
+- `docs/MEMORY_MODEL.md` — 6 entity types and their lifecycle
+- `docs/ARCHITECTURE.md` — system design and component overview
+- `docs/RETRIEVAL.md` — hybrid retrieval specification
+- `docs/AGENTS/SCRIBE.md` — Scribe agent full specification
+- `docs/AGENTS/ARCHIVIST.md` — Archivist agent full specification
+- `docs/DATABASE/SCHEMA.md` — full schema with lifecycle states
+- `docs/IMPLEMENTATIONS/POSTGRES_PGVECTOR_REDIS.md` — reference stack
 
 ---
 
-## Phase 2 — Reference Stack (Month 1–3)
+## Phase 2 — Reference Stack (Month 3–4) ✅
 
-**Goal:** Build the minimal, official implementation using Postgres + pgvector + Redis.
+**Goal:** Build the Python reference implementation.
 
 **Deliverables:**
-- `docs/DATABASE/SCHEMA.md` — full DDL ✓
-- `docs/DATABASE/KNOWLEDGE_GRAPH.md` — graph spec ✓
-- `docs/IMPLEMENTATIONS/POSTGRES_PGVECTOR_REDIS.md` ✓
-- `/src/db/` — migration files, DB client
-- `/src/utils/embeddings.py` — embedding generation (wraps any model)
-- `docker-compose.yml` — Postgres + pgvector + Redis
-
-**Success Criteria:**
-- System can ingest a report and store it with embeddings
-- Knowledge and decisions can be inserted and retrieved
-- Docker Compose brings up a working local environment in one command
+- Postgres + pgvector schema (Alembic migrations)
+- asyncpg DB client with connection pooling
+- Redis queue system (LPUSH/BRPOP pattern)
+- OpenAI and local embedding providers
+- FastAPI REST API (all CRUD endpoints)
+- Docker Compose stack
 
 ---
 
-## Phase 3 — Agent Ecosystem (Month 3–6)
+## Phase 3 — Agents (Month 5–6) ✅
 
-**Goal:** Implement the two core agents: Scribe and Archivist.
+**Goal:** Implement Scribe and Archivist as production-grade async agents.
 
 **Deliverables:**
-- `docs/AGENTS/SCRIBE.md` — spec ✓
-- `docs/AGENTS/ARCHIVIST.md` — spec ✓
-- `/src/agents/scribe/` — Scribe service
-  - Input normalization
-  - Report generation
-  - Knowledge extraction (strict template with scope/conditions/uncertainties)
-  - Decision extraction
-  - Relationship proposal
-  - Contradiction detection
-- `/src/agents/archivist/` — Archivist service
-  - Candidate validation
-  - Deduplication (pgvector similarity)
-  - Contradiction resolution state machine (temporal vs. direct)
-  - Staleness detection
-  - Decision impact tracing (`needs_reassessment` propagation)
-  - Human review routing
-
-**Hard Problems to Solve in This Phase:**
-
-1. **Scribe compression loss** — use dual-layer output (full report + atomic knowledge with source excerpts). Enforce `scope_conditions` and `uncertainties` slots for high-stakes domains.
-
-2. **Contradiction resolution** — build explicit state machine: temporal evolution vs. genuine conflict. When ambiguous, always route to `human_review_queue`.
-
-3. **Decision impact tracing** — when knowledge is deprecated, automatically flag all linked decisions as `needs_reassessment`.
-
-**Success Criteria:**
-- Reports → knowledge → decisions pipeline works end-to-end
-- Archivist prevents memory bloat (duplicates merged, stale items deprecated)
-- Contradictions are detected, classified, and either resolved or routed for human review
-- Decision reassessment propagates correctly when knowledge changes
+- Scribe pipeline: normalize → report → embed → extract → contradiction check → queue
+- Archivist pipeline: validate → deduplicate → contradiction state machine → decisions → relationships → impact tracing
+- Queue workers with graceful shutdown and circuit breakers
+- Anthropic tool_use for deterministic JSON extraction
 
 ---
 
-## Phase 4 — Retrieval Engine (Month 6–9)
+## Phase 4 — Hybrid Retrieval (Month 6–7) ✅
 
-**Goal:** Build the hybrid retrieval system that keeps agent context minimal.
+**Goal:** Implement α·semantic + β·keyword + γ·recency retrieval with graph traversal.
 
 **Deliverables:**
-- `docs/RETRIEVAL.md` ✓
-- `/src/api/retrieve.py` — retrieval endpoint
-  - Keyword search (Postgres full-text)
-  - Semantic search (pgvector)
-  - Hybrid ranking (configurable α/β/γ weights)
-  - Graph traversal (expand via relationships)
-  - Filtering (confidence, status, topic, temporal validity)
-  - Context assembly (minimal package)
-- Redis caching layer
-- Retrieval mode routing (report / knowledge / decision / entity-centric)
-
-**Success Criteria:**
-- Agents retrieve only what they need for a given query
-- Retrieval is fast, explainable, and evidence-based
-- System remains fully usable with 10,000+ reports
-- Same query returns the same result (deterministic with cache)
+- Migration 002: GIN FTS index on knowledge
+- `src/retrieval/scorer.py` — hybrid ranking with pgvector + ts_rank + recency decay
+- `src/retrieval/graph.py` — BFS graph traversal (depth-limited, contradiction surfacing)
+- `/retrieve` endpoint fully implemented (replaces Phase 4 stub)
 
 ---
 
-## Phase 5 — Developer Experience (Month 9–12)
+## Phase 5 — Developer Experience (Month 7–8) ✅
 
-**Goal:** Make North Star easy to adopt, extend, and integrate into any agent system.
+**Goal:** Make North Star easy to adopt and integrate.
 
 **Deliverables:**
-- Public REST API:
-  - `POST /scribe/process`
-  - `POST /archivist/process`
-  - `GET /retrieve`
-  - `GET /reports/{id}`, `GET /knowledge/{id}`, `GET /decisions/{id}`
-  - `GET /entities/{id}`
-- SDK (Python first, TypeScript second):
-  - `northstar.ingest(conversation)` → report + candidates
-  - `northstar.retrieve(query)` → minimal context package
-  - `northstar.report(id)` → full report
-- Templates:
-  - New specialist agent stub
-  - New entity type
-  - New decision workflow
-- Documentation site (generated from `/docs`)
-- `CONTRIBUTING.md` — how to swap components and extend schemas
-
-**Success Criteria:**
-- A developer can integrate North Star into their agent system in under 2 hours
-- External systems can push reports and retrieve knowledge via the public API
-- Users can swap Postgres for SQLite or pgvector for Qdrant with minimal friction
+- Python SDK (`sdk/python/`) — async + sync NorthStarClient
+- TypeScript SDK (`sdk/typescript/`) — fetch-based, zero dependencies
+- Templates: new agent stub, new entity type, new decision workflow
+- `CONTRIBUTING.md` — component swap guides (SQLite, Qdrant, local embeddings)
+- MkDocs documentation site
 
 ---
 
-## Phase 6 — Scaling & Governance (Month 12–24)
+## Phase 6 — Operational Maturity (Month 8–10) ✅
 
-**Goal:** Prepare North Star for large organizations, multi-agent systems, and compliance requirements.
+**Goal:** Make North Star deployable and maintainable by a solo developer.
 
 **Deliverables:**
-- Multi-agent orchestration — agents retrieve from the same store without context collision
-- Human-in-the-loop workflows:
-  - `human_review_queue` UI or webhook
-  - Approval flows for high-impact knowledge changes
-  - Contradiction resolution interface
-- Memory governance:
-  - Configurable retention policies (archive knowledge older than N months)
-  - Audit trails (all deprecations, merges, and contradiction flags logged)
-  - Knowledge versioning (full history of status transitions)
-- Graph hygiene automation:
-  - Periodic high-degree node detection
-  - Orphan knowledge cleanup
-  - Stale decision flagging
-- Optional advanced integrations:
-  - Neo4j sync (for organizations needing advanced graph reasoning)
-  - Qdrant / Weaviate (for high-volume semantic search)
-  - Kafka / Pub-Sub (for event streaming at scale)
-- Performance benchmarks at 10k, 100k, 1M reports
+- Human review API (`GET /human-review`, `POST /human-review/{id}/resolve`)
+- Staleness scan (`POST /scan`, configurable age threshold)
+- Embedding backfill script (`python -m src.tools.backfill`)
+- CLI (`northstar review`, `northstar scan`, `northstar stats`)
+- API locked at v1.0.0
 
 **Success Criteria:**
-- North Star supports hundreds of concurrent agents
-- Memory remains coherent and curated at scale
-- Decisions are fully traceable even years after they were made
-- Humans remain in control of what becomes institutional knowledge
+- A solo developer can deploy, use, and maintain North Star with no ops burden
+- Contradictions and flagged items surface and are actionable
+- Switching embedding models does not require manual DB surgery
 
 ---
 
-## Long-Term Vision (Beyond 24 Months)
+## North Star Enterprise — Phase 6 Strong (Future, commercial)
+
+**Goal:** Support organizations with multiple agents, teams, and compliance requirements.
+
+**Planned deliverables:**
+- Multi-tenant isolation (team/org scoping on all tables)
+- Role-based approval workflows (route contradictions to the right person, not just a queue)
+- Immutable audit log (every status transition logged: who, when, why)
+- Scheduled graph hygiene (orphan cleanup, high-degree node detection, automated stale flagging)
+- Auth layer (API keys per team, JWT, SSO)
+- Performance at scale (100k+ reports, connection pooling tuning, index optimization)
+- Optional integrations: Kafka event streaming, Neo4j graph sync, Qdrant/Weaviate
+
+**Design principle:** Enterprise features solve genuinely different problems.
+The open-source core is never restricted to push Enterprise upgrades.
+
+---
+
+## Long-Term Vision
 
 North Star becomes:
 - A **standard architecture** for AI organizations — the way microservices became a standard for web backends
 - A **reference implementation** for curated memory that others fork and adapt
-- A **platform** for multi-agent collaboration without shared context pollution
 - A **knowledge engine** that organizations trust to grow wiser over time
-
-The long-term goal is simple:
 
 > **Build AI organizations that scale in wisdom, not in context.**
 
 ---
 
-## Guiding Principles for All Phases
+## Guiding Principles
 
-1. **Each phase must be independently useful** — don't build for the future at the cost of the present
-2. **Never add complexity without a clear problem it solves**
-3. **Human readability is never sacrificed for performance**
-4. **Contradictions are modeled, never hidden**
-5. **Provenance is non-negotiable at every phase**
+1. Each phase must be independently useful — don't build for the future at the cost of the present
+2. Never add complexity without a clear problem it solves
+3. Human readability is never sacrificed for performance
+4. The open-source version is never crippled to sell the Enterprise version

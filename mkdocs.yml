@@ -1,0 +1,74 @@
+site_name: North Star
+site_description: AI institutional memory architecture — open source, MIT licensed
+site_url: https://YOUR_ORG.github.io/north-star
+repo_url: https://github.com/YOUR_ORG/north-star
+repo_name: YOUR_ORG/north-star
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: NORTH_STAR.md
+  - Getting Started: GETTING_STARTED.md
+  - Philosophy: PHILOSOPHY.md
+  - Architecture: ARCHITECTURE.md
+  - Memory Model: MEMORY_MODEL.md
+  - Retrieval: RETRIEVAL.md
+  - Roadmap: ROADMAP.md
+
+  - Agents:
+      - Scribe: AGENTS/SCRIBE.md
+      - Archivist: AGENTS/ARCHIVIST.md
+
+  - Database:
+      - Schema: DATABASE/SCHEMA.md
+
+  - Implementations:
+      - Postgres + pgvector + Redis: IMPLEMENTATIONS/POSTGRES_PGVECTOR_REDIS.md
+
+  - Contributing: ../CONTRIBUTING.md
+
+docs_dir: docs
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_ORG/north-star

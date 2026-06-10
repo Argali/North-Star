@@ -31,6 +31,7 @@ One reference stack:
 
 ```
 docs/
+├── GETTING_STARTED.md     # Installation and first steps
 ├── NORTH_STAR.md          # Manifesto & purpose
 ├── PHILOSOPHY.md          # Core beliefs & principles
 ├── ARCHITECTURE.md        # System overview & data flows

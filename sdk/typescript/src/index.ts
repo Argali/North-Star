@@ -1,0 +1,15 @@
+export {
+  NorthStarClient,
+  NorthStarAPIError,
+  type ClientOptions,
+  type IngestOptions,
+  type RetrieveOptions,
+  type RetrieveResult,
+  type ScoredItem,
+  type GraphNode,
+  type ContradictionPair,
+  type Report,
+  type Knowledge,
+  type Decision,
+  type Entity,
+} from "./client.js";

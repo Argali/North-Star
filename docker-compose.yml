@@ -1,0 +1,114 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# North Star — Local development stack
+#
+# Starts: Postgres + pgvector, Redis
+# Usage:  docker compose up -d
+# Migrate: docker compose run --rm migrate
+#
+# Agent services (scribe, archivist) are defined below but commented out
+# until Phase 3 Dockerfiles exist. Un-comment after Phase 3 is complete.
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Postgres + pgvector ────────────────────────────────────────────────────
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: northstar
+      POSTGRES_USER: northstar
+      POSTGRES_PASSWORD: northstar
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U northstar -d northstar"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ── Redis ─────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── Alembic migration runner ──────────────────────────────────────────────
+  # Run once:  docker compose run --rm migrate
+  # Or:        docker compose up migrate
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.migrate
+    environment:
+      DATABASE_URL: postgresql://northstar:northstar@postgres:5432/northstar
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles: ["tools"]   # only runs when explicitly called or with --profile tools
+
+  # ── API (FastAPI) ─────────────────────────────────────────────────────────
+  api:
+    build: .
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      DATABASE_URL: postgresql://northstar:northstar@postgres:5432/northstar
+      REDIS_URL: redis://redis:6379
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-openai}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-text-embedding-3-small}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1536}
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app        # mount code for --reload during dev
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    profiles: ["app"]
+
+  # ── Scribe agent ──────────────────────────────────────────────────────────
+  # Uncomment when Phase 3 Dockerfile exists at src/agents/scribe/Dockerfile
+  # scribe:
+  #   build: src/agents/scribe
+  #   environment:
+  #     DATABASE_URL: postgresql://northstar:northstar@postgres:5432/northstar
+  #     REDIS_URL: redis://redis:6379
+  #     OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+
+  # ── Archivist agent ───────────────────────────────────────────────────────
+  # Uncomment when Phase 3 Dockerfile exists at src/agents/archivist/Dockerfile
+  # archivist:
+  #   build: src/agents/archivist
+  #   environment:
+  #     DATABASE_URL: postgresql://northstar:northstar@postgres:5432/northstar
+  #     REDIS_URL: redis://redis:6379
+  #     OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:

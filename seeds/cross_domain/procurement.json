@@ -1,0 +1,283 @@
+{
+  "pack": "procurement",
+  "version": "1.0.0",
+  "description": "Procurement knowledge — supplier evaluation, vendor scoring, tender analysis, contract risk, and award decisions. Structured to convert supplier interactions into reusable organizational knowledge.",
+  "knowledge": [
+    {
+      "statement": "Procurement's primary purpose is not cost reduction — it is value optimisation under risk constraints. A cheaper supplier who fails to deliver destroys more value than a slightly more expensive reliable one. Total Cost of Ownership (TCO) — including failure cost, switching cost, and risk exposure — is the correct basis for supplier selection, not unit price alone.",
+      "topics": ["supplier_evaluation"],
+      "confidence": 0.99,
+      "tags": ["TCO", "total_cost_of_ownership", "value_optimisation"]
+    },
+    {
+      "statement": "Supplier segmentation by spend and risk (Kraljic matrix) divides the supply base into four categories: Strategic (high spend, high risk — manage closely), Leverage (high spend, low risk — use buying power), Bottleneck (low spend, high risk — ensure supply security), and Non-critical (low spend, low risk — automate and simplify). Different categories require fundamentally different management approaches.",
+      "topics": ["supplier_evaluation"],
+      "confidence": 0.99,
+      "tags": ["Kraljic_matrix", "supplier_segmentation", "strategic_supplier"]
+    },
+    {
+      "statement": "A supplier qualification process must verify before any award: legal status and financial health (credit rating, accounts filed), insurance coverage, relevant certifications and accreditations, references from comparable contracts, and anti-bribery and sanctions compliance. Awarding to an unqualified supplier transfers risk from the supplier to the buying organisation.",
+      "topics": ["supplier_evaluation"],
+      "confidence": 0.99,
+      "tags": ["supplier_qualification", "due_diligence", "KYS"]
+    },
+    {
+      "statement": "Financial health assessment of suppliers must use current data — not more than 12 months old. Key indicators: current ratio (>1.5 is healthy), debt-to-equity ratio, net profit margin trend, and Altman Z-score for bankruptcy risk. A supplier with deteriorating financials is a supply chain risk even if their current price is attractive.",
+      "topics": ["supplier_evaluation", "risk_assessment"],
+      "confidence": 0.97,
+      "tags": ["financial_health", "credit_assessment", "Altman_Z_score", "bankruptcy_risk"]
+    },
+    {
+      "statement": "Supplier performance history is the strongest predictor of future performance. Before awarding to any supplier — new or incumbent — collect and score: on-time delivery rate, quality defect rate, invoice accuracy, responsiveness to issues, and contractual compliance from previous contracts. Past performance data from other buyers (references, industry databases) supplements internal history.",
+      "topics": ["supplier_evaluation", "vendor_scoring"],
+      "confidence": 0.99,
+      "tags": ["past_performance", "delivery_rate", "quality_rate", "performance_history"]
+    },
+    {
+      "statement": "Single-source dependency is a strategic risk that must be explicitly approved, not allowed by default. When only one qualified supplier exists for a critical input, the buying organisation must either qualify a second source, hold strategic stock, or formally accept the risk with mitigating controls. Undocumented single-source situations are invisible risks.",
+      "topics": ["risk_assessment", "supplier_evaluation"],
+      "confidence": 0.98,
+      "tags": ["single_source", "sole_supplier", "supply_risk", "dual_sourcing"]
+    },
+    {
+      "statement": "Geographic concentration risk occurs when multiple critical suppliers are clustered in the same region. A natural disaster, geopolitical event, or infrastructure failure in that region can simultaneously disrupt all of them. Supply chain mapping to tier-2 and tier-3 suppliers is required to identify hidden geographic concentration.",
+      "topics": ["risk_assessment"],
+      "confidence": 0.97,
+      "tags": ["geographic_concentration", "supply_chain_mapping", "tier_2", "geopolitical_risk"]
+    },
+    {
+      "statement": "Supplier ESG (Environmental, Social, Governance) risk is now a procurement obligation in many regulatory frameworks (EU Supply Chain Due Diligence Directive, UK Modern Slavery Act, German LkSG). Due diligence must extend to sub-suppliers. Organisations that cannot demonstrate supply chain ESG governance face regulatory, reputational, and financial consequences.",
+      "topics": ["risk_assessment", "supplier_evaluation"],
+      "confidence": 0.97,
+      "tags": ["ESG", "supply_chain_due_diligence", "modern_slavery", "LkSG", "CSDDD"]
+    },
+    {
+      "statement": "A vendor scorecard quantifies supplier performance across weighted dimensions: quality, delivery, price/value, responsiveness, and innovation. Scores should be calculated from objective data (delivery records, defect logs, invoice accuracy) not subjective impression. Scorecards must be shared with suppliers — an unseen scorecard cannot drive improvement.",
+      "topics": ["vendor_scoring"],
+      "confidence": 0.99,
+      "tags": ["vendor_scorecard", "KPIs", "weighted_scoring", "supplier_feedback"]
+    },
+    {
+      "statement": "Vendor scoring weights must reflect organisational priorities and vary by category. For a safety-critical component supplier, quality weight might be 50%; for a commodity stationery supplier, price weight might be 60%. Using the same weight profile across all categories produces misleading rankings.",
+      "topics": ["vendor_scoring"],
+      "confidence": 0.97,
+      "tags": ["scoring_weights", "category_specific", "quality_weight"]
+    },
+    {
+      "statement": "Supplier tiering (Tier 1 = direct suppliers, Tier 2 = suppliers to suppliers, Tier 3+) is the framework for supply chain risk visibility. Most organisations have excellent visibility of Tier 1 and almost none of Tier 2+. The majority of supply chain disruptions originate at Tier 2 or below. Visibility programmes — requiring Tier 1 to map their key sub-suppliers — are the minimum control.",
+      "topics": ["vendor_scoring", "risk_assessment"],
+      "confidence": 0.97,
+      "tags": ["supplier_tiering", "tier_2_visibility", "supply_chain_risk"]
+    },
+    {
+      "statement": "Regular supplier business reviews (QBRs — Quarterly Business Reviews, or equivalent) for strategic suppliers are the primary mechanism for relationship management, performance course-correction, and early warning of supply risk. Without structured reviews, issues surface only at crisis point. QBR frequency: strategic suppliers quarterly, leverage suppliers semi-annually, bottleneck suppliers monthly.",
+      "topics": ["vendor_scoring", "supplier_evaluation"],
+      "confidence": 0.97,
+      "tags": ["QBR", "supplier_review", "relationship_management"]
+    },
+    {
+      "statement": "A tender (RFP/ITT) must define requirements precisely enough that all bidders price the same scope. Ambiguous requirements produce incomparable bids — one bidder includes an item another excludes, making price comparison meaningless. The effort invested in precise specification is the highest-ROI activity in tender preparation.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.99,
+      "tags": ["tender_specification", "RFP", "ITT", "scope_clarity", "comparability"]
+    },
+    {
+      "statement": "Evaluation criteria and their weightings must be published in the tender documents before bids are received. Changing criteria or weights after receipt of bids — even to achieve a better outcome — is a procurement integrity failure. In public sector procurement, it is grounds for challenge and legal action from unsuccessful bidders.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.99,
+      "tags": ["evaluation_criteria", "transparency", "procurement_integrity", "public_sector"]
+    },
+    {
+      "statement": "Price normalisation is required when comparing bids with different payment terms, currency exposures, or delivery conditions. A bid priced 5% cheaper with 90-day payment terms may be more expensive than a bid at list price with 30-day terms when the cost of capital is applied. All bids must be normalised to the same basis before price comparison.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.97,
+      "tags": ["price_normalisation", "payment_terms", "cost_of_capital", "comparison"]
+    },
+    {
+      "statement": "Should-cost modelling estimates what a product or service should cost based on materials, labour, overhead, and margin, independent of supplier quotes. It gives the buyer an evidence-based target price for negotiation and reveals when a quote is inflated. Without a should-cost model, the buyer negotiates in the dark.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.97,
+      "tags": ["should_cost", "cost_modelling", "negotiation_anchor", "target_price"]
+    },
+    {
+      "statement": "Best and Final Offer (BAFO) rounds allow shortlisted suppliers to improve their bids before award. BAFOs are effective when genuine competition exists and the buyer has credibly signalled they will award on merit. BAFO rounds where the outcome is predetermined destroy supplier trust and reduce participation in future tenders.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.96,
+      "tags": ["BAFO", "best_and_final_offer", "negotiation", "competition"]
+    },
+    {
+      "statement": "Reverse auctions (e-auctions) are effective for commodity and well-specified goods where price is the primary differentiator and switching cost is low. They are inappropriate for complex services, strategic relationships, or categories where quality differentiation is significant but hard to specify. Misapplied reverse auctions optimise price at the cost of quality and relationship.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.96,
+      "tags": ["reverse_auction", "e_auction", "commodity_procurement"]
+    },
+    {
+      "statement": "The award decision record must document: evaluation scores by criterion for all bidders, the rationale for any non-price decisions, declaration of any conflicts of interest, and approval authority sign-off. An award decision that cannot be reconstructed from the record is a governance failure and an audit liability.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.99,
+      "tags": ["award_decision", "evaluation_record", "governance", "audit_trail"]
+    },
+    {
+      "statement": "Debriefing unsuccessful bidders after award is best practice and legally required in many public sector frameworks. A constructive debrief explains the relative strengths and weaknesses of the bid without disclosing commercially sensitive information about the winner. It improves market quality, maintains supplier willingness to bid, and reduces legal challenge risk.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.97,
+      "tags": ["supplier_debrief", "unsuccessful_bidder", "transparency", "public_procurement"]
+    },
+    {
+      "statement": "Contract risk assessment must evaluate: termination for convenience clauses (does the buyer have an exit?), liability caps and indemnities (are they proportionate to contract value?), force majeure scope (what events excuse performance?), intellectual property ownership (who owns deliverables?), and data processing obligations (GDPR compliance). Contracts without these reviews create unlimited or asymmetric risk.",
+      "topics": ["contract_review", "risk_assessment"],
+      "confidence": 0.99,
+      "tags": ["contract_risk", "termination", "liability_cap", "force_majeure", "IP"]
+    },
+    {
+      "statement": "Service Level Agreements (SLAs) must be specific, measurable, and linked to remedies. Vague SLAs ('best efforts', 'reasonable time') are unenforceable. Each SLA metric must specify: the measure, the measurement period, the target value, the measurement method, and the remedy (credit, termination right) if the target is missed. SLAs without remedies are aspirations, not contracts.",
+      "topics": ["contract_review"],
+      "confidence": 0.99,
+      "tags": ["SLA", "service_level", "remedies", "credits", "enforceability"]
+    },
+    {
+      "statement": "Price adjustment mechanisms in multi-year contracts must be explicit and symmetrical. Contracts with supplier rights to increase prices but no buyer rights to decrease them on market improvement create one-way ratchets. Index-linked adjustment (CPI, PPI, sector-specific indices) with caps and floors is the most balanced mechanism.",
+      "topics": ["contract_review"],
+      "confidence": 0.97,
+      "tags": ["price_adjustment", "indexation", "multi_year_contract", "ratchet"]
+    },
+    {
+      "statement": "Intellectual property (IP) clauses in professional services and software contracts are among the highest-risk terms. The default in many jurisdictions is that the supplier retains IP in deliverables they create. Buyers must explicitly contract for IP assignment or a sufficiently broad licence — including the right to modify, sublicense, and use with other contractors. Discovering IP ownership issues post-project is expensive to remedy.",
+      "topics": ["contract_review"],
+      "confidence": 0.98,
+      "tags": ["intellectual_property", "IP_assignment", "licence", "work_for_hire"]
+    },
+    {
+      "statement": "Data processing agreements (DPAs) are legally mandatory under GDPR wherever a supplier processes personal data on behalf of the buying organisation. The DPA must specify: purpose and duration of processing, categories of data, technical and organisational security measures, subprocessor obligations, and data return/deletion on termination. A contract without a DPA for personal data processing is a regulatory breach.",
+      "topics": ["contract_review"],
+      "confidence": 0.99,
+      "tags": ["DPA", "GDPR", "data_processing", "personal_data", "subprocessor"]
+    },
+    {
+      "statement": "Exit and transition provisions are the most neglected contract clauses and the most painful to remedy post-signature. Contracts must specify: notice period for termination, obligations to support transition to a replacement supplier, data portability (format and timeline for data return), and knowledge transfer obligations. A supplier with no contractual exit obligation has disproportionate leverage at contract end.",
+      "topics": ["contract_review"],
+      "confidence": 0.98,
+      "tags": ["exit_provisions", "transition", "data_portability", "supplier_lock_in"]
+    },
+    {
+      "statement": "Contract management after signature is where most procurement value is lost. Studies consistently show that 40-70% of negotiated savings are eroded by poor contract compliance, missed review milestones, and undiscovered price increases. Assigning a named contract owner with responsibility for performance monitoring, SLA tracking, and renewal management is the minimum control.",
+      "topics": ["contract_review", "vendor_scoring"],
+      "confidence": 0.99,
+      "tags": ["contract_management", "value_erosion", "contract_owner", "compliance"]
+    },
+    {
+      "statement": "Negotiation should be approached as interest-based, not position-based (Fisher & Ury, Getting to Yes). Position-based negotiation (I want X, you want Y, we split the difference) leaves joint value on the table. Interest-based negotiation (why do I want X, why do you want Y) identifies trade-offs where both parties gain more than in a positional compromise.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.97,
+      "tags": ["negotiation", "interest_based", "Fisher_Ury", "Getting_to_Yes"]
+    },
+    {
+      "statement": "BATNA (Best Alternative to a Negotiated Agreement) is the single most important concept in procurement negotiation. A buyer with a strong BATNA (viable alternative supplier) negotiates from strength; a buyer with no BATNA is captured. Developing a BATNA before entering critical supplier negotiations — by qualifying alternatives even if they are not preferred — transforms the negotiating position.",
+      "topics": ["tender_analysis", "supplier_evaluation"],
+      "confidence": 0.99,
+      "tags": ["BATNA", "negotiation_leverage", "alternative_supplier"]
+    },
+    {
+      "statement": "Category management organises procurement by spend categories (IT, facilities, professional services, raw materials) rather than by business unit or project. Category managers develop deep market knowledge, supplier relationships, and sourcing strategies for their category. It produces better outcomes than transactional, project-by-project procurement through scale, expertise, and market intelligence.",
+      "topics": ["supplier_evaluation", "tender_analysis"],
+      "confidence": 0.97,
+      "tags": ["category_management", "spend_category", "market_intelligence"]
+    },
+    {
+      "statement": "Spend analysis — categorising, cleansing, and analysing all purchase transactions — is the foundation of procurement strategy. Without spend visibility, it is impossible to identify consolidation opportunities, measure category performance, or prioritise sourcing effort. Spend data quality is typically poor (inconsistent supplier names, missing category codes); cleansing is required before analysis.",
+      "topics": ["supplier_evaluation"],
+      "confidence": 0.98,
+      "tags": ["spend_analysis", "spend_visibility", "data_cleansing", "consolidation"]
+    },
+    {
+      "statement": "Maverick spend — purchasing outside contracted agreements — destroys procurement value, exposes the organisation to unqualified suppliers, and undermines supplier relationships. Root causes: contracts are unknown to end users, contracted items are inconvenient to order, or the procurement process has too much friction. Reducing maverick spend requires both compliance tools and process improvement, not enforcement alone.",
+      "topics": ["contract_review", "vendor_scoring"],
+      "confidence": 0.97,
+      "tags": ["maverick_spend", "off_contract", "compliance", "purchase_to_pay"]
+    },
+    {
+      "statement": "Supplier development programmes invest in improving strategic suppliers' capabilities — quality systems, capacity, technology, sustainability performance — because the buying organisation's performance depends on its supply base. The ROI is shared: the supplier becomes more capable; the buyer gets better quality, lower cost, and reduced risk. It is rational for strategic categories only.",
+      "topics": ["supplier_evaluation", "vendor_scoring"],
+      "confidence": 0.95,
+      "tags": ["supplier_development", "capability_building", "strategic_supplier"]
+    },
+    {
+      "statement": "The bullwhip effect in supply chains shows that small demand variations at the retail end amplify into large production and inventory swings upstream. It is caused by order batching, price fluctuations, shortage gaming, and demand forecast errors. Sharing real demand data with suppliers (vendor-managed inventory, collaborative forecasting) reduces the bullwhip effect and benefits both parties.",
+      "topics": ["risk_assessment"],
+      "confidence": 0.97,
+      "tags": ["bullwhip_effect", "demand_amplification", "VMI", "collaborative_forecasting"]
+    },
+    {
+      "statement": "Public procurement in the EU and UK is governed by procurement regulations (Procurement Act 2023 in UK; EU Directives 2014/24/EU and 2014/25/EU) that mandate transparency, equal treatment, and competition above defined thresholds. Contracting authorities must use prescribed procedures (open, restricted, competitive dialogue, etc.) and publish contract award notices. Non-compliance creates grounds for legal challenge by unsuccessful bidders.",
+      "topics": ["tender_analysis", "risk_assessment"],
+      "confidence": 0.98,
+      "tags": ["public_procurement", "Procurement_Act_2023", "EU_directive", "thresholds", "compliance"]
+    },
+    {
+      "statement": "Framework agreements allow multiple suppliers to be pre-qualified for a category, enabling call-off contracts without a full tender each time. They reduce procurement lead time and transaction cost while maintaining competition between framework members. Framework agreements must be re-competed at their expiry; running beyond expiry is a procurement breach.",
+      "topics": ["tender_analysis", "contract_review"],
+      "confidence": 0.97,
+      "tags": ["framework_agreement", "call_off", "DPS", "re_competition"]
+    },
+    {
+      "statement": "Conflict of interest in procurement must be actively managed and documented. A conflict exists when a person involved in supplier selection has a personal, financial, or professional interest in a bidder. Declarations must be obtained at the start of each procurement exercise. Undisclosed conflicts that later emerge invalidate award decisions and expose individuals to disciplinary and legal action.",
+      "topics": ["tender_analysis", "risk_assessment"],
+      "confidence": 0.99,
+      "tags": ["conflict_of_interest", "declaration", "procurement_ethics", "integrity"]
+    },
+    {
+      "statement": "Anti-bribery and corruption due diligence is required before awarding to suppliers in high-risk geographies or sectors. The UK Bribery Act 2010 and US FCPA create liability for organisations that benefit from bribery even without direct knowledge. Adequate procedures — supplier code of conduct, due diligence, training, and monitoring — are the legal defence and must be evidenced.",
+      "topics": ["risk_assessment", "supplier_evaluation"],
+      "confidence": 0.98,
+      "tags": ["anti_bribery", "FCPA", "Bribery_Act", "adequate_procedures", "corruption"]
+    },
+    {
+      "statement": "Supplier consolidation — reducing the number of suppliers in a category — creates volume leverage, reduces management overhead, and deepens relationships. But over-consolidation creates single-source dependency and removes the competition that drives supplier performance. The optimal supply base size by category depends on the balance between leverage benefits and diversity risk.",
+      "topics": ["supplier_evaluation"],
+      "confidence": 0.96,
+      "tags": ["supplier_consolidation", "supply_base_rationalisation", "concentration_risk"]
+    },
+    {
+      "statement": "Early supplier involvement (ESI) in product or service design — bringing suppliers into the development process before specifications are fixed — captures supplier innovation, improves manufacturability, and reduces cost. It is most valuable for complex, engineered products. It requires trust and contractual protections for supplier IP contributed during development.",
+      "topics": ["supplier_evaluation", "tender_analysis"],
+      "confidence": 0.95,
+      "tags": ["early_supplier_involvement", "ESI", "design_collaboration", "innovation"]
+    },
+    {
+      "statement": "The procurement knowledge base should record, for each completed sourcing event: the market structure found, the suppliers qualified and why, the bid outcomes, the negotiation strategy used, the award rationale, and the subsequent supplier performance. This intelligence compounds over time — each sourcing event enriches the next. Without it, every tender starts from zero.",
+      "topics": ["supplier_evaluation", "vendor_scoring"],
+      "confidence": 0.99,
+      "tags": ["procurement_knowledge", "sourcing_intelligence", "market_knowledge", "knowledge_compound"]
+    },
+    {
+      "statement": "Procurement cycle time — from requirement identification to contract award — is a measure of process efficiency. Long cycle times increase business risk (the need goes unmet) and frustrate internal stakeholders. Targets: simple purchases under £10k in under 5 days via catalogue or p-card; competitive tenders for complex contracts typically 8-16 weeks. Cycle times above target indicate process waste or insufficient resources.",
+      "topics": ["tender_analysis"],
+      "confidence": 0.96,
+      "tags": ["procurement_cycle_time", "process_efficiency", "p_card", "catalogue"]
+    },
+    {
+      "statement": "Purchase orders (POs) should be raised before goods or services are received, not after. Retrospective POs ('PO creation after receipt') indicate procurement bypassed and create financial control weaknesses: no price commitment, no budget check, and no contract terms in place before the liability was incurred. Three-way matching (PO, goods receipt, invoice) is the standard financial control.",
+      "topics": ["contract_review"],
+      "confidence": 0.98,
+      "tags": ["purchase_order", "three_way_match", "financial_control", "retrospective_PO"]
+    },
+    {
+      "statement": "Supplier innovation reviews — structured sessions to hear supplier ideas for cost reduction, quality improvement, or new capabilities — generate value that competitive tendering alone cannot. Suppliers often know where cost is embedded in the specification and can propose design changes the buyer has not considered. Formal mechanisms to receive and act on supplier innovation ideas are a procurement differentiator.",
+      "topics": ["vendor_scoring", "supplier_evaluation"],
+      "confidence": 0.94,
+      "tags": ["supplier_innovation", "value_engineering", "cost_reduction", "specification_review"]
+    },
+    {
+      "statement": "Procurement automation through e-procurement platforms (SAP Ariba, Coupa, Jaggaer) improves compliance, reduces cycle time, and creates spend data automatically. But automation applied to a broken process accelerates the production of waste. Process design must precede automation; automating a flawed procurement process produces faster bad outcomes.",
+      "topics": ["tender_analysis", "vendor_scoring"],
+      "confidence": 0.97,
+      "tags": ["e_procurement", "automation", "Ariba", "Coupa", "process_first"]
+    },
+    {
+      "statement": "Circular procurement principles evaluate suppliers not just on delivery of goods or services but on take-back, reuse, remanufacturing, and end-of-life management. As extended producer responsibility legislation expands across the EU and UK, circular procurement shifts from preference to obligation for certain product categories. Forward-looking procurement strategies incorporate circularity criteria now.",
+      "topics": ["supplier_evaluation", "risk_assessment"],
+      "confidence": 0.94,
+      "tags": ["circular_economy", "circular_procurement", "EPR", "end_of_life", "sustainability"]
+    }
+  ]
+}

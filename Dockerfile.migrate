@@ -1,0 +1,31 @@
+# Dockerfile.migrate
+# Minimal image used by the "migrate" service in docker-compose.yml.
+# Runs Alembic migrations against the Postgres database, then exits.
+#
+# Usage (via docker-compose):
+#   docker compose --profile tools run --rm migrate
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install only the dependencies needed for Alembic migrations.
+# psycopg2-binary is the sync driver Alembic uses; asyncpg is not needed here.
+RUN pip install --no-cache-dir \
+    alembic>=1.13 \
+    psycopg2-binary>=2.9 \
+    pydantic>=2.7 \
+    pydantic-settings>=2.2 \
+    python-dotenv>=1.0
+
+# Copy the application source so Alembic can find env.py and the migration files.
+COPY alembic.ini .
+COPY src/db/migrations ./src/db/migrations
+COPY src/config.py ./src/config.py
+COPY src/__init__.py ./src/__init__.py
+
+# DATABASE_URL must be provided at runtime via environment variable.
+# Example: postgresql://northstar:northstar@postgres:5432/northstar
+ENV DATABASE_URL=""
+
+CMD ["alembic", "upgrade", "head"]

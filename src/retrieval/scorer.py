@@ -424,7 +424,7 @@ async def _score_decisions(
     async with get_conn() as conn:
         rows = await conn.fetch(
             """
-            SELECT id, statement, status, created_at,
+            SELECT id, statement, status, timestamp AS created_at,
                 LEAST(ts_rank(
                     to_tsvector('english', statement||' '||COALESCE(rationale,'')),
                     plainto_tsquery('english', $1)
@@ -486,7 +486,7 @@ async def _score_entities(
                 topics=[row["type"] or ""],
                 semantic_score=0.0,
                 keyword_score=1.0,
-                recency_score=_recency_score(row["created_at"]),
+                recency_score=_recency_score(row.get("created_at")),
                 final_score=1.0,
             )
             for row in rows

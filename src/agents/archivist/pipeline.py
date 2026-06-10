@@ -432,8 +432,8 @@ async def _insert_relationships(
     inserted = 0
 
     for r in r_candidates:
-        from_id = _resolve_ref(r.get("from_ref", ""), source_report_id, knowledge_id_map, decision_id_map)
-        to_id   = _resolve_ref(r.get("to_ref", ""),   source_report_id, knowledge_id_map, decision_id_map)
+        from_id = await _resolve_ref(r.get("from_ref", ""), source_report_id, knowledge_id_map, decision_id_map)
+        to_id   = await _resolve_ref(r.get("to_ref", ""),   source_report_id, knowledge_id_map, decision_id_map)
         edge_type = r.get("type", "")
 
         if not from_id or not to_id:
@@ -469,7 +469,7 @@ async def _insert_relationships(
     return inserted
 
 
-def _resolve_ref(
+async def _resolve_ref(
     ref: str,
     source_report_id: UUID | None,
     knowledge_id_map: dict[int, UUID],
@@ -489,13 +489,10 @@ def _resolve_ref(
         return decision_id_map.get(int(ref[1:]))
 
     if ref.startswith("E:"):
-        # Entity lookup by name -- best-effort
-        import asyncio
+        # Entity lookup by name — best-effort
         entity_name = ref[2:].strip()
         try:
-            return asyncio.get_event_loop().run_until_complete(
-                _get_or_create_entity(entity_name)
-            )
+            return await _get_or_create_entity(entity_name)
         except Exception:
             return None
 

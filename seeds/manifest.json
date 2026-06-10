@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "description": "North Star knowledge seed packs \u2014 pre-validated knowledge items for common domains. Two collections: developer_core (9 packs) and cross_domain (10 packs).",
+  "description": "North Star knowledge seed packs — pre-validated knowledge items for common domains. Two collections: developer_core (9 packs) and cross_domain (20 packs).",
   "packs": [
     {
       "name": "architecture",
@@ -49,43 +49,103 @@
     },
     {
       "name": "human_ai_collaboration",
-      "file": "cross_domain/human_ai_collaboration.json"
+      "file": "cross_domain/human_ai_collaboration.json",
+      "description": "Human-AI teaming patterns, oversight, and collaboration frameworks"
     },
     {
       "name": "cybersecurity",
-      "file": "cross_domain/cybersecurity.json"
+      "file": "cross_domain/cybersecurity.json",
+      "description": "Threat modeling, security operations, and defence-in-depth"
     },
     {
       "name": "decision_making",
-      "file": "cross_domain/decision_making.json"
+      "file": "cross_domain/decision_making.json",
+      "description": "Frameworks, biases, and structured approaches to decision-making"
     },
     {
       "name": "business_analysis",
-      "file": "cross_domain/business_analysis.json"
+      "file": "cross_domain/business_analysis.json",
+      "description": "Requirements, stakeholder management, and business process analysis"
     },
     {
       "name": "project_management",
-      "file": "cross_domain/project_management.json"
+      "file": "cross_domain/project_management.json",
+      "description": "Planning, estimation, risk, and delivery across methodologies"
     },
     {
       "name": "fleet_management",
-      "file": "cross_domain/fleet_management.json"
+      "file": "cross_domain/fleet_management.json",
+      "description": "Vehicle lifecycle, maintenance scheduling, and fleet operations"
     },
     {
       "name": "logistics",
-      "file": "cross_domain/logistics.json"
+      "file": "cross_domain/logistics.json",
+      "description": "Supply chain, routing, warehousing, and last-mile delivery"
     },
     {
       "name": "maintenance",
-      "file": "cross_domain/maintenance.json"
+      "file": "cross_domain/maintenance.json",
+      "description": "Preventive, predictive, and corrective maintenance strategies"
     },
     {
       "name": "compliance",
-      "file": "cross_domain/compliance.json"
+      "file": "cross_domain/compliance.json",
+      "description": "Regulatory frameworks, audit readiness, and compliance operations"
     },
     {
       "name": "investment_decision",
-      "file": "cross_domain/investment_decision.json"
+      "file": "cross_domain/investment_decision.json",
+      "description": "Capital allocation, ROI analysis, and investment decision frameworks"
+    },
+    {
+      "name": "organizational_memory",
+      "file": "cross_domain/organizational_memory.json",
+      "description": "Meeting outcomes, decision records, lessons learned, knowledge governance, and institutional memory — how to build a learning organization"
+    },
+    {
+      "name": "learning_certification",
+      "file": "cross_domain/learning_certification.json",
+      "description": "Learning science, knowledge maps, certification paths, and common mistakes — for students, professionals, and trainers"
+    },
+    {
+      "name": "technical_support",
+      "file": "cross_domain/technical_support.json",
+      "description": "Issue patterns, root cause analysis, fixes, workarounds, and knowledge extraction from support tickets — for support engineers, SREs, and product teams"
+    },
+    {
+      "name": "transport_route_optimization",
+      "file": "cross_domain/transport_route_optimization.json",
+      "description": "Route planning, vehicle assignment, capacity utilization, and scheduling — from TSP/VRP fundamentals to the operational decisions SMEs still run in Excel"
+    },
+    {
+      "name": "property_management",
+      "file": "cross_domain/property_management.json",
+      "description": "Maintenance cycles, tenant relations, lease renewals, energy cost control, and vendor management — turning incident reports into reusable property decisions"
+    },
+    {
+      "name": "procurement",
+      "file": "cross_domain/procurement.json",
+      "description": "Supplier evaluation, vendor scoring, tender analysis, contract risk, and award decisions — turning supplier interactions into reusable procurement knowledge"
+    },
+    {
+      "name": "proposal_writing",
+      "file": "cross_domain/proposal_writing.json",
+      "description": "Proposal structures, scope definitions, pricing models (Fixed Price vs T&M decision), risk clauses, and project estimations — for consultants, freelancers, agencies, and SMEs"
+    },
+    {
+      "name": "healthcare_administration",
+      "file": "cross_domain/healthcare_administration.json",
+      "description": "NHS operational workflows, compliance frameworks (CQC, GDPR, MHA, Duty of Candour), scheduling, patient flow, and administrative procedures — not diagnosis, administration"
+    },
+    {
+      "name": "sales_engineering",
+      "file": "cross_domain/sales_engineering.json",
+      "description": "Customer requirements gathering, technical objection handling, competitor comparisons, PoC design, and proposal knowledge — turning technical sales interactions into reusable intelligence"
+    },
+    {
+      "name": "customer_success",
+      "file": "cross_domain/customer_success.json",
+      "description": "SaaS customer success — health scoring, renewal risk, escalation management, feature request pipelines, and the conversion of support tickets into product decisions"
     }
   ]
 }

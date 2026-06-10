@@ -1,0 +1,301 @@
+{
+  "pack": "technical_support",
+  "version": "1.0.0",
+  "description": "Technical support knowledge — issue patterns, root cause analysis, fixes, workarounds, and how to extract reusable knowledge from support tickets instead of accumulating individual cases.",
+  "knowledge": [
+    {
+      "statement": "A support ticket is a single event. A knowledge item is a pattern. Ten tickets about the same class of failure should produce one knowledge item — the pattern, its root cause, and the resolution — not ten separate records. The goal of support knowledge management is pattern extraction, not ticket archiving.",
+      "topics": ["knowledge_extraction", "support_operations"],
+      "confidence": 0.99,
+      "tags": ["ticket_to_knowledge", "pattern_extraction", "anti_ticket_accumulation"]
+    },
+    {
+      "statement": "The 5 Whys technique (Ohno/Toyota) traces a problem to its root cause by asking 'why?' repeatedly until the fundamental cause is identified, typically within five iterations. Stopping at the first or second why produces symptomatic fixes that recur; reaching the root produces permanent resolution.",
+      "topics": ["root_cause_analysis"],
+      "confidence": 0.99,
+      "tags": ["5_whys", "Ohno", "Toyota", "root_cause"]
+    },
+    {
+      "statement": "Ishikawa (fishbone) diagrams organize potential causes of a problem into six categories: Machine, Method, Material, Measurement, Environment, and People (6M). They are most useful for manufacturing and operational failures where multiple cause categories interact and need to be systematically explored.",
+      "topics": ["root_cause_analysis"],
+      "confidence": 0.98,
+      "tags": ["fishbone", "Ishikawa", "6M", "cause_categories"]
+    },
+    {
+      "statement": "Fault Tree Analysis (FTA) models failure top-down: starting from the observed failure event, it uses logical AND/OR gates to trace all combinations of sub-events that could produce it. It is most powerful for safety-critical systems where multiple concurrent failures must be analyzed.",
+      "topics": ["root_cause_analysis"],
+      "confidence": 0.97,
+      "tags": ["fault_tree_analysis", "FTA", "safety_critical"]
+    },
+    {
+      "statement": "Root cause analysis must distinguish between the proximate cause (the immediate trigger), the contributing causes (conditions that allowed it), and the root cause (the systemic reason it was possible). Fixing only the proximate cause is symptomatic treatment; fixing the root cause prevents recurrence.",
+      "topics": ["root_cause_analysis"],
+      "confidence": 0.99,
+      "tags": ["proximate_cause", "root_cause", "contributing_cause"]
+    },
+    {
+      "statement": "Known issues are previously identified problems with documented behavior, impact, and workaround status. A known issue database prevents duplicate investigation effort, allows support agents to resolve issues in seconds instead of hours, and sets accurate customer expectations. Without it, every ticket is treated as a novel problem.",
+      "topics": ["known_issues", "support_operations"],
+      "confidence": 0.99,
+      "tags": ["known_issue_database", "KI", "deflection"]
+    },
+    {
+      "statement": "A known issue record must contain: a precise description of the problem pattern (not a single instance), affected versions or environments, symptoms the user observes, root cause if known, status (investigating / fix in progress / fix released / no fix planned), and the current workaround if any.",
+      "topics": ["known_issues"],
+      "confidence": 0.99,
+      "tags": ["known_issue_record", "documentation_standard"]
+    },
+    {
+      "statement": "Issue deduplication is the process of recognizing that a new ticket matches an existing known issue. It requires pattern matching on symptoms, not exact string matching on descriptions. Two tickets about 'system hangs on login' and 'application freezes after authentication' may be the same known issue.",
+      "topics": ["known_issues", "support_operations"],
+      "confidence": 0.98,
+      "tags": ["deduplication", "pattern_matching", "symptom_clustering"]
+    },
+    {
+      "statement": "A workaround is a temporary procedure that mitigates a known issue without fixing its root cause. Workarounds must be documented with: the steps, the conditions under which they apply, side effects or limitations, and whether they are temporary or permanent. Undocumented workarounds exist only in the knowledge of the support agent who found them.",
+      "topics": ["workarounds"],
+      "confidence": 0.99,
+      "tags": ["workaround_documentation", "temporary_fix"]
+    },
+    {
+      "statement": "Workarounds degrade over time. A workaround valid in version 2.3 may break in version 3.0 or become unnecessary when the underlying issue is fixed. Workaround records must be versioned and reviewed when related components change.",
+      "topics": ["workarounds"],
+      "confidence": 0.97,
+      "tags": ["workaround_versioning", "staleness"]
+    },
+    {
+      "statement": "The distinction between a fix and a workaround matters for customer communication. A fix resolves the root cause and eliminates the issue. A workaround circumvents the issue while it persists. Presenting a workaround as a fix destroys trust when the issue recurs.",
+      "topics": ["workarounds", "customer_communication"],
+      "confidence": 0.99,
+      "tags": ["fix_vs_workaround", "trust", "transparency"]
+    },
+    {
+      "statement": "Reproducibility is the most critical factor in diagnosing technical issues. A reproducible issue can be investigated systematically; an irreproducible issue cannot be confirmed fixed. Every support interaction should attempt to establish: reproduction steps, affected environment, frequency, and triggering conditions.",
+      "topics": ["troubleshooting"],
+      "confidence": 0.99,
+      "tags": ["reproducibility", "reproduction_steps", "diagnosis"]
+    },
+    {
+      "statement": "Binary search troubleshooting (bisection) applies to issues where a change caused a regression: systematically identify the midpoint between a known-good and known-bad state, test it, and eliminate half the search space. Git bisect implements this for code regressions; configuration bisection applies it to settings.",
+      "topics": ["troubleshooting"],
+      "confidence": 0.97,
+      "tags": ["binary_search", "bisection", "regression", "git_bisect"]
+    },
+    {
+      "statement": "The scientific method in troubleshooting: observe the failure, form a hypothesis about its cause, design a test that would disprove the hypothesis, run the test, update beliefs. Testing one variable at a time is essential — changing multiple things simultaneously makes it impossible to determine what resolved the issue.",
+      "topics": ["troubleshooting"],
+      "confidence": 0.99,
+      "tags": ["scientific_method", "hypothesis", "one_variable"]
+    },
+    {
+      "statement": "Environmental capture at issue time is the most overlooked step in technical support. The environment often changes before investigation begins. Capture immediately: OS version, application version, configuration values, logs at the time of failure, recent changes, and hardware state. Gaps in environmental data are the primary cause of failed root cause analysis.",
+      "topics": ["troubleshooting", "known_issues"],
+      "confidence": 0.99,
+      "tags": ["environmental_capture", "context", "logs", "configuration"]
+    },
+    {
+      "statement": "Log analysis is the primary diagnostic tool for software failures. Effective log analysis requires: knowing which log level captures relevant events, understanding timestamps and sequence, correlating logs across services, and distinguishing errors that are symptoms from errors that are causes.",
+      "topics": ["troubleshooting"],
+      "confidence": 0.98,
+      "tags": ["log_analysis", "logging", "correlation"]
+    },
+    {
+      "statement": "Support ticket triage classifies issues by priority based on business impact, not technical complexity. A cosmetic bug affecting the CEO matters more than a data loss bug affecting a test environment. Priority frameworks (P1-P4, SEV1-SEV4) must be calibrated to actual business impact and communicated to customers.",
+      "topics": ["support_operations"],
+      "confidence": 0.98,
+      "tags": ["triage", "priority", "severity", "business_impact"]
+    },
+    {
+      "statement": "First contact resolution (FCR) rate is the single most important support efficiency metric. It measures the percentage of issues resolved without escalation or callback. High FCR requires good known issue coverage, agent empowerment to act, and clear escalation criteria.",
+      "topics": ["support_operations"],
+      "confidence": 0.97,
+      "tags": ["FCR", "first_contact_resolution", "support_metrics"]
+    },
+    {
+      "statement": "Escalation criteria must be explicit. An agent should escalate when: the issue cannot be reproduced, the fix requires code changes, the workaround is insufficient for the customer's needs, the issue affects SLA compliance, or the issue pattern suggests a systemic problem. Implicit escalation criteria create inconsistent customer experiences.",
+      "topics": ["support_operations"],
+      "confidence": 0.98,
+      "tags": ["escalation", "escalation_criteria", "SLA"]
+    },
+    {
+      "statement": "Time-to-resolution (TTR) and time-to-first-response (TTFR) are the metrics customers care most about. TTFR sets expectations; TTR reflects actual resolution quality. Both should be tracked by issue category — TTR for known issues should be far lower than for novel issues if the knowledge base is functioning.",
+      "topics": ["support_operations"],
+      "confidence": 0.97,
+      "tags": ["TTR", "TTFR", "SLA_metrics", "resolution_time"]
+    },
+    {
+      "statement": "Incident post-mortems should produce actionable knowledge items, not just incident reports. Every P1/SEV1 incident must answer: what was the impact, what was the root cause, what was the detection gap, what was the response gap, and what specific changes will prevent recurrence. Action items without owners and deadlines expire without effect.",
+      "topics": ["root_cause_analysis", "known_issues"],
+      "confidence": 0.99,
+      "tags": ["incident_post_mortem", "action_items", "prevention"]
+    },
+    {
+      "statement": "Alert fatigue occurs when monitoring systems generate too many low-value alerts, causing operators to ignore or dismiss them. High-volume, low-signal alerting is as dangerous as no alerting — critical alerts are missed when they are buried in noise. Every alert should be actionable and linked to a runbook.",
+      "topics": ["troubleshooting", "support_operations"],
+      "confidence": 0.98,
+      "tags": ["alert_fatigue", "monitoring", "runbook", "signal_to_noise"]
+    },
+    {
+      "statement": "A runbook is a documented procedure for responding to a known operational event — an alert, a failure mode, or a routine task. Runbooks reduce mean time to resolve (MTTR) by enabling any team member to respond correctly without relying on expert recall. Outdated runbooks are dangerous; they must be versioned and validated.",
+      "topics": ["known_issues", "support_operations"],
+      "confidence": 0.99,
+      "tags": ["runbook", "MTTR", "operational_procedure"]
+    },
+    {
+      "statement": "Error messages are the first communication from the system to the user and support agent. Vague error messages ('Something went wrong', 'Error 500') destroy diagnostic value and damage user trust. Good error messages name the specific failure, indicate whether the user can resolve it, and provide a reference code linking to the known issue database.",
+      "topics": ["known_issues", "troubleshooting"],
+      "confidence": 0.99,
+      "tags": ["error_messages", "error_design", "diagnostic_value"]
+    },
+    {
+      "statement": "Heisenberg bugs (heisenbugs) change behavior when observed — they disappear under debugging conditions. They are typically caused by timing, concurrency, or side effects of logging/profiling tools. Diagnosing them requires non-invasive tracing, statistical sampling, and deterministic reproduction environments.",
+      "topics": ["known_issues", "troubleshooting"],
+      "confidence": 0.96,
+      "tags": ["heisenbug", "concurrency", "timing", "non_deterministic"]
+    },
+    {
+      "statement": "Regression issues are failures introduced by a change that previously worked. Identifying the change that caused a regression (the 'bad commit') is the most effective path to resolution. Version control history, deployment logs, and configuration change records are the primary tools for regression root cause analysis.",
+      "topics": ["root_cause_analysis", "troubleshooting"],
+      "confidence": 0.98,
+      "tags": ["regression", "change_causation", "deployment_log"]
+    },
+    {
+      "statement": "Memory leaks and resource exhaustion issues are among the hardest to diagnose because they develop gradually and manifest far from their cause. Symptoms (slowness, crashes, OOM errors) appear long after the root cause event. Diagnosis requires baseline metrics, trend analysis over time, and heap/resource profiling.",
+      "topics": ["known_issues", "troubleshooting"],
+      "confidence": 0.97,
+      "tags": ["memory_leak", "resource_exhaustion", "OOM", "profiling"]
+    },
+    {
+      "statement": "Timeout errors are frequently misdiagnosed as network issues when the real cause is a slow upstream dependency. Before blaming the network, check: end-to-end request timing, database query performance, external API latency, and lock contention. The first symptom in a dependency chain is rarely the root cause.",
+      "topics": ["troubleshooting", "known_issues"],
+      "confidence": 0.98,
+      "tags": ["timeout", "dependency_chain", "upstream", "latency"]
+    },
+    {
+      "statement": "Configuration drift is a common cause of environment-specific issues — problems that appear in production but cannot be reproduced in staging. Tracking configuration as code and enforcing environment parity eliminates an entire class of support issues. Infrastructure-as-code and configuration management tools are the structural fix.",
+      "topics": ["known_issues", "root_cause_analysis"],
+      "confidence": 0.98,
+      "tags": ["configuration_drift", "environment_parity", "IaC"]
+    },
+    {
+      "statement": "Intermittent failures with no pattern are often load-dependent or race conditions that only manifest at specific concurrency levels. Reproducing them requires load testing tools and concurrent execution frameworks, not single-user test cases. Document the concurrency conditions and load profile under which the issue appears.",
+      "topics": ["troubleshooting", "known_issues"],
+      "confidence": 0.97,
+      "tags": ["intermittent_failure", "race_condition", "concurrency", "load_dependent"]
+    },
+    {
+      "statement": "The most common customer communication failure in technical support is over-promising resolution timelines. Estimate based on actual investigation time, not optimism. A realistic commitment honored produces more trust than a fast estimate missed. Always communicate when the estimate changes, before it passes.",
+      "topics": ["customer_communication"],
+      "confidence": 0.99,
+      "tags": ["timeline_estimation", "expectation_management", "trust"]
+    },
+    {
+      "statement": "Status page communication during incidents must be proactive — updated before customers ask, not in response to inbound volume. Customers' primary frustration during incidents is not the outage itself but the silence. An acknowledged, actively-investigated incident with poor status updates generates far more inbound volume than the incident alone.",
+      "topics": ["customer_communication", "support_operations"],
+      "confidence": 0.98,
+      "tags": ["status_page", "incident_communication", "proactive_communication"]
+    },
+    {
+      "statement": "The STAR format for documenting resolutions — Situation (what was happening), Task (what needed to be done), Action (what was done), Result (what changed) — produces resolution records that are useful for future pattern matching and knowledge transfer, unlike terse 'fixed by restarting service' notes.",
+      "topics": ["knowledge_extraction", "support_operations"],
+      "confidence": 0.96,
+      "tags": ["STAR_format", "resolution_documentation"]
+    },
+    {
+      "statement": "Ticket clustering — grouping similar tickets by symptom pattern — is the primary mechanism for converting support volume into knowledge. A spike in tickets about the same symptom signals a new known issue. Without systematic clustering, support teams react to each ticket individually and miss systemic problems until they escalate.",
+      "topics": ["knowledge_extraction", "support_operations"],
+      "confidence": 0.98,
+      "tags": ["ticket_clustering", "pattern_detection", "systemic_issue"]
+    },
+    {
+      "statement": "The knowledge-centered service (KCS) methodology integrates knowledge capture into the support workflow rather than treating it as a separate documentation task. Every ticket interaction is an opportunity to create or improve a knowledge article. Knowledge is created at the time of use, validated through reuse, and retired when obsolete.",
+      "topics": ["knowledge_extraction", "support_operations"],
+      "confidence": 0.97,
+      "tags": ["KCS", "knowledge_centered_service", "knowledge_workflow"]
+    },
+    {
+      "statement": "Confidence levels on known issue records indicate how well the root cause is understood. A known issue without root cause (confidence: low) is different from one with a confirmed root cause and fix (confidence: high). Blending both in search results without distinction misleads support agents into applying unvalidated fixes.",
+      "topics": ["known_issues", "knowledge_extraction"],
+      "confidence": 0.97,
+      "tags": ["confidence_levels", "root_cause_confidence"]
+    },
+    {
+      "statement": "Recurring issues — problems that were 'fixed' but return — indicate that the root cause was not addressed. Track recurring issue rate (percentage of resolved issues that reopen within 30 days) as a quality metric for resolution depth. High recurrence rates indicate symptomatic treatment.",
+      "topics": ["known_issues", "support_operations"],
+      "confidence": 0.98,
+      "tags": ["recurring_issues", "reopen_rate", "fix_quality"]
+    },
+    {
+      "statement": "Self-service deflection rate measures the percentage of issues resolved through documentation, FAQs, or automated systems without agent involvement. High deflection reduces support cost and gives customers faster resolution. Deflection requires accurate, findable knowledge — the same known issue must be discoverable from multiple search terms.",
+      "topics": ["support_operations", "known_issues"],
+      "confidence": 0.97,
+      "tags": ["deflection", "self_service", "findability"]
+    },
+    {
+      "statement": "Issue categorization taxonomy is the backbone of support analytics. Without consistent categories, it is impossible to measure which issue types consume the most support effort, identify systemic product quality problems, or route tickets to the right specialist. Taxonomy must be maintained as products evolve.",
+      "topics": ["support_operations", "knowledge_extraction"],
+      "confidence": 0.97,
+      "tags": ["taxonomy", "categorization", "support_analytics"]
+    },
+    {
+      "statement": "The difference between a bug and a feature request is often framing. 'The system doesn't do X' can be a bug (X was promised and broken) or a feature request (X was never designed). Misclassifying feature requests as bugs creates unrealistic customer expectations. Classify based on documented specifications, not customer expectation.",
+      "topics": ["support_operations", "known_issues"],
+      "confidence": 0.97,
+      "tags": ["bug_vs_feature", "classification", "expectation"]
+    },
+    {
+      "statement": "Third-party and dependency issues require different resolution paths than first-party bugs. The support team cannot fix a third-party library bug; they can only document the workaround, track the upstream fix, and notify customers when it is resolved. Known issue records for third-party issues must include the upstream vendor ticket reference.",
+      "topics": ["known_issues", "support_operations"],
+      "confidence": 0.96,
+      "tags": ["third_party", "dependency", "upstream_tracking"]
+    },
+    {
+      "statement": "Security vulnerabilities discovered through support must follow a separate, accelerated disclosure process. They should not be logged in public-facing issue trackers, should be escalated immediately to the security team, and communication with the reporter must follow coordinated vulnerability disclosure principles (CVD).",
+      "topics": ["support_operations"],
+      "confidence": 0.99,
+      "tags": ["security_vulnerability", "CVD", "disclosure", "escalation"]
+    },
+    {
+      "statement": "Data loss and data corruption issues are automatically the highest priority regardless of the number of affected users. A data integrity failure affecting one user is more severe than a performance degradation affecting thousands. Classification frameworks must encode this explicitly.",
+      "topics": ["support_operations"],
+      "confidence": 0.99,
+      "tags": ["data_loss", "data_corruption", "priority_override"]
+    },
+    {
+      "statement": "The shift-left principle in support applies knowledge as close to the user as possible: self-service documentation before tier-1 contact, tier-1 resolution before escalation to engineering, known issue matching before investigation. Every escalation represents a knowledge gap — either missing documentation or insufficient agent enablement.",
+      "topics": ["support_operations", "knowledge_extraction"],
+      "confidence": 0.97,
+      "tags": ["shift_left", "deflection_levels", "knowledge_gap"]
+    },
+    {
+      "statement": "A technical support knowledge base ages fastest in areas of active product development. The support team must be part of the release process — receiving pre-release documentation, known issue lists, and training before new features ship. Support teams surprised by releases produce low-quality first interactions with customers.",
+      "topics": ["support_operations", "known_issues"],
+      "confidence": 0.98,
+      "tags": ["release_readiness", "support_enablement", "knowledge_currency"]
+    },
+    {
+      "statement": "Effective technical support requires empathy before analysis. Customers reporting issues are often stressed, frustrated, or impacted in their work. Acknowledging the impact before diving into diagnosis reduces escalation, increases information quality (customers share more when they feel heard), and improves resolution outcomes.",
+      "topics": ["customer_communication"],
+      "confidence": 0.97,
+      "tags": ["empathy", "active_listening", "customer_experience"]
+    },
+    {
+      "statement": "The hardest support scenario is 'I can't reproduce it.' Protocol: collect full environment details, request logs at maximum verbosity, ask the customer to reproduce on demand with screen recording, and check if the issue correlates with any deployment or infrastructure event in the timeframe. Document all findings even for unresolved reproductions.",
+      "topics": ["troubleshooting"],
+      "confidence": 0.98,
+      "tags": ["cannot_reproduce", "irreproducible_bug", "evidence_collection"]
+    },
+    {
+      "statement": "Support knowledge extracted from tickets has a different quality profile than designed documentation: it is more specific, more practical, and more grounded in real failure conditions, but also more fragmented and less curated. Both are necessary. Designed documentation sets the baseline; ticket-extracted knowledge fills the gaps with real-world patterns.",
+      "topics": ["knowledge_extraction"],
+      "confidence": 0.97,
+      "tags": ["knowledge_quality", "designed_vs_extracted", "real_world_patterns"]
+    },
+    {
+      "statement": "Observability-driven support uses telemetry (metrics, traces, logs) to diagnose issues without requiring customer reproduction. When a customer reports an issue, the support agent queries the observability platform for that customer's session, request, or system state at the time of failure. It converts 'I can't reproduce it' from a dead end into a solvable problem.",
+      "topics": ["troubleshooting", "support_operations"],
+      "confidence": 0.97,
+      "tags": ["observability", "telemetry", "traces", "customer_session"]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "pack": "sales_engineering",
+  "version": "1.0.0",
+  "description": "Sales engineering knowledge — customer requirements gathering, technical objection handling, competitor comparisons, and proposal knowledge. Structured to turn customer interactions into reusable technical sales intelligence.",
+  "knowledge": [
+    {
+      "statement": "Sales engineering sits at the intersection of technical depth and commercial persuasion. The SE's job is not to explain features — it is to translate customer pain into technical solution language and technical capability into business value language. An SE who can only go deep technically is a demo jockey; an SE who loses the technical thread is a salesperson. The dual fluency is the value.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.99,
+      "tags": ["sales_engineering", "technical_translation", "business_value", "dual_fluency"]
+    },
+    {
+      "statement": "Discovery must precede demonstration. Showing a product before understanding the customer's specific pain, environment, and decision criteria is a generic demo — it sells the product, not the solution to their problem. The minimum discovery before a technical demo: what problem are you trying to solve, what have you tried, what does your current environment look like, what does success look like, and who is evaluating?",
+      "topics": ["customer_requirements"],
+      "confidence": 0.99,
+      "tags": ["discovery", "technical_discovery", "pre_demo", "environment_mapping"]
+    },
+    {
+      "statement": "Technical requirements gathering must distinguish between stated requirements, implied requirements, and hidden requirements. Stated requirements are what the customer writes in the RFP. Implied requirements are what they assume is standard but don't mention. Hidden requirements are what the technical evaluator cares about but hasn't articulated (usually because of internal politics or because they don't know they need it yet). Missing hidden requirements in a proposal is a common technical win turned commercial loss.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.98,
+      "tags": ["requirements_types", "stated", "implied", "hidden", "RFP"]
+    },
+    {
+      "statement": "Architecture discovery calls — dedicated sessions with the customer's technical team to understand their existing stack, data flows, integrations, and constraints — are more valuable than product demos for complex B2B sales. The output is a documented architecture diagram of the current state and a gap analysis showing where the solution fits. Customers who receive architecture-level analysis in the sales process trust the vendor more.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.97,
+      "tags": ["architecture_discovery", "technical_call", "stack_mapping", "integration_analysis"]
+    },
+    {
+      "statement": "The economic buyer, technical buyer, and user buyer have fundamentally different priorities in a technical sales process. The economic buyer cares about ROI, risk, and strategic fit. The technical buyer cares about reliability, integration, security, and maintainability. The user buyer cares about usability and workflow disruption. An SE who only speaks to the technical buyer wins the technical evaluation and loses the deal.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.99,
+      "tags": ["economic_buyer", "technical_buyer", "user_buyer", "multi_stakeholder"]
+    },
+    {
+      "statement": "Security questionnaires (SIG, CSA CAIQ, bespoke enterprise questionnaires) are a standard gate in enterprise technical sales. SE teams that can complete security questionnaires accurately and quickly compress sales cycles by weeks. Maintain a security questionnaire response library — standard answers to common questions, reviewed quarterly, signed off by security leadership. A slow or inaccurate security response is a credibility failure.",
+      "topics": ["technical_objections"],
+      "confidence": 0.98,
+      "tags": ["security_questionnaire", "SIG", "CAIQ", "enterprise_sales", "InfoSec"]
+    },
+    {
+      "statement": "Technical objections fall into three categories: genuine blockers (the product cannot do what the customer needs — acknowledge and escalate to product), solvable gaps (the product can do it but it requires configuration, integration, or professional services — address with a proof), and perceived gaps (the customer believes the product can't do it based on incomplete information — address with a demo or documentation). Treating all objections as perceived gaps destroys credibility when a genuine blocker exists.",
+      "topics": ["technical_objections"],
+      "confidence": 0.99,
+      "tags": ["objection_handling", "genuine_blocker", "solvable_gap", "perceived_gap", "credibility"]
+    },
+    {
+      "statement": "Performance and scalability objections ('Will it handle our volume?') require quantitative proof — benchmark data, reference architecture, and customer references at comparable scale — not qualitative reassurance. An SE who says 'yes, it scales' without supporting evidence loses to an SE who shows a stress test report for 10× the customer's expected load. Data beats assertion.",
+      "topics": ["technical_objections"],
+      "confidence": 0.98,
+      "tags": ["scalability", "performance", "benchmark", "stress_test", "proof_of_scale"]
+    },
+    {
+      "statement": "Integration objections ('How does it connect to X?') are the most common technical objection in B2B SaaS sales. Preparation: document and keep current a connector/API inventory for all platforms in your ICP's typical stack. For undocumented integrations, the answer is not 'we'll figure it out' — it is 'we have an API; here is the documentation, and here is how a similar customer built the integration in N weeks.'",
+      "topics": ["technical_objections"],
+      "confidence": 0.98,
+      "tags": ["integration_objection", "API", "connector", "ICP_stack", "integration_timeline"]
+    },
+    {
+      "statement": "Data migration and data residency objections are common enterprise blockers. Data migration: provide a documented methodology, timeline, and rollback plan. Customers who fear losing data in migration need evidence from comparable migrations, not promises. Data residency: know your cloud provider's region map, data processing agreements, and the specific regulatory requirements (GDPR Article 46, UK GDPR adequacy decisions) before the objection is raised.",
+      "topics": ["technical_objections"],
+      "confidence": 0.97,
+      "tags": ["data_migration", "data_residency", "GDPR", "rollback", "cloud_regions"]
+    },
+    {
+      "statement": "Vendor lock-in objections reflect a rational fear: what is the exit cost if the relationship goes wrong? Address structurally: document data portability (export formats, completeness, timeline), API openness, and absence of proprietary formats where alternatives exist. Customers who receive a credible, documented exit plan are more willing to enter. Refusing to discuss lock-in makes the objection worse, not better.",
+      "topics": ["technical_objections"],
+      "confidence": 0.97,
+      "tags": ["vendor_lock_in", "data_portability", "exit_plan", "open_API", "proprietary_formats"]
+    },
+    {
+      "statement": "Total Cost of Ownership (TCO) objections compare the sticker price to the full cost of deployment, maintenance, training, and upgrade. SEs who cannot model TCO for the customer's context lose to competitors who can. Build a TCO model template: licence/subscription, implementation, training, integration, ongoing support, and planned upgrades vs. the current-state cost. Showing lower TCO beats lower list price every time.",
+      "topics": ["technical_objections", "proposal_knowledge"],
+      "confidence": 0.98,
+      "tags": ["TCO", "total_cost_of_ownership", "cost_model", "implementation_cost"]
+    },
+    {
+      "statement": "A competitive battle card is the SE's reference document for a specific competitor: their strengths (acknowledge them honestly), their weaknesses (supported by evidence, not assertion), the customer situations where you win, the customer situations where they win, the questions to ask that expose their weaknesses, and the objections they raise about your product with your rebuttal. Battle cards that minimise competitor strengths destroy SE credibility with technical buyers who know better.",
+      "topics": ["competitor_comparisons"],
+      "confidence": 0.99,
+      "tags": ["battle_card", "competitive_intelligence", "win_loss", "strengths_weaknesses"]
+    },
+    {
+      "statement": "Feature comparison matrices — your product vs. competitor X on a list of features — are the weakest form of competitive differentiation because they are written by the vendor and are therefore presumed biased. Independent analyst reports (Gartner Magic Quadrant, Forrester Wave, G2, Capterra), peer reviews, and third-party benchmarks carry more weight with technical buyers. Use your own comparison matrix to prepare; use third-party validation to persuade.",
+      "topics": ["competitor_comparisons"],
+      "confidence": 0.97,
+      "tags": ["feature_matrix", "analyst_report", "Gartner", "Forrester", "G2", "third_party_validation"]
+    },
+    {
+      "statement": "Proof of Concept (PoC) design is one of the most critical SE skills. A well-designed PoC tests the specific technical risks the customer has identified, produces objective success/fail criteria agreed before start, and is time-boxed (typically 2–4 weeks). A badly designed PoC tests generic product features, has no agreed criteria, and runs indefinitely. The PoC scope document — agreed by both parties — is the SE's most important document in a competitive evaluation.",
+      "topics": ["customer_requirements", "proposal_knowledge"],
+      "confidence": 0.99,
+      "tags": ["PoC", "proof_of_concept", "success_criteria", "evaluation", "PoC_scope"]
+    },
+    {
+      "statement": "Competing on architecture transparency — sharing detailed technical documentation, security whitepapers, and integration guides proactively, rather than under NDA — is a differentiating trust signal in enterprise technical sales. Competitors who restrict technical documentation signal something to hide. An SE who sends architecture documentation, compliance certifications, and third-party audit reports without being asked shortens enterprise sales cycles.",
+      "topics": ["competitor_comparisons", "technical_objections"],
+      "confidence": 0.96,
+      "tags": ["transparency", "technical_documentation", "security_whitepaper", "trust_signal"]
+    },
+    {
+      "statement": "Competitor intelligence must be gathered continuously, not just when needed in a deal. Sources: competitor documentation and changelogs, G2/Capterra reviews (especially critical ones), LinkedIn job postings (reveals strategic direction), pricing page changes, analyst updates, and — most valuable — loss interviews with customers who chose the competitor. Synthesising this into updated battle cards quarterly prevents SEs from fighting last year's competition.",
+      "topics": ["competitor_comparisons"],
+      "confidence": 0.97,
+      "tags": ["competitive_intelligence", "battle_card_maintenance", "loss_interview", "changelogs"]
+    },
+    {
+      "statement": "Reference customers are the most powerful tool in an SE's arsenal. A customer at the same scale, industry, and technical complexity who can speak to their experience closes deals that demos and documentation cannot. Reference management: maintain a tiered reference program, match references to prospect profiles, prepare references before the call (what to emphasise, what to avoid), and protect references from over-use (fatigue destroys willingness to participate).",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.98,
+      "tags": ["customer_references", "reference_program", "peer_validation", "reference_matching"]
+    },
+    {
+      "statement": "Technical proposal writing is distinct from commercial proposal writing. Technical sections must: map solution architecture to customer requirements (not just list product features), address integration points specifically, quantify performance and reliability claims with SLA data, address security and compliance requirements directly, and include a realistic implementation timeline with dependencies. Vague technical proposals ('our scalable, enterprise-grade platform') lose to specific ones.",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.98,
+      "tags": ["technical_proposal", "solution_architecture", "implementation_timeline", "SLA"]
+    },
+    {
+      "statement": "SE knowledge capture from every deal cycle — whether won or lost — is the compounding mechanism that makes the team smarter over time. After every deal, record: the customer's technical environment, the objections raised and how they were resolved, the PoC design and outcome, the competitive situation and how it was navigated, and the win/loss factor. Without this, every SE re-discovers the same solutions to the same problems.",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.99,
+      "tags": ["knowledge_capture", "deal_intelligence", "SE_playbook", "compounding"]
+    },
+    {
+      "statement": "A Mutual Success Plan (MSP) — sometimes called a Mutual Action Plan or Joint Evaluation Plan — is a shared document that aligns the SE and customer on evaluation steps, timelines, decision criteria, and stakeholders. It converts an informal sales process into a joint project. Customers who co-create the MSP are more committed to the evaluation and less likely to ghost. SEs who work without an MSP on complex deals have no early warning when momentum is lost.",
+      "topics": ["customer_requirements", "proposal_knowledge"],
+      "confidence": 0.97,
+      "tags": ["mutual_success_plan", "MSP", "evaluation_plan", "joint_plan", "deal_momentum"]
+    },
+    {
+      "statement": "The technical win and the commercial win are separate events. An SE can win the technical evaluation — the customer's technical team recommends the product — and still lose the deal to budget constraints, executive relationship, or competitive commercial terms. Technical SEs who don't understand the commercial process get blindsided. Post-technical-win, the SE's role shifts to arming the commercial team with technical ammunition for procurement negotiations.",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.97,
+      "tags": ["technical_win", "commercial_win", "procurement_negotiation", "evaluation_separation"]
+    },
+    {
+      "statement": "Demonstrations should be customised to the customer's stated use case, not run from a generic script. The highest-impact customisation: use the customer's own data or terminology in the demo environment. 'Here is your product category / your customer segment / your org name' in the demo creates a visceral sense that the product was built for them. Generic demos create comparison; personalised demos create conviction.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.98,
+      "tags": ["demo_customisation", "personalised_demo", "customer_data", "conviction"]
+    },
+    {
+      "statement": "Technical debt in the customer's current environment is an SE discovery opportunity. A customer drowning in technical debt — brittle integrations, undocumented systems, manual workarounds — is motivated by pain, not features. SE discovery should actively map this debt: where are the manual processes? Where do things break? What are you maintaining that you hate? The SE who maps the pain best, wins the business.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.96,
+      "tags": ["technical_debt", "customer_pain", "manual_processes", "pain_mapping"]
+    },
+    {
+      "statement": "Compliance and certification objections (SOC 2, ISO 27001, HIPAA, FedRAMP, GDPR) in enterprise sales require documentation, not conversation. Maintain a compliance documentation package: current certificates, audit reports (where shareable), compliance scope statements, and a compliance roadmap. Know which certifications are in scope for which product features. Telling a customer 'we're ISO 27001 certified' without providing the certificate is an assertion; providing the certificate is proof.",
+      "topics": ["technical_objections"],
+      "confidence": 0.98,
+      "tags": ["SOC2", "ISO27001", "HIPAA", "FedRAMP", "compliance_certificate", "documentation"]
+    },
+    {
+      "statement": "Platform vs. point solution positioning is a recurring competitive battle in SaaS. Platform: depth of integration, single vendor, consolidated data, workflow automation. Point solution: best-in-class for one problem, lighter implementation, no vendor lock-in. The SE's job is to understand which customer context favours which positioning and to not use platform arguments in a customer who values specialisation, or vice versa.",
+      "topics": ["competitor_comparisons"],
+      "confidence": 0.96,
+      "tags": ["platform_vs_point", "positioning", "vendor_consolidation", "best_of_breed"]
+    },
+    {
+      "statement": "Sales Engineering metrics that matter: PoC win rate (PoCs won / PoCs conducted), technical qualification accuracy (how often did SE-qualified opportunities progress past technical stage), deal support velocity (how many days from SE engagement to technical win), and knowledge reuse (how many deals used content created for a previous deal). Metrics drive behaviour — SEs measured only on quota attach produce different outcomes than SEs measured on PoC win rate.",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.95,
+      "tags": ["SE_metrics", "PoC_win_rate", "technical_qualification", "velocity", "KPIs"]
+    },
+    {
+      "statement": "Handoff from SE to implementation/onboarding is a critical trust moment. The customer has made their decision based on what they heard in the sales process; if the implementation team has no context, the customer must re-explain everything. SE-to-implementation handoff documents must include: the customer's technical environment, the specific use cases sold, any customisations or commitments made in the sales process, and the customer's internal champion. A poor handoff is perceived as a broken promise.",
+      "topics": ["customer_requirements", "proposal_knowledge"],
+      "confidence": 0.98,
+      "tags": ["SE_handoff", "implementation_handoff", "sales_to_CS", "commitments", "technical_context"]
+    },
+    {
+      "statement": "The technical champion — the person inside the customer organisation who wants you to win — is the SE's most valuable relationship. Champions give access, share internal context, flag competitive threats, and advocate internally. Developing champions requires genuine investment: teaching them something useful, making them look good in front of their team, and giving them tools to sell internally on your behalf. Champions are made, not found.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.98,
+      "tags": ["technical_champion", "internal_advocate", "champion_development", "internal_selling"]
+    },
+    {
+      "statement": "Contract and SLA review in the SE role means checking that commitments made in the sales process are reflected in the contract, and that SLA metrics match what was demonstrated. Common misalignment: the SE demonstrated 99.99% uptime in the demo environment but the contract SLA is 99.9%. At scale, 99.9% vs 99.99% is 9 hours vs 52 minutes of downtime per year. Customers notice this gap at renewal.",
+      "topics": ["proposal_knowledge", "technical_objections"],
+      "confidence": 0.96,
+      "tags": ["SLA_review", "uptime_SLA", "contract_alignment", "commitment_gap"]
+    },
+    {
+      "statement": "Technical sales knowledge that is not captured and shared within the SE team means every SE re-discovers the same solutions to the same objections. A shared SE knowledge base of: objection patterns and proven responses, PoC templates by use case, competitive battle cards, and customer environment archetypes is the compound interest of an SE team's experience. Teams without this start every deal with zero institutional knowledge.",
+      "topics": ["proposal_knowledge"],
+      "confidence": 0.99,
+      "tags": ["SE_knowledge_base", "shared_intelligence", "objection_library", "PoC_template"]
+    },
+    {
+      "statement": "Pricing objections in technical sales ('it's too expensive') are often disguised value objections ('I don't see enough value at this price'). The SE's response is to reframe to quantified value: calculate the ROI, time savings, risk reduction, or revenue impact that the solution delivers and express it in the customer's currency. If the value case doesn't hold, the price objection is legitimate and the commercial team has a deal structure problem.",
+      "topics": ["technical_objections", "proposal_knowledge"],
+      "confidence": 0.97,
+      "tags": ["pricing_objection", "value_case", "ROI_calculation", "reframing"]
+    },
+    {
+      "statement": "The 'no decision' outcome — the customer evaluates but does not buy from anyone — is the most common sales outcome and the most frequently ignored in win/loss analysis. No decisions happen when: the customer's pain is real but not urgent, the economic buyer is not aligned, internal consensus cannot be reached, or the risk of change exceeds the risk of the status quo. SE discovery that surfaces these conditions early allows the team to either address them or disengage before wasting resources.",
+      "topics": ["customer_requirements"],
+      "confidence": 0.97,
+      "tags": ["no_decision", "status_quo_bias", "economic_buyer_alignment", "deal_qualification"]
+    }
+  ]
+}

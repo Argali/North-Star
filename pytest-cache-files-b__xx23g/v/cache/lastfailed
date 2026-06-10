@@ -1,0 +1,5 @@
+{
+  "tests/unit/test_archivist.py::TestValidateDecision": true,
+  "tests/unit/test_archivist.py::TestValidateKnowledge": true,
+  "tests/unit/test_archivist.py::TestCollectDeprecatedIds": true
+}

@@ -1,0 +1,307 @@
+{
+  "pack": "property_management",
+  "version": "1.0.0",
+  "description": "Property management knowledge — maintenance cycles, tenant relations, lease renewals, energy cost control, and vendor management. Structured to convert incident reports into reusable decisions.",
+  "knowledge": [
+    {
+      "statement": "Preventive maintenance costs 3-5 times less than reactive maintenance for the same building component. A boiler serviced annually costs a fraction of an emergency boiler replacement in January. Property managers who track component age and enforce scheduled maintenance systematically outperform those who respond to failures.",
+      "topics": ["maintenance"],
+      "confidence": 0.98,
+      "tags": ["preventive_maintenance", "cost_ratio", "reactive_vs_preventive"]
+    },
+    {
+      "statement": "A property maintenance schedule must be organised by component life cycle, not by calendar year alone. Key replacement intervals: roof covering (15-25 years), boiler/HVAC (15-20 years), lifts (20-25 years), electrical installation inspection (every 5 years in most jurisdictions), fire alarm system test (annually), external repainting (7-10 years). Deferring these creates deferred liability, not savings.",
+      "topics": ["maintenance"],
+      "confidence": 0.97,
+      "tags": ["component_lifespan", "replacement_intervals", "planned_maintenance"]
+    },
+    {
+      "statement": "Seasonal maintenance tasks must be completed before the season they protect against, not during it. Boiler servicing in October, not December. Roof and gutter inspection after autumn leaf fall but before winter. HVAC cooling checks in April, not July. Reactive maintenance in peak season is always more expensive and harder to schedule.",
+      "topics": ["maintenance"],
+      "confidence": 0.99,
+      "tags": ["seasonal_maintenance", "pre_season", "timing"]
+    },
+    {
+      "statement": "A maintenance defect log — recording every reported defect, its date, priority, assigned contractor, and resolution status — is the minimum viable property management tool. Without it, defects are forgotten, tenants repeat reports, disputes arise over response time, and warranty claims are lost.",
+      "topics": ["maintenance", "tenant_issues"],
+      "confidence": 0.99,
+      "tags": ["defect_log", "maintenance_tracking", "record_keeping"]
+    },
+    {
+      "statement": "Damp and water ingress are the highest-frequency causes of structural damage in residential and commercial property. They are also the most frequently misdiagnosed — surface condensation is often attributed to structural penetration and vice versa. Correct diagnosis requires: moisture meter reading, thermal imaging in cold weather, and identification of the water source (external, internal, or rising).",
+      "topics": ["maintenance"],
+      "confidence": 0.98,
+      "tags": ["damp", "water_ingress", "condensation", "diagnosis"]
+    },
+    {
+      "statement": "Legal response time obligations for maintenance vary by defect type and jurisdiction. In most EU and UK frameworks: emergency defects (no heating in winter, structural risk, no hot water) require response within 24 hours; urgent defects (roof leak, blocked drain) within 3-5 days; routine defects within 28 days. Failure to meet these timelines creates legal liability regardless of the lease terms.",
+      "topics": ["maintenance", "tenant_issues"],
+      "confidence": 0.97,
+      "tags": ["response_times", "legal_obligations", "emergency_defect"]
+    },
+    {
+      "statement": "Every maintenance visit should generate a written record: what was inspected, what was found, what was done, what requires follow-up, and the date and name of the operative. Verbal confirmations have no value in disputes. A brief job sheet per visit, signed or timestamped, is the minimum acceptable standard.",
+      "topics": ["maintenance", "vendor_management"],
+      "confidence": 0.99,
+      "tags": ["job_record", "maintenance_documentation", "audit_trail"]
+    },
+    {
+      "statement": "Lift maintenance is non-negotiable and legally mandated in all jurisdictions with lifts in occupied buildings. Annual thorough examination by a competent person, statutory inspection certificate, and a maintenance contract with a certified provider are legal requirements in the EU and UK. A lift failure without a valid certificate exposes the property owner to unlimited liability.",
+      "topics": ["maintenance"],
+      "confidence": 0.99,
+      "tags": ["lift_maintenance", "LOLER", "statutory_inspection", "compliance"]
+    },
+    {
+      "statement": "The most common tenant complaint categories in residential property, in frequency order: heating failures, water ingress and damp, plumbing faults (blocked drains, leaks), pest infestation, and electrical faults. A property management knowledge base that maps these complaint types to their common root causes and proven resolutions reduces resolution time and repeat incidents.",
+      "topics": ["tenant_issues", "maintenance"],
+      "confidence": 0.97,
+      "tags": ["complaint_categories", "frequency", "residential"]
+    },
+    {
+      "statement": "Tenant communication must be documented in writing for all maintenance issues, rent changes, and lease matters. A phone call confirming a repair is not sufficient — follow up with a written summary. Written records prevent disputes about what was promised, when, and by whom. Email or a property management platform creates a timestamped audit trail.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.99,
+      "tags": ["written_communication", "audit_trail", "dispute_prevention"]
+    },
+    {
+      "statement": "Tenant onboarding — a documented handover process including property condition report with photos, meter readings, key inventory, and walkthrough of appliances — prevents the majority of end-of-tenancy deposit disputes. A condition report signed by the tenant at move-in is the primary evidence for fair deposit deductions at move-out.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.99,
+      "tags": ["tenant_onboarding", "condition_report", "deposit", "check_in"]
+    },
+    {
+      "statement": "Security deposit deductions are the single largest source of landlord-tenant disputes. Allowable deductions are typically limited to: damage beyond fair wear and tear, unpaid rent, cleaning required to restore the property to move-in standard, and replacement of missing items. Cosmetic wear, minor scuffs, and general aging are not deductible. Deductions without photographic evidence almost never succeed in arbitration.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.98,
+      "tags": ["deposit_deductions", "fair_wear_and_tear", "arbitration", "evidence"]
+    },
+    {
+      "statement": "Anti-social behaviour complaints require a documented, time-stamped log from the first incident. Without a log, escalation to legal action, mediation, or eviction is impossible to evidence. Each complaint entry should include: date, time, nature of behaviour, witnesses, and action taken. Pattern evidence — not a single incident — is what enforcement requires.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.98,
+      "tags": ["anti_social_behaviour", "ASB_log", "evidence_log", "escalation"]
+    },
+    {
+      "statement": "Rent arrears intervention should begin on the first day of default, not after several months. Early contact (day 2-3 of arrears) is disproportionately more effective than late contact. Offer a repayment plan at the first contact; most arrears are temporary cash flow problems. Legal eviction proceedings should be a last resort after documented, good-faith repayment negotiation has failed.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.98,
+      "tags": ["rent_arrears", "early_intervention", "repayment_plan", "eviction"]
+    },
+    {
+      "statement": "Mandatory licensing for HMOs (Houses in Multiple Occupation) and other property types varies by local authority and changes frequently. Operating a licensable property without a licence is a criminal offence with unlimited fines in many jurisdictions and may render rent repayment orders possible. Licensing status must be verified before any new letting of a multi-occupancy property.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.97,
+      "tags": ["HMO", "licensing", "compliance", "rent_repayment_order"]
+    },
+    {
+      "statement": "Right to rent checks (UK) and equivalent tenancy verification obligations require landlords to verify tenant identity and immigration status before granting occupancy. Failure to conduct these checks is a criminal offence. The check must be performed on original documents, must be documented, and must be repeated for time-limited immigration statuses. Digital verification services are now legally accepted in most jurisdictions.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.97,
+      "tags": ["right_to_rent", "identity_verification", "compliance", "immigration_status"]
+    },
+    {
+      "statement": "Lease renewal negotiations should begin 6-9 months before expiry for commercial properties and 2-3 months before expiry for residential. Initiating renewal at expiry is the weakest negotiating position — the tenant knows the property manager is motivated to avoid vacancy and can extract concessions. Early renewal conversations when both parties have options produce better terms.",
+      "topics": ["contract_renewals"],
+      "confidence": 0.98,
+      "tags": ["lease_renewal", "negotiation_timing", "vacancy_risk"]
+    },
+    {
+      "statement": "Open market rent review for commercial leases requires an independent valuation using comparable evidence (comparables) from recently agreed lettings in the same location and property class. Opinion without comparables is negotiation, not valuation. Dispute resolution through RICS arbitration or expert determination is available when parties cannot agree.",
+      "topics": ["contract_renewals"],
+      "confidence": 0.97,
+      "tags": ["rent_review", "open_market_value", "comparables", "RICS"]
+    },
+    {
+      "statement": "Break clauses in commercial leases must be exercised strictly in accordance with the lease terms — correct notice period, correct form of notice, correct recipient, and (for tenant breaks) compliance with all lease conditions by the break date. A missed break exercise due to procedural error binds the tenant for the remainder of the lease term. Always use a solicitor for break clause exercise.",
+      "topics": ["contract_renewals"],
+      "confidence": 0.99,
+      "tags": ["break_clause", "lease_terms", "notice_period", "solicitor"]
+    },
+    {
+      "statement": "Rent escalation mechanisms in long leases fall into three types: fixed increase (e.g., 3% annually), RPI/CPI-linked, and open market review. Fixed increases provide certainty for both parties; index-linked increases track inflation; open market reviews may decrease as well as increase rent. The choice of mechanism should reflect the property type, market outlook, and the tenant's business risk profile.",
+      "topics": ["contract_renewals"],
+      "confidence": 0.96,
+      "tags": ["rent_escalation", "RPI", "CPI", "open_market_review", "indexation"]
+    },
+    {
+      "statement": "Vacancy periods are the highest-cost event in property management. One month of vacancy on a commercial property typically costs more than a full year of normal operating issues. Vacancy cost includes: lost rent, rates/taxes during void, security, utilities, and marketing. Every decision about lease renewals, tenant disputes, and maintenance investment must be weighed against vacancy cost.",
+      "topics": ["contract_renewals", "vendor_management"],
+      "confidence": 0.99,
+      "tags": ["vacancy_cost", "void_period", "opportunity_cost"]
+    },
+    {
+      "statement": "Incentives for lease renewal (rent-free periods, fit-out contributions, lower initial rent stepping up) are commercially normal and often less costly than a void period. A three-month rent-free period to secure a five-year lease at market rent is almost always more profitable than a three-month void searching for a tenant with no incentive.",
+      "topics": ["contract_renewals"],
+      "confidence": 0.97,
+      "tags": ["lease_incentives", "rent_free", "fit_out_contribution", "vacancy_vs_incentive"]
+    },
+    {
+      "statement": "Energy costs in commercial property typically represent 15-30% of total occupancy cost for tenants and are the second-largest controllable expense for landlords in common areas. Baseline measurement — submetering by floor, zone, or tenant — is the precondition for identifying savings. You cannot optimise what you cannot measure.",
+      "topics": ["energy_costs"],
+      "confidence": 0.98,
+      "tags": ["energy_baseline", "submetering", "occupancy_cost"]
+    },
+    {
+      "statement": "Building fabric insulation upgrades (roof, walls, windows) typically produce the highest energy cost reduction per pound invested for older properties. HVAC system optimization and controls upgrades (BMS/BAS) produce faster payback in newer properties with already good insulation. Energy audit results should sequence investment by payback period, not by visibility of the upgrade.",
+      "topics": ["energy_costs", "maintenance"],
+      "confidence": 0.97,
+      "tags": ["insulation", "HVAC", "BMS", "energy_audit", "payback_period"]
+    },
+    {
+      "statement": "LED lighting retrofit typically has a 2-4 year payback period and a 15-25 year lifespan, producing 50-70% reduction in lighting energy cost. It is consistently the fastest-payback energy improvement in commercial and residential properties. It should be the first energy efficiency intervention considered, before more complex and expensive measures.",
+      "topics": ["energy_costs"],
+      "confidence": 0.97,
+      "tags": ["LED_retrofit", "lighting_energy", "payback_period"]
+    },
+    {
+      "statement": "Half-hourly metering and time-of-use energy tariffs allow large commercial buildings to shift consumption away from peak periods (typically 4pm-7pm weekdays) and reduce demand charges. Automated building management systems (BMS) that pre-cool or pre-heat during off-peak periods can reduce energy bills by 10-20% with no comfort impact.",
+      "topics": ["energy_costs"],
+      "confidence": 0.96,
+      "tags": ["half_hourly_metering", "time_of_use", "demand_management", "BMS"]
+    },
+    {
+      "statement": "EPC (Energy Performance Certificate) ratings are now legally significant in letting decisions. In the UK, properties rated below E cannot legally be let to new or renewing commercial tenants (MEES regulations). The threshold is moving to C by 2027 and B by 2030. Buildings below the threshold have a non-lettable liability that must be priced into acquisition, investment, and lease decisions.",
+      "topics": ["energy_costs", "contract_renewals"],
+      "confidence": 0.97,
+      "tags": ["EPC", "MEES", "energy_rating", "minimum_energy_standard", "compliance"]
+    },
+    {
+      "statement": "Solar PV installation on commercial roofs typically achieves a 5-8 year payback in northern Europe and 3-5 years in southern Europe at current electricity prices. Battery storage combined with solar can further reduce grid dependency. Roof structural assessment must precede installation — older flat roofs may not support the panel weight without reinforcement.",
+      "topics": ["energy_costs"],
+      "confidence": 0.95,
+      "tags": ["solar_PV", "renewable_energy", "payback_period", "battery_storage"]
+    },
+    {
+      "statement": "Heat pumps for space heating and hot water have a coefficient of performance (COP) of 2.5-4.5 — they produce 2.5-4.5 units of heat per unit of electricity consumed. They are most cost-effective when replacing gas boilers in well-insulated buildings and when electricity costs relative to gas make the COP economically favourable. In poorly insulated buildings, insulation must precede heat pump installation.",
+      "topics": ["energy_costs", "maintenance"],
+      "confidence": 0.96,
+      "tags": ["heat_pump", "COP", "decarbonisation", "gas_replacement"]
+    },
+    {
+      "statement": "A vendor pre-qualification process evaluates contractors on: insurance coverage (public liability minimum £2-5M, employers' liability where applicable), relevant accreditations and certifications (Gas Safe, NICEIC, CHAS, Constructionline), references from comparable properties, and financial stability. Using unqualified contractors creates direct liability for the property owner for injury, property damage, and regulatory breaches.",
+      "topics": ["vendor_management"],
+      "confidence": 0.99,
+      "tags": ["contractor_prequalification", "insurance", "accreditation", "Gas_Safe", "NICEIC"]
+    },
+    {
+      "statement": "Preferred contractor frameworks — a pre-approved list of vendors with agreed rates and response time commitments — reduce procurement overhead, improve response reliability, and create volume leverage for better pricing. They require annual review: contractors whose performance has declined must be removed; new entrants with better value should be added.",
+      "topics": ["vendor_management"],
+      "confidence": 0.97,
+      "tags": ["preferred_vendor", "framework_agreement", "SLA", "procurement"]
+    },
+    {
+      "statement": "Maintenance contracts should be structured as: scope of service (what is covered), frequency (scheduled visits per year), response time commitments (emergency, urgent, routine), exclusions (what is not covered), and pricing basis (fixed annual fee vs. call-out rates). Contracts without explicit exclusions create disputes — contractors claim items are excluded; managers claim they are included.",
+      "topics": ["vendor_management"],
+      "confidence": 0.98,
+      "tags": ["maintenance_contract", "scope_of_service", "exclusions", "pricing"]
+    },
+    {
+      "statement": "Three-quote procurement for works above a threshold (typically £500-1000 for routine works, £5000+ for major works) is best practice and often contractually required by head leases and management agreements. Document all quotes received, the basis for selection, and any deviations from the lowest quote. Price is not always the correct selection criterion — response capability and quality track record matter.",
+      "topics": ["vendor_management"],
+      "confidence": 0.97,
+      "tags": ["three_quotes", "competitive_procurement", "selection_criteria"]
+    },
+    {
+      "statement": "Service charge disputes in multi-tenancy commercial and residential buildings are most commonly caused by: unexplained cost increases, lack of transparency on cost components, works carried out without prior notice, and costs that appear inconsistent with the building's actual condition. Annual service charge budgets and accounts with itemised breakdown, distributed to all tenants, prevent the majority of disputes.",
+      "topics": ["vendor_management", "tenant_issues"],
+      "confidence": 0.97,
+      "tags": ["service_charge", "transparency", "budget", "annual_accounts"]
+    },
+    {
+      "statement": "Planned major works (external repainting, roof replacement, lift refurbishment) require advance notice and Section 20 consultation with leaseholders in buildings subject to long leasehold law (England and Wales). Failure to comply with Section 20 caps the recovery of major works costs to £250 per leaseholder regardless of actual cost. The consultation process takes a minimum of three months.",
+      "topics": ["vendor_management", "maintenance"],
+      "confidence": 0.97,
+      "tags": ["Section_20", "leaseholder_consultation", "major_works", "cost_recovery"]
+    },
+    {
+      "statement": "Contractor payment terms should match cash flow realities: retention (typically 5%) held for 12 months after practical completion provides leverage to remedy defects. Releasing full payment immediately on completion removes the contractor's incentive to return for snagging. Retention is standard practice; waiving it requires a strong performance relationship.",
+      "topics": ["vendor_management"],
+      "confidence": 0.96,
+      "tags": ["retention", "defects_liability_period", "contractor_payment", "snagging"]
+    },
+    {
+      "statement": "Property management KPIs minimum set: average days to resolve maintenance defects (by priority), tenant satisfaction score (annual survey), void period rate (days vacant as % of available days), service charge variance (budget vs. actual), and energy consumption per square metre year-on-year. Without these five, performance management is subjective.",
+      "topics": ["maintenance", "energy_costs"],
+      "confidence": 0.97,
+      "tags": ["KPIs", "performance_management", "property_metrics"]
+    },
+    {
+      "statement": "Planned preventive maintenance budgets for commercial buildings should be calculated at 1-3% of building replacement cost per annum for well-maintained properties; older or higher-specification buildings may require 3-5%. Budgets below 1% indicate deferred maintenance accumulation. Building condition surveys (quinquennial at minimum) provide the evidence base for realistic budgeting.",
+      "topics": ["maintenance"],
+      "confidence": 0.96,
+      "tags": ["maintenance_budget", "replacement_cost_percentage", "condition_survey"]
+    },
+    {
+      "statement": "Asbestos management is a legal obligation for buildings constructed before 2000. An asbestos register identifying the location, type, and condition of any asbestos-containing materials (ACMs) must exist before any maintenance or refurbishment work commences. Contractors must be informed of ACM locations before starting work. Failure to manage asbestos is a criminal offence with unlimited fines.",
+      "topics": ["maintenance"],
+      "confidence": 0.99,
+      "tags": ["asbestos", "ACM", "asbestos_register", "compliance", "CDM"]
+    },
+    {
+      "statement": "Legionella risk assessment and a written water management scheme are legal requirements for all non-domestic premises in the UK (ACoP L8) and equivalent regulations across the EU. Hot water systems must be maintained above 60°C; cold water below 20°C; regular temperature testing, flushing of infrequently used outlets, and annual inspection must be documented. Legionella outbreaks without documented management create unlimited criminal liability.",
+      "topics": ["maintenance"],
+      "confidence": 0.99,
+      "tags": ["Legionella", "L8_ACoP", "water_management", "temperature_testing", "compliance"]
+    },
+    {
+      "statement": "Fire risk assessment is a legal requirement under the Regulatory Reform (Fire Safety) Order 2005 (England and Wales) and equivalent legislation. It must be reviewed annually and immediately after any material change to the building or occupancy. Responsible persons (property owners and managers) face unlimited fines and imprisonment for non-compliance that results in injury or death.",
+      "topics": ["maintenance"],
+      "confidence": 0.99,
+      "tags": ["fire_risk_assessment", "FSO_2005", "fire_safety", "responsible_person", "compliance"]
+    },
+    {
+      "statement": "Gas Safety Certificates (CP12) for residential lettings must be renewed annually in the UK. A new certificate must be provided to the tenant before they move in and within 28 days of each annual check. Without a valid CP12, landlords cannot serve a Section 21 'no fault' eviction notice and face criminal penalties. The same obligation exists for commercial gas appliances under CDM regulations.",
+      "topics": ["maintenance", "tenant_issues"],
+      "confidence": 0.99,
+      "tags": ["gas_safety_certificate", "CP12", "annual_inspection", "Section_21_block", "Gas_Safe"]
+    },
+    {
+      "statement": "Electrical Installation Condition Reports (EICR) are now mandatory for private residential lettings in England (every 5 years) and are best practice for commercial premises. An unsatisfactory EICR requires remedial works within 28 days. A tenant in a property with an overdue EICR can seek rent repayment orders in some jurisdictions.",
+      "topics": ["maintenance", "tenant_issues"],
+      "confidence": 0.98,
+      "tags": ["EICR", "electrical_inspection", "5_year_cycle", "compliance"]
+    },
+    {
+      "statement": "Refuse, recycling, and waste management failures are among the top complaints from commercial tenants and local authorities. Clear waste segregation signage, adequate bin provision per occupant, agreed collection schedules with the waste contractor, and a single named responsible person per floor or unit prevent the majority of waste management issues.",
+      "topics": ["tenant_issues", "vendor_management"],
+      "confidence": 0.95,
+      "tags": ["waste_management", "recycling", "waste_contractor", "tenant_obligations"]
+    },
+    {
+      "statement": "Building management systems (BMS) in large commercial properties control heating, cooling, ventilation, lighting, and access. BMS data — occupancy patterns, temperature trends, energy consumption — is a rich source of operational knowledge. Properties without a functioning BMS or with an unmonitored BMS are managing energy cost and maintenance blind.",
+      "topics": ["energy_costs", "maintenance"],
+      "confidence": 0.97,
+      "tags": ["BMS", "building_management_system", "operational_data", "HVAC_control"]
+    },
+    {
+      "statement": "Cyclical redecoration programs (interior and exterior) should be on a fixed schedule: residential common areas every 5-7 years, commercial common areas every 3-5 years, exterior every 7-10 years depending on exposure. Deferred redecoration creates accelerating costs — paint failure leads to substrate damage which leads to structural remediation. Redecoration is maintenance, not cosmetics.",
+      "topics": ["maintenance"],
+      "confidence": 0.96,
+      "tags": ["redecoration", "cyclical_maintenance", "exterior_maintenance", "paint"]
+    },
+    {
+      "statement": "Tenant satisfaction surveys, conducted annually, quantify the gap between landlord perception of performance and tenant experience. Properties with unsolicited complaints but no formal survey consistently underestimate tenant dissatisfaction. Survey data should feed directly into maintenance prioritisation and vendor performance reviews.",
+      "topics": ["tenant_issues"],
+      "confidence": 0.95,
+      "tags": ["tenant_satisfaction", "survey", "feedback_loop", "NPS"]
+    },
+    {
+      "statement": "Insurance reinstatement value (the cost to rebuild, not the market value) must be reviewed every three years at minimum, and revalued after any significant works. Under-insurance at the point of a total or partial loss claim means the insurer pays out pro-rata, not in full. Over-insurance wastes premium. An independent RICS reinstatement valuation is the only reliable basis for setting the insured sum.",
+      "topics": ["vendor_management"],
+      "confidence": 0.97,
+      "tags": ["reinstatement_value", "insurance", "under_insurance", "RICS_valuation"]
+    },
+    {
+      "statement": "Drone surveys of roofs, facades, and high-level areas are now standard practice for condition assessment. They eliminate scaffold or cherry picker hire for inspection (thousands saved per visit), produce photographic evidence with geolocation, and enable comparison between surveys. The cost barrier has dropped below £500 per survey for standard commercial properties.",
+      "topics": ["maintenance"],
+      "confidence": 0.95,
+      "tags": ["drone_survey", "roof_inspection", "facade_inspection", "condition_assessment"]
+    },
+    {
+      "statement": "The conversion rate of maintenance incidents to knowledge items is the key metric for property management learning. If the same boiler fault, roof leak pattern, or tenant complaint type recurs across multiple properties without being captured as a known pattern with a documented resolution, the organisation is paying to solve the same problem repeatedly. Incident-to-knowledge extraction is not automatic — it requires a deliberate review process.",
+      "topics": ["maintenance", "tenant_issues"],
+      "confidence": 0.98,
+      "tags": ["incident_to_knowledge", "pattern_extraction", "learning_organisation", "knowledge_management"]
+    }
+  ]
+}

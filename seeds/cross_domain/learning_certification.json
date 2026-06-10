@@ -1,0 +1,307 @@
+{
+  "pack": "learning_certification",
+  "version": "1.0.0",
+  "description": "How individuals and organizations plan, execute, and validate learning — learning science, knowledge maps, certification paths, and common failure modes for students, professionals, and trainers.",
+  "knowledge": [
+    {
+      "statement": "The spacing effect (Ebbinghaus) shows that distributing practice across time produces stronger long-term retention than massed practice. Reviewing material at increasing intervals — spaced repetition — is the single most evidence-backed technique for durable learning.",
+      "topics": ["learning_science", "memory"],
+      "confidence": 0.99,
+      "tags": ["spacing_effect", "spaced_repetition", "Ebbinghaus"]
+    },
+    {
+      "statement": "The testing effect (retrieval practice effect) demonstrates that actively recalling information from memory strengthens retention more than re-reading or re-watching the same material. Low-stakes self-testing and flashcards outperform passive review by a factor of two or more.",
+      "topics": ["learning_science", "memory"],
+      "confidence": 0.99,
+      "tags": ["testing_effect", "retrieval_practice", "active_recall"]
+    },
+    {
+      "statement": "Interleaving — mixing different topics or problem types within a single study session — produces better long-term transfer and discrimination than blocked practice (completing all problems of one type before moving to another), even though it feels harder in the moment.",
+      "topics": ["learning_science"],
+      "confidence": 0.98,
+      "tags": ["interleaving", "desirable_difficulties"]
+    },
+    {
+      "statement": "Desirable difficulties are learning conditions that slow acquisition and feel less productive but produce superior long-term retention and transfer. They include spacing, interleaving, retrieval practice, and generation (producing answers before being shown them). Ease of learning is not the same as depth of learning.",
+      "topics": ["learning_science"],
+      "confidence": 0.98,
+      "tags": ["desirable_difficulties", "Bjork"]
+    },
+    {
+      "statement": "The illusion of knowing (fluency illusion) causes learners to mistake familiarity with a topic for mastery. Re-reading produces fluency without retention. Metacognitive calibration — accurately judging what you know vs. what you merely recognize — is a learnable skill.",
+      "topics": ["learning_science", "metacognition"],
+      "confidence": 0.99,
+      "tags": ["illusion_of_knowing", "fluency_illusion", "metacognition"]
+    },
+    {
+      "statement": "Bloom's Taxonomy classifies cognitive learning into six levels: Remember, Understand, Apply, Analyze, Evaluate, Create. Most classroom instruction targets the bottom two levels; professional and certification learning requires reaching Apply and above. Knowing a fact is not the same as being able to use it.",
+      "topics": ["learning_plans", "learning_science"],
+      "confidence": 0.99,
+      "tags": ["Bloom_taxonomy", "cognitive_levels"]
+    },
+    {
+      "statement": "The Dreyfus model of skill acquisition defines five stages: Novice, Advanced Beginner, Competent, Proficient, Expert. Each stage requires different learning strategies. Novices need rules and examples; experts need cases and reflection. Applying expert methods to novices — or novice methods to experts — retards progress.",
+      "topics": ["learning_plans", "skill_acquisition"],
+      "confidence": 0.98,
+      "tags": ["Dreyfus_model", "skill_stages", "expertise"]
+    },
+    {
+      "statement": "Deliberate practice (Ericsson) is focused, goal-directed practice at the edge of current competence, with immediate feedback and specific error correction. It is distinct from naive practice (repetition without improvement intent). Hours of naive practice do not produce expertise; hours of deliberate practice do.",
+      "topics": ["skill_acquisition", "learning_plans"],
+      "confidence": 0.99,
+      "tags": ["deliberate_practice", "Ericsson"]
+    },
+    {
+      "statement": "The 10,000-hour rule (popularized by Gladwell from Ericsson's work) is widely misunderstood. The original research found 10,000 hours of deliberate practice in elite violinists, not any practice. Domain, quality of practice, and coaching all matter more than raw hours.",
+      "topics": ["skill_acquisition"],
+      "confidence": 0.97,
+      "tags": ["10000_hours", "deliberate_practice", "misconception"]
+    },
+    {
+      "statement": "Zone of Proximal Development (Vygotsky) is the range between what a learner can do independently and what they can do with guidance. Effective instruction and mentoring targets this zone — tasks that are challenging but achievable with support. Work below or far above the zone produces little learning.",
+      "topics": ["learning_plans", "learning_science"],
+      "confidence": 0.98,
+      "tags": ["ZPD", "Vygotsky", "scaffolding"]
+    },
+    {
+      "statement": "A learning plan must specify: the target competency and its level (Bloom/Dreyfus), the resources and activities to be used, the assessment method that will confirm achievement, and a realistic timeline. Plans without assessment criteria cannot be validated — the learner never knows when they are done.",
+      "topics": ["learning_plans"],
+      "confidence": 0.99,
+      "tags": ["learning_plan", "competency", "assessment"]
+    },
+    {
+      "statement": "Learning objectives should be written in SMART format for professional development: Specific (what exactly will be learned), Measurable (how mastery will be demonstrated), Achievable (within current constraints), Relevant (linked to a real work goal), Time-bound (by when).",
+      "topics": ["learning_plans"],
+      "confidence": 0.97,
+      "tags": ["SMART_objectives", "learning_objectives"]
+    },
+    {
+      "statement": "Prerequisite mapping is essential before designing a learning path. Attempting to learn concept B without mastering concept A produces confusion and false failure. A knowledge map (dependency graph) of prerequisites prevents learners from hitting invisible walls.",
+      "topics": ["knowledge_maps", "learning_plans"],
+      "confidence": 0.98,
+      "tags": ["prerequisite_mapping", "knowledge_graph", "dependency"]
+    },
+    {
+      "statement": "A knowledge map is a structured representation of what must be known, in what order, and how concepts relate. It serves as a curriculum skeleton, a diagnostic tool (find the gap), and a progress tracker. Without a map, learners over-study familiar areas and under-study unfamiliar ones.",
+      "topics": ["knowledge_maps"],
+      "confidence": 0.98,
+      "tags": ["knowledge_map", "curriculum_design", "concept_map"]
+    },
+    {
+      "statement": "Concept maps differ from mind maps in that they show labelled relationships between concepts (e.g., 'A causes B', 'A is a type of B'), not just associations. Labelled edges force precision and reveal gaps in understanding that association-only maps hide.",
+      "topics": ["knowledge_maps"],
+      "confidence": 0.96,
+      "tags": ["concept_map", "mind_map", "relationship_labels"]
+    },
+    {
+      "statement": "Spaced repetition systems (SRS) like Anki implement the spacing effect algorithmically. Cards due for review are shown at the optimal moment before forgetting occurs. SRS is most effective for declarative knowledge (facts, definitions, vocabulary) and less suited to procedural or contextual knowledge.",
+      "topics": ["learning_science", "tools"],
+      "confidence": 0.98,
+      "tags": ["SRS", "Anki", "spaced_repetition", "flashcards"]
+    },
+    {
+      "statement": "The Feynman Technique tests deep understanding by requiring the learner to explain a concept in simple language, as if teaching a novice. Gaps and vague areas become immediately apparent. It is a fast metacognitive diagnostic that forces generation over recognition.",
+      "topics": ["learning_science", "metacognition"],
+      "confidence": 0.97,
+      "tags": ["Feynman_technique", "explanation", "teaching_to_learn"]
+    },
+    {
+      "statement": "Certification exams test a defined body of knowledge (syllabus) at a specific level of competence. The most common failure mode is studying content outside the syllabus while underweighting high-frequency exam topics. Always anchor study to the official exam outline and past question distributions.",
+      "topics": ["certification_paths"],
+      "confidence": 0.99,
+      "tags": ["certification_exam", "syllabus", "exam_strategy"]
+    },
+    {
+      "statement": "Practice exams under realistic timed conditions are the highest-ROI preparation activity for certification. They expose knowledge gaps, train pacing, reduce test anxiety through familiarity, and mirror the retrieval conditions of the real exam.",
+      "topics": ["certification_paths"],
+      "confidence": 0.99,
+      "tags": ["practice_exams", "mock_exams", "exam_preparation"]
+    },
+    {
+      "statement": "Certification paths should be planned end-to-end before starting. Many certifications have prerequisites, recommended predecessors, and logical sequences (associate → professional → expert). Attempting an advanced certification before foundational ones wastes time and money.",
+      "topics": ["certification_paths"],
+      "confidence": 0.98,
+      "tags": ["certification_path", "prerequisites", "sequencing"]
+    },
+    {
+      "statement": "Certification maintenance requirements (continuing education, renewal exams, CPD credits) should be factored into the decision to pursue a certification. A credential that lapses due to neglected renewal is a sunk cost. Include maintenance overhead in the total cost of certification.",
+      "topics": ["certification_paths"],
+      "confidence": 0.97,
+      "tags": ["CPD", "certification_renewal", "maintenance_credits"]
+    },
+    {
+      "statement": "The half-life of technical knowledge in fast-moving fields (cloud, security, AI) is 2–5 years. Certifications in these fields may be outdated before they expire. Continuous learning through community engagement and hands-on practice matters more than re-certification alone.",
+      "topics": ["certification_paths", "knowledge_maps"],
+      "confidence": 0.96,
+      "tags": ["knowledge_decay", "technical_half_life", "continuous_learning"]
+    },
+    {
+      "statement": "Transfer of learning — applying knowledge learned in one context to a new context — is the ultimate goal of education but the hardest to achieve. Near transfer (similar context) comes more easily; far transfer (different domain) requires deep understanding of underlying principles, not surface-level pattern matching.",
+      "topics": ["learning_science"],
+      "confidence": 0.98,
+      "tags": ["transfer_of_learning", "near_transfer", "far_transfer"]
+    },
+    {
+      "statement": "Project-based learning anchors knowledge acquisition to a concrete deliverable. Learners encounter concepts in context, which improves retention and transfer. The project should be real or realistic — toy problems with no stakes produce less engagement and weaker encoding.",
+      "topics": ["learning_plans", "learning_science"],
+      "confidence": 0.97,
+      "tags": ["project_based_learning", "PBL", "contextual_learning"]
+    },
+    {
+      "statement": "Learning in public — writing blog posts, teaching others, contributing to open communities — dramatically accelerates skill development. Explaining forces precision; public accountability creates follow-through; community feedback surfaces blind spots faster than solo study.",
+      "topics": ["learning_plans", "skill_acquisition"],
+      "confidence": 0.96,
+      "tags": ["learning_in_public", "teaching", "community"]
+    },
+    {
+      "statement": "The most common mistake in self-directed learning is spending too much time in the comfortable zone of consuming content (videos, books) and too little in the uncomfortable zone of producing output (code, writing, practice problems). Consumption feels like learning but production is where learning consolidates.",
+      "topics": ["common_mistakes", "learning_plans"],
+      "confidence": 0.99,
+      "tags": ["consumption_vs_production", "passive_learning", "tutorial_hell"]
+    },
+    {
+      "statement": "Tutorial hell is the trap of following tutorial after tutorial without building anything independently. Each tutorial feels productive because it produces a working result, but the learner is executing, not problem-solving. Breaking out requires attempting projects without guidance before reaching for help.",
+      "topics": ["common_mistakes"],
+      "confidence": 0.98,
+      "tags": ["tutorial_hell", "self_directed_learning"]
+    },
+    {
+      "statement": "Overlearning — continuing to practice after reaching criterion performance — is beneficial for skills that must be executed under stress or time pressure (emergency procedures, public speaking, sport). For knowledge recall and conceptual understanding, time is better spent on new material once criterion is met.",
+      "topics": ["learning_science", "skill_acquisition"],
+      "confidence": 0.96,
+      "tags": ["overlearning", "criterion_performance"]
+    },
+    {
+      "statement": "The curse of expertise causes subject matter experts to systematically underestimate how long it takes novices to learn. Expert trainers must recalibrate their mental model of the novice experience by observing learners directly, not estimating from memory of their own learning.",
+      "topics": ["common_mistakes", "training_design"],
+      "confidence": 0.97,
+      "tags": ["curse_of_expertise", "expert_blind_spot", "trainer"]
+    },
+    {
+      "statement": "Kirkpatrick's Four Levels of Training Evaluation measure: (1) Reaction — did learners find it useful? (2) Learning — did they acquire the knowledge? (3) Behavior — are they applying it on the job? (4) Results — did it produce business outcomes? Most training evaluation stops at Level 1, the least informative level.",
+      "topics": ["training_design"],
+      "confidence": 0.98,
+      "tags": ["Kirkpatrick", "training_evaluation", "L1_L2_L3_L4"]
+    },
+    {
+      "statement": "70-20-10 model of learning suggests professionals develop skills through: 70% on-the-job experience (challenging assignments, stretch roles), 20% social learning (coaching, mentoring, peer feedback), and 10% formal training (courses, certifications). Formal training alone cannot produce competence without supported practice.",
+      "topics": ["training_design", "learning_plans"],
+      "confidence": 0.95,
+      "tags": ["70_20_10", "experiential_learning", "social_learning"]
+    },
+    {
+      "statement": "Cognitive load theory (Sweller) distinguishes intrinsic load (complexity of the material itself), extraneous load (complexity from poor instructional design), and germane load (effort invested in building schemas). Good instructional design minimises extraneous load to free capacity for germane load.",
+      "topics": ["learning_science", "training_design"],
+      "confidence": 0.98,
+      "tags": ["cognitive_load", "Sweller", "schema_formation"]
+    },
+    {
+      "statement": "Worked examples are highly effective for novices because they reduce intrinsic and extraneous load simultaneously. As competence grows, the worked example effect reverses — experts learn better from problem-solving without worked examples (expertise reversal effect).",
+      "topics": ["learning_science", "training_design"],
+      "confidence": 0.97,
+      "tags": ["worked_examples", "expertise_reversal", "novice_expert"]
+    },
+    {
+      "statement": "Feedback must be timely, specific, and actionable to improve performance. Delayed feedback (results days after practice) is dramatically less effective than immediate feedback. Feedback that says 'wrong' without explaining why is useless for correction.",
+      "topics": ["learning_science", "skill_acquisition"],
+      "confidence": 0.99,
+      "tags": ["feedback", "formative_assessment", "immediacy"]
+    },
+    {
+      "statement": "Formative assessment (ongoing checks for understanding during learning) is more effective at improving outcomes than summative assessment (final evaluation). Regular low-stakes quizzes that inform instruction produce larger learning gains than rare high-stakes exams alone.",
+      "topics": ["training_design", "certification_paths"],
+      "confidence": 0.98,
+      "tags": ["formative_assessment", "summative_assessment", "low_stakes_testing"]
+    },
+    {
+      "statement": "Learning modality myths (visual/auditory/kinesthetic) have no empirical support. Matching 'learning styles' to instructional format does not improve outcomes. What does matter is matching the instructional method to the content type: motor skills need physical practice, spatial knowledge benefits from diagrams, verbal reasoning benefits from worked text.",
+      "topics": ["common_mistakes", "learning_science"],
+      "confidence": 0.97,
+      "tags": ["learning_styles_myth", "VARK", "misconception"]
+    },
+    {
+      "statement": "Multitasking during learning — taking a course while checking messages — does not save time; it fragments attention and prevents encoding. Deep work (Newport) — uninterrupted focused study — produces more learning per hour than the same hours fragmented across tasks.",
+      "topics": ["common_mistakes", "learning_plans"],
+      "confidence": 0.98,
+      "tags": ["multitasking", "deep_work", "attention", "Newport"]
+    },
+    {
+      "statement": "Note-taking by hand produces stronger retention than typing, even though typed notes capture more content. Handwriting forces processing and paraphrasing; typing enables verbatim transcription, which is passive. The act of generating a summary in your own words is the learning event.",
+      "topics": ["learning_science"],
+      "confidence": 0.95,
+      "tags": ["handwriting", "note_taking", "Mueller_Oppenheimer"]
+    },
+    {
+      "statement": "Sleep is a non-negotiable component of memory consolidation. Declarative memories are replayed and consolidated during slow-wave sleep; procedural memories during REM sleep. Studying late at night and sacrificing sleep for more study time is counterproductive — the material encoded without sleep consolidation is largely lost.",
+      "topics": ["learning_science", "common_mistakes"],
+      "confidence": 0.99,
+      "tags": ["sleep", "memory_consolidation", "cramming"]
+    },
+    {
+      "statement": "Cramming (massed practice immediately before an exam) produces short-term performance but negligible long-term retention. Information crammed the night before is largely forgotten within a week. Spaced study over weeks produces the same exam score with far superior long-term retention.",
+      "topics": ["common_mistakes", "learning_science"],
+      "confidence": 0.99,
+      "tags": ["cramming", "massed_practice", "short_term_retention"]
+    },
+    {
+      "statement": "The generation effect shows that generating an answer (even an incorrect one) before being shown the correct answer produces stronger memory for the correct answer than simply reading it. Pre-testing on new material improves subsequent learning even when initial answers are wrong.",
+      "topics": ["learning_science"],
+      "confidence": 0.97,
+      "tags": ["generation_effect", "pre_testing", "productive_failure"]
+    },
+    {
+      "statement": "Productive failure (Kapur) is an instructional design technique where learners attempt a problem with insufficient knowledge before instruction. The struggle activates prior knowledge, surfaces misconceptions, and prepares the brain to encode the correct solution more deeply.",
+      "topics": ["learning_science", "training_design"],
+      "confidence": 0.96,
+      "tags": ["productive_failure", "Kapur", "struggle_first"]
+    },
+    {
+      "statement": "Common certification failure modes: studying from unofficial or outdated materials, neglecting exam-specific question formats (scenario-based, drag-and-drop), underestimating time per question, not reviewing incorrect practice answers in depth, and failing to rest adequately before the exam.",
+      "topics": ["common_mistakes", "certification_paths"],
+      "confidence": 0.98,
+      "tags": ["exam_failure", "certification_mistakes"]
+    },
+    {
+      "statement": "Learner motivation follows Self-Determination Theory (Deci & Ryan): intrinsic motivation (autonomy, competence, relatedness) produces deeper engagement and retention than extrinsic motivation (grades, compliance requirements). Learning that is perceived as chosen rather than imposed persists longer.",
+      "topics": ["learning_science", "learning_plans"],
+      "confidence": 0.97,
+      "tags": ["motivation", "SDT", "intrinsic_motivation", "Deci_Ryan"]
+    },
+    {
+      "statement": "Imposter syndrome disproportionately affects high performers and learners entering new fields. It causes under-claiming of competence, avoidance of stretch opportunities, and chronic anxiety about being 'found out'. Recognising it and normalising it through community reduces its inhibiting effect on learning progression.",
+      "topics": ["common_mistakes", "skill_acquisition"],
+      "confidence": 0.96,
+      "tags": ["imposter_syndrome", "self_efficacy"]
+    },
+    {
+      "statement": "Social learning (Bandura) occurs through observation, imitation, and modelling. Watching an expert perform a task — especially with narrated reasoning — produces learning that pure text instruction cannot replicate. Apprenticeship, pair programming, and clinical observation are social learning mechanisms.",
+      "topics": ["learning_science", "training_design"],
+      "confidence": 0.97,
+      "tags": ["social_learning", "Bandura", "modelling", "apprenticeship"]
+    },
+    {
+      "statement": "A personal knowledge management (PKM) system externalizes the learner's growing knowledge base — notes, connections, questions, and references — outside their biological memory. Systems like Zettelkasten, Obsidian, or Notion reduce cognitive load and enable non-linear connection-making across domains.",
+      "topics": ["knowledge_maps", "learning_plans"],
+      "confidence": 0.96,
+      "tags": ["PKM", "Zettelkasten", "second_brain", "note_taking_system"]
+    },
+    {
+      "statement": "Certification value varies significantly by domain, employer, and career stage. In some fields (cloud, project management, compliance) certifications are table-stakes for hiring; in others (software engineering, design) portfolio and demonstrated output outweigh credentials. Research the target employer's actual requirements before investing in certification.",
+      "topics": ["certification_paths"],
+      "confidence": 0.97,
+      "tags": ["certification_ROI", "credential_value", "hiring"]
+    },
+    {
+      "statement": "Microlearning — brief, focused learning units of 3–10 minutes — suits performance support (looking up a procedure at the moment of need) better than skill development. Deep expertise requires extended engagement that microlearning cannot substitute, but microlearning can effectively reinforce and refresh previously learned concepts.",
+      "topics": ["training_design", "learning_plans"],
+      "confidence": 0.95,
+      "tags": ["microlearning", "performance_support", "learning_design"]
+    },
+    {
+      "statement": "The most persistent misconception among trainers is that delivering content is the same as producing learning. Instruction produces exposure; practice, feedback, and reflection produce learning. A trainer's primary job is engineering the conditions for the learner to do the work, not doing the work for them.",
+      "topics": ["common_mistakes", "training_design"],
+      "confidence": 0.99,
+      "tags": ["trainer_misconception", "active_learning", "instructional_design"]
+    }
+  ]
+}

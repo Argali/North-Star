@@ -1,0 +1,301 @@
+{
+  "pack": "proposal_writing",
+  "version": "1.0.0",
+  "description": "Proposal writing knowledge for consultants, freelancers, agencies, and SMEs — structures, scope definitions, pricing models, risk clauses, and the Fixed Price vs Time & Material decision.",
+  "knowledge": [
+    {
+      "statement": "The executive summary is the most-read section of any proposal and often the only section read by decision-makers. It must answer four questions on one page: what problem are we solving, how are we solving it, why are we the right partner, and what does it cost. Proposals where the executive summary is unclear about value fail at the first read, regardless of technical quality.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.99,
+      "tags": ["executive_summary", "decision_maker", "value_proposition"]
+    },
+    {
+      "statement": "A winning proposal structure follows the client's logic, not the supplier's organisational structure. Organise content around: the client's problem as they stated it, the proposed solution, the evidence you can deliver it, the commercial terms, and next steps. Proposals organised around the supplier's capabilities rather than the client's problem signal poor listening.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.98,
+      "tags": ["proposal_structure", "client_centric", "problem_solution"]
+    },
+    {
+      "statement": "A proposal without a clear problem statement is a solution looking for a problem. Before writing, the proposer must be able to articulate: what the client's current state is, what pain that causes, what the desired future state is, and why the client cannot get there alone. If any of these is unclear, more discovery is needed before writing begins.",
+      "topics": ["scope_definitions"],
+      "confidence": 0.99,
+      "tags": ["problem_statement", "discovery", "current_state", "desired_state"]
+    },
+    {
+      "statement": "Scope definition is the highest-risk activity in proposal writing. Under-scoped proposals win on price but lose on delivery — the work costs more than quoted and either the margin is destroyed or quality is cut. The scope must specify: what is included (deliverables, activities), what is explicitly excluded, the assumptions that make the estimate valid, and the conditions under which the scope changes.",
+      "topics": ["scope_definitions"],
+      "confidence": 0.99,
+      "tags": ["scope_definition", "deliverables", "exclusions", "assumptions"]
+    },
+    {
+      "statement": "Out-of-scope items must be named explicitly in proposals, not just absent from the scope list. Clients default to assuming everything is included unless told otherwise. A scope statement that does not name common adjacent activities (e.g., 'data migration is out of scope', 'training of end users is out of scope') will generate disputes and change requests post-award.",
+      "topics": ["scope_definitions"],
+      "confidence": 0.98,
+      "tags": ["out_of_scope", "explicit_exclusions", "change_requests", "disputes"]
+    },
+    {
+      "statement": "Assumptions documented in a proposal serve a dual purpose: they make the estimate valid, and they transfer risk back to the client if the assumption proves false. Each assumption should be written in the form 'We have assumed X; if X is not true, we reserve the right to revise scope and cost.' Assumptions without a stated consequence are useless.",
+      "topics": ["scope_definitions", "risk_clauses"],
+      "confidence": 0.98,
+      "tags": ["assumptions", "risk_transfer", "estimate_validity"]
+    },
+    {
+      "statement": "Fixed Price (FP) contracts transfer cost risk to the supplier in exchange for price certainty for the client. They are appropriate when: the scope is fully defined, requirements are stable, the supplier has done comparable work and can estimate with confidence, and the client's primary need is budget certainty. Offering FP on poorly-defined scope is a high-risk decision that frequently produces disputes or losses.",
+      "topics": ["pricing_models"],
+      "confidence": 0.99,
+      "tags": ["fixed_price", "cost_risk", "scope_certainty", "budget_certainty"]
+    },
+    {
+      "statement": "Time & Material (T&M) contracts transfer cost risk to the client in exchange for flexibility. They are appropriate when: scope is exploratory or subject to change, the client wants to direct effort day-to-day, or the engagement is a discovery or research phase. T&M without a not-to-exceed (NTE) cap gives the client unlimited liability and is rarely accepted; always include a cap or regular budget checkpoints.",
+      "topics": ["pricing_models"],
+      "confidence": 0.99,
+      "tags": ["time_and_material", "T&M", "NTE", "cost_flexibility", "not_to_exceed"]
+    },
+    {
+      "statement": "The Fixed Price vs T&M decision turns on one question: who knows more about what the work will actually require — the supplier or the client? If the supplier knows (defined technology, standard process, comparable past work), FP is appropriate. If the client knows (undocumented systems, evolving requirements, experimental work), T&M is appropriate. Scope certainty, not preferred commercial model, should drive the decision.",
+      "topics": ["pricing_models"],
+      "confidence": 0.99,
+      "tags": ["FP_vs_TM", "pricing_decision", "scope_certainty", "risk_allocation"]
+    },
+    {
+      "statement": "Retainer pricing — a fixed monthly fee for a defined level of access and effort — suits ongoing advisory, maintenance, or fractional resource engagements. Retainers create revenue predictability for the supplier and cost predictability for the client. They erode in value when the client under-uses the retainer (they pay for unused capacity) or over-uses it (the supplier delivers more than priced). Clear definition of what the retainer covers avoids both failure modes.",
+      "topics": ["pricing_models"],
+      "confidence": 0.96,
+      "tags": ["retainer", "monthly_fee", "fractional", "ongoing_engagement"]
+    },
+    {
+      "statement": "Value-based pricing sets the price based on the value delivered to the client, not the cost of delivery. It is appropriate when the outcome has a clear, measurable financial impact (e.g., 'this system will save you £500k/year'). Value-based proposals must quantify the client's problem in financial terms first, then propose a price that is a fraction of the value. It requires confidence and discovery quality; it cannot be applied to poorly-understood engagements.",
+      "topics": ["pricing_models"],
+      "confidence": 0.96,
+      "tags": ["value_based_pricing", "ROI", "outcome_pricing", "quantified_value"]
+    },
+    {
+      "statement": "Project estimation for Fixed Price proposals requires three distinct estimates: a best-case (minimal complexity), a most-likely (expected complexity), and a worst-case (maximum risk). The proposal price should be anchored to the most-likely estimate plus a risk contingency, not the best-case. Proposals priced at best-case assume everything goes right — and in complex projects, it rarely does.",
+      "topics": ["project_estimations"],
+      "confidence": 0.99,
+      "tags": ["three_point_estimation", "PERT", "contingency", "risk_buffer"]
+    },
+    {
+      "statement": "PERT estimation calculates a weighted average: (Optimistic + 4×Most Likely + Pessimistic) / 6. It produces a single estimate that weights the most likely outcome while acknowledging variance. It is more accurate than single-point estimates and appropriate for proposals where the client needs a confident single number. The standard deviation ((Pessimistic - Optimistic) / 6) quantifies the uncertainty.",
+      "topics": ["project_estimations"],
+      "confidence": 0.97,
+      "tags": ["PERT", "weighted_estimate", "standard_deviation", "variance"]
+    },
+    {
+      "statement": "Estimation by analogy — using data from completed similar projects — is more accurate than bottom-up estimation from scratch for most proposals. Every consulting firm and agency should maintain an estimation database: actual vs. estimated hours by project type, phase, and complexity level. Teams without historical data are condemned to repeat the same estimation errors.",
+      "topics": ["project_estimations"],
+      "confidence": 0.98,
+      "tags": ["analogous_estimation", "historical_data", "estimation_accuracy", "lessons_learned"]
+    },
+    {
+      "statement": "The planning fallacy (Kahneman) is the systematic human tendency to underestimate task duration and cost while overestimating benefits. It persists even when people know about it. Mitigation: reference class forecasting (look at how long similar projects actually took, not how long this one feels like it should take). Proposals built on reference-class data beat proposals built on inside-view optimism.",
+      "topics": ["project_estimations"],
+      "confidence": 0.97,
+      "tags": ["planning_fallacy", "reference_class_forecasting", "Kahneman", "optimism_bias"]
+    },
+    {
+      "statement": "A limitation of liability clause caps the supplier's total liability under the contract, typically at the contract value or a multiple of it. Without a liability cap, a consulting firm earning £50k on a project could face unlimited liability if the client suffers a large consequential loss. Liability caps, mutual indemnities, and consequential loss exclusions are non-negotiable standard terms for professional services.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.99,
+      "tags": ["liability_cap", "limitation_of_liability", "consequential_loss", "indemnity"]
+    },
+    {
+      "statement": "Intellectual property ownership in proposals must be defined before signature. Default law in most jurisdictions gives IP in deliverables to the creator (the supplier), not the commissioner. Clients frequently assume they own everything they paid for. The proposal or contract must specify: who owns the deliverables, what pre-existing IP the supplier brings, what licence the client receives, and any exclusivity terms.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.98,
+      "tags": ["IP_ownership", "work_product", "pre_existing_IP", "licence"]
+    },
+    {
+      "statement": "Change control clauses define how scope changes are identified, priced, and approved. A Fixed Price contract without a change control process is not fixed price — it is a negotiation waiting to happen. The clause must specify: what constitutes a change, how changes are raised (written Change Request), how they are priced (time + cost), and what happens if the client rejects the change pricing.",
+      "topics": ["risk_clauses", "scope_definitions"],
+      "confidence": 0.99,
+      "tags": ["change_control", "variation_order", "change_request", "scope_creep"]
+    },
+    {
+      "statement": "Force majeure clauses excuse performance when extraordinary events outside both parties' control make it impossible. Post-COVID, clients scrutinise force majeure more carefully. Key points: define the triggering events specifically (not just 'acts of God'), specify what happens to payments during force majeure (usually suspended), and set a maximum duration before either party can terminate.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.96,
+      "tags": ["force_majeure", "impossibility", "performance_excuse", "termination_right"]
+    },
+    {
+      "statement": "Acceptance criteria — the conditions under which a deliverable is formally accepted — must be defined in the proposal or contract, not left to the client's discretion at delivery. Vague acceptance language ('to the client's satisfaction') gives the client unlimited veto power over payment. Acceptance criteria should be objective, measurable, and agreed before work begins.",
+      "topics": ["risk_clauses", "scope_definitions"],
+      "confidence": 0.99,
+      "tags": ["acceptance_criteria", "sign_off", "deliverable_acceptance", "payment_trigger"]
+    },
+    {
+      "statement": "Payment milestone structure in Fixed Price proposals should link payments to deliverable acceptance, not calendar dates. Typical structure: 30% on signature (mobilisation), 40% on mid-project milestone acceptance, 30% on final acceptance. Front-loading payment reduces the supplier's working capital risk; back-loading creates leverage for the client to withhold payment over disagreements. The structure should reflect actual cost timing.",
+      "topics": ["pricing_models", "risk_clauses"],
+      "confidence": 0.97,
+      "tags": ["payment_milestones", "payment_structure", "mobilisation_payment", "final_payment"]
+    },
+    {
+      "statement": "The win rate of proposals is the primary metric of proposal quality. If win rate is below 30%, either qualification (bidding on unsuitable opportunities) or proposal quality is failing. If win rate is above 80%, the firm is probably under-bidding. Tracking win/loss reasons — not just outcomes — is the feedback mechanism that improves future proposals.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.97,
+      "tags": ["win_rate", "win_loss_analysis", "proposal_quality", "bid_qualification"]
+    },
+    {
+      "statement": "Bid/no-bid qualification prevents wasting proposal effort on unwinnable opportunities. Qualification criteria: Is the relationship warm enough? Does the solution fit? Is the timeline realistic? Is the margin acceptable? Is there a competitive advantage? Bidding on every opportunity dilutes proposal quality and inflates cost of sale. A disciplined no-bid decision is often more valuable than a weak proposal.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.97,
+      "tags": ["bid_no_bid", "qualification", "opportunity_assessment", "cost_of_sale"]
+    },
+    {
+      "statement": "Social proof — case studies, testimonials, and references — is the most persuasive element of a services proposal because it replaces the client's uncertainty about capability with evidence. Case studies must be specific: the client's problem, the approach taken, and the measurable outcome. Generic capability statements ('we have 20 years of experience') are weak compared to specific past results.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.98,
+      "tags": ["social_proof", "case_studies", "testimonials", "credibility"]
+    },
+    {
+      "statement": "A rate card proposal — listing day rates by role without scoping the work — puts all the risk on the client and signals that the supplier hasn't done the discovery required to scope the work. Clients with budget scrutiny and governance requirements will reject rate-only proposals. The minimum viable proposal includes scope, estimated effort by role and phase, and a total cost derived from the estimate.",
+      "topics": ["pricing_models", "scope_definitions"],
+      "confidence": 0.97,
+      "tags": ["rate_card", "effort_estimate", "scoped_proposal", "minimum_viable"]
+    },
+    {
+      "statement": "Proposal templates create consistency and reduce writing time but produce generic proposals that lose to tailored ones. The solution is a modular library: reusable boilerplate blocks (methodology, team bios, terms) combined with client-specific problem framing and scope. The client-specific sections should always be written fresh from the discovery notes, not copied from a previous proposal.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.96,
+      "tags": ["proposal_template", "modular_library", "boilerplate", "customisation"]
+    },
+    {
+      "statement": "A proposal knowledge base should capture, for each closed proposal: the opportunity description, the pricing model chosen, the win/loss outcome, the client objections raised, and the key differentiator that won or lost the deal. This data compounds: each proposal improves the next. Without it, every proposal team starts from institutional zero.",
+      "topics": ["proposal_structures", "project_estimations"],
+      "confidence": 0.99,
+      "tags": ["proposal_knowledge_base", "win_loss", "lessons_learned", "intelligence"]
+    },
+    {
+      "statement": "Procurement-compliant proposals (for public sector or large enterprise tenders) must follow the question structure and word limits set by the client — not the supplier's preferred proposal structure. Deviating from the required format, even with excellent content, is grounds for disqualification. The client's evaluation grid is the proposal outline.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.98,
+      "tags": ["procurement_compliance", "tender_format", "evaluation_grid", "public_sector"]
+    },
+    {
+      "statement": "Pricing psychology affects proposal perception. Three-option pricing (good/better/best) anchors the client to the middle option, which is typically the one the supplier wants to sell. Presenting a very high option first makes the preferred option feel reasonable by comparison. Itemised pricing ('price per component') invites clients to remove items and negotiate on each line; packaged pricing ('one price for the complete solution') is harder to negotiate down.",
+      "topics": ["pricing_models"],
+      "confidence": 0.95,
+      "tags": ["pricing_psychology", "anchoring", "three_option", "packaged_pricing"]
+    },
+    {
+      "statement": "Proposal review before submission should be done by someone who did not write it. The author is blind to their own assumptions and gaps. A fresh reader will find: sections the client's question was not answered, assumptions stated as facts, scope items left ambiguous, and grammatical or numerical errors. For large proposals, a formal red team review — reviewers playing the role of the client evaluating objectively — is best practice.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.97,
+      "tags": ["proposal_review", "red_team", "peer_review", "quality_check"]
+    },
+    {
+      "statement": "Exclusivity and non-compete clauses in consulting proposals protect the client's investment but restrict the supplier's freedom. A clause requiring the supplier not to work for competitors for the engagement duration must be compensated — either in price or by limiting the restriction narrowly (specific named competitors only, defined geography, limited duration). Broad non-competes in consulting contracts are often unenforceable but always expensive to litigate.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.93,
+      "tags": ["exclusivity", "non_compete", "restriction", "enforceability"]
+    },
+    {
+      "statement": "Pilot or proof-of-concept (PoC) proposals reduce client risk at the cost of supplier effort. A well-structured pilot: has defined success criteria agreed before start, uses a representative sample of the real problem, produces a report that makes the case for full engagement, and is priced to cover supplier cost while feeling low-risk to the client. Free pilots that are not gated on success criteria give away work without creating commitment.",
+      "topics": ["proposal_structures", "pricing_models"],
+      "confidence": 0.95,
+      "tags": ["pilot", "proof_of_concept", "PoC", "success_criteria", "low_risk_entry"]
+    },
+    {
+      "statement": "Proposal validity periods — the window during which the quoted price holds — protect suppliers from cost inflation and resource unavailability. Standard validity is 30–90 days depending on complexity. A proposal with no stated validity period creates indefinite price commitment; the client can accept it 18 months later and hold the supplier to the original price.",
+      "topics": ["pricing_models", "risk_clauses"],
+      "confidence": 0.96,
+      "tags": ["proposal_validity", "price_hold", "validity_period", "acceptance_deadline"]
+    },
+    {
+      "statement": "Governing law and dispute resolution clauses define which jurisdiction's law applies and how disputes are resolved (litigation, arbitration, mediation). For international engagements, agreeing governing law in advance avoids jurisdictional battles that cost more than most disputes. Neutral arbitration (ICC, LCIA) is preferred over litigation for cross-border professional services contracts.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.95,
+      "tags": ["governing_law", "dispute_resolution", "arbitration", "jurisdiction", "ICC"]
+    },
+    {
+      "statement": "The cover letter or introductory message of a proposal should be personalised to the specific individual, not addressed generically. It should reference the conversation or RFP, confirm understanding of the key issue, and state the core value proposition in two or three sentences. A generic 'please find attached our proposal' cover letter signals the proposal inside is equally generic.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.96,
+      "tags": ["cover_letter", "personalisation", "first_impression"]
+    },
+    {
+      "statement": "Warranty and defect periods in deliverable-based proposals define how long the supplier will fix defects at no extra charge after acceptance. Standard practice for software: 30–90 days. Without a defined warranty period, every post-delivery fix is a new commercial conversation. Warranty scope must also be defined: fixes to the agreed spec only, not enhancements or changes in requirements.",
+      "topics": ["risk_clauses", "scope_definitions"],
+      "confidence": 0.96,
+      "tags": ["warranty", "defect_period", "post_delivery_support", "bug_fix"]
+    },
+    {
+      "statement": "Proposal follow-up cadence after submission separates proactive suppliers from passive ones. Best practice: acknowledge submission with a brief message; follow up 3–5 business days later to confirm receipt and offer to answer questions; request a presentation or clarification meeting. Clients who go silent after proposal submission are either still evaluating or have mentally decided — the follow-up call reveals which.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.95,
+      "tags": ["proposal_follow_up", "pipeline_management", "sales_cadence"]
+    },
+    {
+      "statement": "Discovery calls before writing a proposal are not optional for complex engagements — they are the investment that makes the proposal accurate. Key discovery questions: What triggered this project now? What have you already tried? Who is the economic buyer? What does success look like in 12 months? What will happen if you don't solve this? What's your timeline and budget range? Proposals written without these answers are informed guesses.",
+      "topics": ["scope_definitions", "proposal_structures"],
+      "confidence": 0.99,
+      "tags": ["discovery", "qualification_questions", "economic_buyer", "sales_discovery"]
+    },
+    {
+      "statement": "Subcontractor and resource commitment statements in proposals must be honest. Naming senior practitioners in the proposal and delivering junior staff is a client trust issue — and in some frameworks a breach of contract. If named individuals are not guaranteed, qualify their involvement explicitly ('subject to availability at project start') or do not name them.",
+      "topics": ["risk_clauses", "proposal_structures"],
+      "confidence": 0.97,
+      "tags": ["subcontractors", "named_resources", "CVs", "bait_and_switch"]
+    },
+    {
+      "statement": "Milestone-based Fixed Price contracts reduce risk for both parties more than a single lump-sum contract. Milestones allow early detection of scope creep, create natural checkpoints for course correction, and align payment to verified progress. A single final payment contract maximises dispute risk — the client withholds payment over any disagreement about the final deliverable.",
+      "topics": ["pricing_models", "scope_definitions"],
+      "confidence": 0.97,
+      "tags": ["milestone_contract", "phased_payment", "lump_sum", "progress_payment"]
+    },
+    {
+      "statement": "Proposal knowledge compounds when captured systematically. After every proposal close (win or loss), record: the scope defined, the pricing model chosen, the actual hours vs estimated, the objections encountered, and the closing factor. Over 20–30 proposals, patterns emerge — which scope assumptions are consistently wrong, which pricing models win in which client segments, which objections need better answers.",
+      "topics": ["proposal_structures", "project_estimations"],
+      "confidence": 0.99,
+      "tags": ["knowledge_capture", "proposal_intelligence", "estimation_improvement"]
+    },
+    {
+      "statement": "Termination for convenience — the client's right to end the contract early without cause — is standard in most commercial contracts. Suppliers must ensure the clause includes adequate compensation: at minimum, payment for work done, reasonable notice period, and recovery of committed costs (subcontractors, materials, travel). A termination for convenience clause with no compensation mechanism is an option for the client to walk away for free.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.97,
+      "tags": ["termination_for_convenience", "early_termination", "compensation", "committed_costs"]
+    },
+    {
+      "statement": "Hybrid pricing models — part Fixed Price, part T&M — are often the optimal structure for complex projects with a defined core and an uncertain periphery. Example: FP for analysis and design phases (well-defined output), T&M with NTE cap for implementation (scope-dependent). Presenting hybrid models demonstrates pricing sophistication and reduces the client's perception of risk.",
+      "topics": ["pricing_models"],
+      "confidence": 0.96,
+      "tags": ["hybrid_pricing", "phase_based", "FP_TM_hybrid", "structured_engagement"]
+    },
+    {
+      "statement": "Proposal win knowledge must be captured before it is lost. After a win: ask the client what differentiated the proposal — their answer is usually specific and actionable. After a loss: request a debrief (many clients will give one if asked promptly). The reasons clients give for decisions are the most accurate signal available for improving proposal strategy.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.98,
+      "tags": ["win_debrief", "loss_debrief", "client_feedback", "proposal_improvement"]
+    },
+    {
+      "statement": "Confidentiality clauses in proposals protect both parties: the client's requirements (often commercially sensitive) and the supplier's methodology and pricing. Mutual NDAs before proposal discussions are standard for large engagements. Unilateral NDAs that bind only the supplier are common in RFP processes but carry no protection for the supplier's approach or IP.",
+      "topics": ["risk_clauses"],
+      "confidence": 0.95,
+      "tags": ["NDA", "confidentiality", "mutual_NDA", "RFP_protection"]
+    },
+    {
+      "statement": "The proposal length should match the complexity and value of the engagement. A £5k website project proposal should be 3–5 pages; a £2M transformation programme proposal might need 40–60 pages. Over-long proposals for small engagements signal process over substance; under-developed proposals for large engagements signal insufficient investment. Matching depth to stakes is itself a signal of commercial judgment.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.96,
+      "tags": ["proposal_length", "proportionality", "commercial_judgment"]
+    },
+    {
+      "statement": "Expenses and disbursements must be clearly addressed in proposals — either included in the price, excluded with a cap, or reimbursed at cost with receipts. Travel, accommodation, printing, and software licences are common sources of commercial disputes when not specified. 'Expenses at cost plus a reasonable management fee' is the minimum protection for the supplier.",
+      "topics": ["pricing_models", "scope_definitions"],
+      "confidence": 0.96,
+      "tags": ["expenses", "disbursements", "travel_costs", "reimbursement"]
+    },
+    {
+      "statement": "Proposals that address the client's internal stakeholder dynamics — not just the technical problem — win more often. The economic buyer (who signs), the technical evaluator (who scores), and the end user (who lives with the outcome) often have different priorities. A proposal that speaks to all three audiences — commercial value, technical quality, and user experience — beats one optimised for only one audience.",
+      "topics": ["proposal_structures"],
+      "confidence": 0.97,
+      "tags": ["stakeholder_mapping", "economic_buyer", "technical_buyer", "champion"]
+    },
+    {
+      "statement": "Performance bonds and parent company guarantees are financial instruments that back contractual performance. Public sector and large enterprise clients may require them for high-value contracts with smaller suppliers. They transfer insolvency risk from the client to a guarantor. For the supplier, they represent a real cost (bank or insurer fee) that must be factored into pricing.",
+      "topics": ["risk_clauses", "pricing_models"],
+      "confidence": 0.92,
+      "tags": ["performance_bond", "parent_guarantee", "financial_security", "insolvency_risk"]
+    }
+  ]
+}

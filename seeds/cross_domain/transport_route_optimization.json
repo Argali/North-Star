@@ -1,0 +1,289 @@
+{
+  "pack": "transport_route_optimization",
+  "version": "1.0.0",
+  "description": "Route planning, vehicle assignment, capacity utilization, and scheduling for transport and logistics operations — from the principles SMEs still run in Excel to the algorithms that replace them.",
+  "knowledge": [
+    {
+      "statement": "The Travelling Salesman Problem (TSP) asks for the shortest route visiting all stops exactly once. It is NP-hard — exact solutions become computationally infeasible beyond ~20 stops. Real-world routing uses heuristics (nearest neighbor, 2-opt, 3-opt) and metaheuristics (genetic algorithms, simulated annealing) that find near-optimal solutions fast enough to be actionable.",
+      "topics": ["route_planning"],
+      "confidence": 0.99,
+      "tags": ["TSP", "NP_hard", "heuristics", "optimization"]
+    },
+    {
+      "statement": "The Vehicle Routing Problem (VRP) extends TSP to multiple vehicles with capacity, time window, and depot constraints. Real fleets face the Capacitated VRP (CVRP), VRP with Time Windows (VRPTW), and the Multi-Depot VRP (MDVRP). Each constraint layer increases complexity significantly. Most commercial routing tools solve VRPTW variants.",
+      "topics": ["route_planning"],
+      "confidence": 0.99,
+      "tags": ["VRP", "CVRP", "VRPTW", "MDVRP", "fleet_routing"]
+    },
+    {
+      "statement": "Route clustering before sequencing produces better results at scale. First, group stops into geographically coherent clusters (one per vehicle), then sequence each cluster optimally. Attempting to optimize all stops across all vehicles simultaneously in one pass does not scale and produces worse solutions for large problems.",
+      "topics": ["route_planning"],
+      "confidence": 0.97,
+      "tags": ["cluster_first_route_second", "stop_clustering", "scalability"]
+    },
+    {
+      "statement": "Time window constraints are the most common source of route infeasibility in transport planning. Hard time windows (must arrive between A and B or the stop fails) impose strict sequencing. Soft time windows (a penalty applies if the window is missed) allow more flexible optimization. Distinguishing the two in the planning system is critical.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["time_windows", "hard_constraint", "soft_constraint", "infeasibility"]
+    },
+    {
+      "statement": "Empty kilometre (deadhead kilometre) is distance driven without load. It is pure cost with no revenue. Target empty km rate below 15% for dedicated distribution fleets; above 25% indicates poor route balance, incorrect depot placement, or missed backhaul opportunities. Tracking empty km is a precondition for route optimization.",
+      "topics": ["route_planning", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["empty_km", "deadhead", "backhaul", "cost_per_km"]
+    },
+    {
+      "statement": "Backhaul optimization uses outbound vehicles to collect return loads on the homeward leg. A vehicle that returns empty is a 100% empty km loss. Even partial backhaul loads improve utilization. Identifying backhaul opportunities requires visibility of both outbound and inbound freight flows simultaneously.",
+      "topics": ["route_planning", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["backhaul", "return_load", "utilization", "freight_exchange"]
+    },
+    {
+      "statement": "The 80/20 rule applies to stop density: roughly 20% of geographic zones typically account for 80% of delivery volume. Routes in high-density zones should be short and high-frequency; routes in low-density zones should be longer and consolidated. Treating all zones identically produces suboptimal frequency and cost.",
+      "topics": ["route_planning"],
+      "confidence": 0.95,
+      "tags": ["stop_density", "zone_analysis", "pareto", "frequency"]
+    },
+    {
+      "statement": "Fixed routes (static routing) serve predictable, recurring demand efficiently but cannot adapt to demand changes, driver absences, or vehicle breakdowns. Dynamic routing replans in real time based on actuals. Best practice is a hybrid: fixed route frameworks with dynamic adjustment windows for known disruptions.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["static_routing", "dynamic_routing", "hybrid_routing"]
+    },
+    {
+      "statement": "Traffic data integration is essential for realistic ETAs and time window compliance. Static maps without traffic produce plans that are technically optimal but operationally impossible. Time-of-day traffic profiles (morning peak, midday, evening peak) should be embedded in travel time matrices, not just straight-line distance.",
+      "topics": ["route_planning"],
+      "confidence": 0.98,
+      "tags": ["traffic", "ETA", "travel_time_matrix", "time_of_day"]
+    },
+    {
+      "statement": "Service time (dwell time at each stop) is frequently underestimated and is a major source of route plan failure. Service time includes: parking, unloading, customer signature, paperwork, and walking time. Measure actual service times by stop type and customer, and use empirical distributions rather than fixed estimates.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.99,
+      "tags": ["service_time", "dwell_time", "plan_accuracy", "stop_time"]
+    },
+    {
+      "statement": "Vehicle assignment must match vehicle capability to load requirements before optimizing route order. Constraints to check: payload weight, cargo volume (cube), temperature zone (chilled/ambient/frozen), vehicle height and width (bridge and dock restrictions), tail lift requirement, hazmat certification, and customer-specific vehicle preferences.",
+      "topics": ["vehicle_assignment"],
+      "confidence": 0.99,
+      "tags": ["vehicle_matching", "constraints", "payload", "temperature", "ADR"]
+    },
+    {
+      "statement": "Weight and volume constraints are independent and both binding. A vehicle may reach its payload weight limit before its cargo space is full (dense freight) or fill its cargo space before reaching the weight limit (light, bulky freight). Route planning must check both constraints simultaneously — checking only one produces illegal overloads or phantom capacity.",
+      "topics": ["vehicle_assignment", "capacity_utilization"],
+      "confidence": 0.99,
+      "tags": ["weight_volume", "dual_constraint", "overload", "cube_utilization"]
+    },
+    {
+      "statement": "Vehicle utilization rate (load factor) is the average payload carried as a percentage of maximum capacity, measured in weight or volume. Industry benchmarks: full truckload (FTL) operations target >90%; less-than-truckload (LTL) operations typically achieve 70-85%; urban distribution fleets often run 55-70%. Below 50% is a strong signal for route consolidation or fleet downsizing.",
+      "topics": ["capacity_utilization", "vehicle_assignment"],
+      "confidence": 0.96,
+      "tags": ["load_factor", "utilization_rate", "FTL", "LTL", "benchmarks"]
+    },
+    {
+      "statement": "Multi-temperature (combi) vehicles carry chilled, ambient, and frozen cargo simultaneously in separate compartments. They improve utilization by consolidating loads that would otherwise require separate vehicles, but they require strict loading order planning — items needed first at delivery must be loaded last.",
+      "topics": ["vehicle_assignment", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["multi_temperature", "combi_vehicle", "loading_order", "cold_chain"]
+    },
+    {
+      "statement": "Loading order planning (load sequencing) ensures that the first delivery stop is loaded last on the vehicle (LIFO — last in, first out). Ignoring loading order requires breaking and reloading at intermediate stops, destroying the time plan. For complex multi-stop loads, loading plans must be generated alongside route plans, not separately.",
+      "topics": ["vehicle_assignment", "route_planning"],
+      "confidence": 0.99,
+      "tags": ["loading_order", "LIFO", "load_sequencing", "break_bulk"]
+    },
+    {
+      "statement": "Fleet sizing should be based on demand distribution, not peak demand alone. Sizing the owned fleet to meet average daily demand and covering peaks with subcontracted capacity (3PL spot market) typically produces lower total cost than owning a fleet sized for peak. The owned fleet becomes the baseload; contracted vehicles cover peaks.",
+      "topics": ["vehicle_assignment", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["fleet_sizing", "peak_demand", "3PL", "baseload", "spot_market"]
+    },
+    {
+      "statement": "Driver hours regulations (EU Regulation 561/2006 and equivalent national rules) set hard legal limits: maximum 9 hours driving per day (extendable to 10 hours twice weekly), maximum 4.5 hours before a 45-minute break, maximum 56 hours driving per week, maximum 90 hours per two-week period. Route plans that violate these limits are illegal and unexecutable — compliance must be checked before dispatch.",
+      "topics": ["scheduling"],
+      "confidence": 0.99,
+      "tags": ["HOS", "EU_561_2006", "drivers_hours", "tachograph", "compliance"]
+    },
+    {
+      "statement": "Shift planning must account for non-driving time: pre-trip inspection, vehicle loading/unloading, breaks, return to depot, and post-trip administration. A driver with a 10-hour shift does not have 10 hours of driving time. Typical non-driving overhead is 1.5–2.5 hours per shift depending on operation type.",
+      "topics": ["scheduling"],
+      "confidence": 0.98,
+      "tags": ["shift_planning", "non_driving_time", "pre_trip", "overhead"]
+    },
+    {
+      "statement": "Overtime costs in transport are disproportionately high due to the combination of driver wage premiums, vehicle fixed costs running beyond planned hours, and customer SLA exposure. Routes that structurally require overtime indicate either insufficient planned time or incorrect fleet sizing — both require structural correction, not repeated acceptance of overtime.",
+      "topics": ["scheduling", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["overtime", "structural_overtime", "cost_overrun"]
+    },
+    {
+      "statement": "Split deliveries — delivering part of an order on one route and the remainder on another — reduce vehicle utilization constraints and can significantly improve route optimality, at the cost of additional handling and coordination. Most Excel-based planners avoid splits by default; optimization software should be configured to evaluate splits when they reduce total cost.",
+      "topics": ["route_planning", "vehicle_assignment"],
+      "confidence": 0.96,
+      "tags": ["split_delivery", "partial_order", "optimization_flexibility"]
+    },
+    {
+      "statement": "Cross-docking eliminates storage by transferring freight directly from inbound to outbound vehicles at a transfer point. It requires precise synchronisation of inbound and outbound schedules. Cross-docking reduces inventory holding cost and transit time but creates a single point of failure — a delayed inbound vehicle cascades across all connected outbound routes.",
+      "topics": ["route_planning"],
+      "confidence": 0.97,
+      "tags": ["cross_docking", "transfer_point", "synchronisation", "single_point_of_failure"]
+    },
+    {
+      "statement": "Hub-and-spoke network design concentrates freight at central hubs for sorting and redistribution to spoke destinations. It produces high utilisation on trunk (hub-to-hub) lanes at the cost of increased total distance compared to direct routing. It is economical above a certain volume threshold; below that threshold, direct routing is cheaper.",
+      "topics": ["route_planning"],
+      "confidence": 0.97,
+      "tags": ["hub_and_spoke", "network_design", "trunk_lane", "break_even"]
+    },
+    {
+      "statement": "Depot location has a larger impact on total transport cost than route optimization within an existing network. A poorly placed depot produces structural inefficiency that no amount of route optimization can overcome. Depot placement analysis should use demand centre-of-gravity models weighted by delivery volume and frequency.",
+      "topics": ["route_planning"],
+      "confidence": 0.98,
+      "tags": ["depot_location", "centre_of_gravity", "network_design", "structural_cost"]
+    },
+    {
+      "statement": "Cost per kilometre (CPK) and cost per delivery (CPD) are the primary route efficiency metrics. CPK measures infrastructure efficiency; CPD measures operational productivity. Both must be tracked simultaneously — a route with low CPK but high CPD indicates many short, unproductive stops; high CPK and low CPD indicates long routes with few high-value deliveries.",
+      "topics": ["capacity_utilization", "route_planning"],
+      "confidence": 0.97,
+      "tags": ["cost_per_km", "CPK", "cost_per_delivery", "CPD", "efficiency_metrics"]
+    },
+    {
+      "statement": "On-time delivery (OTD) rate and on-time in-full (OTIF) rate are the primary customer service metrics. OTD measures arrival within the promised window; OTIF adds completeness of order. OTIF below 95% in B2B distribution typically triggers financial penalties. Track OTD and OTIF by route, driver, customer, and time window type to isolate root causes.",
+      "topics": ["scheduling", "route_planning"],
+      "confidence": 0.98,
+      "tags": ["OTD", "OTIF", "customer_service_metrics", "SLA"]
+    },
+    {
+      "statement": "Fuel represents 25-35% of total operating cost for most commercial fleets. Route optimization that reduces total distance by 10% reduces fuel cost by approximately the same proportion. Fuel cost modeling for route comparison must use vehicle-specific consumption rates — a 7.5t rigid and a 44t artic have very different fuel curves relative to load and gradient.",
+      "topics": ["route_planning", "capacity_utilization"],
+      "confidence": 0.97,
+      "tags": ["fuel_cost", "fuel_consumption", "cost_modeling"]
+    },
+    {
+      "statement": "Telematics data (GPS tracks, speed profiles, idle time, harsh braking events) is the ground truth for route plan vs. actual comparison. Plan adherence analysis identifies where drivers deviate from planned routes, where service times are systematically over- or under-estimated, and where traffic assumptions are wrong. Without telematics, route plans cannot be calibrated.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["telematics", "GPS", "plan_vs_actual", "calibration"]
+    },
+    {
+      "statement": "Excel-based route planning fails at scale because it cannot solve constraint satisfaction problems — the planner must manually check that weight, volume, time window, driver hours, and vehicle type constraints are all satisfied simultaneously for every route. This is cognitively impossible above ~30 stops across ~5 vehicles. Errors that Excel misses become illegal loads, missed windows, and driver hours violations.",
+      "topics": ["route_planning"],
+      "confidence": 0.99,
+      "tags": ["Excel_limitation", "constraint_satisfaction", "manual_planning", "scale"]
+    },
+    {
+      "statement": "The savings algorithm (Clarke & Wright, 1964) is the most widely implemented VRP heuristic. It starts with individual vehicle routes for each stop and iteratively merges pairs of routes when doing so saves distance, subject to vehicle capacity. It produces good solutions quickly and is the basis of many commercial routing engines.",
+      "topics": ["route_planning"],
+      "confidence": 0.97,
+      "tags": ["Clarke_Wright", "savings_algorithm", "VRP_heuristic"]
+    },
+    {
+      "statement": "2-opt improvement iteratively removes two edges from a route and reconnects them in reverse order, accepting the change if it reduces total distance. It eliminates crossing routes — a visual indicator that a route is suboptimal. Running 2-opt after initial route construction can reduce total distance by 5-15% on typical problems.",
+      "topics": ["route_planning"],
+      "confidence": 0.96,
+      "tags": ["2_opt", "route_improvement", "crossing_routes"]
+    },
+    {
+      "statement": "Dynamic routing uses real-time events (new orders, cancellations, traffic incidents, vehicle breakdowns) to replan routes during execution. Effective dynamic routing requires a routing engine that can re-optimize in under 30 seconds and drivers with mobile connectivity to receive updated plans. Static re-routing (replan at fixed intervals) is a practical compromise.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["dynamic_routing", "real_time", "replanning", "mobile"]
+    },
+    {
+      "statement": "Vehicle breakdown contingency planning requires pre-defined protocols: which vehicles or subcontractors can substitute, which stops can be rescheduled versus which are hard deadlines, and what the customer communication protocol is. A breakdown without a contingency plan produces ad hoc decisions under pressure that are consistently more expensive and less effective than pre-planned responses.",
+      "topics": ["scheduling", "vehicle_assignment"],
+      "confidence": 0.97,
+      "tags": ["breakdown_contingency", "vehicle_substitution", "resilience"]
+    },
+    {
+      "statement": "Urban last-mile delivery faces constraints absent from linehaul: loading bay availability, pedestrian zone restrictions, delivery hour windows (no delivery before 7am or after 9pm in many municipalities), congestion charges, and low emission zones (LEZ/ZFE) that restrict certain vehicle types. These constraints must be encoded in the routing system, not managed manually by drivers.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["last_mile", "urban_delivery", "LEZ", "ZFE", "loading_bay", "restrictions"]
+    },
+    {
+      "statement": "Seasonal demand variation requires planned fleet capacity adjustments. Annual routes designed for average demand are consistently over-resourced in low seasons and under-resourced at peak. Build seasonal plans as distinct configurations: a base plan, a +20% plan, and a peak plan. Switching between them requires advance notice for subcontractor bookings and driver scheduling.",
+      "topics": ["scheduling", "capacity_utilization"],
+      "confidence": 0.96,
+      "tags": ["seasonal_variation", "capacity_planning", "seasonal_plan"]
+    },
+    {
+      "statement": "Stop consolidation — combining multiple small deliveries to the same customer or geographic zone into a single stop — is the highest-ROI route improvement for fragmented delivery networks. Delivering three times weekly to a customer who can accept once weekly reduces stop count by 67% on that lane. Consolidation requires customer agreement and inventory buffer willingness.",
+      "topics": ["route_planning", "capacity_utilization"],
+      "confidence": 0.98,
+      "tags": ["stop_consolidation", "delivery_frequency", "consolidation"]
+    },
+    {
+      "statement": "Proof of delivery (POD) capture at the stop — digital signature, photo, barcode scan — creates a timestamped record that resolves disputes, confirms time window compliance, and provides actual dwell time data for route plan calibration. Paper POD produces data only after return to depot, too late to use for same-day replanning.",
+      "topics": ["scheduling", "route_planning"],
+      "confidence": 0.97,
+      "tags": ["POD", "proof_of_delivery", "digital_signature", "timestamping"]
+    },
+    {
+      "statement": "Average speed assumptions are the most common source of route plan inaccuracy. Planners frequently use highway speed averages for routes that are primarily urban. Segment-level speed profiles by road class and time of day produce route time estimates that are typically 15-25% more accurate than average-speed models.",
+      "topics": ["route_planning"],
+      "confidence": 0.98,
+      "tags": ["speed_assumptions", "road_class", "time_of_day_speed", "accuracy"]
+    },
+    {
+      "statement": "Vehicle asset utilisation measures how many hours per day a vehicle is in productive use versus idle (parked at depot). Industry benchmark for commercial vehicles is 60-70% utilisation (15-17 hours per day across two-shift operations). Single-shift operations typically achieve only 30-40% utilisation, making subcontracting or daily rental economically competitive versus ownership.",
+      "topics": ["vehicle_assignment", "capacity_utilization"],
+      "confidence": 0.96,
+      "tags": ["asset_utilisation", "vehicle_idle", "single_shift", "ownership_vs_rental"]
+    },
+    {
+      "statement": "Subcontractor and spot market rates should be benchmarked quarterly against owned fleet cost per kilometre and cost per stop. When spot rates are below owned fleet fully allocated cost, increasing subcontracting and reducing owned fleet is economically rational. This calculation is rarely performed because fully allocated costs are opaque in most Excel-based fleet management.",
+      "topics": ["vehicle_assignment", "capacity_utilization"],
+      "confidence": 0.96,
+      "tags": ["subcontracting", "spot_rate", "make_vs_buy", "fully_allocated_cost"]
+    },
+    {
+      "statement": "CO2 and emissions reporting for transport requires per-route emission calculations based on vehicle type, payload (heavier loads increase fuel consumption non-linearly), and distance. Scope 3 emissions from logistics are increasingly required in corporate sustainability reporting. Routing software that does not output emissions data per route cannot support decarbonisation target-setting.",
+      "topics": ["route_planning", "capacity_utilization"],
+      "confidence": 0.96,
+      "tags": ["CO2", "emissions", "Scope_3", "decarbonisation", "sustainability"]
+    },
+    {
+      "statement": "Electric vehicle (EV) routing introduces range anxiety as a hard constraint. Unlike diesel vehicles, EVs cannot be range-extended by refuelling anywhere. EV route planning must check range sufficiency including load weight impact on consumption, plan charging stops within the route when required, and account for charging time in the schedule.",
+      "topics": ["route_planning", "vehicle_assignment"],
+      "confidence": 0.97,
+      "tags": ["EV_routing", "range", "charging", "electric_vehicle"]
+    },
+    {
+      "statement": "Transport management systems (TMS) range from basic route planning tools (single vehicle, no constraint checking) to full optimisation suites (multi-vehicle VRPTW, telematics integration, carrier management, freight audit). Selecting a TMS above the organisation's operational maturity produces unused features and failed implementations; selecting one below maturity produces a ceiling on optimisation gains.",
+      "topics": ["route_planning"],
+      "confidence": 0.97,
+      "tags": ["TMS", "tool_selection", "operational_maturity"]
+    },
+    {
+      "statement": "Route optimisation software ROI is typically measured through: distance reduction (5-15%), fuel savings (proportional), driver hours reduction (3-10%), and overtime reduction (20-40%). ROI payback is typically 6-18 months for operations above 10 vehicles. Below 5 vehicles, manual planning by an experienced planner often matches software output.",
+      "topics": ["route_planning"],
+      "confidence": 0.95,
+      "tags": ["optimization_ROI", "distance_reduction", "payback_period"]
+    },
+    {
+      "statement": "The most common implementation failure for route optimisation systems is data quality. Garbage in, garbage out: incorrect customer addresses, wrong time windows, stale vehicle parameters, and missing service times produce plans that are mathematically optimal against wrong inputs and operationally useless. Data quality audit must precede implementation.",
+      "topics": ["route_planning"],
+      "confidence": 0.99,
+      "tags": ["data_quality", "GIGO", "implementation_failure", "master_data"]
+    },
+    {
+      "statement": "Driver acceptance is a critical success factor for routing system implementation. Drivers who distrust the system will deviate from planned routes, destroying the optimisation gains and creating plan vs. actual data that appears to validate their skepticism. Change management, driver involvement in route design, and transparent explanation of route logic are non-optional.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["driver_acceptance", "change_management", "route_deviation"]
+    },
+    {
+      "statement": "A transport key performance indicator (KPI) dashboard minimum viable set: cost per kilometre, cost per delivery stop, load factor (weight and volume), on-time delivery rate, empty kilometre percentage, and driver hours compliance rate. These six metrics expose the most common efficiency and compliance failures. Adding more metrics without acting on these six first produces dashboard theatre.",
+      "topics": ["capacity_utilization", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["KPI", "dashboard", "minimum_viable_metrics"]
+    },
+    {
+      "statement": "Humanitarian logistics (MSF, WFP, ICRC) applies the same routing and capacity principles under radically different constraints: no reliable maps, damaged infrastructure, security corridors, import permit delays, and demand that spikes unpredictably. The core optimisation principles hold; the data inputs are uncertain and the cost of route failure is measured in lives, not euros.",
+      "topics": ["route_planning", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["humanitarian_logistics", "MSF", "last_mile_humanitarian", "uncertainty"]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "pack": "customer_success",
+  "version": "1.0.0",
+  "description": "Customer Success knowledge for SaaS companies — customer issues, feature requests, escalations, renewal risk, and the transformation of support tickets into product decisions.",
+  "knowledge": [
+    {
+      "statement": "Customer Success is not support. Support is reactive — the customer has a problem and calls for help. Customer Success is proactive — the CSM intervenes before the customer experiences a problem, identifies under-utilised value, and connects usage to the business outcome the customer bought for. Organisations that staff CS as 'premium support' do not get CS outcomes.",
+      "topics": ["customer_issues"],
+      "confidence": 0.99,
+      "tags": ["customer_success", "proactive", "support_vs_CS", "value_realisation"]
+    },
+    {
+      "statement": "Time-to-First-Value (TTFV) is the most critical early metric in customer success. Customers who don't reach their first meaningful outcome before the initial excitement wears off churn disproportionately. Every CS process should be designed backwards from TTFV: what is the minimum viable configuration, what data needs to be loaded, what training is required for the first success? Onboarding friction that delays TTFV predicts churn 60–90 days later.",
+      "topics": ["customer_issues"],
+      "confidence": 0.99,
+      "tags": ["TTFV", "time_to_first_value", "onboarding", "churn_prediction", "early_value"]
+    },
+    {
+      "statement": "Customer Health Scores aggregate signals — product usage, support ticket volume, NPS, engagement with CS, contract coverage, and stakeholder change — into a single risk indicator. Health scores are predictive, not descriptive: they should change before the customer churns, not when they churn. A health score that only reflects 'is the customer happy today' misses the predictive signals that lead to renewal risk.",
+      "topics": ["escalations", "renewal_risks"],
+      "confidence": 0.99,
+      "tags": ["health_score", "leading_indicators", "churn_prediction", "renewal_risk"]
+    },
+    {
+      "statement": "The 'silent churn' pattern: a customer stops using the product, reduces logins, and stops engaging with CS — but does not raise tickets or complaints. By the time they decline renewal, their internal decision is already made. Detecting silent churn requires usage monitoring: trigger alerts when logins drop below baseline, when key features are unused for 30+ days, or when the number of active users falls. Silence is a signal, not satisfaction.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.99,
+      "tags": ["silent_churn", "usage_monitoring", "login_drop", "inactive_users", "churn_signal"]
+    },
+    {
+      "statement": "Expansion revenue (upsell and cross-sell) within the existing customer base has 3–5× the ROI of new customer acquisition in SaaS. Land-and-expand strategy requires: a minimal initial contract that reduces buying friction, a clear expansion path built into the product and pricing, and CS motions that identify and capture expansion signals (usage near limit, new use case discovery, team growth). CS teams measured only on retention miss expansion opportunity.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.98,
+      "tags": ["expansion_revenue", "land_and_expand", "upsell", "cross_sell", "net_revenue_retention"]
+    },
+    {
+      "statement": "Escalation management requires a tiered framework: Level 1 (operational issue, resolved by support within SLA), Level 2 (escalated to CSM, requires coordination), Level 3 (executive-level, risk to renewal, requires VP or C-level engagement). Escalations that bounce through levels without resolution destroy trust faster than the original issue. Escalation records must capture: issue, impact, owner, timeline, and resolution — accessible to the whole team.",
+      "topics": ["escalations"],
+      "confidence": 0.99,
+      "tags": ["escalation_tiers", "executive_escalation", "escalation_record", "resolution_tracking"]
+    },
+    {
+      "statement": "Support tickets are single events. Knowledge items are patterns. A support ticket that says 'user can't figure out the export function' is noise. Fifty tickets about the same feature are a signal: either the UX is broken, the documentation is inadequate, or the feature doesn't work as expected. CS and support teams that don't aggregate ticket patterns miss the product intelligence embedded in customer frustration.",
+      "topics": ["customer_issues", "feature_requests"],
+      "confidence": 0.99,
+      "tags": ["ticket_to_knowledge", "pattern_extraction", "support_intelligence", "product_signal"]
+    },
+    {
+      "statement": "CSAT (Customer Satisfaction Score) measures transactional satisfaction after a specific interaction. NPS (Net Promoter Score) measures relationship satisfaction and likelihood to recommend. CES (Customer Effort Score) measures how hard the customer had to work to resolve an issue. Each measures a different dimension. Using CSAT alone misses relationship trajectory; using NPS alone misses operational friction. Best-in-class CS teams use all three at appropriate moments.",
+      "topics": ["customer_issues"],
+      "confidence": 0.97,
+      "tags": ["CSAT", "NPS", "CES", "satisfaction_metrics", "experience_measurement"]
+    },
+    {
+      "statement": "Renewal risk assessment must begin 90 days before renewal, not 30 days. By 30 days, late-stage renewal decisions are already made. The 90-day checklist: health score trend, QBR completed, executive sponsor confirmed, contract coverage (are the right stakeholders named?), open escalations resolved, and expansion or renewal proposal drafted. Deals that are 'at risk' at 30 days are usually lost deals with a delay.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.99,
+      "tags": ["renewal_risk", "90_day_renewal", "QBR", "executive_sponsor", "contract_coverage"]
+    },
+    {
+      "statement": "Executive Business Reviews (EBRs) — quarterly or semi-annual senior-level meetings between the vendor and the customer's leadership — are the primary mechanism for renewing at executive level, beyond daily operational interactions. EBRs must show: progress against the customer's stated business goals (not just product usage metrics), strategic roadmap alignment, and mutual investment in the relationship. EBRs that are just usage reports do not create executive-level retention.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.98,
+      "tags": ["EBR", "QBR", "executive_review", "business_goals", "retention"]
+    },
+    {
+      "statement": "Stakeholder mapping is a continuous CS activity, not a one-time onboarding exercise. People change roles, leave, and join. The champion who drove the initial purchase may be gone at renewal. Identifying and developing new champions, and maintaining executive sponsor relationships through turnover, is a survival skill in enterprise CS. Losing the champion without a backup is the most common cause of unexpected churn.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.99,
+      "tags": ["stakeholder_mapping", "champion_loss", "sponsor_change", "relationship_continuity"]
+    },
+    {
+      "statement": "Adoption gaps — features the customer has licensed but not activated — are the most accessible expansion and retention levers. A customer using 30% of licensed features has an adoption gap that represents both risk (they're not getting full value) and opportunity (activating features increases switching cost and satisfaction). CS should track feature adoption by tier and segment and run targeted activation campaigns.",
+      "topics": ["customer_issues", "renewal_risks"],
+      "confidence": 0.97,
+      "tags": ["feature_adoption", "adoption_gap", "activation", "switching_cost"]
+    },
+    {
+      "statement": "Voice of the Customer (VoC) programmes aggregate qualitative signals — interview insights, survey verbatims, support ticket themes, CSM field intelligence — into structured product and operational intelligence. VoC is only valuable when it closes the loop: the customer insight must reach the product team and result in either a product change, a documented decision not to change, or a communication back to customers about why. VoC with no product loop is customer theatre.",
+      "topics": ["feature_requests"],
+      "confidence": 0.98,
+      "tags": ["VoC", "voice_of_customer", "product_loop", "closed_loop", "field_intelligence"]
+    },
+    {
+      "statement": "Feature requests from CS must be structured to be actionable by product teams. Raw requests ('the customer wants X') are not useful. Structured requests: the customer's underlying job-to-be-done, the frequency of the request, the customer segment requesting it, the current workaround, and the business impact if unaddressed. One structured request is worth fifty raw ones. CS-to-product handoff quality determines whether customer intelligence improves the product.",
+      "topics": ["feature_requests"],
+      "confidence": 0.99,
+      "tags": ["feature_request_format", "jobs_to_be_done", "JTBD", "structured_request", "product_team"]
+    },
+    {
+      "statement": "Product roadmap communication to customers requires balancing transparency with commitment risk. Sharing a roadmap builds trust and aligns customer expectation; but customers remember what was promised and notice what doesn't ship. Best practice: share directional themes, not specific features with dates, unless you have high confidence they will ship. 'We're investing in X area' is safer than 'Feature Y ships in Q3' when timelines are uncertain.",
+      "topics": ["feature_requests"],
+      "confidence": 0.97,
+      "tags": ["roadmap_communication", "commitment_risk", "directional_themes", "customer_expectation"]
+    },
+    {
+      "statement": "Customer success qualified leads (CSQLs) — expansion opportunities identified by CSMs from product usage data, stakeholder conversations, and business reviews — convert at 2–4× the rate of marketing or sales-generated leads. CSMs who identify expansion signals but don't qualify and route them to sales leave revenue on the table. CS-to-sales handoff with context (why they're interested, timing, decision process) is the value-add.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.96,
+      "tags": ["CSQL", "expansion_opportunity", "CS_to_sales", "conversion_rate"]
+    },
+    {
+      "statement": "Escalation post-mortems — reviewing resolved escalations to identify root cause, prevention opportunity, and process change — convert one-time crises into systemic improvements. An escalation that happens once is an incident; the same escalation happening three times is a process failure. Post-mortem cadence: weekly for high-severity escalations, monthly summary for all escalations. Findings must feed back into CS playbooks and product backlog.",
+      "topics": ["escalations"],
+      "confidence": 0.97,
+      "tags": ["escalation_post_mortem", "root_cause", "process_change", "playbook_update"]
+    },
+    {
+      "statement": "SaaS gross revenue retention (GRR) measures the percentage of contracted revenue retained from existing customers, excluding expansion. Net Revenue Retention (NRR) includes expansion, contraction, and churn. NRR above 120% means the existing customer base grows even with 100% churn of new customers. These are the compound interest metrics of SaaS — CS teams should know their segment's GRR and NRR and understand the levers that move them.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.98,
+      "tags": ["GRR", "NRR", "net_revenue_retention", "gross_retention", "SaaS_metrics"]
+    },
+    {
+      "statement": "Customer feedback loops — systematically bringing customer intelligence back to product, engineering, marketing, and sales — require structured process, not goodwill. CSMs who email product managers informally are not a feedback loop; they're noise. A feedback loop has: a standard format for submissions, a regular cadence for review, a visible backlog of customer-submitted items, and a closed-loop response to the CSM (and optionally the customer) on decisions made.",
+      "topics": ["feature_requests", "customer_issues"],
+      "confidence": 0.98,
+      "tags": ["feedback_loop", "product_feedback", "backlog", "closed_loop", "structured_process"]
+    },
+    {
+      "statement": "Success plans — documented agreements between the CSM and the customer about goals, timelines, and milestones for the current period — are the operational tool that makes CS proactive rather than reactive. Success plans should be customer-facing (co-created and shared), living documents (reviewed at each QBR), and grounded in the customer's business goals (not product adoption metrics). A success plan the customer hasn't seen is not a success plan.",
+      "topics": ["customer_issues", "renewal_risks"],
+      "confidence": 0.98,
+      "tags": ["success_plan", "customer_goals", "proactive_CS", "QBR", "co_created"]
+    },
+    {
+      "statement": "Support ticket deflection — reducing the volume of tickets through self-service content, in-product guidance, and proactive communication — reduces support cost while improving customer experience. Ticket deflection requires analysing ticket drivers (what do customers contact support about most?) and systematically eliminating each category through documentation, UI improvement, or product fix. The highest-value deflection is fixing the product so the question no longer arises.",
+      "topics": ["customer_issues"],
+      "confidence": 0.97,
+      "tags": ["ticket_deflection", "self_service", "in_product_guidance", "deflection_rate"]
+    },
+    {
+      "statement": "Renewal risk flags that predict churn most reliably (from SaaS industry research): executive sponsor change without new champion identified, support ticket volume spike in months 10–11, product usage below 50% of baseline for 30+ consecutive days, NPS dropping from Promoter to Passive/Detractor, and open escalations unresolved at 90 days to renewal. Any single flag warrants immediate CSM-led intervention.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.97,
+      "tags": ["churn_flags", "renewal_prediction", "sponsor_change", "usage_drop", "late_escalation"]
+    },
+    {
+      "statement": "The CSM-to-customer ratio determines whether CS is commercially viable. High-touch enterprise CS: 1 CSM to 5–15 accounts; mid-market: 1 CSM to 20–50 accounts; digital/tech-touch: 1 CSM to 100+ accounts with automation. Ratio mismatches — too many accounts per CSM — produce relationship gaps that churn. Ratios should be set by segment ARR, not just account count.",
+      "topics": ["escalations"],
+      "confidence": 0.96,
+      "tags": ["CSM_ratio", "account_coverage", "high_touch", "tech_touch", "segment_ARR"]
+    },
+    {
+      "statement": "Customer onboarding success predicts 12-month retention with higher accuracy than any other leading indicator. Customers who complete onboarding milestones in the first 90 days retain at 2× the rate of customers who don't. Onboarding milestones should be defined, tracked, and flagged when delayed. A customer who is 30 days into onboarding and hasn't completed step 1 needs immediate intervention, not a scheduled check-in at 90 days.",
+      "topics": ["customer_issues"],
+      "confidence": 0.98,
+      "tags": ["onboarding_success", "90_day_retention", "onboarding_milestones", "early_intervention"]
+    },
+    {
+      "statement": "Competitive displacement risk — a customer actively evaluating a competitor during the contract period — is a specific renewal risk requiring a specific play. Triggers: the customer requests RFI/RFP support, raises competitor names in conversations, or reduces CS engagement. Response: executive sponsor re-engagement, product roadmap review, competitive differentiation briefing, and commercial review. Treating competitive displacement as a standard renewal is a high-churn mistake.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.97,
+      "tags": ["competitive_displacement", "mid_contract_churn", "recompete", "displacement_play"]
+    },
+    {
+      "statement": "Customer advocacy — turning satisfied customers into case studies, references, and public testimonials — is the highest-ROI marketing investment available to CS. Advocates are developed, not recruited: they require genuine success (the product delivered on its promise), a relationship with the CS team, and a low-friction advocacy process. Customers who won't advocate despite high usage are a signal that the relationship layer — not the product — has failed.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.96,
+      "tags": ["customer_advocacy", "case_study", "reference", "testimonial", "advocacy_program"]
+    },
+    {
+      "statement": "Product-led CS uses product usage data as the primary signal for CS interventions, rather than relying on CSM intuition or scheduled check-ins. Trigger-based CS motions: 'send in-app message when user first completes X', 'CSM alert when account usage drops 30% week-over-week', 'expansion play triggered when seats near contract limit'. Product-led CS scales with fewer CSMs by automating interventions for common signals.",
+      "topics": ["customer_issues", "renewal_risks"],
+      "confidence": 0.97,
+      "tags": ["product_led_CS", "usage_triggers", "automation", "in_app_messaging", "scalable_CS"]
+    },
+    {
+      "statement": "CS knowledge capture should treat every significant customer event — escalation, churn, expansion, advocacy conversion — as a knowledge source. What triggered the event, what intervention worked or didn't, what the customer said, what the root cause was. This intelligence compounds: teams with 500 documented events have pattern-level insight that teams relying on CSM memory cannot access. North Star's role in CS is converting customer events into strategic intelligence.",
+      "topics": ["customer_issues", "feature_requests"],
+      "confidence": 0.99,
+      "tags": ["knowledge_capture", "event_logging", "CS_intelligence", "North_Star", "pattern_insight"]
+    },
+    {
+      "statement": "Contract negotiation at renewal is a symptom of relationship failure. Customers who are fully realising value, have a strong champion, and are engaged at executive level rarely negotiate aggressively on price. Customers who negotiate hard at renewal are signalling: they don't see enough value, they have a competitive alternative in mind, or they feel the relationship is transactional. Price pressure at renewal is diagnostic information, not just a commercial problem.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.97,
+      "tags": ["renewal_negotiation", "price_pressure", "value_realisation", "relationship_signal"]
+    },
+    {
+      "statement": "Segmentation of the customer base by ARR, growth potential, product maturity, and strategic value determines where to invest CS resources. Premium CS for strategic accounts, digital touch for small accounts — but the segmentation must be reviewed as customers grow or shrink. A customer in the digital tier who grows to enterprise ARR without being migrated to high-touch CS churns at higher rates than a customer properly resourced from the start.",
+      "topics": ["renewal_risks"],
+      "confidence": 0.96,
+      "tags": ["customer_segmentation", "ARR_tier", "resource_allocation", "segment_migration"]
+    },
+    {
+      "statement": "The customer's definition of success — which may differ significantly from the vendor's product metrics — is the correct benchmark for the relationship. A customer who defines success as 'saving my team 10 hours/week' cares about that metric, not DAU or feature adoption counts. CS should discover the customer's success definition at onboarding and track progress against it. Reporting product metrics to a customer who bought time savings is a value communication failure.",
+      "topics": ["customer_issues"],
+      "confidence": 0.99,
+      "tags": ["success_definition", "customer_outcome", "business_metric", "value_communication"]
+    }
+  ]
+}

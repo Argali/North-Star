@@ -545,21 +545,30 @@ async def retrieve(
     return context
 
 
-# ── Human review (Phase 6 Lite) ──────────────────────────────────────────────
+# ── Human review ─────────────────────────────────────────────────────────────
+#
+# The human review queue is backed by Postgres (human_review_queue table),
+# not Redis. Items are durable across restarts and carry a full audit trail.
+#
+# Resolution actions:
+#   approve — validate and store any knowledge candidates in the item's context
+#   reject  — discard; no knowledge is stored
+#   skip    — defer; item stays pending, queued_at reset to NOW() (moves to back)
 
 class ReviewResolveBody(BaseModel):
     action: str = Field(..., description="'approve' | 'reject' | 'skip'")
     note: str | None = Field(None, description="Optional resolution note")
+    resolved_by: str | None = Field(None, description="Name/identifier of the resolver")
 
 
 @app.get("/human-review", tags=["review"])
 async def list_human_review(
-    reason: str | None = Query(default=None, description="Filter by reason string"),
+    reason: str | None = Query(default=None, description="Substring filter on reason"),
     limit: int = Query(default=20, le=100),
     offset: int = Query(default=0),
 ) -> dict:
     """
-    List items in the human review queue.
+    List pending items in the human review queue.
 
     The queue is populated by:
     - Archivist: direct/ambiguous contradictions
@@ -567,113 +576,103 @@ async def list_human_review(
     - Scribe and Archivist workers: pipeline errors
     - Staleness scan: knowledge flagged as stale
 
-    Each item has: id, reason, context, source, queued_at.
+    Each item has: id (UUID), source, reason, context, status, queued_at.
     """
-    from src.pipelines.queues import get_redis
+    from src.pipelines.queues import human_review_queue
 
-    r = await get_redis()
-    raw_items = await r.lrange("ns:queue:human_review", 0, -1)
-
-    import json as _json
-    items = []
-    for i, raw in enumerate(raw_items):
-        try:
-            item = _json.loads(raw)
-            item["_queue_index"] = i
-            if reason and reason.lower() not in item.get("reason", "").lower():
-                continue
-            items.append(item)
-        except Exception:
-            continue
-
-    total = len(items)
-    page = items[offset : offset + limit]
-
-    return {"items": page, "total": total, "limit": limit, "offset": offset}
+    items, total = await human_review_queue.list_pending(
+        reason=reason, limit=limit, offset=offset
+    )
+    return {"items": items, "total": total, "limit": limit, "offset": offset}
 
 
-@app.post("/human-review/{queue_index}/resolve", tags=["review"])
+@app.get("/human-review/{review_id}", tags=["review"])
+async def get_human_review_item(review_id: UUID) -> dict:
+    """Fetch a single human review item by UUID."""
+    from src.pipelines.queues import human_review_queue
+
+    item = await human_review_queue.get(review_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail=f"Review item {review_id} not found")
+    return item
+
+
+@app.post("/human-review/{review_id}/resolve", tags=["review"])
 async def resolve_human_review(
-    queue_index: int,
+    review_id: UUID,
     body: ReviewResolveBody,
 ) -> dict:
     """
     Resolve a human review item.
 
     Actions:
-    - approve: if the item contains knowledge candidates, validate and store them.
-              if it contains a contradiction, accept the new item as validated.
-    - reject:  discard the item. No knowledge is stored.
-    - skip:    move the item to the end of the queue for later review.
+    - approve: if the item's context contains a knowledge statement, validate
+               and store it with confidence 0.7 (human-curated default).
+    - reject:  mark as rejected. No knowledge is stored.
+    - skip:    defer; item stays pending, moved to back of queue.
 
-    The item is removed from the queue on approve or reject.
-    On skip, it is re-queued at the tail.
+    Resolution is idempotent — resolving an already-resolved item returns 404.
     """
-    from src.pipelines.queues import get_redis
-    import json as _json
+    from src.pipelines.queues import human_review_queue
 
     action = body.action.lower()
     if action not in ("approve", "reject", "skip"):
-        raise HTTPException(status_code=400, detail="action must be 'approve', 'reject', or 'skip'")
+        raise HTTPException(
+            status_code=400, detail="action must be 'approve', 'reject', or 'skip'"
+        )
 
-    r = await get_redis()
-    raw_items = await r.lrange("ns:queue:human_review", 0, -1)
+    # Fetch the item first so we can act on its context
+    item = await human_review_queue.get(review_id)
+    if item is None:
+        raise HTTPException(status_code=404, detail=f"Review item {review_id} not found")
+    if item.get("status") != "pending":
+        raise HTTPException(
+            status_code=409,
+            detail=f"Item is already {item['status']} — cannot resolve again",
+        )
 
-    if queue_index < 0 or queue_index >= len(raw_items):
-        raise HTTPException(status_code=404, detail=f"No item at index {queue_index}")
+    approved_ids: list[str] = []
 
-    raw = raw_items[queue_index]
-    try:
-        item = _json.loads(raw)
-    except Exception:
-        raise HTTPException(status_code=500, detail="Could not parse queue item")
+    if action == "approve":
+        # If the context contains a knowledge statement, validate and store it
+        context = item.get("context", {})
+        new_statement = context.get("new_statement") or context.get("statement")
+        source_report_id = context.get("source_report_id")
 
-    result: dict[str, Any] = {
-        "queue_index": queue_index,
+        if new_statement:
+            from src.db.client import transaction
+            async with transaction() as conn:
+                row = await conn.fetchrow(
+                    """
+                    INSERT INTO knowledge (statement, confidence, status, source_report_ids)
+                    VALUES ($1, $2, 'validated', $3)
+                    RETURNING id
+                    """,
+                    new_statement,
+                    0.7,
+                    [source_report_id] if source_report_id else [],
+                )
+            approved_ids.append(str(row["id"]))
+
+    # Update queue item status
+    updated = await human_review_queue.resolve(
+        review_id=review_id,
+        action=action,
+        note=body.note,
+        resolved_by=body.resolved_by,
+    )
+    if not updated:
+        raise HTTPException(status_code=409, detail="Item was resolved by another request")
+
+    return {
+        "id": str(review_id),
         "action": action,
         "reason": item.get("reason"),
         "note": body.note,
+        "resolved_by": body.resolved_by,
+        "status": action if action != "skip" else "pending",
+        "stored_ids": approved_ids,
     }
-
-    if action == "skip":
-        # Remove from current position and re-push to tail
-        await r.lrem("ns:queue:human_review", 1, raw)
-        await r.rpush("ns:queue:human_review", raw)
-        result["status"] = "skipped — re-queued at tail"
-        return result
-
-    # approve or reject: remove the item from the queue
-    await r.lrem("ns:queue:human_review", 1, raw)
-
-    if action == "reject":
-        result["status"] = "rejected — item discarded"
-        return result
-
-    # approve: if this item has knowledge candidates, validate them
-    context = item.get("context", {})
-    approved_ids: list[str] = []
-
-    new_statement = context.get("new_statement") or context.get("statement")
-    source_report_id = context.get("source_report_id")
-
-    if new_statement:
-        from src.db.client import transaction
-        async with transaction() as conn:
-            row = await conn.fetchrow(
-                """
-                INSERT INTO knowledge (statement, confidence, status, source_report_ids)
-                VALUES (, , 'validated', )
-                RETURNING id
-                """,
-                new_statement,
-                0.7,   # human-approved gets a default confidence
-                [source_report_id] if source_report_id else [],
-            )
-        approved_ids.append(str(row["id"]))
-
-    result["status"] = "approved"
-    result["stored_ids"] = approved_ids
-    return result
 
 
 # ── Staleness scan (Phase 6 Lite) ─────────────────────────────────────────────
@@ -714,7 +713,7 @@ async def run_staleness_scan(
         k_rows = await conn.fetch(
             """
             SELECT k.id, k.statement, k.valid_from, k.topics,
-                   MAX(r.created_at) AS latest_report
+                   r.created_at AS latest_report
             FROM knowledge k
             LEFT JOIN LATERAL (
                 SELECT r.created_at
@@ -724,8 +723,8 @@ async def run_staleness_scan(
                 LIMIT 1
             ) r ON true
             WHERE k.status = 'validated'
-              AND k.valid_from < NOW() - ( || ' days')::interval
-              AND (r.created_at IS NULL OR r.created_at < NOW() - ( || ' days')::interval)
+              AND k.valid_from < NOW() - ($1 || ' days')::interval
+              AND (r.created_at IS NULL OR r.created_at < NOW() - ($1 || ' days')::interval)
             ORDER BY k.valid_from ASC
             """,
             str(threshold_days),
@@ -743,11 +742,11 @@ async def run_staleness_scan(
         # Stale decisions: planned and old
         d_rows = await conn.fetch(
             """
-            SELECT id, statement, created_at, owner
+            SELECT id, statement, timestamp AS created_at, owner
             FROM decisions
             WHERE status = 'planned'
-              AND created_at < NOW() - ( || ' days')::interval
-            ORDER BY created_at ASC
+              AND timestamp < NOW() - ($1 || ' days')::interval
+            ORDER BY timestamp ASC
             """,
             str(threshold_days),
         )
@@ -761,6 +760,7 @@ async def run_staleness_scan(
             })
 
     if not dry_run:
+        from src.pipelines.queues import human_review_queue
         for item in stale_knowledge:
             await human_review_queue.push({
                 "source": "staleness_scan",

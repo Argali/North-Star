@@ -1,0 +1,271 @@
+{
+  "pack": "healthcare_administration",
+  "version": "1.0.0",
+  "description": "Healthcare administration knowledge — not diagnosis. Covers operational workflows, compliance frameworks, scheduling systems, patient flow, and administrative procedures for hospital, clinic, and care facility managers.",
+  "knowledge": [
+    {
+      "statement": "Patient flow optimisation is the primary operational lever in healthcare administration. Bottlenecks in admissions, diagnostic turnaround, discharge processes, and bed allocation cascade downstream into cancelled procedures, diverted ambulances, and patient deterioration. Every administrative system should be designed around reducing patient flow time, not around departmental convenience.",
+      "topics": ["operational_workflows"],
+      "confidence": 0.99,
+      "tags": ["patient_flow", "bottleneck", "throughput", "bed_management"]
+    },
+    {
+      "statement": "Discharge planning must begin at admission, not when the clinical team decides the patient is medically ready. Delayed discharge — patients occupying beds after medical fitness — is the primary cause of bed blockages in acute hospitals. Administrative triggers: social care assessment, medication to take home (TTOs), patient and carer education, transport booking, and GP notification must be initiated on admission for elective patients.",
+      "topics": ["operational_workflows"],
+      "confidence": 0.99,
+      "tags": ["discharge_planning", "delayed_discharge", "TTO", "bed_blockage", "social_care"]
+    },
+    {
+      "statement": "Outpatient scheduling must match appointment slot lengths to procedure complexity, not default all appointments to the same duration. Under-scheduling complex consultations creates running-late cascades that affect every patient that day. Over-scheduling simple consultations wastes clinical capacity. DNA (Did Not Attend) rates above 10% indicate booking process failure — confirmation calls, SMS reminders, and online self-check-in reduce DNAs.",
+      "topics": ["scheduling"],
+      "confidence": 0.98,
+      "tags": ["outpatient_scheduling", "DNA", "appointment_length", "reminders"]
+    },
+    {
+      "statement": "The 18-week referral-to-treatment (RTT) pathway target in the NHS requires that patients wait no more than 18 weeks from GP referral to start of treatment for elective conditions. Breaches must be tracked by specialty and reported. Administrative RTT management requires: accurate pathway start date recording, breach risk identification at 12 weeks, and escalation protocols for patients approaching 18 weeks.",
+      "topics": ["compliance", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["RTT", "18_week_pathway", "NHS", "waiting_list", "breach_reporting"]
+    },
+    {
+      "statement": "National Early Warning Score (NEWS2) is the standardised clinical observation and escalation tool used across NHS acute settings. Administratively, the system must ensure: observation frequency matches the NEWS2 score (high NEWS2 = more frequent obs), escalation is documented when triggered, and response time to escalation is recorded. Administrative failures in NEWS2 documentation are a patient safety risk and a CQC inspection focus.",
+      "topics": ["compliance", "operational_workflows"],
+      "confidence": 0.97,
+      "tags": ["NEWS2", "early_warning_score", "escalation", "observation", "CQC"]
+    },
+    {
+      "statement": "Duty of Candour is a legal obligation on NHS providers (Health and Social Care Act 2008, Regulation 20) to be open and transparent with patients and families when things go wrong. Administrative obligations: notify the patient or family of notifiable safety incidents, provide a written explanation and apology, support a review of what happened. Failure to comply with Duty of Candour is a CQC regulatory breach.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["duty_of_candour", "patient_safety_incident", "CQC", "regulation_20", "transparency"]
+    },
+    {
+      "statement": "Serious Incident (SI) reporting is mandatory in NHS healthcare when an event results in unexpected patient death, serious harm, abuse, or major service disruption. SIs must be reported to the NHS England Strategic Executive Information System (STEIS) within 2 working days of identification. Root cause analysis (RCA) and action plans must be completed within 60 working days. Missed SI reporting is a governance failure.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["serious_incident", "STEIS", "NHS_England", "root_cause_analysis", "mandatory_reporting"]
+    },
+    {
+      "statement": "CQC inspection readiness is not a project to be done before an inspection — it is the continuous state of an organisation that has embedded the Fundamental Standards into its operating procedures. CQC's five key questions (Safe, Effective, Caring, Responsive, Well-led) should map to operational metrics and governance structures. Providers rated 'Requires Improvement' typically have documentation gaps, not care gaps.",
+      "topics": ["compliance"],
+      "confidence": 0.98,
+      "tags": ["CQC", "fundamental_standards", "inspection_readiness", "well_led", "safe"]
+    },
+    {
+      "statement": "Infection Prevention and Control (IPC) has administrative as well as clinical dimensions. Administrative responsibilities include: ensuring hand hygiene compliance audits are conducted and reported, managing the IPC mandatory training register, maintaining cleaning schedules and audits, and escalating IPC concerns to the Director of Infection Prevention and Control (DIPC). IPC failures are frequently administrative failures in system maintenance, not clinical practice failures.",
+      "topics": ["compliance", "operational_workflows"],
+      "confidence": 0.99,
+      "tags": ["IPC", "infection_control", "hand_hygiene", "DIPC", "cleaning_audit"]
+    },
+    {
+      "statement": "GDPR and the UK Data Protection Act 2018 apply to patient data with additional restrictions under the common law duty of confidentiality and the Caldicott Principles. Patient data can only be shared for direct care, with explicit consent, or under a legal gateway. The Caldicott Guardian role oversees patient information governance. Subject Access Requests (SARs) must be fulfilled within 1 calendar month.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["GDPR", "patient_confidentiality", "Caldicott", "SAR", "data_protection"]
+    },
+    {
+      "statement": "Medicines management administration includes: controlled drug (CD) register compliance (two-person sign, balance checked after each transaction, quarterly audit), medication reconciliation on admission and discharge, prescription accuracy audits, and pharmacist medicines review. CDs must be kept in locked cabinets; discrepancies must be reported to the Accountable Officer immediately.",
+      "topics": ["compliance", "operational_workflows"],
+      "confidence": 0.99,
+      "tags": ["controlled_drugs", "CD_register", "medication_reconciliation", "pharmacy", "accountable_officer"]
+    },
+    {
+      "statement": "Mandatory training compliance is a CQC and employment law requirement. Organisations must maintain a training matrix: which staff roles require which training, frequency of renewal, and current completion percentage by team. Common mandatory modules: safeguarding (Level appropriate to role), IPC, fire safety, manual handling, information governance, and conflict resolution. Compliance below 85% in a team is a governance risk.",
+      "topics": ["compliance"],
+      "confidence": 0.98,
+      "tags": ["mandatory_training", "training_matrix", "safeguarding", "compliance_rate"]
+    },
+    {
+      "statement": "Safeguarding administration requires clear escalation pathways for both children and adults at risk. Every organisation must have a named Designated Safeguarding Lead (DSL) or Safeguarding Adults Lead. Staff must know how to raise a safeguarding concern and to whom. Multi-Agency Safeguarding Hubs (MASH) are the referral point in most local authority areas. Safeguarding records must be stored separately from the main patient record.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.99,
+      "tags": ["safeguarding", "DSL", "MASH", "adult_at_risk", "referral_pathway"]
+    },
+    {
+      "statement": "Elective recovery planning requires active waiting list management — not just passive tracking. Administrative actions: validate waiting lists monthly (check patients still want treatment, are medically fit, and have correct clinical priority), offer cancelled appointments proactively, and track 'clock stops' accurately. Waiting lists with poor data quality cause clinical harm when patients with changing conditions are not identified.",
+      "topics": ["scheduling", "operational_workflows"],
+      "confidence": 0.97,
+      "tags": ["waiting_list", "elective_recovery", "validation", "clock_stop", "clinical_priority"]
+    },
+    {
+      "statement": "Theatre scheduling requires optimising sequence, turnaround time, and equipment availability simultaneously. Overrunning lists cascade into cancelled procedures and staff overtime. Key administrative controls: book to 80–85% of list capacity (not 100%) to absorb complexity variation, monitor utilisation weekly, flag lists running below 70% efficiency for clinical input, and measure cancellation rates by list and reason.",
+      "topics": ["scheduling"],
+      "confidence": 0.97,
+      "tags": ["theatre_scheduling", "surgical_list", "utilisation", "cancellation_rate", "turnaround"]
+    },
+    {
+      "statement": "Staff rostering in healthcare must balance patient safety (minimum safe staffing ratios) with workforce availability, skill mix requirements, and working time regulations. NHS Improvement's Safe Staffing guidance and the NMC's professional standards require registered nurse-to-patient ratios that vary by setting. Fill rates below 80% (unfilled shifts) are a patient safety red flag requiring immediate escalation.",
+      "topics": ["operational_workflows", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["safe_staffing", "rostering", "nurse_ratio", "fill_rate", "working_time"]
+    },
+    {
+      "statement": "The Friends and Family Test (FFT) and patient experience surveys generate qualitative feedback that administrative teams must act on, not just report. Systematic review of free-text comments identifies operational themes (waiting times, communication, cleanliness) that quantitative scores miss. Boards that review only scores, not verbatim comments, miss the insight.",
+      "topics": ["procedures", "operational_workflows"],
+      "confidence": 0.96,
+      "tags": ["Friends_and_Family_Test", "FFT", "patient_experience", "verbatim_feedback"]
+    },
+    {
+      "statement": "Never Events are a defined list of serious, preventable patient safety incidents that must never occur if preventive measures are in place (NHS Never Events list). Examples: wrong-site surgery, retained foreign object, wrong-route medication. Every Never Event requires immediate notification to the board, NHS England, and the Care Quality Commission. They are the clearest signal of system failure in healthcare governance.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["never_events", "wrong_site_surgery", "retained_object", "patient_safety", "system_failure"]
+    },
+    {
+      "statement": "Procurement in healthcare is subject to NHS Supply Chain frameworks and the Public Contracts Regulations 2015. Clinical and administrative procurement must use approved frameworks where available. Single-source procurement above threshold requires documented justification. Medical devices must be registered with the MHRA (Medical Devices Regulation 2002) before procurement. Using unregistered devices is both a patient safety and regulatory risk.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.97,
+      "tags": ["NHS_procurement", "MHRA", "medical_devices", "supply_chain", "frameworks"]
+    },
+    {
+      "statement": "Care Quality Commission (CQC) registration is required for all providers of regulated health and social care activities in England. Material changes to services (new location, new regulated activity, change in responsible individual) require CQC notification and often fresh registration. Operating regulated activities without registration is a criminal offence. Registration conditions set the legal parameters of the service.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["CQC_registration", "regulated_activity", "responsible_individual", "registration_conditions"]
+    },
+    {
+      "statement": "Mortality review is mandatory in NHS trusts through the Learning from Deaths framework (National Quality Board 2017). All deaths occurring in hospital must be screened for whether a structured judgement review (SJR) or case record review (CRR) is warranted. Findings must be reported to the board quarterly. Trusts that review fewer than 25% of deaths miss learning opportunities.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.97,
+      "tags": ["mortality_review", "learning_from_deaths", "SJR", "CRR", "National_Quality_Board"]
+    },
+    {
+      "statement": "Business continuity planning in healthcare must cover: IT system failure (electronic patient record downtime procedures), utility failure (generators, water backup), major surge events, and supply chain failure. NHS organisations must submit and test Business Continuity Plans annually. The critical administrative test: can care continue safely if all IT systems go down for 72 hours?",
+      "topics": ["procedures", "compliance"],
+      "confidence": 0.97,
+      "tags": ["business_continuity", "downtime_procedures", "EPR_failure", "surge", "resilience"]
+    },
+    {
+      "statement": "Complaints handling in NHS settings is governed by the NHS Complaints Regulations 2009 (as amended). Key obligations: acknowledge within 3 working days, investigate thoroughly, respond in writing within the agreed timeframe (typically 25 working days), offer a meeting with the complainant, and explain the right to escalate to the Parliamentary and Health Service Ombudsman (PHSO). Complaint data must be analysed for systemic issues.",
+      "topics": ["procedures", "compliance"],
+      "confidence": 0.99,
+      "tags": ["complaints", "NHS_complaints_regulations", "PHSO", "ombudsman", "response_timeframe"]
+    },
+    {
+      "statement": "Freedom of Information (FOI) Act 2000 applies to NHS bodies. Requests must be responded to within 20 working days. Organisations must maintain a publication scheme (information proactively published). NHS bodies must not charge for standard FOI requests. Repeated patterns of late FOI responses are an indicator of poor information governance, which the ICO can investigate.",
+      "topics": ["compliance"],
+      "confidence": 0.98,
+      "tags": ["FOI", "Freedom_of_Information", "20_working_days", "publication_scheme", "ICO"]
+    },
+    {
+      "statement": "Medical staffing administration must comply with the European Working Time Directive (EWTD) / Working Time Regulations 1998 — junior doctors may not work more than 48 hours per week averaged over 26 weeks, with adequate rest periods. Exception To Work (ETW) forms allow temporary exceedances but require monitoring. Rota gaps creating EWTD breaches must be escalated to the Medical Director.",
+      "topics": ["compliance", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["EWTD", "junior_doctors", "rota", "48_hour_week", "ETW"]
+    },
+    {
+      "statement": "Job planning for consultants is an NHS contractual requirement. Annual job plans must document direct clinical care programmed activities (PAs), supporting professional activities (SPAs), and any additional NHS responsibilities. Administrative managers should track job plan completion rates (target 100%) and escalate overdue plans. Job plans that do not reflect actual work are a budget management problem.",
+      "topics": ["procedures", "scheduling"],
+      "confidence": 0.96,
+      "tags": ["job_planning", "consultant", "PAs", "SPAs", "NHS_contract"]
+    },
+    {
+      "statement": "Estates and facilities management in healthcare is governed by NHS Premises Assurance Model (PAM) and the Health Technical Memoranda (HTMs). Statutory compliance includes: Legionella L8 water safety, asbestos register management, fire risk assessments, pressure systems, and electrical installations (EICR). A backlog of statutory maintenance is a CQC concern and a patient safety risk.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.97,
+      "tags": ["estates", "HTM", "Legionella_L8", "asbestos", "EICR", "fire_risk"]
+    },
+    {
+      "statement": "Referral management — ensuring incoming referrals are triaged, allocated, and tracked — is the administrative foundation of secondary care access. Key metrics: referral-to-first-appointment time by specialty, percentage of referrals triaged within 24 hours, referral rejection rate. High rejection rates signal that GP referral guidelines are unclear or not followed. Untracked referrals ('lost in the system') are a never-acceptable administrative failure.",
+      "topics": ["operational_workflows", "scheduling"],
+      "confidence": 0.98,
+      "tags": ["referral_management", "triage", "referral_rejection", "lost_referral", "secondary_care"]
+    },
+    {
+      "statement": "Information governance (IG) audits and Data Security and Protection (DSP) Toolkit submissions are annual requirements for all NHS organisations and providers of NHS-funded services. The DSP Toolkit assesses: data protection policies, staff training, system access controls, data sharing agreements, and breach response procedures. Failure to achieve standards results in ICO investigation risk and NHS contract suspension.",
+      "topics": ["compliance"],
+      "confidence": 0.99,
+      "tags": ["DSP_toolkit", "information_governance", "ICO", "data_security", "annual_submission"]
+    },
+    {
+      "statement": "Healthcare administration knowledge compounds when systematically captured from incidents, inspections, and operational reviews. Organisations that treat each CQC inspection, SI investigation, or complaint as an isolated event miss the systemic insights. A knowledge base of 'what failed and why' — across incidents, complaints, and audit findings — is the raw material of organisational learning.",
+      "topics": ["operational_workflows", "procedures"],
+      "confidence": 0.99,
+      "tags": ["organisational_learning", "knowledge_capture", "systemic_insight", "intelligence"]
+    },
+    {
+      "statement": "Coded clinical data (ICD-10 diagnoses, OPCS procedure codes) underlies NHS payment (HRG-based tariff), commissioning decisions, and national quality indicators. Coding accuracy depends on the quality of clinical documentation — poor clinical notes produce wrong codes, wrong HRGs, and wrong payment. Coding quality management is an administrative function with direct revenue impact.",
+      "topics": ["procedures", "compliance"],
+      "confidence": 0.97,
+      "tags": ["clinical_coding", "ICD-10", "OPCS", "HRG_tariff", "coding_accuracy"]
+    },
+    {
+      "statement": "Patient safety culture — the degree to which staff feel safe to report incidents and near misses without blame — is the strongest predictor of patient safety outcomes. Administrative systems that create psychological safety (anonymous reporting options, visible learning from reports, no-blame culture for honest mistakes) generate more incident reports, not more incidents. High report rates are a sign of good safety culture, not poor performance.",
+      "topics": ["procedures", "operational_workflows"],
+      "confidence": 0.98,
+      "tags": ["safety_culture", "psychological_safety", "incident_reporting", "no_blame", "near_miss"]
+    },
+    {
+      "statement": "Clinic preparation and pre-appointment work — verifying patient demographics, ensuring letters have been sent, checking outstanding investigations, and confirming equipment availability — directly affects clinic efficiency. Poor preparation creates delays, abandoned consultations ('no results available'), and patient dissatisfaction. Dedicated pre-clinic administrative review the day before is a high-ROI operational investment.",
+      "topics": ["operational_workflows", "scheduling"],
+      "confidence": 0.96,
+      "tags": ["clinic_prep", "pre_appointment", "investigations", "equipment_availability"]
+    },
+    {
+      "statement": "Overseas visitor charging is a legal obligation for NHS secondary care providers. Charging regulations require identifying patients subject to charge before treatment, charging the relevant overseas authority or the patient, and recovering costs. Failure to charge results in irrecoverable debt. NHS England overseas visitor guidance and the National Overseas Visitor Programme provide the administrative framework.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.95,
+      "tags": ["overseas_visitor_charging", "NHS_charges", "cost_recovery", "immigration_health_surcharge"]
+    },
+    {
+      "statement": "Mental health legislation administration requires specific competencies. The Mental Health Act 1983 (amended 2007) provides powers for detention, treatment, and discharge of patients with mental disorder. Key administrative roles: Mental Health Act Administrator (processes legal paperwork for sections), Approved Mental Health Professional (AMHP), and Second Opinion Appointed Doctor (SOAD). Errors in MHA paperwork can make detention unlawful.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.98,
+      "tags": ["Mental_Health_Act", "MHA_administrator", "AMHP", "section_papers", "detention"]
+    },
+    {
+      "statement": "Consent documentation is both a clinical and administrative obligation. Consent forms must be signed by the patient (or legally authorised representative) before elective procedures, with confirmation that the clinician has explained the procedure, material risks, and alternatives. Consent obtained by a clinician who will not perform the procedure is best practice. Unsigned consent forms are an audit and medico-legal vulnerability.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.99,
+      "tags": ["consent", "informed_consent", "consent_form", "medico_legal", "capacity"]
+    },
+    {
+      "statement": "Capacity and Mental Capacity Act (MCA 2005) compliance requires that any decision made on behalf of an incapacitated adult is: in their best interests, the least restrictive option, and made with appropriate consultation (family, IMCA if no family). Best interest documentation must be completed and recorded. Deprivation of Liberty Safeguards (DoLS) require formal authorisation when a care plan deprives a person of liberty in a hospital or care home.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.99,
+      "tags": ["MCA", "mental_capacity", "best_interests", "DoLS", "IMCA"]
+    },
+    {
+      "statement": "Care coordination for complex, multi-morbid patients requires a named care coordinator who tracks care across multiple services, ensures communication between providers, and supports the patient in navigating the system. Without coordination, patients fall through gaps between services, leading to avoidable emergency admissions. Administrative investment in care coordination has the highest ROI in frail elderly and long-term conditions management.",
+      "topics": ["operational_workflows"],
+      "confidence": 0.97,
+      "tags": ["care_coordination", "multi_morbidity", "named_coordinator", "frail_elderly", "avoidable_admissions"]
+    },
+    {
+      "statement": "Integrated care records — shared across primary, secondary, community, and social care — reduce duplication of assessment, medication errors, and failed handoffs. IG barriers to sharing are real but frequently overstated. The National Data Guardian's framework and the Health and Social Care (Safety and Quality) Act 2015 require organisations to promote record sharing for direct care. Administrative resistance to record sharing causes preventable harm.",
+      "topics": ["operational_workflows", "compliance"],
+      "confidence": 0.97,
+      "tags": ["integrated_care_records", "shared_records", "National_Data_Guardian", "handoff", "interoperability"]
+    },
+    {
+      "statement": "Temporary staffing (bank and agency) management is one of the largest controllable cost areas in healthcare. Excessive agency use at premium rates is driven by: poor rostering planning, high sickness absence, unfilled establishment vacancies, and weak bank recruitment. Administrative controls: maximise bank fill before agency, use only framework agency suppliers, cap agency rates, and track agency spend weekly with mandatory escalation triggers.",
+      "topics": ["operational_workflows", "scheduling"],
+      "confidence": 0.97,
+      "tags": ["agency_staff", "bank_staff", "temporary_staffing", "agency_spend", "NHSP"]
+    },
+    {
+      "statement": "CQUIN (Commissioning for Quality and Innovation) is an NHS payment framework that links a proportion of contract value to achieving specific quality improvement goals. Administrative management of CQUINs requires: understanding the indicators, designing data collection processes, submitting evidence to commissioners quarterly, and escalating at-risk CQUINs early. Missing CQUIN milestones results in payment deduction.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.96,
+      "tags": ["CQUIN", "commissioning", "quality_improvement", "payment_framework"]
+    },
+    {
+      "statement": "Internal audit in healthcare provides independent assurance to the board that controls are operating effectively. Healthcare-specific audit areas: clinical coding, waiting list management, discharge processes, medicines management, and financial controls. Audit recommendations with no management response or implementation plan are a governance red flag. Boards should track audit recommendation implementation, not just audit output.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.96,
+      "tags": ["internal_audit", "assurance", "audit_recommendations", "governance"]
+    },
+    {
+      "statement": "Emergency preparedness, resilience, and response (EPRR) is a statutory function for NHS organisations. Core standards require a Major Incident Plan, command and control structures (Bronze/Silver/Gold), annual testing of plans, and trained Incident Commanders. NHS organisations must declare a Major Incident when their response capacity is exceeded. Administrative under-investment in EPRR produces operational chaos when a real incident occurs.",
+      "topics": ["compliance", "procedures"],
+      "confidence": 0.97,
+      "tags": ["EPRR", "major_incident", "command_and_control", "emergency_preparedness", "resilience"]
+    },
+    {
+      "statement": "Healthcare administration knowledge — captured from operational reviews, incidents, complaints, and inspections — is the organisation's memory of what works and what fails. Without systematic capture, organisations repeatedly make the same process errors, investigate the same root causes, and implement the same recommendations that were never sustained from the last investigation. North Star's role in healthcare is converting repeated incidents into durable operational knowledge.",
+      "topics": ["operational_workflows", "procedures"],
+      "confidence": 0.99,
+      "tags": ["organisational_memory", "repeated_incidents", "knowledge_capture", "North_Star"]
+    }
+  ]
+}

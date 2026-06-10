@@ -1,0 +1,301 @@
+{
+  "pack": "organizational_memory",
+  "version": "1.0.0",
+  "description": "How organizations capture, govern, and reuse their collective knowledge — meeting outcomes, decision records, lessons learned, knowledge governance, and institutional memory.",
+  "knowledge": [
+    {
+      "statement": "Organizational memory is the stored body of information, knowledge, and experience accumulated by an organization over time. It exists in documents, databases, processes, culture, and the minds of individuals. When individuals leave, undocumented memory is permanently lost.",
+      "topics": ["organizational_memory", "knowledge_management"],
+      "confidence": 0.99,
+      "tags": ["definition", "knowledge_loss"]
+    },
+    {
+      "statement": "Tacit knowledge is personal, context-dependent, and hard to articulate — the know-how embedded in experts' intuitions and routines. Explicit knowledge is codified and transferable. Most organizational value lives in tacit knowledge; the challenge is making it explicit without losing fidelity.",
+      "topics": ["organizational_memory", "knowledge_types"],
+      "confidence": 0.99,
+      "tags": ["tacit_knowledge", "explicit_knowledge"]
+    },
+    {
+      "statement": "The SECI model (Nonaka & Takeuchi) describes four knowledge conversion modes: Socialisation (tacit to tacit, through shared experience), Externalisation (tacit to explicit, through articulation), Combination (explicit to explicit, through systemisation), and Internalisation (explicit to tacit, through learning by doing).",
+      "topics": ["organizational_memory", "knowledge_management", "theory"],
+      "confidence": 0.98,
+      "tags": ["SECI", "Nonaka", "knowledge_conversion"]
+    },
+    {
+      "statement": "The bus factor (or truck factor) measures how many key people could leave before a project or system fails due to lost knowledge. A bus factor of one is a critical organizational risk. Knowledge redundancy — deliberately spreading know-how across people and documentation — mitigates it.",
+      "topics": ["organizational_memory", "risk", "knowledge_management"],
+      "confidence": 0.99,
+      "tags": ["bus_factor", "knowledge_redundancy"]
+    },
+    {
+      "statement": "Communities of Practice (CoP) are groups of practitioners who share a domain of interest, engage in joint activities, and build a shared repertoire of knowledge. They are one of the most effective mechanisms for transferring tacit knowledge at scale.",
+      "topics": ["organizational_memory", "knowledge_management"],
+      "confidence": 0.98,
+      "tags": ["community_of_practice", "CoP"]
+    },
+    {
+      "statement": "Knowledge management systems are only as valuable as the quality and freshness of their content. Stale, inaccurate, or conflicting records are worse than no records — they create false confidence and mislead decisions. Regular curation and expiry policies are essential.",
+      "topics": ["organizational_memory", "knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["knowledge_quality", "staleness", "governance"]
+    },
+    {
+      "statement": "Every meeting that produces a decision, commitment, or change in direction should generate a written record within 24 hours. The record must capture: the decision made, the rationale, who made it, what alternatives were considered, and what follow-up actions are required.",
+      "topics": ["meeting_outcomes", "decision_records"],
+      "confidence": 0.99,
+      "tags": ["meeting_notes", "24_hour_rule"]
+    },
+    {
+      "statement": "Meeting notes without clear ownership of action items are organizational waste. Each action item must have one named owner, a due date, and a definition of done. Shared ownership ('we should') means no ownership.",
+      "topics": ["meeting_outcomes"],
+      "confidence": 0.99,
+      "tags": ["action_items", "ownership"]
+    },
+    {
+      "statement": "Decision fatigue sets in when too many decisions are made in a single meeting. Meetings should front-load the most important decisions when attention is highest. Decisions made late in long meetings are of lower quality and more likely to be revisited.",
+      "topics": ["meeting_outcomes", "decision_making"],
+      "confidence": 0.96,
+      "tags": ["decision_fatigue", "meeting_design"]
+    },
+    {
+      "statement": "The DACI framework (Driver, Approver, Contributor, Informed) clarifies decision-making roles. One Driver coordinates, one Approver is accountable for the outcome, Contributors provide input, and Informed parties are notified. Ambiguity about who approves is the most common cause of decision loops.",
+      "topics": ["meeting_outcomes", "decision_making"],
+      "confidence": 0.97,
+      "tags": ["DACI", "RACI", "decision_roles"]
+    },
+    {
+      "statement": "Architecture Decision Records (ADRs) are short documents that capture a significant architectural decision, its context, the alternatives considered, the decision made, and its consequences. They transform implicit architectural knowledge into explicit organizational memory.",
+      "topics": ["decision_records", "architecture"],
+      "confidence": 0.99,
+      "tags": ["ADR", "architecture_decisions"]
+    },
+    {
+      "statement": "A good decision record captures the context at the time the decision was made, not just the outcome. Future readers need to understand the constraints, information, and pressures that existed then — not re-judge the decision from the present.",
+      "topics": ["decision_records"],
+      "confidence": 0.99,
+      "tags": ["decision_context", "temporal_context"]
+    },
+    {
+      "statement": "Decisions should be tracked through their full lifecycle: proposed, approved, active, superseded, deprecated. A superseded decision record preserves why the original decision was made and why it changed, preventing the same discussion from recurring.",
+      "topics": ["decision_records", "knowledge_governance"],
+      "confidence": 0.98,
+      "tags": ["decision_lifecycle", "superseded"]
+    },
+    {
+      "statement": "The two-way door vs one-way door distinction (Amazon) classifies decisions by reversibility. Two-way door decisions can be reversed easily and should be made quickly and delegated. One-way door decisions are irreversible and warrant careful deliberation and escalation.",
+      "topics": ["decision_records", "decision_making"],
+      "confidence": 0.97,
+      "tags": ["reversibility", "two_way_door", "delegation"]
+    },
+    {
+      "statement": "Decisions made without documented rationale are routinely re-litigated when the original decision-makers leave or the context changes. The primary value of a decision record is preserving the 'why' — the rationale, not just the 'what'.",
+      "topics": ["decision_records"],
+      "confidence": 0.99,
+      "tags": ["rationale", "re-litigation"]
+    },
+    {
+      "statement": "Pre-mortem analysis (Klein) asks the team to imagine the decision has failed and work backward to identify what caused the failure. It surfaces risks and assumptions before committing, reducing the risk of groupthink and overconfidence.",
+      "topics": ["decision_records", "decision_making"],
+      "confidence": 0.97,
+      "tags": ["pre_mortem", "risk_analysis", "Klein"]
+    },
+    {
+      "statement": "A post-mortem (or incident retrospective) is a blameless analysis of what went wrong, what went right, and what systemic changes would prevent recurrence. Blameless means the focus is on systems and processes, not individual fault. Blame inhibits honest reporting.",
+      "topics": ["lessons_learned", "incident_management"],
+      "confidence": 0.99,
+      "tags": ["post_mortem", "blameless", "retrospective"]
+    },
+    {
+      "statement": "Lessons learned sessions are only valuable if they produce concrete changes to processes, tools, or knowledge bases. A lessons learned document filed away and never acted upon is organizational theater that reduces trust in the process over time.",
+      "topics": ["lessons_learned"],
+      "confidence": 0.99,
+      "tags": ["lessons_learned", "action_required"]
+    },
+    {
+      "statement": "The After Action Review (AAR), developed by the US Army, asks four questions after every significant event: What was supposed to happen? What actually happened? Why was there a difference? What do we do differently next time? Its power is in its brevity and universal applicability.",
+      "topics": ["lessons_learned"],
+      "confidence": 0.98,
+      "tags": ["AAR", "after_action_review", "army"]
+    },
+    {
+      "statement": "Sprint retrospectives in agile are a recurring lessons-learned mechanism. Their effectiveness depends on psychological safety: team members must feel safe raising problems without fear of judgment or reprisal. Without safety, retrospectives produce only surface-level feedback.",
+      "topics": ["lessons_learned", "agile"],
+      "confidence": 0.98,
+      "tags": ["retrospective", "psychological_safety", "agile"]
+    },
+    {
+      "statement": "Lessons learned must be searchable and linked to the decisions and events they reference. A flat document repository of lessons learned is nearly useless; the lesson has no value if it cannot be found when the relevant situation recurs.",
+      "topics": ["lessons_learned", "knowledge_governance"],
+      "confidence": 0.98,
+      "tags": ["searchability", "linking"]
+    },
+    {
+      "statement": "The OODA loop (Observe, Orient, Decide, Act) describes how organizations and individuals respond to events. Faster OODA loops outcompete slower ones. Institutional memory accelerates the Orient phase by providing relevant historical context before decisions are made.",
+      "topics": ["lessons_learned", "decision_making"],
+      "confidence": 0.96,
+      "tags": ["OODA", "Boyd", "decision_speed"]
+    },
+    {
+      "statement": "Double-loop learning (Argyris) goes beyond correcting errors (single-loop) to questioning the assumptions and mental models that caused the error. Organizations stuck in single-loop learning repeat the same classes of mistakes across different contexts.",
+      "topics": ["lessons_learned", "organizational_learning"],
+      "confidence": 0.97,
+      "tags": ["double_loop_learning", "Argyris", "mental_models"]
+    },
+    {
+      "statement": "Knowledge owners are responsible for the accuracy, completeness, and currency of specific knowledge domains. Without assigned owners, knowledge degrades by default. Ownership must be explicit and include the responsibility to update or deprecate stale records.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["knowledge_ownership", "stewardship"]
+    },
+    {
+      "statement": "Knowledge has a half-life that varies by domain. Operational procedures may be stale in months; strategic principles may hold for years. Knowledge governance systems must enforce review cycles tuned to domain-specific decay rates.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.98,
+      "tags": ["knowledge_decay", "half_life", "review_cycles"]
+    },
+    {
+      "statement": "Contradiction management is a core governance function. When new information contradicts existing knowledge, the conflict must be resolved explicitly: the old record is superseded, both records coexist with context, or the contradiction is flagged for human review. Ignoring contradictions silently corrupts the knowledge base.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["contradiction", "conflict_resolution", "superseded"]
+    },
+    {
+      "statement": "Knowledge provenance — recording where a piece of knowledge came from, when it was captured, and who validated it — is essential for assessing trustworthiness. A claim without provenance cannot be distinguished from speculation.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["provenance", "traceability", "trust"]
+    },
+    {
+      "statement": "Confidence scoring allows knowledge items to carry a numeric signal of reliability. High-confidence items are widely validated observations; low-confidence items are hypotheses or single-source claims. Queries that blend high- and low-confidence results without distinction mislead decision-makers.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.97,
+      "tags": ["confidence_score", "reliability"]
+    },
+    {
+      "statement": "Knowledge curation is an active process, not a passive one. Good curators prune redundant entries, merge duplicates, flag contradictions, and promote high-quality items. Without curation, any knowledge base drifts into noise.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["curation", "maintenance"]
+    },
+    {
+      "statement": "The curse of knowledge (cognitive bias) makes experts systematically underestimate how much context novices lack. When capturing knowledge, writers should document what seems obvious to them — that is often the most valuable tacit knowledge for others.",
+      "topics": ["knowledge_governance", "knowledge_capture"],
+      "confidence": 0.97,
+      "tags": ["curse_of_knowledge", "documentation_bias"]
+    },
+    {
+      "statement": "Peter Senge's Five Disciplines of the Learning Organization are: Personal Mastery, Mental Models, Shared Vision, Team Learning, and Systems Thinking. The fifth — systems thinking — is the integrating discipline that makes the others coherent.",
+      "topics": ["learning_organization", "theory"],
+      "confidence": 0.98,
+      "tags": ["Senge", "five_disciplines", "systems_thinking"]
+    },
+    {
+      "statement": "A learning organization treats every project, incident, and decision as an input to its knowledge base, not just an output to be delivered. The organization's memory improves continuously. Organizations that do not learn systematically rely on individuals, creating fragility.",
+      "topics": ["learning_organization"],
+      "confidence": 0.99,
+      "tags": ["continuous_learning", "organizational_learning"]
+    },
+    {
+      "statement": "Psychological safety (Edmondson) is the shared belief that the team is safe for interpersonal risk-taking. It is the single strongest predictor of team learning behavior. Without it, mistakes are hidden, lessons are never surfaced, and the organization cannot learn from failure.",
+      "topics": ["learning_organization"],
+      "confidence": 0.99,
+      "tags": ["psychological_safety", "Edmondson", "team_learning"]
+    },
+    {
+      "statement": "Knowledge silos form when teams or individuals hoard information for competitive or political reasons, or simply due to poor tooling. Silos reduce organizational intelligence, create redundant work, and cause decisions that ignore relevant context held elsewhere.",
+      "topics": ["learning_organization", "knowledge_management"],
+      "confidence": 0.99,
+      "tags": ["knowledge_silos", "information_hoarding"]
+    },
+    {
+      "statement": "Onboarding time is a direct measure of institutional memory quality. If it takes months for a new hire to become productive, tacit knowledge is locked in people's heads rather than systems. Improving knowledge documentation is a force multiplier on onboarding speed.",
+      "topics": ["learning_organization", "institutional_memory"],
+      "confidence": 0.97,
+      "tags": ["onboarding", "ramp_up_time"]
+    },
+    {
+      "statement": "Exit interviews should include a structured knowledge transfer component. When an experienced employee leaves, their undocumented knowledge — key contacts, historical context, failure patterns, workarounds — should be systematically extracted before departure.",
+      "topics": ["institutional_memory", "knowledge_transfer"],
+      "confidence": 0.97,
+      "tags": ["exit_interview", "knowledge_transfer", "offboarding"]
+    },
+    {
+      "statement": "Institutional memory enables faster diagnosis of recurring problems. When an organization can answer 'have we seen this before?', it avoids re-investigating root causes that were already found, and applies proven mitigations rather than re-inventing them.",
+      "topics": ["institutional_memory"],
+      "confidence": 0.99,
+      "tags": ["pattern_recognition", "recurring_problems"]
+    },
+    {
+      "statement": "The forgetting curve (Ebbinghaus) shows that information is forgotten exponentially unless reinforced. Organizational knowledge faces the same decay: knowledge captured but never referenced or retrieved degrades in accessibility. Active use and retrieval reinforce retention.",
+      "topics": ["institutional_memory", "knowledge_management"],
+      "confidence": 0.97,
+      "tags": ["forgetting_curve", "Ebbinghaus", "retrieval"]
+    },
+    {
+      "statement": "Knowledge management ROI is most visible in decision quality and speed, not in the cost of documentation. Measuring the value of institutional memory requires tracking decisions where historical knowledge was retrieved and used, and comparing outcomes to baseline.",
+      "topics": ["institutional_memory", "knowledge_governance"],
+      "confidence": 0.96,
+      "tags": ["knowledge_ROI", "measurement"]
+    },
+    {
+      "statement": "The distinction between data, information, knowledge, and wisdom (DIKW hierarchy) clarifies the level of processing required. Data is raw facts; information is contextualized data; knowledge is information applied through experience; wisdom is knowing when and how to apply knowledge. Organizational memory operates primarily at the knowledge level.",
+      "topics": ["knowledge_management", "theory"],
+      "confidence": 0.97,
+      "tags": ["DIKW", "hierarchy", "knowledge_types"]
+    },
+    {
+      "statement": "Narrative capture — documenting decisions as stories with context, characters, and consequences — is more memorable and transferable than abstract principles alone. Case studies embed knowledge in a form that activates pattern-matching during future analogous situations.",
+      "topics": ["knowledge_capture", "organizational_memory"],
+      "confidence": 0.96,
+      "tags": ["narrative", "case_studies", "storytelling"]
+    },
+    {
+      "statement": "Knowledge bases should support versioning. When a record is updated, the previous version should be preserved with a timestamp and reason for change. This enables auditing, reconstruction of historical context, and detection of systematic drift.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.98,
+      "tags": ["versioning", "audit_trail"]
+    },
+    {
+      "statement": "The most actionable unit of organizational memory is the decision, not the report. Reports describe the past; decisions describe the response. Knowledge systems that index decisions with their rationale, context, and outcomes are more useful than those that index raw documents.",
+      "topics": ["decision_records", "organizational_memory"],
+      "confidence": 0.98,
+      "tags": ["decision_centricity", "actionable_knowledge"]
+    },
+    {
+      "statement": "High-stakes domains — safety, compliance, customer commitments, financial controls — require mandatory review workflows before knowledge is published or superseded. Automated ingestion without human validation gates is inappropriate for knowledge that has direct operational consequences.",
+      "topics": ["knowledge_governance"],
+      "confidence": 0.99,
+      "tags": ["high_stakes", "human_review", "validation"]
+    },
+    {
+      "statement": "Retrieval-augmented decision making pairs a question or decision with relevant historical context automatically surfaced from the knowledge base. This closes the loop between capture and use, making knowledge investment tangible rather than theoretical.",
+      "topics": ["organizational_memory", "knowledge_management"],
+      "confidence": 0.97,
+      "tags": ["RAG", "retrieval_augmented", "decision_support"]
+    },
+    {
+      "statement": "Meeting-free knowledge capture is often more valuable than meeting-based capture. Written updates, async decision logs, and lightweight status records generate more durable knowledge than meetings, while also being more inclusive and time-efficient.",
+      "topics": ["meeting_outcomes", "knowledge_capture"],
+      "confidence": 0.96,
+      "tags": ["async_first", "written_culture"]
+    },
+    {
+      "statement": "Amazon's Working Backwards and six-pager memo culture forces decisions to be articulated in writing before meetings. The act of writing clarifies thinking, surfaces assumptions, and creates a record simultaneously. It is both a decision-quality and knowledge-capture practice.",
+      "topics": ["decision_records", "meeting_outcomes", "learning_organization"],
+      "confidence": 0.97,
+      "tags": ["Amazon", "six_pager", "working_backwards", "writing_culture"]
+    },
+    {
+      "statement": "Knowledge federation — connecting distributed knowledge stores rather than centralizing all knowledge in one system — reduces friction for capture while enabling cross-domain retrieval. The key challenge is maintaining consistent metadata and identity across federated sources.",
+      "topics": ["knowledge_governance", "knowledge_management"],
+      "confidence": 0.95,
+      "tags": ["federation", "distributed_knowledge", "integration"]
+    },
+    {
+      "statement": "Knowledge entropy is the natural tendency of organizational knowledge to become disordered, outdated, and fragmented over time without active maintenance. Entropy accelerates during rapid growth, team turnover, and tool migrations. Reversing entropy requires dedicated governance effort.",
+      "topics": ["knowledge_governance", "organizational_memory"],
+      "confidence": 0.97,
+      "tags": ["knowledge_entropy", "decay", "governance"]
+    }
+  ]
+}

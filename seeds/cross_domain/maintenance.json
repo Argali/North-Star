@@ -1,0 +1,558 @@
+{
+  "pack": "maintenance",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Maintenance is the set of activities required to keep physical assets in a functional state or restore them to one. Effective maintenance maximises asset availability and reliability while minimising lifecycle cost.",
+      "topics": [
+        "maintenance"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "Corrective maintenance (reactive/breakdown maintenance) repairs a failed asset. It has the highest unit cost and causes unplanned downtime. It is only appropriate for non-critical, cheap-to-repair assets where failure has minimal operational impact.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "corrective_maintenance"
+      ]
+    },
+    {
+      "statement": "Preventive maintenance (PM) performs inspections and replacements at scheduled intervals (time or usage-based) before failure occurs. It reduces unplanned breakdowns and is mandatory for safety-critical components. The risk is over-maintaining: replacing parts with remaining useful life.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "preventive_maintenance"
+      ]
+    },
+    {
+      "statement": "Predictive maintenance (PdM) uses condition monitoring data (vibration, temperature, oil analysis, acoustic emission) to detect degradation and predict remaining useful life. It services assets only when needed, avoiding both unnecessary PM and reactive failures.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "predictive_maintenance"
+      ]
+    },
+    {
+      "statement": "Condition-Based Maintenance (CBM) triggers maintenance when a monitored condition (e.g. vibration level, oil contamination, bearing temperature) crosses a defined threshold. CBM requires continuous or periodic measurement and threshold setting based on historical failure data.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "cbm"
+      ]
+    },
+    {
+      "statement": "Reliability-Centred Maintenance (RCM) systematically determines the most appropriate maintenance strategy for each asset function and failure mode. It asks seven questions about asset function, failure effects, and consequences. RCM results in a mix of PM, PdM, and run-to-failure strategies.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "rcm"
+      ]
+    },
+    {
+      "statement": "Total Productive Maintenance (TPM) engages operators in basic equipment care (cleaning, lubrication, inspection) to prevent deterioration. The goal is zero breakdowns, zero defects, zero accidents. OEE (Overall Equipment Effectiveness) is TPM's primary metric.",
+      "topics": [
+        "maintenance",
+        "strategies"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "tpm"
+      ]
+    },
+    {
+      "statement": "Overall Equipment Effectiveness (OEE) = Availability × Performance × Quality. It measures how effectively a manufacturing asset is utilised relative to its theoretical maximum. World-class OEE is typically >85%. It decomposes losses into six categories for targeted improvement.",
+      "topics": [
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "oee"
+      ]
+    },
+    {
+      "statement": "Mean Time Between Failures (MTBF) is the average time between consecutive failures of a repairable asset. Higher MTBF indicates more reliable assets or more effective PM. MTBF = Total operational time / number of failures.",
+      "topics": [
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "mtbf"
+      ]
+    },
+    {
+      "statement": "Mean Time To Repair (MTTR) is the average time to restore a failed asset to operation. Lower MTTR indicates efficient repair processes. MTTR = Total repair time / number of repairs. It combines diagnostic time, parts availability, technician response, and repair execution.",
+      "topics": [
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "mttr"
+      ]
+    },
+    {
+      "statement": "Mean Time To Failure (MTTF) applies to non-repairable assets or components. It measures the expected life before replacement is required. Used for spare parts planning and lifecycle cost modelling.",
+      "topics": [
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "mttf"
+      ]
+    },
+    {
+      "statement": "Failure Mode and Effects Analysis (FMEA) systematically identifies every way a component or system can fail, the effect of each failure mode, and its severity, occurrence probability, and detectability. The Risk Priority Number (RPN = Severity × Occurrence × Detection) prioritises mitigation actions.",
+      "topics": [
+        "maintenance",
+        "analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "fmea"
+      ]
+    },
+    {
+      "statement": "The bathtub curve describes failure rates over asset life: infant mortality (early failures from manufacturing defects), normal operating life (random low-rate failures), and wear-out (increasing failures as the asset ages). Maintenance strategy should vary by lifecycle phase.",
+      "topics": [
+        "maintenance",
+        "reliability"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "bathtub_curve"
+      ]
+    },
+    {
+      "statement": "Computerised Maintenance Management Systems (CMMS) manage work orders, maintenance schedules, asset history, spare parts inventory, and maintenance costs. Without a CMMS, maintenance decisions are based on memory rather than data.",
+      "topics": [
+        "maintenance",
+        "software"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "cmms"
+      ]
+    },
+    {
+      "statement": "Work orders are the formal mechanism for requesting, authorising, planning, and documenting maintenance tasks. Every maintenance activity should be preceded by a work order. Work order history is the primary data source for MTBF, MTTR, and cost analysis.",
+      "topics": [
+        "maintenance",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "work_orders"
+      ]
+    },
+    {
+      "statement": "Planned maintenance percentage (PMP) is the ratio of planned to total maintenance hours. World-class operations target >80–85% planned. Low PMP (high reactive maintenance) indicates inadequate PM or condition monitoring and drives higher cost and lower availability.",
+      "topics": [
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "planned_maintenance_percentage"
+      ]
+    },
+    {
+      "statement": "Spare parts management balances holding cost against stockout risk. Critical spare parts (long lead time, high failure impact) should be stocked; non-critical, easily sourced parts can be ordered on demand. Pareto analysis (ABC) identifies which parts deserve strategic stocking.",
+      "topics": [
+        "maintenance",
+        "spare_parts"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "spare_parts"
+      ]
+    },
+    {
+      "statement": "Root cause analysis (RCA) for failures uses techniques like 5 Whys and Fishbone (Ishikawa) diagrams to identify the underlying cause, not just the immediate failure. Addressing root causes prevents recurrence; replacing failed parts without RCA creates a recurring failure pattern.",
+      "topics": [
+        "maintenance",
+        "analysis"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "rca"
+      ]
+    },
+    {
+      "statement": "Maintenance backlog tracks all work orders that have been approved but not yet executed. An unmanaged backlog grows until assets fail. Backlog age and work order priority distribution are leading indicators of maintenance programme health.",
+      "topics": [
+        "maintenance",
+        "process",
+        "kpis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "maintenance_backlog"
+      ]
+    },
+    {
+      "statement": "Vibration analysis detects bearing defects, imbalance, misalignment, and looseness in rotating machinery before catastrophic failure. Frequency spectrum analysis identifies specific fault signatures. It is one of the most mature and cost-effective PdM technologies.",
+      "topics": [
+        "maintenance",
+        "condition_monitoring"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "vibration_analysis"
+      ]
+    },
+    {
+      "statement": "Oil analysis monitors lubricant condition and contamination to assess gear, bearing, and engine health. Metal particle content indicates wear rates; water contamination shortens lubricant life. Oil analysis extends oil change intervals while preventing premature failure.",
+      "topics": [
+        "maintenance",
+        "condition_monitoring"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "oil_analysis"
+      ]
+    },
+    {
+      "statement": "Thermographic inspection uses infrared cameras to detect abnormal heat in electrical systems (loose connections, overloaded circuits) and mechanical components. Overheating is a leading indicator of imminent failure in motors, switchgear, and refractory systems.",
+      "topics": [
+        "maintenance",
+        "condition_monitoring"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "thermography"
+      ]
+    },
+    {
+      "statement": "Asset criticality ranking assigns a priority level to each asset based on safety impact, production impact, environmental impact, regulatory requirements, and replaceability. Criticality drives which maintenance strategy is applied and what spare parts are stocked.",
+      "topics": [
+        "maintenance",
+        "planning"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "asset_criticality"
+      ]
+    },
+    {
+      "statement": "Life cycle cost (LCC) analysis evaluates the total cost of owning an asset from acquisition through disposal: acquisition, installation, operation, maintenance, downtime, and disposal. Lowest acquisition cost rarely equates to lowest LCC. LCC guides procurement decisions.",
+      "topics": [
+        "maintenance",
+        "financial"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "lifecycle_cost"
+      ]
+    },
+    {
+      "statement": "Lubrication management is one of the highest-ROI maintenance activities. Up to 40% of premature bearing failures are lubrication-related (wrong type, wrong quantity, wrong frequency). Lubrication routes, standardised lubricants, and contamination control are the key practices.",
+      "topics": [
+        "maintenance",
+        "best_practices"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "lubrication"
+      ]
+    },
+    {
+      "statement": "Maintenance strategy selection should match the consequence of failure and the failure mode. Corrective maintenance is acceptable for non-critical, cheap-to-replace items with no safety impact. Preventive maintenance suits items with age-related failure patterns. Predictive maintenance is justified when monitoring costs less than the failure consequence.",
+      "topics": [
+        "maintenance",
+        "strategy"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "strategy_selection"
+      ]
+    },
+    {
+      "statement": "Run-to-failure (RTF) is a deliberate maintenance strategy, not a failure of management. It is appropriate when: the item is non-critical, failure has no safety or environmental consequence, spares are cheap and readily available, and the repair is quick. RTF should be documented as a conscious decision, not a default.",
+      "topics": [
+        "maintenance",
+        "strategy"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "run_to_failure"
+      ]
+    },
+    {
+      "statement": "Planned Maintenance Percentage (PMP) measures the proportion of maintenance work that was scheduled in advance vs reactive work. World-class operations achieve PMP >85%. Low PMP indicates reactive drift: the maintenance department is fire-fighting rather than controlling its workload.",
+      "topics": [
+        "maintenance",
+        "performance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "pmp"
+      ]
+    },
+    {
+      "statement": "Work order priority classification: Priority 1 (Safety/Critical) — respond within 4 hours, affects safety or production halted. Priority 2 (Urgent) — respond within 24 hours, degraded capacity. Priority 3 (Routine) — schedule within 2 weeks. Priority 4 (Improvement) — schedule in next outage. Consistent prioritisation prevents all work defaulting to 'urgent'.",
+      "topics": [
+        "maintenance",
+        "planning"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "work_order_priority"
+      ]
+    },
+    {
+      "statement": "Maintenance planning separates 'what' (job plan: scope, materials, tools, labour hours, safety requirements) from 'when' (scheduling). Planners should never do the maintenance; they create the plan. Schedulers maximise wrench time by coordinating labour, parts availability, and equipment availability simultaneously.",
+      "topics": [
+        "maintenance",
+        "planning"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "planning_scheduling_separation"
+      ]
+    },
+    {
+      "statement": "Shutdown / turnaround planning for plant shutdowns requires 6-18 months lead time for major work. Critical path analysis identifies tasks that determine minimum shutdown duration. Cost and schedule overruns in turnarounds are typically caused by scope creep (additional work found during inspection) and parts delays.",
+      "topics": [
+        "maintenance",
+        "planning"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "turnaround_planning"
+      ]
+    },
+    {
+      "statement": "Spare parts classification: critical spares (single point of failure, long lead time, held on-site), insurance spares (held for low-probability, high-consequence failures), routine consumables (managed by min/max reorder). Over-stocking critical spares is expensive; under-stocking can halt production for weeks.",
+      "topics": [
+        "maintenance",
+        "spare_parts"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "spare_parts_classification"
+      ]
+    },
+    {
+      "statement": "Stores management for maintenance: Right parts, right quantity, right condition, right location. Min/max inventory system triggers replenishment orders automatically. Kitting (pre-picking all parts for a job) reduces wrench-time delay. Bin location systems prevent technicians searching for parts.",
+      "topics": [
+        "maintenance",
+        "spare_parts"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "stores_management"
+      ]
+    },
+    {
+      "statement": "Maintenance float (buffer stock of critical assemblies) allows rapid swap-out of failed components for repair offline, minimising downtime. Float strategy is cost-effective when repair time exceeds acceptable downtime and spare component cost is less than lost production cost per hour.",
+      "topics": [
+        "maintenance",
+        "spare_parts"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "maintenance_float"
+      ]
+    },
+    {
+      "statement": "Condition monitoring routes are periodic rounds of non-intrusive measurements (vibration, temperature, oil sample, visual) that provide asset health trends. Route frequency is calibrated to the P-F interval (potential failure to functional failure). Condition monitoring only adds value if abnormal readings trigger work orders within the P-F interval.",
+      "topics": [
+        "maintenance",
+        "predictive"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "condition_monitoring_routes"
+      ]
+    },
+    {
+      "statement": "Infrared thermography detects thermal anomalies in electrical panels, refractory linings, heat exchangers, and mechanical bearings. Temperature rise above baseline indicates insulation degradation, resistance increase, or friction. Annual thermographic surveys of electrical infrastructure are best practice in manufacturing and data centres.",
+      "topics": [
+        "maintenance",
+        "predictive"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "thermography"
+      ]
+    },
+    {
+      "statement": "Motor current signature analysis (MCSA) diagnoses rotor bar faults, bearing defects, and mechanical imbalance in electric motors by analysing current waveform harmonics. It requires no physical access to the motor and can be performed during normal operation.",
+      "topics": [
+        "maintenance",
+        "predictive"
+      ],
+      "confidence": 0.92,
+      "tags": [
+        "mcsa"
+      ]
+    },
+    {
+      "statement": "Ultrasonic detection identifies leaks (compressed air, gas, steam), electrical discharge (arcing, tracking, corona), and early-stage bearing defects (before vibration analysis detects them) by sensing ultrasonic emissions in the 20-100 kHz range. It is one of the most cost-effective condition monitoring technologies per defect found.",
+      "topics": [
+        "maintenance",
+        "predictive"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "ultrasonic_detection"
+      ]
+    },
+    {
+      "statement": "IIoT (Industrial IoT) sensors continuously stream vibration, temperature, pressure, and flow data to cloud analytics platforms. Machine learning models on streaming data detect anomalies that periodic condition monitoring rounds miss. The business case requires comparing sensor + analytics cost against avoided failure consequence.",
+      "topics": [
+        "maintenance",
+        "technology"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "iiot_maintenance"
+      ]
+    },
+    {
+      "statement": "Digital twin for maintenance creates a virtual replica of a physical asset, updated in real time with operational data. Simulations on the digital twin predict how the asset will behave under different operating conditions and maintenance schedules. Digital twins are highest-value for complex, high-consequence assets (turbines, compressors, aircraft).",
+      "topics": [
+        "maintenance",
+        "technology"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "digital_twin"
+      ]
+    },
+    {
+      "statement": "Maintenance work measurement establishes standard times for routine tasks. Planned hours vs actual hours variance (wrench time ratio) reveals whether jobs are accurately estimated and whether technicians are productively engaged. Industry benchmark wrench time is 25-35% in reactive environments, 45-55% in world-class planned environments.",
+      "topics": [
+        "maintenance",
+        "performance"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "wrench_time"
+      ]
+    },
+    {
+      "statement": "Contractor management for maintenance: pre-qualification (competency, insurance, safety record), induction (site rules, permit-to-work procedures), supervision (owner's representative on-site for critical work), performance review (KPIs, near-miss reporting). Contractors working unsupervised without site induction is a high-consequence safety risk.",
+      "topics": [
+        "maintenance",
+        "safety",
+        "procurement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "contractor_management"
+      ]
+    },
+    {
+      "statement": "Permit-to-work (PTW) system controls high-risk maintenance activities: electrical isolation (Lockout/Tagout — LOTO), confined space entry, hot work, working at height, and pressure systems. PTW requires written isolation certificate, hazard assessment, emergency procedures, and authorised sign-off before work begins.",
+      "topics": [
+        "maintenance",
+        "safety"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "permit_to_work"
+      ]
+    },
+    {
+      "statement": "Energy isolation and Lockout/Tagout (LOTO) ensures equipment cannot be energised while maintenance work is in progress. Every energy source (electrical, hydraulic, pneumatic, gravitational, thermal, chemical) must be identified, isolated, and locked out. LOTO failures cause more maintenance fatalities than any other single cause.",
+      "topics": [
+        "maintenance",
+        "safety"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "loto"
+      ]
+    },
+    {
+      "statement": "Maintenance culture shift from reactive to proactive requires: leadership commitment (not cutting maintenance budget when assets are running well), maintenance metrics that predict failures (leading indicators) not just count them (lagging indicators), and wrench-time incentives that reward planned work completion over breakdown response speed.",
+      "topics": [
+        "maintenance",
+        "culture"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "maintenance_culture"
+      ]
+    },
+    {
+      "statement": "Asset lifecycle management covers: selection (fit for purpose, total life cost), commissioning (verify asset performs to specification before handover), operation (adherence to design parameters), maintenance (strategies appropriate to age and condition), and decommissioning (safe disposal, data retention). CAPEX decisions at acquisition determine 80% of lifetime operating cost.",
+      "topics": [
+        "maintenance",
+        "asset_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "asset_lifecycle"
+      ]
+    },
+    {
+      "statement": "ISO 55000 Asset Management standard provides requirements for an asset management system: policy, strategy, objectives, plans, and performance evaluation. It requires organisations to demonstrate that asset management decisions are aligned to organisational objectives and that performance is systematically measured and improved.",
+      "topics": [
+        "maintenance",
+        "standards"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "iso_55000"
+      ]
+    },
+    {
+      "statement": "Maintenance cost analysis splits costs into: direct (labour, parts, contractor, consumables) and indirect (production loss, quality impact, customer penalty). Direct costs are visible; indirect costs are often 2-5x direct costs for critical equipment failures. A maintenance cost reduction that increases indirect costs is a false economy.",
+      "topics": [
+        "maintenance",
+        "cost"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "maintenance_cost_analysis"
+      ]
+    },
+    {
+      "statement": "Post-maintenance testing (commissioning checks) after significant maintenance work verifies that the asset is performing to specification before return to service. Skipping post-maintenance testing is a common cause of infant mortality failures — equipment failing shortly after maintenance due to incorrect reassembly or missed re-connections.",
+      "topics": [
+        "maintenance",
+        "quality"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "post_maintenance_testing"
+      ]
+    },
+    {
+      "statement": "Maintenance Key Performance Indicators minimum set: OEE trend, PM compliance %, PMP %, MTBF trend per critical asset, MTTR trend, planned vs actual maintenance cost, work order backlog age, safety incidents during maintenance work. KPIs should be reviewed at operational (daily), tactical (weekly), and strategic (monthly) levels.",
+      "topics": [
+        "maintenance",
+        "performance",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "maintenance_kpis"
+      ]
+    }
+  ]
+}

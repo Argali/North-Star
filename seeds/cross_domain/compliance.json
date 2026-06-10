@@ -1,0 +1,562 @@
+{
+  "pack": "compliance",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Compliance means adhering to laws, regulations, standards, and internal policies applicable to an organisation's activities. Non-compliance creates legal liability, financial penalties, reputational damage, and operational disruption.",
+      "topics": [
+        "compliance"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "Regulatory compliance involves meeting obligations set by governmental or regulatory bodies (GDPR, OSHA, FDA, SOX, HIPAA). Compliance programmes must monitor regulatory changes continuously — regulations evolve and breaches of new requirements are not excused by ignorance.",
+      "topics": [
+        "compliance",
+        "regulatory"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "regulatory_compliance"
+      ]
+    },
+    {
+      "statement": "GDPR (General Data Protection Regulation) governs the processing of personal data of EU/EEA residents. Key obligations: lawful basis for processing, data subject rights (access, erasure, portability), data breach notification within 72 hours, and Data Protection Officer appointment for certain organisations.",
+      "topics": [
+        "compliance",
+        "data_protection",
+        "gdpr"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "gdpr"
+      ]
+    },
+    {
+      "statement": "Data minimisation (GDPR principle) requires collecting only the personal data strictly necessary for the stated purpose. Collecting data 'just in case' is a GDPR violation. Every data field must have a documented processing purpose and retention period.",
+      "topics": [
+        "compliance",
+        "data_protection"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "data_minimisation"
+      ]
+    },
+    {
+      "statement": "Privacy by Design builds data protection requirements into systems from the design stage. Retrofitting privacy controls after a system is built is more expensive and less effective than designing them in from the start.",
+      "topics": [
+        "compliance",
+        "data_protection"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "privacy_by_design"
+      ]
+    },
+    {
+      "statement": "SOX (Sarbanes-Oxley Act) requires publicly listed US companies to maintain accurate financial records and internal controls. CEO and CFO must personally certify financial statements. Non-compliance is a criminal offence. IT controls over financial systems are directly within SOX scope.",
+      "topics": [
+        "compliance",
+        "financial_regulation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "sox"
+      ]
+    },
+    {
+      "statement": "ISO 27001 is the international standard for Information Security Management Systems (ISMS). Certification demonstrates systematic management of information security risks. It is increasingly required by enterprise customers and government contracts.",
+      "topics": [
+        "compliance",
+        "information_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "iso27001"
+      ]
+    },
+    {
+      "statement": "ISO 9001 is the international standard for Quality Management Systems. It requires documented processes, defined responsibilities, monitoring, measurement, and continuous improvement. It focuses on consistently meeting customer requirements.",
+      "topics": [
+        "compliance",
+        "quality_management"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "iso9001"
+      ]
+    },
+    {
+      "statement": "A compliance risk assessment identifies applicable regulations, the organisation's current compliance status, gaps, and the likelihood and impact of non-compliance. It prioritises where to invest compliance effort and resources.",
+      "topics": [
+        "compliance",
+        "risk_management"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "compliance_risk_assessment"
+      ]
+    },
+    {
+      "statement": "The three lines of defence model: first line (operational management) owns and manages risks; second line (compliance/risk function) provides oversight and challenge; third line (internal audit) provides independent assurance. Each line must be independent and clearly separated.",
+      "topics": [
+        "compliance",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "three_lines"
+      ]
+    },
+    {
+      "statement": "Audit trails are immutable, timestamped records of who did what, when, and from where. They are required for regulatory compliance (SOX, GDPR, HIPAA), internal investigation, and legal proceedings. Audit logs must be tamper-evident and retained for mandated periods.",
+      "topics": [
+        "compliance",
+        "audit"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "audit_trail"
+      ]
+    },
+    {
+      "statement": "Internal audits independently assess whether controls are operating as designed and whether the compliance programme is effective. Findings must be tracked to remediation. An internal audit function that never finds issues is not doing its job.",
+      "topics": [
+        "compliance",
+        "audit"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "internal_audit"
+      ]
+    },
+    {
+      "statement": "Compliance policies must be documented, version-controlled, accessible to all employees, regularly reviewed, and formally approved by management. Undocumented or outdated policies are an audit finding and do not provide legal protection.",
+      "topics": [
+        "compliance",
+        "policies"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "policy_management"
+      ]
+    },
+    {
+      "statement": "Compliance training ensures employees understand their obligations. Training records must be maintained as evidence. Annual refresher training is typically required. Training effectiveness must be assessed, not just completion rate.",
+      "topics": [
+        "compliance",
+        "training"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "compliance_training"
+      ]
+    },
+    {
+      "statement": "Whistleblowing channels (protected disclosure mechanisms) allow employees to report compliance concerns without fear of retaliation. EU Whistleblower Directive requires organisations above 50 employees to provide confidential reporting channels. Retaliation against whistleblowers is illegal in most jurisdictions.",
+      "topics": [
+        "compliance",
+        "culture"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "whistleblowing"
+      ]
+    },
+    {
+      "statement": "Sanctions compliance requires screening customers, suppliers, and transactions against governmental sanctions lists (OFAC, EU, UN). Transacting with sanctioned parties carries severe penalties. Screening must be automated and updated continuously as lists change.",
+      "topics": [
+        "compliance",
+        "financial_crime"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "sanctions"
+      ]
+    },
+    {
+      "statement": "Anti-money laundering (AML) controls include Know Your Customer (KYC) identity verification, transaction monitoring for suspicious patterns, and Suspicious Activity Report (SAR) filing. AML obligations apply to financial institutions and increasingly to other sectors.",
+      "topics": [
+        "compliance",
+        "financial_crime"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "aml_kyc"
+      ]
+    },
+    {
+      "statement": "Vendor/third-party compliance management extends compliance obligations to the supply chain. Organisations are liable for data breaches caused by their processors (GDPR) and for corruption committed by their agents (UK Bribery Act). Third-party due diligence and contractual controls are required.",
+      "topics": [
+        "compliance",
+        "third_party"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "third_party_compliance"
+      ]
+    },
+    {
+      "statement": "Regulatory change management monitors new and amended regulations, assesses their impact on the organisation, assigns remediation ownership, and tracks implementation to completion. A static compliance programme that does not track regulatory change will drift out of compliance.",
+      "topics": [
+        "compliance",
+        "regulatory"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "regulatory_change"
+      ]
+    },
+    {
+      "statement": "Health and safety compliance (OSHA in the US, Health and Safety at Work Act in the UK, D.Lgs 81/08 in Italy) requires risk assessments, safe working procedures, incident reporting, and safety training. Duty of care obligations exist regardless of whether specific regulations apply.",
+      "topics": [
+        "compliance",
+        "health_safety"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "health_safety"
+      ]
+    },
+    {
+      "statement": "Environmental compliance (EIA, emission limits, waste disposal regulations, chemical handling) is increasingly enforced and carries both civil and criminal liability. ESG reporting requirements are expanding environmental compliance obligations for listed companies.",
+      "topics": [
+        "compliance",
+        "environmental"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "environmental_compliance"
+      ]
+    },
+    {
+      "statement": "Compliance monitoring uses automated controls, key risk indicators (KRIs), and exception reports to detect compliance failures in real time. Monitoring is preventive; audit is detective. Both are required for an effective compliance programme.",
+      "topics": [
+        "compliance",
+        "monitoring"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "compliance_monitoring"
+      ]
+    },
+    {
+      "statement": "Data retention and deletion policies specify how long each category of data must be kept and how it must be disposed of. Retaining data beyond its retention period creates GDPR liability; deleting it before mandatory retention periods violates other regulations (tax records, employment records).",
+      "topics": [
+        "compliance",
+        "data_governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "data_retention"
+      ]
+    },
+    {
+      "statement": "Segregation of duties (SoD) prevents any single individual from controlling all steps of a critical process (e.g. payment authorisation and payment execution). SoD is a fundamental control against fraud and error. Automation can enforce SoD at scale.",
+      "topics": [
+        "compliance",
+        "internal_controls"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "segregation_of_duties"
+      ]
+    },
+    {
+      "statement": "Compliance culture — the organisation's values and behaviours around compliance — is the most important determinant of programme effectiveness. Leadership tone at the top, middle management reinforcement, and zero tolerance for ethical violations create a culture where compliance failures are less likely.",
+      "topics": [
+        "compliance",
+        "culture"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "compliance_culture"
+      ]
+    },
+    {
+      "statement": "Compliance risk assessment scores regulatory obligations by the likelihood of breach and the consequence (financial penalty, criminal liability, reputational damage, operational disruption). High-consequence, high-likelihood risks require immediate control uplift. The assessment should be reviewed at least annually and after any material regulatory change.",
+      "topics": [
+        "compliance",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "compliance_risk_assessment_depth"
+      ]
+    },
+    {
+      "statement": "Regulatory horizon scanning monitors legislative and regulatory developments before they become enforceable requirements. Early awareness allows organisations to influence consultations, plan implementation resources, and avoid last-minute compliance sprints. Key sources: regulator announcements, government consultations, industry association briefings, law firm updates.",
+      "topics": [
+        "compliance",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "regulatory_horizon_scanning"
+      ]
+    },
+    {
+      "statement": "Control effectiveness testing verifies that compliance controls are operating as designed. Design adequacy (the control exists) is insufficient; operating effectiveness (the control fires correctly, every time, for every applicable transaction) is what matters. Controls should be tested by internal audit or compliance function quarterly for high-risk areas.",
+      "topics": [
+        "compliance",
+        "controls"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "control_effectiveness_testing"
+      ]
+    },
+    {
+      "statement": "Regulatory reporting obligations include specific submission formats, frequencies, and deadlines. Late or inaccurate regulatory reports are themselves compliance breaches distinct from the underlying issue. Automated data pipelines to regulatory reporting systems reduce manual error risk and ensure consistent methodology across reporting periods.",
+      "topics": [
+        "compliance",
+        "reporting"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "regulatory_reporting"
+      ]
+    },
+    {
+      "statement": "Data Protection Impact Assessment (DPIA) is required under GDPR Article 35 for processing likely to result in high risk to individuals: large-scale systematic monitoring, processing special category data, or automated decision-making with significant effects. A DPIA must be completed before processing begins, not after.",
+      "topics": [
+        "compliance",
+        "gdpr",
+        "privacy"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "dpia"
+      ]
+    },
+    {
+      "statement": "Records retention schedule specifies how long each record type must be retained and the disposal method. Retention periods are driven by legal obligation (tax records 7 years, employment records 6-7 years in UK/EU), contractual obligation, and operational need. Retaining data longer than required increases GDPR risk; disposing too early destroys legal evidence.",
+      "topics": [
+        "compliance",
+        "data_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "records_retention"
+      ]
+    },
+    {
+      "statement": "Regulatory sandbox programmes allow companies to test innovative products or services in a live environment with relaxed regulatory requirements and supervisory oversight. They provide a structured way to engage regulators before full market launch. Used extensively in financial services (FCA, MAS) and increasingly in energy and transport.",
+      "topics": [
+        "compliance",
+        "innovation"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "regulatory_sandbox"
+      ]
+    },
+    {
+      "statement": "Competition law (antitrust) prohibits agreements that restrict competition (price-fixing, market allocation, bid rigging) and abuse of a dominant market position. Cartel participation carries criminal liability for individuals in many jurisdictions and fines of up to 10% of global turnover for companies. Compliance training for commercial and procurement staff is mandatory.",
+      "topics": [
+        "compliance",
+        "competition_law"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "competition_law"
+      ]
+    },
+    {
+      "statement": "Modern Slavery Act (UK) and equivalent legislation require large organisations to publish annual statements confirming steps taken to identify and address modern slavery in their supply chains. Due diligence must extend beyond tier 1 suppliers. High-risk sectors include hospitality, construction, agriculture, and garment manufacturing.",
+      "topics": [
+        "compliance",
+        "esg",
+        "supply_chain"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "modern_slavery"
+      ]
+    },
+    {
+      "statement": "Environmental compliance obligations include: emissions reporting (ESOS in UK, EU ETS), waste classification and disposal documentation, environmental permits (for emissions, discharge, waste management), and statutory environmental impact assessments for significant projects. Environmental enforcement carries criminal liability for senior officers.",
+      "topics": [
+        "compliance",
+        "environmental"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "environmental_compliance"
+      ]
+    },
+    {
+      "statement": "ISO 37001 Anti-Bribery Management System standard provides a framework for preventing, detecting, and addressing bribery. Key controls include: facilitation payment prohibition, gifts and hospitality register, due diligence on business partners, training for high-risk roles, and a reporting channel. ISO 37001 certification provides an affirmative defence in some jurisdictions.",
+      "topics": [
+        "compliance",
+        "anti_bribery"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "iso_37001"
+      ]
+    },
+    {
+      "statement": "Market abuse regulation (MAR in EU/UK) prohibits insider dealing, market manipulation, and unlawful disclosure of inside information. Listed companies and their advisors must maintain insider lists, implement information barriers (Chinese walls), and have dealing policies for directors and connected persons.",
+      "topics": [
+        "compliance",
+        "financial_regulation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "market_abuse"
+      ]
+    },
+    {
+      "statement": "Conduct risk is the risk that an organisation or its employees will act in a way that causes harm to customers, markets, or the firm's reputation. It is distinct from operational risk. Regulators (FCA, SEC) increasingly focus on conduct risk through senior manager accountability regimes and culture assessments.",
+      "topics": [
+        "compliance",
+        "governance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "conduct_risk"
+      ]
+    },
+    {
+      "statement": "Senior Managers and Certification Regime (SMCR in UK) assigns individual accountability for conduct and compliance to named senior managers. Regulators can hold individuals personally liable for breaches within their area of responsibility. It creates strong incentives for senior leaders to actively manage compliance risk rather than delegating it entirely.",
+      "topics": [
+        "compliance",
+        "governance",
+        "financial_regulation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "smcr"
+      ]
+    },
+    {
+      "statement": "Breach response protocol defines what to do when a compliance breach is identified: contain (stop the breach), assess (scope and impact), report (internal escalation, regulatory notification where required), remediate (fix the root cause), and document (evidence of the response). Regulatory self-reporting is required for material breaches in most jurisdictions and typically results in reduced penalties.",
+      "topics": [
+        "compliance",
+        "incident_response"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "breach_response"
+      ]
+    },
+    {
+      "statement": "Compliance metrics for board reporting: number of regulatory breaches (by severity), regulatory actions or enquiries received, training completion rate for mandatory programmes, third-party compliance audit results, policy exception counts, and whistleblower report volumes (and outcomes). Boards should see trend data, not just point-in-time snapshots.",
+      "topics": [
+        "compliance",
+        "governance",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "compliance_board_reporting"
+      ]
+    },
+    {
+      "statement": "Accountability mapping for compliance assigns each regulatory obligation to an accountable business owner (not the compliance function). The compliance function provides oversight, tools, and challenge. Business owners are accountable for operating compliant processes. Compliance functions that own the controls create moral hazard — the business stops being responsible.",
+      "topics": [
+        "compliance",
+        "governance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "accountability_mapping"
+      ]
+    },
+    {
+      "statement": "Health and Safety management system under ISO 45001 requires: hazard identification and risk assessment, legal register, safe systems of work, incident reporting and investigation, competence management, and management review. Near-miss reporting rate is a leading indicator of safety culture maturity; high rates indicate reporting culture (positive), not unsafe workplace.",
+      "topics": [
+        "compliance",
+        "health_safety"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "iso_45001"
+      ]
+    },
+    {
+      "statement": "Sanctions compliance requires screening customers, counterparties, suppliers, and transactions against sanctions lists (OFAC, EU, UN, OFSI). Screening must be ongoing: parties can be added to sanctions lists after relationship establishment. Violations carry significant criminal and civil penalties and can result in debarment from USD correspondent banking.",
+      "topics": [
+        "compliance",
+        "sanctions"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "sanctions_screening"
+      ]
+    },
+    {
+      "statement": "Conflict of interest policy requires employees to disclose relationships or interests that could impair their objectivity. Procurement decisions, hiring, and contract awards are highest-risk areas. Disclosed conflicts can often be managed (recusal); undisclosed conflicts that later emerge are disciplinary matters and may constitute fraud.",
+      "topics": [
+        "compliance",
+        "ethics"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "conflict_of_interest"
+      ]
+    },
+    {
+      "statement": "Compliance training effectiveness should be measured by knowledge retention (tested post-training and at intervals), behaviour change (incident data, audit findings in trained areas), and risk reduction (fewer policy breaches). Annual compliance training with a test-and-forget approach produces the lowest behaviour change; scenario-based, contextualised training is most effective.",
+      "topics": [
+        "compliance",
+        "training"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "training_effectiveness"
+      ]
+    },
+    {
+      "statement": "Regulatory relationship management means proactively engaging regulators through industry consultations, supervisory meetings, and regulatory horizon scanning. Organisations with constructive regulator relationships receive earlier warnings of regulatory concerns and more proportionate enforcement responses when issues arise.",
+      "topics": [
+        "compliance",
+        "regulatory_relations"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "regulator_engagement"
+      ]
+    },
+    {
+      "statement": "Compliance technology (RegTech) includes: automated regulatory change management platforms, AI-based transaction monitoring (AML), automated reporting tools, and compliance workflow management. RegTech reduces manual compliance work but requires rigorous validation: a model that incorrectly classifies transactions may itself constitute a compliance failure.",
+      "topics": [
+        "compliance",
+        "technology"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "regtech"
+      ]
+    },
+    {
+      "statement": "ESG compliance is becoming regulated: EU CSRD (Corporate Sustainability Reporting Directive) requires detailed sustainability reporting for large EU companies from 2024-2025 (phased). TCFD (Task Force on Climate-related Financial Disclosures) is mandatory for UK-listed companies. Non-financial reporting obligations are converging with financial reporting standards.",
+      "topics": [
+        "compliance",
+        "esg",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "esg_compliance"
+      ]
+    },
+    {
+      "statement": "Privacy by design and default under GDPR requires that data minimisation, purpose limitation, and appropriate security are built into products and processes from inception, not bolted on after launch. Privacy impact reviews should be part of the product development process, not a legal sign-off step at go-live.",
+      "topics": [
+        "compliance",
+        "gdpr",
+        "privacy"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "privacy_by_design_depth"
+      ]
+    }
+  ]
+}

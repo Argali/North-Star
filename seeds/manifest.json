@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "description": "North Star knowledge seed packs \u2014 pre-validated knowledge items for common domains. Two collections: developer_core (9 packs) and cross_domain (10 packs).",
+  "packs": [
+    {
+      "name": "architecture",
+      "file": "developer_core/architecture.json",
+      "description": "Software architecture principles, patterns, and trade-offs"
+    },
+    {
+      "name": "design_patterns",
+      "file": "developer_core/design_patterns.json",
+      "description": "GoF patterns, enterprise integration patterns, and architectural patterns"
+    },
+    {
+      "name": "testing",
+      "file": "developer_core/testing.json",
+      "description": "Testing strategies, methodologies, and tooling concepts"
+    },
+    {
+      "name": "documentation",
+      "file": "developer_core/documentation.json",
+      "description": "Code and system documentation best practices"
+    },
+    {
+      "name": "security",
+      "file": "developer_core/security.json",
+      "description": "Application security, OWASP, authentication, and secure coding"
+    },
+    {
+      "name": "deployment",
+      "file": "developer_core/deployment.json",
+      "description": "CI/CD, containerisation, orchestration, and release strategies"
+    },
+    {
+      "name": "observability",
+      "file": "developer_core/observability.json",
+      "description": "Logging, metrics, tracing, alerting, and SLOs"
+    },
+    {
+      "name": "data_modeling",
+      "file": "developer_core/data_modeling.json",
+      "description": "Database design, schema patterns, indexing, and migrations"
+    },
+    {
+      "name": "performance",
+      "file": "developer_core/performance.json",
+      "description": "Caching, query optimisation, async patterns, and scalability"
+    },
+    {
+      "name": "human_ai_collaboration",
+      "file": "cross_domain/human_ai_collaboration.json"
+    },
+    {
+      "name": "cybersecurity",
+      "file": "cross_domain/cybersecurity.json"
+    },
+    {
+      "name": "decision_making",
+      "file": "cross_domain/decision_making.json"
+    },
+    {
+      "name": "business_analysis",
+      "file": "cross_domain/business_analysis.json"
+    },
+    {
+      "name": "project_management",
+      "file": "cross_domain/project_management.json"
+    },
+    {
+      "name": "fleet_management",
+      "file": "cross_domain/fleet_management.json"
+    },
+    {
+      "name": "logistics",
+      "file": "cross_domain/logistics.json"
+    },
+    {
+      "name": "maintenance",
+      "file": "cross_domain/maintenance.json"
+    },
+    {
+      "name": "compliance",
+      "file": "cross_domain/compliance.json"
+    },
+    {
+      "name": "investment_decision",
+      "file": "cross_domain/investment_decision.json"
+    }
+  ]
+}

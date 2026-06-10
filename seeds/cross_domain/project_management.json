@@ -1,0 +1,701 @@
+{
+  "pack": "project_management",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "A project is a temporary endeavour with a defined start and end date, producing a unique output. It differs from operations (ongoing, repetitive) in its novelty and finite nature.",
+      "topics": [
+        "project_management"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "The project management triple constraint — scope, time, and cost — are interdependent. Changing one affects the others. When scope increases, either time or cost must increase, or quality must decrease. This is non-negotiable physics.",
+      "topics": [
+        "project_management"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "triple_constraint"
+      ]
+    },
+    {
+      "statement": "Waterfall (predictive) project management defines requirements fully upfront and executes in sequential phases: requirements → design → build → test → deploy. It suits stable, well-understood requirements where change is costly.",
+      "topics": [
+        "project_management",
+        "methodologies"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "waterfall"
+      ]
+    },
+    {
+      "statement": "Agile project management delivers value in short iterations (sprints, typically 2 weeks) with frequent stakeholder feedback. It embraces changing requirements rather than resisting them. Scrum and Kanban are the most common Agile frameworks.",
+      "topics": [
+        "project_management",
+        "methodologies",
+        "agile"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "agile"
+      ]
+    },
+    {
+      "statement": "Scrum organises work into time-boxed sprints with defined ceremonies: Sprint Planning (what to build), Daily Standup (progress and blockers), Sprint Review (demo to stakeholders), Sprint Retrospective (improve the process). Roles: Product Owner, Scrum Master, Development Team.",
+      "topics": [
+        "project_management",
+        "agile",
+        "scrum"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "scrum"
+      ]
+    },
+    {
+      "statement": "Kanban visualises work on a board with columns representing workflow states (To Do, In Progress, Review, Done). Work-in-progress (WIP) limits prevent overloading the team and expose bottlenecks. It is flow-based, not iteration-based.",
+      "topics": [
+        "project_management",
+        "agile",
+        "kanban"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "kanban"
+      ]
+    },
+    {
+      "statement": "Scope creep is the uncontrolled expansion of project scope without corresponding adjustment to time, cost, or resources. It is prevented by a formal change control process that requires approval for all scope changes.",
+      "topics": [
+        "project_management",
+        "scope"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "scope_creep"
+      ]
+    },
+    {
+      "statement": "The Work Breakdown Structure (WBS) decomposes the project deliverable into smaller, manageable components down to work packages. It provides the foundation for schedule, cost, and resource estimates and ensures nothing is missed.",
+      "topics": [
+        "project_management",
+        "planning"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "wbs"
+      ]
+    },
+    {
+      "statement": "Critical Path Method (CPM) identifies the longest sequence of dependent tasks that determines the minimum project duration. Tasks on the critical path have zero float; any delay to them delays the project. Non-critical tasks have slack that can be used.",
+      "topics": [
+        "project_management",
+        "scheduling"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "critical_path"
+      ]
+    },
+    {
+      "statement": "Earned Value Management (EVM) integrates scope, schedule, and cost performance. Key metrics: Schedule Variance (SV = EV - PV), Cost Variance (CV = EV - AC), Schedule Performance Index (SPI = EV/PV), Cost Performance Index (CPI = EV/AC).",
+      "topics": [
+        "project_management",
+        "monitoring"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "earned_value"
+      ]
+    },
+    {
+      "statement": "A risk register documents identified risks with their probability, impact, risk score, owner, and mitigation/contingency plan. It must be actively reviewed and updated throughout the project — not created once and forgotten.",
+      "topics": [
+        "project_management",
+        "risk"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "risk_register"
+      ]
+    },
+    {
+      "statement": "Risk response strategies: Avoid (eliminate the risk by changing the plan), Transfer (shift the impact to a third party via insurance or contract), Mitigate (reduce probability or impact), and Accept (acknowledge and monitor). Each risk needs an explicit response.",
+      "topics": [
+        "project_management",
+        "risk"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "risk_response"
+      ]
+    },
+    {
+      "statement": "A RACI matrix defines four roles for each project activity: Responsible (does the work), Accountable (owns the outcome — only one per task), Consulted (input required), Informed (kept updated). Multiple Accountables create ambiguity and slow decisions.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "raci"
+      ]
+    },
+    {
+      "statement": "A project charter formally authorises the project, defines its objectives and scope, identifies key stakeholders, and grants the project manager authority to use resources. Without a charter, the project lacks formal organisational sanction.",
+      "topics": [
+        "project_management",
+        "initiation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "project_charter"
+      ]
+    },
+    {
+      "statement": "Stakeholder management is an active, ongoing process of identifying expectations, managing communication, and building buy-in. Ignored or poorly managed stakeholders are a leading cause of project failure, independent of technical execution quality.",
+      "topics": [
+        "project_management",
+        "stakeholders"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "stakeholder_management"
+      ]
+    },
+    {
+      "statement": "The project manager is accountable for project outcomes but typically has limited formal authority over team members. Influence through relationships, clarity of vision, and political navigation is as important as process knowledge.",
+      "topics": [
+        "project_management",
+        "leadership"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "pm_authority"
+      ]
+    },
+    {
+      "statement": "A project retrospective (lessons learned review) captures what went well, what didn't, and what to do differently. It is only valuable if the findings are documented, shared, and actually applied to future projects.",
+      "topics": [
+        "project_management",
+        "improvement"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "retrospective"
+      ]
+    },
+    {
+      "statement": "Resource levelling adjusts the project schedule to address over-allocation — when a resource is assigned to more work than is feasible at a given time. It extends the timeline but produces a feasible plan. Resource smoothing constrains the timeline instead.",
+      "topics": [
+        "project_management",
+        "scheduling",
+        "resources"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "resource_levelling"
+      ]
+    },
+    {
+      "statement": "Project communication plan defines who receives what information, how often, in what format, and through which channel. Poor communication is consistently cited as the top reason projects fail. Tailor communication to each stakeholder's needs.",
+      "topics": [
+        "project_management",
+        "communication"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "communication_plan"
+      ]
+    },
+    {
+      "statement": "The definition of done (DoD) specifies the quality criteria a deliverable must meet to be considered complete. It prevents 90% done becoming 90% done forever. DoD is agreed before work starts, not negotiated at delivery.",
+      "topics": [
+        "project_management",
+        "quality",
+        "agile"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "definition_of_done"
+      ]
+    },
+    {
+      "statement": "Dependencies between tasks can be: Finish-to-Start (most common — B can't start until A finishes), Start-to-Start (B can't start until A starts), Finish-to-Finish (B can't finish until A finishes), Start-to-Finish (rare). Incorrect dependency modelling produces unrealistic schedules.",
+      "topics": [
+        "project_management",
+        "scheduling"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "task_dependencies"
+      ]
+    },
+    {
+      "statement": "Agile scaling frameworks (SAFe, LeSS, Nexus) coordinate multiple Agile teams working on the same product. They add overhead and governance to address inter-team dependencies, shared architecture, and portfolio prioritisation.",
+      "topics": [
+        "project_management",
+        "agile",
+        "scaling"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "agile_scaling"
+      ]
+    },
+    {
+      "statement": "Timeboxing allocates a fixed amount of time to an activity regardless of whether it is complete. It prevents perfectionism from consuming unlimited time and forces prioritisation within constraints.",
+      "topics": [
+        "project_management",
+        "agile"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "timeboxing"
+      ]
+    },
+    {
+      "statement": "PRINCE2 (Projects IN Controlled Environments) is a process-based project management methodology popular in Europe and government. Its key principles: continued business justification, learn from experience, manage by stages, manage by exception, focus on products.",
+      "topics": [
+        "project_management",
+        "methodologies"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "prince2"
+      ]
+    },
+    {
+      "statement": "Project portfolio management governs the organisation's collection of projects to maximise strategic value and manage resource constraints. Portfolio decisions must be driven by strategic alignment, not just individual project ROI.",
+      "topics": [
+        "project_management",
+        "portfolio"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "portfolio_management"
+      ]
+    },
+    {
+      "statement": "Issue management tracks problems that have already occurred (vs risks that might occur). Issues need owners, resolution plans, and escalation paths. An issue log without active management is a list of complaints.",
+      "topics": [
+        "project_management",
+        "monitoring"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "issue_management"
+      ]
+    },
+    {
+      "statement": "Meeting hygiene for projects: every meeting needs a purpose, agenda, and owner. Decisions must be documented and distributed. Follow-up actions need owners and due dates. Undocumented decisions will be relitigated.",
+      "topics": [
+        "project_management",
+        "communication"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "meeting_hygiene"
+      ]
+    },
+    {
+      "statement": "Project lifecycle phases are initiation, planning, execution, monitoring & control, and closure. Governance gates between phases (stage gates / tollgates) require formal approval to proceed. Skipping initiation or closure phases is the most common cause of unclear mandates and unrealised benefits.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "project_lifecycle"
+      ]
+    },
+    {
+      "statement": "Project closure includes formal acceptance of deliverables, release of resources, archiving of project documentation, and lessons-learned capture. Projects that drift into perpetual maintenance without formal closure become invisible cost centres.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "project_closure"
+      ]
+    },
+    {
+      "statement": "Project governance defines who has authority to approve scope changes, budget increases, and go/no-go decisions. Without explicit governance, decisions default to whoever shouts loudest, creating inconsistency and accountability gaps.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "project_governance"
+      ]
+    },
+    {
+      "statement": "A Project Management Office (PMO) standardises project practices, provides templates, tracks portfolio health, and pools specialist PM resources. A directive PMO manages projects directly; a controlling PMO enforces standards; a supportive PMO offers tools and advice. The right model depends on organisational maturity.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "pmo"
+      ]
+    },
+    {
+      "statement": "Benefits realisation plan tracks whether the business case benefits materialise after project delivery. A project that delivers on time and budget but whose benefits are never realised is a failure. Benefits owners (business-side, not the PM) should be accountable for post-go-live measurement.",
+      "topics": [
+        "project_management",
+        "governance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "benefits_realisation"
+      ]
+    },
+    {
+      "statement": "Rolling wave planning elaborates near-term work in detail while leaving distant phases at high level, allowing planning to respond to what is learned during execution. It is the standard approach in uncertain or long-duration projects where full upfront planning would be premature.",
+      "topics": [
+        "project_management",
+        "planning"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "rolling_wave_planning"
+      ]
+    },
+    {
+      "statement": "Monte Carlo simulation for schedule risk runs thousands of schedule iterations sampling task durations from probability distributions. The output is a probability curve: 'there is a 70% chance of completing by date X'. It converts qualitative risk registers into quantitative schedule confidence levels.",
+      "topics": [
+        "project_management",
+        "risk",
+        "estimation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "monte_carlo"
+      ]
+    },
+    {
+      "statement": "Three-point estimation uses optimistic (O), most likely (M), and pessimistic (P) duration estimates. PERT formula: (O + 4M + P) / 6. This accounts for uncertainty and produces more realistic estimates than single-point guesses, especially for novel or complex tasks.",
+      "topics": [
+        "project_management",
+        "estimation"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "three_point_estimation"
+      ]
+    },
+    {
+      "statement": "Velocity is the average amount of work (story points or similar) a team completes per sprint, measured over several sprints. It is used to forecast how many sprints remain to complete a backlog. Velocity is a team-specific planning tool, not a productivity metric for comparing teams.",
+      "topics": [
+        "project_management",
+        "agile",
+        "estimation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "velocity"
+      ]
+    },
+    {
+      "statement": "Capacity planning in agile accounts for team availability (vacations, training, ceremonies) to determine how many story points are achievable in the sprint. Sprint capacity = (team members × sprint days × daily hours × focus factor) minus planned absences. Ignoring capacity creates systematically overcommitted sprints.",
+      "topics": [
+        "project_management",
+        "agile",
+        "planning"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "capacity_planning"
+      ]
+    },
+    {
+      "statement": "Baseline management captures the approved scope, schedule, and cost at the start of a project and after each approved change. Performance is measured against the baseline, not against the current plan. Without a baseline, earned value and variance analysis are meaningless.",
+      "topics": [
+        "project_management",
+        "control"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "baseline_management"
+      ]
+    },
+    {
+      "statement": "Quality assurance (QA) is process-focused: auditing project processes to ensure they are followed and will produce quality outcomes. Quality control (QC) is product-focused: inspecting deliverables against specifications. Both are necessary; QA prevents defects, QC detects them.",
+      "topics": [
+        "project_management",
+        "quality"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "qa_vs_qc"
+      ]
+    },
+    {
+      "statement": "Definition of Ready (DoR) specifies the conditions a user story must meet before it enters a sprint: acceptance criteria written, dependencies identified, design approved, estimate agreed. DoR prevents half-baked work entering sprints and causing mid-sprint blockers.",
+      "topics": [
+        "project_management",
+        "agile",
+        "quality"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "definition_of_ready"
+      ]
+    },
+    {
+      "statement": "Acceptance criteria define the conditions under which a user story is accepted as complete by the product owner. They should be testable, specific, and written in collaboration with the team before sprint start. Ambiguous acceptance criteria are the primary cause of rework in agile projects.",
+      "topics": [
+        "project_management",
+        "agile",
+        "quality"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "acceptance_criteria"
+      ]
+    },
+    {
+      "statement": "Power/interest grid maps stakeholders by their power to influence the project and their interest in it. High power / high interest: manage closely. High power / low interest: keep satisfied. Low power / high interest: keep informed. Low power / low interest: monitor. It determines communication and engagement strategy per stakeholder group.",
+      "topics": [
+        "project_management",
+        "stakeholders"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "power_interest_grid"
+      ]
+    },
+    {
+      "statement": "A stakeholder register documents each stakeholder's role, influence, interests, engagement level, and communication preferences. It is a living document, updated as stakeholders are identified or their influence changes. Projects without a register routinely discover critical stakeholders too late.",
+      "topics": [
+        "project_management",
+        "stakeholders"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "stakeholder_register"
+      ]
+    },
+    {
+      "statement": "Communications matrix defines: what information each stakeholder receives, in what format, at what frequency, and from whom. It prevents both information overload (too many updates to the wrong people) and information gaps (key stakeholders not receiving critical project news).",
+      "topics": [
+        "project_management",
+        "communication"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "communications_matrix"
+      ]
+    },
+    {
+      "statement": "Change request process formalises how scope changes are proposed, assessed for cost/schedule/quality impact, approved or rejected, and implemented. Without a formal change process, scope creep is uncontrolled and the project baseline becomes meaningless.",
+      "topics": [
+        "project_management",
+        "control"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "change_request_process"
+      ]
+    },
+    {
+      "statement": "Fixed-price contracts transfer cost risk to the supplier: the supplier delivers at an agreed price regardless of actual cost. Time and materials (T&M) transfers risk to the buyer. Cost-plus provides the supplier's costs plus an agreed margin. Contract type selection should match risk allocation to the party best placed to manage it.",
+      "topics": [
+        "project_management",
+        "procurement"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "contract_types"
+      ]
+    },
+    {
+      "statement": "Statement of Work (SoW) defines the deliverables, standards, schedule, and acceptance criteria for a procurement contract. Ambiguous SoWs are the primary cause of contract disputes. Every deliverable should have a clear, measurable acceptance criterion before signature.",
+      "topics": [
+        "project_management",
+        "procurement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "statement_of_work"
+      ]
+    },
+    {
+      "statement": "Sprint burndown chart tracks remaining work against time within a sprint. A flat or rising burndown mid-sprint signals that scope was added or tasks are blocked. It is an early warning tool for the team, not a management reporting tool.",
+      "topics": [
+        "project_management",
+        "agile",
+        "metrics"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "sprint_burndown"
+      ]
+    },
+    {
+      "statement": "Release burnup chart tracks cumulative completed work against total scope over multiple sprints. Unlike burndown, burnup makes scope changes visible — if the scope line rises, work was added. It is more informative than burndown for tracking progress towards a release target.",
+      "topics": [
+        "project_management",
+        "agile",
+        "metrics"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "release_burnup"
+      ]
+    },
+    {
+      "statement": "Cumulative flow diagram (CFD) shows the count of work items in each workflow state (backlog, in-progress, done) over time. It reveals bottlenecks: when a state's band widens, items are accumulating there. It is the primary lead-time and throughput diagnostic in Kanban.",
+      "topics": [
+        "project_management",
+        "kanban",
+        "metrics"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "cumulative_flow_diagram"
+      ]
+    },
+    {
+      "statement": "SAFe (Scaled Agile Framework), LeSS (Large-Scale Scrum), and Spotify model are the main frameworks for scaling agile across multiple teams. SAFe is the most prescriptive and enterprise-oriented; LeSS is closer to pure Scrum; Spotify (squads/tribes/guilds) is often misapplied as a structure rather than a cultural model.",
+      "topics": [
+        "project_management",
+        "agile_scaling"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "agile_scaling_frameworks"
+      ]
+    },
+    {
+      "statement": "Hybrid project methodology combines waterfall (for fixed-scope, regulated, or hardware elements) with agile (for software or frequently changing elements). It is the practical reality in most enterprises. The risk is defaulting to waterfall bureaucracy with agile terminology rather than genuinely iterating.",
+      "topics": [
+        "project_management",
+        "methodology"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "hybrid_methodology"
+      ]
+    },
+    {
+      "statement": "DevOps integration into project management means delivery teams own deployment and operations, eliminating hand-offs between dev and ops. Project timelines must account for environment provisioning, pipeline setup, and operational readiness — not just code completion.",
+      "topics": [
+        "project_management",
+        "devops"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "devops_pm"
+      ]
+    },
+    {
+      "statement": "Risk probability and impact matrix quantifies risks by combining likelihood (rare/unlikely/possible/likely/almost certain) with impact (negligible/minor/moderate/major/critical). Risks in the high-probability / high-impact quadrant require active mitigation plans with owners and deadlines, not just monitoring.",
+      "topics": [
+        "project_management",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "risk_matrix"
+      ]
+    },
+    {
+      "statement": "Issue log tracks problems that have already materialised (risks that have occurred). Each issue has an owner, target resolution date, status, and escalation path. Unlogged issues are invisible to the PM and accumulate into project crises.",
+      "topics": [
+        "project_management",
+        "risk"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "issue_log"
+      ]
+    },
+    {
+      "statement": "Dependency management identifies predecessors (tasks that must finish before another can start) and external dependencies (deliverables from other teams or suppliers). Unmanaged external dependencies are the most common cause of project delays that a PM cannot control internally.",
+      "topics": [
+        "project_management",
+        "planning"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "dependency_management"
+      ]
+    },
+    {
+      "statement": "Lessons learned database captures what went well, what went poorly, and recommendations for future projects. It is only valuable if it is queried at project initiation and planning. A lessons-learned database that is written but never read is organisational theatre.",
+      "topics": [
+        "project_management",
+        "knowledge_management"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "lessons_learned"
+      ]
+    },
+    {
+      "statement": "Project health dashboard provides a red/amber/green status across key dimensions: schedule, cost, scope, quality, risk, and stakeholder satisfaction. RAG status without trend arrows (improving / deteriorating) is less informative. Persistent amber is often more dangerous than a declared red.",
+      "topics": [
+        "project_management",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "project_health_dashboard"
+      ]
+    },
+    {
+      "statement": "Milestone plan summarises the key deliverables and dates for executive audiences who do not need task-level detail. Milestones should represent meaningful business outcomes (e.g. UAT complete, go-live), not just internal project events. Missed milestones must trigger a root-cause review, not just a date shift.",
+      "topics": [
+        "project_management",
+        "planning",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "milestone_plan"
+      ]
+    },
+    {
+      "statement": "OKRs (Objectives and Key Results) in project context align project deliverables to strategic outcomes. The objective is the qualitative goal; key results are quantitative measures of progress. They force the team to connect tasks to outcomes rather than treating delivery as the end goal.",
+      "topics": [
+        "project_management",
+        "strategy"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "okrs_in_pm"
+      ]
+    },
+    {
+      "statement": "Project portfolio management prioritises, authorises, and monitors a collection of projects to achieve strategic objectives. It requires capacity visibility across all projects to avoid resource contention and to make informed trade-off decisions when priorities conflict.",
+      "topics": [
+        "project_management",
+        "portfolio"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "portfolio_management_depth"
+      ]
+    },
+    {
+      "statement": "Meeting hygiene rules that improve project meeting effectiveness: every meeting has a stated objective and agenda circulated in advance; only required attendees are invited; decisions and actions are captured with owners and deadlines; a follow-up is sent within 24 hours. Meetings without decisions are information broadcasts — send an email instead.",
+      "topics": [
+        "project_management",
+        "communication"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "meeting_effectiveness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,586 @@
+{
+  "pack": "logistics",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Logistics is the process of planning, implementing, and controlling the efficient flow of goods, services, and information from origin to destination to meet customer requirements. Supply chain management extends this to coordinating multiple organisations.",
+      "topics": [
+        "logistics"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "The supply chain encompasses all entities involved in producing and delivering a product: raw material suppliers, manufacturers, distributors, retailers, and end customers. Supply chain visibility — knowing where goods are at all times — is the primary enabler of efficiency.",
+      "topics": [
+        "logistics",
+        "supply_chain"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "supply_chain"
+      ]
+    },
+    {
+      "statement": "Just-In-Time (JIT) inventory minimises stock by receiving goods only when needed for production or sale. It reduces working capital and storage costs but creates vulnerability to supply disruptions. JIT requires reliable suppliers and accurate demand forecasting.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "jit"
+      ]
+    },
+    {
+      "statement": "Safety stock is buffer inventory held to protect against demand variability and supply uncertainty. Its optimal level balances holding cost against stockout cost. Safety stock should be calculated from actual demand variability data, not as a flat percentage.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "safety_stock"
+      ]
+    },
+    {
+      "statement": "ABC analysis classifies inventory by value contribution: A items (top 10–20% of SKUs, 70–80% of value) need tight control; B items need moderate control; C items (high volume, low value) suit automated reorder with minimal oversight.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "abc_analysis"
+      ]
+    },
+    {
+      "statement": "Economic Order Quantity (EOQ) is the order quantity that minimises total inventory cost (holding cost + ordering cost). It balances the trade-off: larger orders reduce ordering frequency but increase average stock held.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "eoq"
+      ]
+    },
+    {
+      "statement": "Vehicle Routing Problem (VRP) finds the optimal set of routes for a fleet serving multiple destinations from one or more depots. NP-hard for exact solutions, it is solved in practice with heuristics (nearest neighbour, Clarke-Wright savings, genetic algorithms).",
+      "topics": [
+        "logistics",
+        "routing"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "vrp"
+      ]
+    },
+    {
+      "statement": "Time window constraints in routing (VRPTW) require deliveries within specific time windows. They significantly restrict route feasibility and require more vehicles. Wider time windows reduce fleet size; tighter windows increase it.",
+      "topics": [
+        "logistics",
+        "routing"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "time_windows"
+      ]
+    },
+    {
+      "statement": "Last-mile delivery is the final leg from distribution hub to end customer. It is the most expensive segment (25–40% of total logistics cost per parcel) and the most complex due to low drop density, access constraints, and failed delivery rates.",
+      "topics": [
+        "logistics",
+        "last_mile"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "last_mile"
+      ]
+    },
+    {
+      "statement": "Cross-docking transfers goods directly from inbound to outbound vehicles with minimal or no storage. It reduces handling, warehouse space, and transit time. It requires precise synchronisation between inbound deliveries and outbound dispatch schedules.",
+      "topics": [
+        "logistics",
+        "warehouse"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "cross_docking"
+      ]
+    },
+    {
+      "statement": "Warehouse slotting assigns inventory locations based on pick frequency and product affinity. Fast-moving items should be located closest to the dispatch area. Poor slotting increases travel distance for pickers, the primary driver of warehouse labour cost.",
+      "topics": [
+        "logistics",
+        "warehouse"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "warehouse_slotting"
+      ]
+    },
+    {
+      "statement": "Warehouse Management Systems (WMS) control inventory location, pick-and-pack operations, receiving, and dispatch. Integration with ERP and TMS systems is essential for end-to-end visibility and automated replenishment triggers.",
+      "topics": [
+        "logistics",
+        "software"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "wms"
+      ]
+    },
+    {
+      "statement": "Transportation Management Systems (TMS) plan, execute, and optimise freight movement. Core functions: carrier selection, rate management, route planning, shipment tracking, and freight audit and payment. TMS typically delivers 10–15% freight cost reduction.",
+      "topics": [
+        "logistics",
+        "software"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "tms"
+      ]
+    },
+    {
+      "statement": "Incoterms (International Commercial Terms) define the responsibilities of buyer and seller for costs, risk, and insurance during international transport. Ex Works (EXW) places maximum responsibility on the buyer; Delivered Duty Paid (DDP) on the seller.",
+      "topics": [
+        "logistics",
+        "international_trade"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "incoterms"
+      ]
+    },
+    {
+      "statement": "Cold chain logistics maintains a temperature-controlled environment for perishable goods (pharmaceuticals, food, vaccines) from production to final delivery. Any break in the cold chain causes product degradation and regulatory liability.",
+      "topics": [
+        "logistics",
+        "cold_chain"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "cold_chain"
+      ]
+    },
+    {
+      "statement": "Demand forecasting predicts future customer demand to drive inventory and logistics planning. Methods range from simple moving averages to machine learning models. Forecast accuracy directly determines inventory efficiency; errors cascade through the supply chain.",
+      "topics": [
+        "logistics",
+        "planning"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "demand_forecasting"
+      ]
+    },
+    {
+      "statement": "The bullwhip effect describes how small demand fluctuations at the retail level amplify into large swings in orders as they propagate upstream through the supply chain. Caused by order batching, price fluctuations, and lack of demand visibility. Sharing point-of-sale data upstream reduces it.",
+      "topics": [
+        "logistics",
+        "supply_chain"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "bullwhip_effect"
+      ]
+    },
+    {
+      "statement": "Third-party logistics (3PL) providers outsource warehousing, distribution, and transport. 4PLs add supply chain management coordination across multiple 3PLs. Outsourcing logistics converts fixed costs to variable but reduces direct control.",
+      "topics": [
+        "logistics",
+        "outsourcing"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "3pl_4pl"
+      ]
+    },
+    {
+      "statement": "Freight consolidation combines multiple small shipments from different shippers into one vehicle to maximise load factor and reduce per-unit transport cost. Less-than-truckload (LTL) services provide this as a standard offering.",
+      "topics": [
+        "logistics",
+        "freight"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "consolidation"
+      ]
+    },
+    {
+      "statement": "Key logistics KPIs: On-Time In-Full (OTIF) delivery rate, perfect order rate (correct item, quantity, condition, documentation), cost per order, cost per pallet, warehouse picking accuracy, inventory turnover ratio, and days of supply.",
+      "topics": [
+        "logistics",
+        "kpis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "logistics_kpis"
+      ]
+    },
+    {
+      "statement": "Reverse logistics handles returns, recalls, repairs, and disposal. It is often 2–3x more expensive per unit than forward logistics due to low volume, high variability, and complex processes. E-commerce returns have made reverse logistics a strategic capability.",
+      "topics": [
+        "logistics",
+        "reverse_logistics"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "reverse_logistics"
+      ]
+    },
+    {
+      "statement": "Load factor (utilisation of vehicle capacity) directly impacts cost per unit moved. Low load factors mean you are paying for capacity you are not using. Route consolidation, dynamic load optimisation, and customer minimum order quantities improve load factor.",
+      "topics": [
+        "logistics",
+        "operations"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "load_factor"
+      ]
+    },
+    {
+      "statement": "Multi-modal transport combines road, rail, sea, and air depending on cost, speed, and carbon considerations. Intermodal containers enable seamless transfer between modes without unpacking. Rail and sea are more carbon-efficient than road for long distances.",
+      "topics": [
+        "logistics",
+        "transport_modes"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "multimodal"
+      ]
+    },
+    {
+      "statement": "Supply chain resilience requires identifying single points of failure (single-source suppliers, single transport lanes) and building redundancy (alternative suppliers, safety stock, flexible transport contracts). COVID-19 exposed systemic resilience gaps in lean, JIT-optimised chains.",
+      "topics": [
+        "logistics",
+        "resilience"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "supply_chain_resilience"
+      ]
+    },
+    {
+      "statement": "Proof of Delivery (POD) documentation — signature, timestamp, photo evidence — is the legal record that a delivery was made. In disputes, an accurate, timestamped POD is the primary evidence. Electronic POD systems are faster, more accurate, and harder to dispute than paper.",
+      "topics": [
+        "logistics",
+        "operations",
+        "compliance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "pod"
+      ]
+    },
+    {
+      "statement": "Demand forecasting accuracy determines safety stock levels and reorder points. Methods range from simple moving average to ARIMA and machine learning models. Forecast error should be tracked as MAPE (Mean Absolute Percentage Error) per SKU. High-error SKUs need either better data or segmented safety stock policies.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "demand_forecasting"
+      ]
+    },
+    {
+      "statement": "Cycle counting replaces periodic full stock counts with continuous counting of a rotating subset of SKUs. High-value and high-velocity items should be counted most frequently. Cycle counting reduces the operational disruption of annual stock counts while maintaining higher ongoing accuracy.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "cycle_counting"
+      ]
+    },
+    {
+      "statement": "First In, First Out (FIFO) and First Expired, First Out (FEFO) are stock rotation policies. FIFO prevents old stock accumulating; FEFO is mandatory for food, pharmaceuticals, and any date-sensitive product. WMS systems enforce rotation by directing pick locations, not by relying on operator memory.",
+      "topics": [
+        "logistics",
+        "warehouse",
+        "inventory"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "stock_rotation"
+      ]
+    },
+    {
+      "statement": "Slotting optimisation assigns SKUs to warehouse locations to minimise travel distance. Fast-moving items (A-class) should be nearest the despatch area; slow-movers (C-class) in remote zones. Dynamic slotting re-evaluates assignments as velocity profiles change. Poor slotting is a major source of picker travel waste.",
+      "topics": [
+        "logistics",
+        "warehouse"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "warehouse_slotting"
+      ]
+    },
+    {
+      "statement": "Wave picking batches orders into waves processed together, with pick routes optimised across all orders in the wave. Zone picking assigns pickers to fixed areas; orders accumulate parts from multiple zones then merge at packing. Pick-to-light and voice-directed picking increase accuracy and throughput in high-volume operations.",
+      "topics": [
+        "logistics",
+        "warehouse"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "picking_methods"
+      ]
+    },
+    {
+      "statement": "Goods-in process (receiving) sets quality standards for all inbound stock. It includes quantity verification, condition inspection, label scanning, and putaway instructions. A poor receiving process introduces errors that propagate through the entire supply chain. Blind receiving (no pre-advice) is the lowest-quality approach.",
+      "topics": [
+        "logistics",
+        "warehouse"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "goods_in"
+      ]
+    },
+    {
+      "statement": "Proof of Delivery (POD) confirmation closes the delivery loop. Electronic POD (ePOD) with timestamp, GPS coordinates, recipient signature, and photo evidence reduces disputed deliveries and accelerates invoicing. Paper POD requires manual scanning and is a source of billing delay.",
+      "topics": [
+        "logistics",
+        "last_mile"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "epod"
+      ]
+    },
+    {
+      "statement": "Dynamic routing recalculates vehicle routes in real time based on new orders, cancellations, traffic, and vehicle breakdowns. It requires a transport management system with live API integration to the routing engine and driver mobile apps. Static routes optimised overnight cannot respond to same-day demand changes.",
+      "topics": [
+        "logistics",
+        "routing"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "dynamic_routing"
+      ]
+    },
+    {
+      "statement": "Milk round (fixed route, fixed time window) contrasts with dynamic dispatch. Milk rounds suit high-frequency, predictable customers; dynamic dispatch suits variable demand. Hybrid models use milk round structures for anchor customers and dynamic fill-in for others.",
+      "topics": [
+        "logistics",
+        "routing"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "milk_round"
+      ]
+    },
+    {
+      "statement": "Load planning software maximises vehicle fill (weight and volume) while respecting weight distribution limits, fragility constraints, delivery sequence, and unload accessibility. Improving average load factor by 5% reduces the fleet size required for the same output by approximately 5%.",
+      "topics": [
+        "logistics",
+        "routing",
+        "cost"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "load_planning"
+      ]
+    },
+    {
+      "statement": "Freight audit and payment (FAP) verifies carrier invoices against contracted rates, actual shipments, and service level credits. Billing errors of 2-5% are common in complex freight environments. Automated FAP systems recover those costs without manual invoice review.",
+      "topics": [
+        "logistics",
+        "finance"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "freight_audit"
+      ]
+    },
+    {
+      "statement": "Carrier management includes carrier selection, rate negotiation, KPI tracking (on-time delivery, damage rate, transit time), and strategic review. Over-reliance on a single carrier is a supply chain risk. Carrier diversification must balance cost efficiency against resilience.",
+      "topics": [
+        "logistics",
+        "procurement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "carrier_management"
+      ]
+    },
+    {
+      "statement": "Carbon reporting for logistics (Scope 3 emissions under GHG Protocol) requires tonne-km data by mode and fuel type. GLEC Framework (Global Logistics Emissions Council) provides standardised emission factors. Shipper companies are increasingly requiring carbon data per shipment from logistics providers.",
+      "topics": [
+        "logistics",
+        "sustainability"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "logistics_carbon_reporting"
+      ]
+    },
+    {
+      "statement": "Intermodal transport combines road, rail, sea, and/or air in a single journey using standardised containers. It reduces road mileage (and emissions) for long-distance freight while retaining road flexibility for first and last mile. Intermodal economics become favourable beyond approximately 500 km for rail and above 2,000 km for sea.",
+      "topics": [
+        "logistics",
+        "transport_modes"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "intermodal"
+      ]
+    },
+    {
+      "statement": "Port and customs clearance delays are a major source of supply chain disruption for international logistics. Pre-lodging customs declarations, advance cargo information (ACI), and trusted trader programmes (AEO status) reduce clearance time. Post-Brexit UK/EU customs procedures added 1-3 days average to UK-EU freight.",
+      "topics": [
+        "logistics",
+        "international_trade"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "customs_clearance"
+      ]
+    },
+    {
+      "statement": "Dangerous goods (hazmat) transport requires classification (UN number, packing group), compliant packaging, marking and labelling, documentation (DGD / MSDS), and trained staff. Regulations differ by mode: ADR (road), RID (rail), IMDG (sea), IATA DGR (air). Non-compliance penalties include fines, cargo seizure, and loss of operator licence.",
+      "topics": [
+        "logistics",
+        "compliance",
+        "safety"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "dangerous_goods"
+      ]
+    },
+    {
+      "statement": "Warehouse labour productivity metrics: orders picked per hour, lines per hour, receiving units per hour, despatch units per hour. Productivity benchmarks vary by operation type (manual, assisted, automated). Labour is typically 50-65% of warehouse operating cost; productivity improvement has the highest cost-reduction leverage.",
+      "topics": [
+        "logistics",
+        "warehouse",
+        "performance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "warehouse_productivity"
+      ]
+    },
+    {
+      "statement": "Returns management (reverse logistics) handles the physical flow of returned goods: collection, condition assessment, sorting (resale, repair, recycle, disposal), and stock reinstatement. E-commerce return rates of 15-30% make reverse logistics a significant cost driver. Automated returns processing reduces handling cost per item by 30-50%.",
+      "topics": [
+        "logistics",
+        "reverse_logistics"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "returns_management"
+      ]
+    },
+    {
+      "statement": "Supply chain visibility platforms provide real-time tracking across multiple tiers of the supply chain. They aggregate data from ERP, WMS, TMS, carrier APIs, and IoT sensors. End-to-end visibility reduces the lag between supply chain events and management response from days to hours.",
+      "topics": [
+        "logistics",
+        "technology"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "supply_chain_visibility"
+      ]
+    },
+    {
+      "statement": "Inventory record accuracy (IRA) measures the percentage of stock locations where system quantity matches physical quantity. IRA below 95% creates phantom inventory (system shows stock that is not there) and causes missed orders. Daily cycle counting is the most effective intervention to maintain IRA above 98%.",
+      "topics": [
+        "logistics",
+        "inventory"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "inventory_record_accuracy"
+      ]
+    },
+    {
+      "statement": "Service level agreement (SLA) for logistics typically specifies: on-time delivery % (e.g. 98% within agreed time window), order accuracy % (e.g. 99.5%), damage rate (e.g. <0.1%), and claims resolution time. SLAs should include both penalties (service credits) and incentive structures (bonuses for outperformance).",
+      "topics": [
+        "logistics",
+        "performance",
+        "contracts"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "logistics_sla"
+      ]
+    },
+    {
+      "statement": "Cold chain compliance requires temperature logging at every stage: storage, loading, in-transit, and unloading. Temperature excursions must be logged with duration and magnitude to support product quality decisions. Calibrated data loggers with tamper-evident seals are the regulatory standard for food and pharmaceutical cold chain.",
+      "topics": [
+        "logistics",
+        "cold_chain",
+        "compliance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "cold_chain_compliance"
+      ]
+    },
+    {
+      "statement": "Logistics network design optimises the number, location, and size of distribution centres (DCs) to minimise total landed cost (transport + warehousing + inventory) while meeting service level requirements. Network redesign triggers include: new market entry, significant demand growth, transport cost changes, or service level failures.",
+      "topics": [
+        "logistics",
+        "network_design"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "network_design"
+      ]
+    },
+    {
+      "statement": "Lean warehousing applies 5S (Sort, Set in order, Shine, Standardise, Sustain) and waste elimination (TIMWOOD: Transport, Inventory, Motion, Waiting, Overprocessing, Overproduction, Defects) to warehouse operations. Visual management techniques (floor markings, shadow boards, kanban signals) make abnormal conditions immediately visible.",
+      "topics": [
+        "logistics",
+        "warehouse",
+        "lean"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "lean_warehousing"
+      ]
+    },
+    {
+      "statement": "Automation ROI for logistics operations: goods-to-person systems (AutoStore, Kardex) are justified at 500+ orders/day with high SKU diversity; conveyor-sorter systems at 2,000+ parcels/hour; autonomous mobile robots (AMRs) at 100+ picks/hour with high labour turnover. Payback periods are typically 3-5 years at current automation costs.",
+      "topics": [
+        "logistics",
+        "technology",
+        "automation"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "warehouse_automation_roi"
+      ]
+    },
+    {
+      "statement": "Transport tendering process: define shipment characteristics (lanes, volumes, frequency, service requirements), issue to approved carrier list, evaluate on price and service capability, award (typically multi-carrier per lane for resilience), and review annually. Spot market rates provide a benchmark but should not be the primary sourcing strategy.",
+      "topics": [
+        "logistics",
+        "procurement"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "transport_tendering"
+      ]
+    },
+    {
+      "statement": "Order Management System (OMS) provides a single view of orders across all channels (web, phone, EDI, marketplace) and orchestrates fulfilment: available-to-promise, order routing to the optimal fulfilment location, and customer communication. Without an OMS, multi-channel fulfilment creates inventory fragmentation and service inconsistency.",
+      "topics": [
+        "logistics",
+        "technology"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "oms"
+      ]
+    }
+  ]
+}

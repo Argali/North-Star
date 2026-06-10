@@ -1,0 +1,634 @@
+{
+  "pack": "fleet_management",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Fleet management is the administration of a company's vehicle assets to maximise utilisation, minimise operating costs, ensure regulatory compliance, and maintain driver safety throughout each vehicle's lifecycle.",
+      "topics": [
+        "fleet_management"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "Total Cost of Ownership (TCO) for a vehicle includes acquisition cost, fuel, maintenance, tyres, insurance, tax, licensing, depreciation, and disposal value. Purchase price is typically only 20–30% of TCO over a 5-year lifecycle. Decisions based solely on acquisition cost optimise the wrong metric.",
+      "topics": [
+        "fleet_management",
+        "financial"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "tco"
+      ]
+    },
+    {
+      "statement": "Fleet replacement cycle optimisation balances depreciation (favours early replacement) against maintenance costs (favour keeping longer). The optimal replacement point is where marginal maintenance costs exceed marginal depreciation gains. Data from maintenance records is essential.",
+      "topics": [
+        "fleet_management",
+        "financial",
+        "lifecycle"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "replacement_cycle"
+      ]
+    },
+    {
+      "statement": "Vehicle utilisation rate measures how much of a vehicle's available time it is productively in use. Low utilisation indicates fleet oversizing; target utilisation depends on vehicle type and operations (70–85% is typical for operational fleets). Utilisation data drives right-sizing decisions.",
+      "topics": [
+        "fleet_management",
+        "kpis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "utilisation"
+      ]
+    },
+    {
+      "statement": "Telematics systems (GPS tracking + vehicle data) provide real-time visibility of vehicle location, speed, fuel consumption, engine hours, harsh braking, and idle time. Telematics data is the foundation of evidence-based fleet management.",
+      "topics": [
+        "fleet_management",
+        "telematics"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "telematics"
+      ]
+    },
+    {
+      "statement": "Driver behaviour monitoring scores events like harsh braking, sharp cornering, rapid acceleration, speeding, and excessive idling. Poor driver behaviour increases fuel consumption by 15–30%, accelerates tyre and brake wear, and raises accident risk.",
+      "topics": [
+        "fleet_management",
+        "driver_management"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "driver_behaviour"
+      ]
+    },
+    {
+      "statement": "Fuel management accounts for 25–35% of fleet operating costs. Key levers: driver behaviour coaching (idle reduction, speed management), route optimisation, vehicle right-sizing, tyre pressure maintenance, and transitioning to alternative fuels/EVs.",
+      "topics": [
+        "fleet_management",
+        "fuel"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "fuel_management"
+      ]
+    },
+    {
+      "statement": "Idle reduction programmes target engine-on time with no vehicle movement. Excessive idling burns fuel, produces emissions, and adds unnecessary engine hours. Fleet telematics can identify drivers with high idle rates for targeted coaching.",
+      "topics": [
+        "fleet_management",
+        "fuel",
+        "sustainability"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "idle_reduction"
+      ]
+    },
+    {
+      "statement": "Preventive maintenance (PM) schedules inspections and part replacements at defined intervals based on time or mileage. PM prevents breakdowns, extends vehicle life, and is required to maintain manufacturer warranties. Missed PM intervals compound into higher repair costs.",
+      "topics": [
+        "fleet_management",
+        "maintenance"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "preventive_maintenance"
+      ]
+    },
+    {
+      "statement": "Predictive maintenance uses telematics and sensor data to identify failure precursors before breakdown occurs. It reduces unplanned downtime compared to purely time-based preventive maintenance by servicing only when data indicates the need.",
+      "topics": [
+        "fleet_management",
+        "maintenance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "predictive_maintenance"
+      ]
+    },
+    {
+      "statement": "Mean Time Between Failures (MTBF) and Mean Time To Repair (MTTR) are key fleet maintenance KPIs. High MTBF indicates reliable vehicles or effective PM; low MTTR indicates efficient workshop throughput. Both affect operational availability.",
+      "topics": [
+        "fleet_management",
+        "maintenance",
+        "kpis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "mtbf_mttr"
+      ]
+    },
+    {
+      "statement": "Fleet availability (vehicle uptime) is the percentage of scheduled operational time a vehicle is available for use. Downtime causes include planned maintenance, unplanned repairs, and administrative delays. Target availability varies by criticality: emergency vehicles >98%, standard fleet 85–95%.",
+      "topics": [
+        "fleet_management",
+        "kpis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "availability"
+      ]
+    },
+    {
+      "statement": "Vehicle defect reporting must be systematic and immediate. Drivers should complete pre-trip and post-trip inspections (walkaround checks) and report defects in writing. Unaddressed defects create safety risks and regulatory liability.",
+      "topics": [
+        "fleet_management",
+        "safety",
+        "compliance"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "defect_reporting"
+      ]
+    },
+    {
+      "statement": "Fleet safety management reduces accident rates through driver selection, training, behaviour monitoring, fatigue management, vehicle safety specification, and incident investigation. A fleet's accident frequency rate (AFR) and accident severity rate (ASR) are standard safety KPIs.",
+      "topics": [
+        "fleet_management",
+        "safety"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "fleet_safety"
+      ]
+    },
+    {
+      "statement": "Tachograph compliance (in Europe and many other jurisdictions) requires commercial vehicle drivers to record hours driven, breaks taken, and rest periods. Digital tachographs store data for download; operators must analyse and archive records and ensure driver compliance.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "regulatory"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "tachograph"
+      ]
+    },
+    {
+      "statement": "Driver hours regulations (EU Drivers' Hours Regulations, US FMCSA Hours of Service) set maximum driving time, mandatory break frequency, and minimum rest periods. Violations carry fines for both driver and operator and increase accident risk through fatigue.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "regulatory"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "driver_hours"
+      ]
+    },
+    {
+      "statement": "Vehicle roadworthiness compliance requires regular technical inspection (MOT in the UK, TÜV in Germany, PTF in Italy and France, etc.). Operators must maintain service records and ensure vehicles are inspected at legally required intervals. Operating an unroadworthy vehicle is a criminal offence in most jurisdictions.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "regulatory"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "roadworthiness"
+      ]
+    },
+    {
+      "statement": "Fleet Management Software (FMTS/FMIS) centralises vehicle records, maintenance schedules, work orders, defect reports, compliance documents, and cost data. Without a centralised system, fleet data lives in spreadsheets and becomes unmanageable above ~20 vehicles.",
+      "topics": [
+        "fleet_management",
+        "software"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "fleet_software"
+      ]
+    },
+    {
+      "statement": "Route optimisation algorithms reduce total distance and time for multi-stop journeys. Dynamic routing factors in real-time traffic data. Optimised routing reduces fuel consumption by 10–20% and increases the number of stops a driver can complete per shift.",
+      "topics": [
+        "fleet_management",
+        "operations",
+        "logistics"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "route_optimisation"
+      ]
+    },
+    {
+      "statement": "Right-sizing the fleet means matching vehicle specifications to operational requirements. Oversized vehicles cost more to run and are harder to drive and park. Undersized vehicles are unreliable and create safety risks. Vehicle specification should be driven by actual payload, load frequency, and route data.",
+      "topics": [
+        "fleet_management",
+        "procurement"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "right_sizing"
+      ]
+    },
+    {
+      "statement": "Fleet electrification (EV transition) requires analysis of operational suitability: daily range requirement vs vehicle range, depot charging infrastructure, grid capacity, and TCO comparison including fuel savings and maintenance reduction (EVs have ~30% fewer moving parts). Not all fleet roles are yet suitable for EVs.",
+      "topics": [
+        "fleet_management",
+        "sustainability",
+        "ev"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "electrification"
+      ]
+    },
+    {
+      "statement": "Total cost comparison between fuel types must include: fuel/energy cost per km, maintenance differential, acquisition premium, residual value risk, charging/refuelling infrastructure cost, and any applicable government grants or tax incentives.",
+      "topics": [
+        "fleet_management",
+        "financial",
+        "ev"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "fuel_type_comparison"
+      ]
+    },
+    {
+      "statement": "Accident management processes define the immediate steps after an incident: driver safety check, emergency services notification, accident report documentation, photo/witness evidence collection, third-party notification, and insurer notification within required timeframes.",
+      "topics": [
+        "fleet_management",
+        "safety"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "accident_management"
+      ]
+    },
+    {
+      "statement": "Tyre management is a high-impact cost lever: tyres represent 3–5% of fleet operating costs, but improper inflation alone increases fuel consumption by 2–4% and cuts tyre life by up to 25%. Tyre rotation and retreading programmes extend lifecycle cost efficiency.",
+      "topics": [
+        "fleet_management",
+        "maintenance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "tyre_management"
+      ]
+    },
+    {
+      "statement": "Vehicle lifecycle data (mileage, service history, repair costs, defect frequency) enables evidence-based disposal decisions. Vehicles that regularly require expensive repairs should be disposed of earlier than a fixed-year cycle would dictate.",
+      "topics": [
+        "fleet_management",
+        "lifecycle"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "lifecycle_data"
+      ]
+    },
+    {
+      "statement": "CO2 and emissions reporting for fleets is increasingly mandatory under corporate sustainability frameworks (Scope 1 emissions for owned vehicles, Scope 3 for contracted haulage). Telematics-derived fuel consumption data is the most granular input for fleet emissions calculations.",
+      "topics": [
+        "fleet_management",
+        "sustainability",
+        "compliance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "emissions_reporting"
+      ]
+    },
+    {
+      "statement": "Driver licence verification must be performed at hiring and periodically throughout employment (typically every 6 months for high-risk roles, annually for standard roles). An employee driving on a suspended or expired licence creates operator liability.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "driver_management"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "licence_checks"
+      ]
+    },
+    {
+      "statement": "Key fleet management metrics: cost per km (total fleet cost / total km), cost per vehicle, fleet utilisation rate, maintenance cost as % of asset value, accident frequency rate, fuel consumption per 100km, and planned vs unplanned maintenance ratio. Each metric should have a target and trend tracking.",
+      "topics": [
+        "fleet_management",
+        "kpis"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "fleet_kpis"
+      ]
+    },
+    {
+      "statement": "Waste management fleet operations have specific constraints: compactor vehicles require daily maintenance to avoid operational failure, waste collection routes are time-critical (legal disposal windows, site opening hours), and drivers operate in residential areas requiring special safety protocols.",
+      "topics": [
+        "fleet_management",
+        "waste_management"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "waste_fleet"
+      ]
+    },
+    {
+      "statement": "Fleet procurement strategy choices — outright purchase, finance lease, operating lease, and contract hire — have different impacts on balance sheet, cash flow, maintenance liability, and disposal risk. Operating lease and contract hire transfer residual value risk to the funder; outright purchase retains it.",
+      "topics": [
+        "fleet_management",
+        "financial",
+        "procurement"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "fleet_procurement"
+      ]
+    },
+    {
+      "statement": "Fleet utilisation rate measures the percentage of available vehicle hours that are productively used. Target utilisation varies by sector: waste collection 75-85%, long-haul 80-90%. Underutilisation indicates over-fleet; chronic over-utilisation indicates under-fleet and accelerates wear.",
+      "topics": [
+        "fleet_management",
+        "performance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "fleet_utilisation"
+      ]
+    },
+    {
+      "statement": "Total Cost of Ownership (TCO) for a vehicle includes acquisition (purchase or lease), fuel, maintenance, tyres, insurance, driver cost, administration, and residual value. Acquisition price is typically 30-40% of a vehicle's lifetime cost; focusing only on purchase price systematically underestimates fleet cost.",
+      "topics": [
+        "fleet_management",
+        "cost"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "tco_depth"
+      ]
+    },
+    {
+      "statement": "Fuel card management provides per-vehicle fuel transaction data, enabling fraud detection (fills exceeding tank capacity, suspicious locations) and cost allocation by vehicle or cost centre. Fuel cards should be linked to odometer readings to calculate litres-per-100km per vehicle automatically.",
+      "topics": [
+        "fleet_management",
+        "fuel"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "fuel_card_management"
+      ]
+    },
+    {
+      "statement": "AdBlue (DEF - Diesel Exhaust Fluid) consumption is approximately 3-5% of diesel consumption on Euro 5/6 vehicles. Running out of AdBlue triggers a derate (speed/power reduction) and eventually engine lockout. Fleet management systems should track AdBlue levels alongside fuel.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "fuel"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "adblue_management"
+      ]
+    },
+    {
+      "statement": "Driver debrief process reviews telematics data with each driver regularly (weekly or monthly). Effective debriefs focus on behaviour change, not punishment: showing the driver their own trend, explaining the safety and fuel cost impact, and agreeing a specific improvement target for the next period.",
+      "topics": [
+        "fleet_management",
+        "driver_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "driver_debrief"
+      ]
+    },
+    {
+      "statement": "Driver licence verification must be performed at recruitment and at least annually. In the EU/UK, licence status changes (endorsements, disqualifications) are not automatically communicated to employers. Online DVLA/national authority checks are the only reliable verification mechanism.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "driver_management"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "licence_verification"
+      ]
+    },
+    {
+      "statement": "Duty of care obligation requires operators to ensure that vehicles are roadworthy and drivers are fit to drive before each journey. A daily walkaround check by the driver, signed and recorded, is the primary compliance mechanism. Paper defect books must be retained for 15 months in the UK.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "safety"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "duty_of_care"
+      ]
+    },
+    {
+      "statement": "Operator licence (O-licence in the UK) authorises commercial vehicle operators. Compliance with O-licence conditions requires maintenance records, driver records, and defect records to be available for DVSA inspection. Loss of O-licence is business-critical for transport operators.",
+      "topics": [
+        "fleet_management",
+        "compliance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "operator_licence"
+      ]
+    },
+    {
+      "statement": "Vehicle replacement cycle optimises the trade-off between declining residual value, increasing maintenance cost, and downtime as vehicles age. For light commercial vehicles, the economic replacement point is typically 4-7 years or 120,000-200,000 km; heavy vehicles 8-12 years. TCO modelling determines the fleet-specific optimum.",
+      "topics": [
+        "fleet_management",
+        "procurement"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "replacement_cycle"
+      ]
+    },
+    {
+      "statement": "Lease vs buy decision for fleet involves comparing operational lease (fixed monthly cost, no residual risk, included maintenance), finance lease (balance sheet asset, residual risk retained), and outright purchase (highest upfront cost, full ownership). Operational lease is preferred when predictable cash flow and risk transfer matter more than asset ownership.",
+      "topics": [
+        "fleet_management",
+        "procurement",
+        "finance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "lease_vs_buy"
+      ]
+    },
+    {
+      "statement": "CANbus data from modern vehicles provides live engine diagnostics including fault codes (DTCs), engine load, coolant temperature, fuel consumption, and emissions data. Integration between vehicle CANbus and fleet management software enables predictive maintenance alerts and immediate fault notification.",
+      "topics": [
+        "fleet_management",
+        "telematics",
+        "maintenance"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "canbus_data"
+      ]
+    },
+    {
+      "statement": "Electric vehicle (EV) fleet charging infrastructure requires site assessment (power capacity, charger locations), smart charging management (load balancing, off-peak scheduling), and route planning integration (range vs route length). Total energy cost per km for EVs is typically 60-70% lower than diesel, offset by higher acquisition cost.",
+      "topics": [
+        "fleet_management",
+        "ev"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "ev_charging_infrastructure"
+      ]
+    },
+    {
+      "statement": "Range anxiety management for EV fleets requires mapping all routes against vehicle range in varying conditions (cold weather reduces range 20-30%), identifying charging opportunities, and maintaining a diesel contingency fleet for high-range routes during EV transition.",
+      "topics": [
+        "fleet_management",
+        "ev"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "ev_range_management"
+      ]
+    },
+    {
+      "statement": "Accident management process covers first notification of loss (FNOL), third-party liability assessment, repair authorisation, hire vehicle provision, and subrogation. Centralised accident management reduces average claim cost 20-30% versus driver-managed claims through faster intervention and controlled repair networks.",
+      "topics": [
+        "fleet_management",
+        "safety",
+        "insurance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "accident_management_depth"
+      ]
+    },
+    {
+      "statement": "Near-miss reporting captures incidents that did not result in collision or injury but could have. High near-miss frequency is a leading indicator of future accidents. Near-miss culture requires psychological safety: drivers must believe reporting will not result in punishment.",
+      "topics": [
+        "fleet_management",
+        "safety"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "near_miss_reporting"
+      ]
+    },
+    {
+      "statement": "Fleet decarbonisation roadmap combines vehicle electrification, HVO (Hydrotreated Vegetable Oil) as a diesel substitute, route optimisation to reduce mileage, driver training for eco-driving, and renewable energy for charging. Scope 1 emissions (direct fuel use) are typically the largest component of a logistics company's carbon footprint.",
+      "topics": [
+        "fleet_management",
+        "sustainability"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "fleet_decarbonisation"
+      ]
+    },
+    {
+      "statement": "HVO (Hydrotreated Vegetable Oil) is a drop-in biofuel compatible with existing diesel engines and infrastructure, reducing lifecycle CO2 by 70-90% versus diesel. It is more expensive than diesel but requires no vehicle modification and is used as a bridging fuel during EV transition.",
+      "topics": [
+        "fleet_management",
+        "sustainability",
+        "fuel"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "hvo_fuel"
+      ]
+    },
+    {
+      "statement": "Waste collection fleet specifics: compactor vehicles require daily defect checks including PTO (power take-off) operation, hydraulic systems, and body condition. Rear-loader, side-loader, and roll-on/roll-off vehicles each have distinct inspection protocols. Contamination risk from collected waste requires body wash-down and hygiene records.",
+      "topics": [
+        "fleet_management",
+        "waste_management"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "waste_fleet_operations"
+      ]
+    },
+    {
+      "statement": "Driver fatigue management requires compliance with working time regulations and hours-of-service rules, but technology supplements compliance: fatigue detection cameras monitor eye closure and head position, alerting drivers in real time. Long-haul routes should build in mandatory rest breaks beyond legal minimums.",
+      "topics": [
+        "fleet_management",
+        "safety",
+        "driver_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "fatigue_management"
+      ]
+    },
+    {
+      "statement": "Fleet KPI dashboard minimum set: vehicle utilisation %, cost per km by vehicle type, fuel consumption L/100km trend, defect rate (defects per 100 vehicle inspections), accidents per million km, PM compliance % (services completed on schedule), driver behaviour score trend. Executive reporting should focus on trend direction, not just current values.",
+      "topics": [
+        "fleet_management",
+        "performance",
+        "reporting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "fleet_kpis"
+      ]
+    },
+    {
+      "statement": "Tyre management programme tracks tyre fitment, rotation, pressure, tread depth, and removal reason per axle position per vehicle. Premature tyre removal is the primary tyre cost driver. Casings with 3mm+ remaining tread removed due to damage should trigger a kerbing or overloading investigation.",
+      "topics": [
+        "fleet_management",
+        "maintenance"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "tyre_programme"
+      ]
+    },
+    {
+      "statement": "Vehicle uptime is the percentage of scheduled operating days a vehicle is available (not off-road for maintenance or repair). Target: >95% for primary vehicles. Unplanned downtime costs include hire vehicle cost, lost revenue, and customer penalties. Tracking MTTR (mean time to repair) per vehicle and per supplier identifies bottlenecks.",
+      "topics": [
+        "fleet_management",
+        "maintenance",
+        "performance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "vehicle_uptime"
+      ]
+    },
+    {
+      "statement": "DVSA (Driver and Vehicle Standards Agency) annual roadworthiness test (HGV annual test / MOT for LCV) pass rate is a lagging maintenance quality indicator. Failure rates above 20% on first presentation indicate systemic maintenance quality issues. Analysing failure reason codes guides preventive maintenance schedule improvements.",
+      "topics": [
+        "fleet_management",
+        "compliance",
+        "maintenance"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "annual_test_compliance"
+      ]
+    },
+    {
+      "statement": "Fleet data integration architecture connects telematics, workshop management, tachograph analysis, fuel card, and transport management systems. Without integration, data lives in silos requiring manual reconciliation. The fleet management platform should be the master system with other systems feeding it via API.",
+      "topics": [
+        "fleet_management",
+        "technology"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "fleet_data_integration"
+      ]
+    },
+    {
+      "statement": "Immobiliser and keyless entry management for fleet: keys and access credentials must be controlled via a key management system. Lost vehicle keys require immediate lock change (significant cost). Driver-specific keyless access systems (PIN or card) create an audit trail linking driver to vehicle for each journey.",
+      "topics": [
+        "fleet_management",
+        "security"
+      ],
+      "confidence": 0.92,
+      "tags": [
+        "vehicle_access_control"
+      ]
+    }
+  ]
+}

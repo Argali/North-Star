@@ -1,0 +1,789 @@
+{
+  "pack": "cybersecurity",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "The CIA triad — Confidentiality, Integrity, Availability — is the foundational framework for information security. Every control and risk assessment should be evaluated against its impact on all three properties.",
+      "topics": [
+        "cybersecurity"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "cia_triad"
+      ]
+    },
+    {
+      "statement": "Threat modelling systematically identifies assets, threats, attack vectors, and mitigations before building or deploying a system. STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) is the most widely used threat categorisation.",
+      "topics": [
+        "cybersecurity",
+        "threat_modelling"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "stride"
+      ]
+    },
+    {
+      "statement": "The attack surface is the sum of all entry points an attacker can exploit. Reducing it — by disabling unused features, removing unnecessary services, and limiting exposed interfaces — is the simplest and most reliable defensive measure.",
+      "topics": [
+        "cybersecurity",
+        "defence"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "attack_surface"
+      ]
+    },
+    {
+      "statement": "The kill chain (Lockheed Martin) models an attack as seven sequential phases: Reconnaissance, Weaponisation, Delivery, Exploitation, Installation, Command & Control, and Actions on Objectives. Defenders can disrupt any phase; early disruption is cheapest.",
+      "topics": [
+        "cybersecurity",
+        "threat_modelling"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "kill_chain"
+      ]
+    },
+    {
+      "statement": "MITRE ATT&CK is a curated knowledge base of real-world adversary tactics, techniques, and procedures (TTPs). It provides a common vocabulary for threat intelligence, detection engineering, and red team exercises.",
+      "topics": [
+        "cybersecurity",
+        "threat_intelligence"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "mitre_attack"
+      ]
+    },
+    {
+      "statement": "Zero Trust Architecture assumes no implicit trust based on network location. Every access request must be authenticated, authorised, and continuously validated regardless of whether it originates inside or outside the perimeter.",
+      "topics": [
+        "cybersecurity",
+        "architecture"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "zero_trust"
+      ]
+    },
+    {
+      "statement": "Defence in depth layers multiple independent security controls so that the failure of any single control does not compromise the system. Layers include perimeter (firewall), host (endpoint detection), application (input validation), and data (encryption).",
+      "topics": [
+        "cybersecurity",
+        "defence"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "defence_in_depth"
+      ]
+    },
+    {
+      "statement": "Vulnerability management is the continuous process of discovering, classifying, prioritising, and remediating security weaknesses. CVSS scores quantify severity; business context determines actual priority. Critical CVEs in exploited-in-the-wild status must be patched within 24–48 hours.",
+      "topics": [
+        "cybersecurity",
+        "vulnerability_management"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "vulnerability_management"
+      ]
+    },
+    {
+      "statement": "Patch management must be systematic and timely. The vast majority of breaches exploit known vulnerabilities with available patches. Unpatched systems are the largest preventable attack surface.",
+      "topics": [
+        "cybersecurity",
+        "vulnerability_management"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "patch_management"
+      ]
+    },
+    {
+      "statement": "Penetration testing (pen testing) is an authorised simulated attack to identify exploitable vulnerabilities before real adversaries do. It must be scoped, contracted, and documented. Never perform security testing without explicit written authorisation.",
+      "topics": [
+        "cybersecurity",
+        "testing"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "pen_testing"
+      ]
+    },
+    {
+      "statement": "Red team exercises simulate a full adversary campaign against an organisation. Blue team defends. Purple team combines both for knowledge transfer. Red teaming reveals detection and response gaps that automated scanning misses.",
+      "topics": [
+        "cybersecurity",
+        "testing"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "red_blue_team"
+      ]
+    },
+    {
+      "statement": "Incident response follows a structured lifecycle: Preparation → Detection & Analysis → Containment → Eradication → Recovery → Post-Incident Review. Skipping containment before eradication allows threats to re-establish persistence.",
+      "topics": [
+        "cybersecurity",
+        "incident_response"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "incident_response"
+      ]
+    },
+    {
+      "statement": "The first actions in incident response are to preserve evidence (memory dump, log snapshot) before containing or remediating. Evidence lost during remediation cannot be recovered and compromises forensic investigation.",
+      "topics": [
+        "cybersecurity",
+        "incident_response",
+        "forensics"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "evidence_preservation"
+      ]
+    },
+    {
+      "statement": "SIEM (Security Information and Event Management) aggregates logs from all sources, correlates events, and triggers alerts on suspicious patterns. It is the central nervous system of a security operations centre (SOC).",
+      "topics": [
+        "cybersecurity",
+        "soc"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "siem"
+      ]
+    },
+    {
+      "statement": "Indicators of Compromise (IoCs) are forensic artefacts that signal a breach: malicious IP addresses, file hashes, domain names, registry keys. IoC feeds enable automated blocking but expire quickly as adversaries change infrastructure.",
+      "topics": [
+        "cybersecurity",
+        "threat_intelligence"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ioc"
+      ]
+    },
+    {
+      "statement": "Indicators of Attack (IoAs) are behavioural patterns that suggest an attack in progress (e.g. credential dumping, lateral movement, unusual outbound data). IoAs are more durable than IoCs because TTPs change more slowly than infrastructure.",
+      "topics": [
+        "cybersecurity",
+        "threat_intelligence"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "ioa"
+      ]
+    },
+    {
+      "statement": "Principle of least privilege means users, services, and processes have only the minimum permissions required for their function. It is the most effective single control against lateral movement and privilege escalation.",
+      "topics": [
+        "cybersecurity",
+        "access_control"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "least_privilege"
+      ]
+    },
+    {
+      "statement": "Multi-factor authentication (MFA) requires two or more verification factors (something you know, have, or are). It prevents credential-based attacks even when passwords are compromised. TOTP and hardware keys are stronger than SMS-based MFA.",
+      "topics": [
+        "cybersecurity",
+        "authentication"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "mfa"
+      ]
+    },
+    {
+      "statement": "Privileged Access Management (PAM) controls, monitors, and audits access for administrative accounts. Admin credentials are the highest-value target; PAM vaults them, enforces just-in-time access, and records sessions.",
+      "topics": [
+        "cybersecurity",
+        "access_control"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "pam"
+      ]
+    },
+    {
+      "statement": "Social engineering exploits human psychology rather than technical vulnerabilities. Phishing (email), vishing (voice), and smishing (SMS) are the dominant initial access vectors in real-world breaches. Technical controls alone cannot defeat social engineering.",
+      "topics": [
+        "cybersecurity",
+        "social_engineering"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "social_engineering"
+      ]
+    },
+    {
+      "statement": "Ransomware encrypts victim data and demands payment for the decryption key. Primary defences: immutable offline backups, network segmentation, endpoint detection and response (EDR), and email filtering. Paying ransom does not guarantee data recovery.",
+      "topics": [
+        "cybersecurity",
+        "malware"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "ransomware"
+      ]
+    },
+    {
+      "statement": "Endpoint Detection and Response (EDR) tools monitor host behaviour in real time, detect anomalous activity (e.g. process injection, credential dumping), and enable rapid containment. EDR is the modern successor to traditional antivirus.",
+      "topics": [
+        "cybersecurity",
+        "endpoint_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "edr"
+      ]
+    },
+    {
+      "statement": "Network segmentation divides the network into isolated zones with restricted traffic between them. Micro-segmentation applies this at the workload level. It limits lateral movement: an attacker who compromises one zone cannot freely reach others.",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "network_segmentation"
+      ]
+    },
+    {
+      "statement": "Data Loss Prevention (DLP) monitors and controls the movement of sensitive data. It prevents accidental or malicious exfiltration via email, USB, cloud uploads, or other channels. DLP requires accurate data classification to be effective.",
+      "topics": [
+        "cybersecurity",
+        "data_security"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "dlp"
+      ]
+    },
+    {
+      "statement": "Encryption at rest protects data stored on disk from physical theft or unauthorised access. AES-256 is the standard algorithm. Key management is as important as encryption: keys stored alongside encrypted data negate the protection.",
+      "topics": [
+        "cybersecurity",
+        "cryptography"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "encryption_at_rest"
+      ]
+    },
+    {
+      "statement": "TLS 1.3 is the current standard for encryption in transit. Deprecated protocols (TLS 1.0, 1.1, SSLv3) have known vulnerabilities and must be disabled. Certificate pinning and HSTS prevent downgrade and interception attacks.",
+      "topics": [
+        "cybersecurity",
+        "cryptography",
+        "networking"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "tls"
+      ]
+    },
+    {
+      "statement": "The 3-2-1 backup rule: three copies of data, on two different media types, with one copy offsite. For ransomware resilience, at least one copy must be immutable (cannot be encrypted or deleted by any automated process).",
+      "topics": [
+        "cybersecurity",
+        "resilience"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "backup_321"
+      ]
+    },
+    {
+      "statement": "Security logging must capture authentication events (success and failure), privilege escalation, configuration changes, and access to sensitive data. Logs must be tamper-evident (write-once), centralised, and retained for at least 12 months.",
+      "topics": [
+        "cybersecurity",
+        "logging"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "security_logging"
+      ]
+    },
+    {
+      "statement": "Supply chain attacks compromise a trusted software component, library, or update mechanism to deliver malware to downstream users. SolarWinds, XZ Utils, and npm package hijacks are landmark examples. SBOM and dependency scanning are key controls.",
+      "topics": [
+        "cybersecurity",
+        "supply_chain"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "supply_chain_attack"
+      ]
+    },
+    {
+      "statement": "Threat intelligence is contextual information about adversary capabilities, motivations, and TTPs. Strategic intelligence informs policy; operational intelligence informs defence; tactical intelligence informs detection signatures.",
+      "topics": [
+        "cybersecurity",
+        "threat_intelligence"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "threat_intelligence"
+      ]
+    },
+    {
+      "statement": "Cyber security frameworks (NIST CSF, ISO 27001, CIS Controls) provide structured approaches to managing security risk. They organise controls around identify, protect, detect, respond, and recover functions.",
+      "topics": [
+        "cybersecurity",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "security_frameworks"
+      ]
+    },
+    {
+      "statement": "Responsible disclosure (coordinated vulnerability disclosure) allows security researchers to report vulnerabilities directly to the vendor before public disclosure, giving time to develop and release a patch. Bug bounty programmes incentivise this.",
+      "topics": [
+        "cybersecurity",
+        "vulnerability_management"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "responsible_disclosure"
+      ]
+    },
+    {
+      "statement": "Security awareness training is one of the highest-ROI security investments. Phishing simulation exercises, regular training, and a no-blame reporting culture reduce the effectiveness of social engineering attacks.",
+      "topics": [
+        "cybersecurity",
+        "culture"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "security_awareness"
+      ]
+    },
+    {
+      "statement": "Insider threat includes malicious insiders (employees deliberately exfiltrating data) and negligent insiders (employees accidentally causing breaches). User and Entity Behaviour Analytics (UEBA) detects anomalous internal patterns.",
+      "topics": [
+        "cybersecurity",
+        "insider_threat"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "insider_threat"
+      ]
+    },
+    {
+      "statement": "Business Continuity Planning (BCP) and Disaster Recovery (DR) plans must be tested annually. An untested DR plan is a liability, not an asset. Recovery Time Objective (RTO) and Recovery Point Objective (RPO) drive the technical architecture.",
+      "topics": [
+        "cybersecurity",
+        "resilience"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "bcp_dr"
+      ]
+    },
+    {
+      "statement": "Cloud security follows a shared responsibility model: the cloud provider secures the infrastructure; the customer secures data, identities, configurations, and applications. Misconfigurations (public S3 buckets, overly permissive IAM) are the leading cloud breach cause.",
+      "topics": [
+        "cybersecurity",
+        "cloud_security"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "cloud_security"
+      ]
+    },
+    {
+      "statement": "Identity is the new perimeter. In cloud and remote work environments, network location no longer determines trust. Identity verification (strong MFA, conditional access, identity governance) is the primary security boundary.",
+      "topics": [
+        "cybersecurity",
+        "identity"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "identity_perimeter"
+      ]
+    },
+    {
+      "statement": "Security by design embeds security controls during architecture and development, not as a bolt-on after completion. Threat modelling during design costs ~10x less to remediate than issues found in production.",
+      "topics": [
+        "cybersecurity",
+        "sdlc"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "security_by_design"
+      ]
+    },
+    {
+      "statement": "DevSecOps integrates security into the CI/CD pipeline: SAST scans code, SCA checks dependencies, DAST tests the running application, and secrets scanners catch committed credentials. Security shifts left to the developer.",
+      "topics": [
+        "cybersecurity",
+        "devsecops"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "devsecops"
+      ]
+    },
+    {
+      "statement": "Cyber insurance covers financial losses from breaches, ransomware payments, business interruption, and regulatory fines. Insurers increasingly mandate specific controls (MFA, EDR, tested backups) before issuing policies.",
+      "topics": [
+        "cybersecurity",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "cyber_insurance"
+      ]
+    },
+    {
+      "statement": "DNS security controls prevent DNS hijacking, cache poisoning, and DNS-based exfiltration. DNSSEC validates DNS responses with cryptographic signatures. DNS over HTTPS (DoH) prevents eavesdropping on DNS queries. Internal DNS resolvers should not forward queries to external servers by default.",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "dns_security"
+      ]
+    },
+    {
+      "statement": "Firewalls enforce network access control by inspecting and filtering traffic based on rules. Next-generation firewalls (NGFW) add application awareness, intrusion prevention, and TLS inspection. Default-deny rules reject all traffic not explicitly permitted.",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "firewalls"
+      ]
+    },
+    {
+      "statement": "VPNs encrypt traffic between endpoints over untrusted networks. Site-to-site VPNs connect offices; remote-access VPNs connect individuals. Deprecated protocols (PPTP, L2TP without IPsec) must be disabled. Modern alternatives include WireGuard and zero-trust network access (ZTNA).",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "vpn"
+      ]
+    },
+    {
+      "statement": "Intrusion Detection Systems (IDS) monitor network or host activity for known attack signatures and anomalies. Intrusion Prevention Systems (IPS) also block detected threats. Signature-based detection misses novel attacks; anomaly-based detection produces false positives that require tuning.",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "ids_ips"
+      ]
+    },
+    {
+      "statement": "Network Access Control (NAC) enforces security policy compliance before allowing devices onto the network. It checks patch level, antivirus status, and configuration compliance. Non-compliant devices are quarantined to a remediation VLAN.",
+      "topics": [
+        "cybersecurity",
+        "network_security"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "nac"
+      ]
+    },
+    {
+      "statement": "Single Sign-On (SSO) allows users to authenticate once and access multiple systems. It reduces password fatigue and centralises authentication, making MFA enforcement and account deprovisioning more reliable. SAML 2.0 and OIDC are the dominant SSO protocols.",
+      "topics": [
+        "cybersecurity",
+        "identity"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "sso"
+      ]
+    },
+    {
+      "statement": "Identity governance and administration (IGA) manages user lifecycle: provisioning access at onboarding, adjusting it on role change, and revoking it at offboarding. Access reviews periodically validate that current access is still appropriate. Orphaned accounts (ex-employee access) are a critical risk.",
+      "topics": [
+        "cybersecurity",
+        "identity"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "iga"
+      ]
+    },
+    {
+      "statement": "Conditional access policies grant or deny resource access based on user identity, device health, location, and risk signals. They are the primary enforcement mechanism in a Zero Trust architecture, replacing binary allow/deny firewall rules.",
+      "topics": [
+        "cybersecurity",
+        "identity"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "conditional_access"
+      ]
+    },
+    {
+      "statement": "Service accounts and non-human identities (API keys, OAuth tokens, certificates) must be managed with the same rigour as human accounts. They are frequently over-privileged, rarely rotated, and are a top target for lateral movement after initial compromise.",
+      "topics": [
+        "cybersecurity",
+        "identity"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "service_accounts"
+      ]
+    },
+    {
+      "statement": "Public Key Infrastructure (PKI) manages digital certificates that bind cryptographic keys to identities. Certificate Authorities (CAs) sign certificates. Short-lived certificates (90-day or less) with automated renewal (ACME protocol / Let's Encrypt) reduce the impact of key compromise.",
+      "topics": [
+        "cybersecurity",
+        "cryptography"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "pki"
+      ]
+    },
+    {
+      "statement": "Key management is as important as the cryptographic algorithm. Keys must be generated with a cryptographically secure random number generator, stored in a Hardware Security Module (HSM) or secrets manager, rotated on a defined schedule, and destroyed securely at end of life.",
+      "topics": [
+        "cybersecurity",
+        "cryptography"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "key_management"
+      ]
+    },
+    {
+      "statement": "Hashing is a one-way transformation producing a fixed-length digest. Cryptographic hashes (SHA-256, SHA-3) are used for integrity verification; password hashing requires slow adaptive functions (Argon2id, bcrypt, scrypt) that resist GPU-accelerated brute force.",
+      "topics": [
+        "cybersecurity",
+        "cryptography"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "hashing"
+      ]
+    },
+    {
+      "statement": "OWASP Top 10 is the most widely referenced list of web application security risks, updated approximately every 3–4 years. 2021 Top 3: Broken Access Control (A01), Cryptographic Failures (A02), Injection (A03). It is the baseline checklist for web application security assessments.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "owasp_top10"
+      ]
+    },
+    {
+      "statement": "SQL injection remains the most common and dangerous injection attack. Parameterised queries (prepared statements) completely eliminate it. ORMs use parameterised queries by default. String concatenation to build SQL is never acceptable, regardless of apparent input sanitisation.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "sql_injection"
+      ]
+    },
+    {
+      "statement": "Cross-Site Scripting (XSS) injects malicious scripts into web pages viewed by other users. Stored XSS is most dangerous; reflected XSS requires a crafted link. Defences: output encoding, Content Security Policy (CSP), and context-aware template engines that auto-escape.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "xss"
+      ]
+    },
+    {
+      "statement": "CSRF (Cross-Site Request Forgery) tricks an authenticated user's browser into sending an unintended request. Defences: CSRF tokens (synchronised token pattern), SameSite cookie attribute (Lax or Strict), and verifying the Origin header on state-changing requests.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "csrf"
+      ]
+    },
+    {
+      "statement": "Server-Side Request Forgery (SSRF) tricks the server into making requests to internal resources on behalf of an attacker. In cloud environments, SSRF can reach the metadata service and extract instance credentials. Defences: allowlist outbound destinations, block metadata IPs, use IMDSv2.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ssrf"
+      ]
+    },
+    {
+      "statement": "Broken access control (IDOR — Insecure Direct Object Reference) exposes objects by a predictable identifier without verifying that the requesting user has permission. Always validate authorisation server-side for every request; never rely on obscured IDs.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "idor"
+      ]
+    },
+    {
+      "statement": "Security headers harden web applications against common attacks. Key headers: Content-Security-Policy (XSS), Strict-Transport-Security (HTTPS downgrade), X-Frame-Options (clickjacking), X-Content-Type-Options (MIME sniffing), Referrer-Policy, and Permissions-Policy.",
+      "topics": [
+        "cybersecurity",
+        "application_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "security_headers"
+      ]
+    },
+    {
+      "statement": "Cloud Security Posture Management (CSPM) continuously assesses cloud configuration against security best practices and compliance frameworks. It detects drift from secure baselines and alerts on misconfigurations before attackers find them.",
+      "topics": [
+        "cybersecurity",
+        "cloud_security"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "cspm"
+      ]
+    },
+    {
+      "statement": "Secrets scanning tools (Trufflehog, GitLeaks, GitHub Secret Scanning) detect API keys, passwords, and certificates committed to source code repositories. Every repository — public and private — should have pre-commit hooks and CI-stage secrets scanning.",
+      "topics": [
+        "cybersecurity",
+        "devsecops"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "secrets_scanning"
+      ]
+    },
+    {
+      "statement": "Container security extends beyond image scanning. Runtime security (Falco) monitors container behaviour for unexpected system calls. Pod security standards restrict privileged containers, host network access, and root execution. Network policies restrict inter-pod traffic.",
+      "topics": [
+        "cybersecurity",
+        "containers"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "container_runtime_security"
+      ]
+    },
+    {
+      "statement": "Digital forensics preserves, acquires, and analyses electronic evidence for investigation or legal proceedings. Chain of custody documentation proves evidence was not altered. Forensic copies (disk images) are made before analysis to protect the original.",
+      "topics": [
+        "cybersecurity",
+        "forensics"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "digital_forensics"
+      ]
+    },
+    {
+      "statement": "Memory forensics captures and analyses volatile RAM contents during or after an incident. It reveals running processes, network connections, injected code, and encryption keys that do not appear in disk forensics. Memory must be captured before system shutdown.",
+      "topics": [
+        "cybersecurity",
+        "forensics"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "memory_forensics"
+      ]
+    },
+    {
+      "statement": "Threat hunting proactively searches for threats that have evaded automated detection. It is hypothesis-driven: the analyst formulates a hypothesis about how an attacker might behave and searches for evidence. It complements SIEM alerting, which only detects known patterns.",
+      "topics": [
+        "cybersecurity",
+        "soc"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "threat_hunting"
+      ]
+    },
+    {
+      "statement": "Security orchestration, automation, and response (SOAR) automates repetitive SOC tasks: alert triage, IoC enrichment, containment actions, and ticket creation. It reduces analyst workload and MTTR by handling high-volume, low-complexity incidents automatically.",
+      "topics": [
+        "cybersecurity",
+        "soc"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "soar"
+      ]
+    },
+    {
+      "statement": "Cyber risk quantification translates security risks into financial terms (expected loss in euros/dollars). FAIR (Factor Analysis of Information Risk) is the dominant methodology. Financial quantification enables risk prioritisation against business investment and insurance decisions.",
+      "topics": [
+        "cybersecurity",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "risk_quantification"
+      ]
+    },
+    {
+      "statement": "Security metrics that matter: mean time to detect (MTTD), mean time to respond (MTTR), patch SLA compliance rate, % of critical systems with EDR coverage, MFA adoption rate, and open critical vulnerabilities. Vanity metrics (number of alerts, phishing click rate alone) do not reflect security posture.",
+      "topics": [
+        "cybersecurity",
+        "governance",
+        "kpis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "security_metrics"
+      ]
+    },
+    {
+      "statement": "Data classification defines sensitivity tiers (Public, Internal, Confidential, Restricted) and maps controls to each tier. Without classification, the same expensive controls are applied to public marketing materials and personal health records alike.",
+      "topics": [
+        "cybersecurity",
+        "data_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "data_classification"
+      ]
+    },
+    {
+      "statement": "Bug bounty programmes invite external security researchers to responsibly report vulnerabilities in exchange for recognition or payment. They cost-effectively extend security testing coverage beyond what internal teams can achieve.",
+      "topics": [
+        "cybersecurity",
+        "vulnerability_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "bug_bounty"
+      ]
+    },
+    {
+      "statement": "The NIST Cybersecurity Framework 2.0 (CSF 2.0) adds a sixth function — Govern — alongside Identify, Protect, Detect, Respond, and Recover. Govern addresses the organisational context, risk management strategy, and supply chain risk that CSF 1.1 left implicit.",
+      "topics": [
+        "cybersecurity",
+        "governance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "nist_csf2"
+      ]
+    }
+  ]
+}

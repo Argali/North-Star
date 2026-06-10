@@ -1,0 +1,687 @@
+{
+  "pack": "decision_making",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "A decision is a choice made under uncertainty. Good decisions are defined by the quality of the process used to make them, not by their outcome. Bad outcomes can follow good decisions; good outcomes can follow bad ones.",
+      "topics": [
+        "decision_making"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "decision_quality"
+      ]
+    },
+    {
+      "statement": "Reversible vs irreversible decisions require different processes. Reversible (two-way door) decisions should be made quickly with less information. Irreversible (one-way door) decisions warrant slower, more deliberate analysis.",
+      "topics": [
+        "decision_making"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "reversibility"
+      ]
+    },
+    {
+      "statement": "Expected value is the probability-weighted average of all possible outcomes. It is the foundation of rational decision-making under uncertainty: EV = Σ (probability × outcome value). Maximise expected value, not best-case scenarios.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "expected_value"
+      ]
+    },
+    {
+      "statement": "Cognitive biases systematically distort human judgment. Recognising a bias does not eliminate it. Structural decision processes (checklists, pre-mortems, diverse teams) are more effective than individual awareness alone.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "cognitive_biases"
+      ]
+    },
+    {
+      "statement": "Confirmation bias is the tendency to search for, favour, and interpret information that confirms existing beliefs. Counter it by actively seeking disconfirming evidence and assigning someone to argue the opposite position.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "confirmation_bias"
+      ]
+    },
+    {
+      "statement": "Sunk cost fallacy is the tendency to continue an investment based on past unrecoverable costs rather than future expected value. Past spending is irrelevant to forward decisions; only future costs and benefits matter.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "sunk_cost"
+      ]
+    },
+    {
+      "statement": "Anchoring bias causes estimates and decisions to be unduly influenced by the first number or piece of information encountered. Counter it by generating independent estimates before exposure to any anchor.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "anchoring"
+      ]
+    },
+    {
+      "statement": "Availability heuristic overweights vivid, recent, or memorable information. Recent disasters make people overestimate the probability of similar events; conversely, routine risks are underestimated because they are unfamiliar.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "availability_heuristic"
+      ]
+    },
+    {
+      "statement": "Overconfidence bias causes people to underestimate uncertainty and overestimate the accuracy of their predictions. Calibrated forecasters explicitly quantify uncertainty ranges and track prediction accuracy over time.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "overconfidence"
+      ]
+    },
+    {
+      "statement": "Pre-mortem analysis imagines the decision has already failed and asks 'what went wrong?' It surfaces risks and assumptions that forward planning misses, because it bypasses optimism bias and encourages independent critical thinking.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "pre_mortem"
+      ]
+    },
+    {
+      "statement": "The OODA loop (Observe, Orient, Decide, Act) models decision-making in fast-changing environments. Faster OODA cycles outcompete slower opponents. Speed of orientation (applying prior knowledge to new information) is the critical leverage point.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ooda_loop"
+      ]
+    },
+    {
+      "statement": "Decision matrix (weighted criteria analysis) evaluates options against multiple criteria with explicit weightings. It externalises the trade-off logic, makes implicit priorities visible, and reduces post-hoc rationalisation.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "decision_matrix"
+      ]
+    },
+    {
+      "statement": "Second-order thinking asks 'and then what?' for each consequence. First-order thinkers see the immediate outcome; second-order thinkers see the cascade of consequences that follows. Most decisions involve at least two orders of effects.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "second_order_thinking"
+      ]
+    },
+    {
+      "statement": "Inversion (thinking backwards) solves problems by asking 'what would guarantee failure?' and then avoiding those conditions. It often reveals critical risks that forward analysis overlooks.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "inversion"
+      ]
+    },
+    {
+      "statement": "Risk appetite defines the level of risk an organisation is willing to accept in pursuit of objectives. It must be explicit, documented, and communicated. Decisions taken outside the stated risk appetite require escalation.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "risk_appetite"
+      ]
+    },
+    {
+      "statement": "Risk tolerance is the acceptable variation around an objective. It is narrower than risk appetite. An organisation may have a risk appetite for entering new markets (strategic risk) but low tolerance for financial reporting errors (compliance risk).",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "risk_tolerance"
+      ]
+    },
+    {
+      "statement": "Scenario planning develops multiple plausible futures and tests strategies against each one. It is superior to point forecasting for high-uncertainty environments. Strategies that are robust across multiple scenarios are more valuable than strategies optimised for one.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "scenario_planning"
+      ]
+    },
+    {
+      "statement": "Base rates are the prior probabilities of an event in a reference class. Ignoring base rates (base rate neglect) leads to over-reliance on specific case details. Always ask: what is the success rate for similar situations?",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "base_rate"
+      ]
+    },
+    {
+      "statement": "The inside view relies on the specific features of the current situation. The outside view asks how similar situations have played out historically. Effective forecasters start with the outside view and adjust for specific case factors.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "inside_outside_view"
+      ]
+    },
+    {
+      "statement": "Satisficing means choosing the first option that meets a minimum threshold rather than exhaustively searching for the optimum. It is rational when the cost of additional search exceeds the expected value of a better option.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "satisficing"
+      ]
+    },
+    {
+      "statement": "Regret minimisation asks: which decision will I regret least at age 80? It is effective for long-horizon, high-stakes decisions where expected-value calculations are hard but the emotional salience of each path is clear.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "regret_minimisation"
+      ]
+    },
+    {
+      "statement": "Group decision-making is vulnerable to groupthink: the suppression of dissent in favour of consensus. Mitigations: anonymous voting, rotating devil's advocate, structured disagreement, and diverse teams.",
+      "topics": [
+        "decision_making",
+        "group_dynamics"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "groupthink"
+      ]
+    },
+    {
+      "statement": "Decision authority matrices (RACI, DACI, RAPID) clarify who has the right to decide, recommend, approve, and be informed. Unclear decision authority is a leading cause of slow, low-quality decisions in organisations.",
+      "topics": [
+        "decision_making",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "decision_authority"
+      ]
+    },
+    {
+      "statement": "Disagree and commit: teams can disagree with a decision but still execute it fully once made. This preserves both intellectual honesty and organisational speed. It requires psychological safety and a trustworthy decision process.",
+      "topics": [
+        "decision_making",
+        "culture"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "disagree_commit"
+      ]
+    },
+    {
+      "statement": "Decision documentation records the context, options considered, criteria used, and reasoning behind a decision (Architecture Decision Records are one format). It prevents re-litigating settled decisions and enables retrospective learning.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "decision_documentation"
+      ]
+    },
+    {
+      "statement": "Opportunity cost is the value of the best foregone alternative. Every decision to do X is simultaneously a decision not to do Y. Explicitly naming the opportunity cost prevents the illusion that choosing something is free.",
+      "topics": [
+        "decision_making"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "opportunity_cost"
+      ]
+    },
+    {
+      "statement": "Loss aversion means losses feel roughly twice as painful as equivalent gains feel good (Kahneman & Tversky). It causes people to take insufficient risks to avoid losses and to irrationally hold losing positions.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "loss_aversion"
+      ]
+    },
+    {
+      "statement": "The planning fallacy underestimates project time, cost, and risk while overestimating benefits. Counter it with reference class forecasting (how long did similar projects actually take?) and explicit uncertainty ranges.",
+      "topics": [
+        "decision_making",
+        "biases",
+        "project_management"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "planning_fallacy"
+      ]
+    },
+    {
+      "statement": "Fast and slow thinking (System 1 and System 2, Kahneman) describes two modes of cognition. System 1 is fast, automatic, and intuitive. System 2 is slow, deliberate, and analytical. High-stakes decisions benefit from engaging System 2 by slowing down.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "system1_system2"
+      ]
+    },
+    {
+      "statement": "Decision hygiene practices: sleep before deciding on important matters, seek diverse perspectives, separate information gathering from evaluation, and set a decision deadline to prevent analysis paralysis.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "decision_hygiene"
+      ]
+    },
+    {
+      "statement": "Asymmetric decisions have a small downside and large potential upside (or vice versa). Identifying asymmetry is more valuable than precise probability estimation; pursue bets where being wrong is cheap and being right is transformative.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "asymmetric_decisions"
+      ]
+    },
+    {
+      "statement": "Calibrated uncertainty means expressing confidence levels that match actual accuracy rates. A calibrated forecaster who says '70% confident' is right about 70% of the time. Calibration can be measured and trained.",
+      "topics": [
+        "decision_making",
+        "forecasting"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "calibration"
+      ]
+    },
+    {
+      "statement": "Status quo bias is the preference for the current state of affairs. The pain of change feels larger than the potential gain, causing people to under-react to deteriorating situations and to favour familiar options over objectively better alternatives.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "status_quo_bias"
+      ]
+    },
+    {
+      "statement": "Recency bias overweights recent events when forming expectations about the future. After a long bull market, investors assume prices will keep rising; after a crash, they assume losses will continue. Counter it by explicitly examining longer historical base rates.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "recency_bias"
+      ]
+    },
+    {
+      "statement": "Attribution error (fundamental attribution error) over-attributes others' behaviour to their character and under-attributes it to their situation. When evaluating decisions, examine the situational pressures the decision-maker faced, not just the outcome.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "attribution_error"
+      ]
+    },
+    {
+      "statement": "Survivorship bias analyses only successful examples while ignoring failures, because failures are no longer visible. Studying only successful companies, strategies, or people produces misleading lessons. Always ask: where are the failures for this sample?",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "survivorship_bias"
+      ]
+    },
+    {
+      "statement": "Commitment and escalation bias causes people to continue investing in a losing course of action because they are publicly committed to it. The sunk cost fallacy is one mechanism; reputational risk is another. Formal review triggers and pre-defined exit criteria prevent escalation.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "escalation_bias"
+      ]
+    },
+    {
+      "statement": "The planning fallacy's antidote is reference class forecasting: identify the relevant historical reference class (similar projects, similar decisions), obtain the distribution of outcomes, and use that distribution as the prior before adjusting for specific case factors.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "reference_class_forecasting"
+      ]
+    },
+    {
+      "statement": "Scope insensitivity (psychophysical numbing) means people's willingness to help or pay does not scale proportionally with the magnitude of a problem. Saving 200,000 birds generates only marginally more concern than saving 2,000. Make scope vivid and concrete to counter it.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "scope_insensitivity"
+      ]
+    },
+    {
+      "statement": "The WYSIATI principle (What You See Is All There Is, Kahneman) describes how the mind constructs the most coherent story from available information, ignoring the possibility that critical information is missing. Explicitly ask 'what would change my view?' before deciding.",
+      "topics": [
+        "decision_making",
+        "biases"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "wysiati"
+      ]
+    },
+    {
+      "statement": "The Cynefin framework categorises problems into five domains: Clear (best practice), Complicated (good practice / expert analysis), Complex (emergent practice / experiment), Chaotic (novel practice / act first), and Confused (unclear domain). Decision approach must match the domain.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "cynefin"
+      ]
+    },
+    {
+      "statement": "First principles thinking breaks a problem down to its fundamental truths and reasons up from there, rather than reasoning by analogy from existing solutions. It produces novel solutions but is cognitively expensive; reserve it for high-stakes, genuinely novel problems.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "first_principles"
+      ]
+    },
+    {
+      "statement": "The 10/10/10 rule evaluates a decision's impact at three time horizons: How will you feel about this in 10 minutes? 10 months? 10 years? It counteracts short-term emotional intensity by forcing long-term perspective on present-focused decisions.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "10_10_10"
+      ]
+    },
+    {
+      "statement": "Sensitivity analysis identifies which assumptions most affect the decision outcome. If a decision remains correct across a wide range of assumption values, it is robust. If it flips on small changes to a key assumption, that assumption demands more rigorous investigation.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "sensitivity_analysis"
+      ]
+    },
+    {
+      "statement": "The distinction between complicated and complex problems is critical. Complicated problems have knowable solutions through expert analysis (engineering a bridge). Complex problems involve emergent behaviour and human systems where cause and effect are clear only in retrospect (organisational change, market dynamics). They require different approaches.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "complicated_vs_complex"
+      ]
+    },
+    {
+      "statement": "Bayesian updating is the process of revising probability estimates as new evidence arrives. Start with a prior probability, observe new evidence, and calculate the posterior. Explicit Bayesian reasoning prevents under-updating (ignoring new evidence) and over-updating (treating every data point as decisive).",
+      "topics": [
+        "decision_making",
+        "tools",
+        "forecasting"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "bayesian_updating"
+      ]
+    },
+    {
+      "statement": "The five whys technique repeatedly asks 'why' to drill from a symptom down to the root cause. It is most effective for simple, linear causal chains. Complex systems with multiple interacting causes require fishbone diagrams or causal loop diagrams.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "five_whys"
+      ]
+    },
+    {
+      "statement": "Reversing the decision default can unlock options. Instead of 'should we do X?', ask 'if we had already done X, would we stop?' or 'what would we need to believe for X to be the right answer?' These reframes surface hidden assumptions.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "decision_reversal"
+      ]
+    },
+    {
+      "statement": "Decision fatigue degrades the quality of decisions made later in a day or after a long series of choices. High-stakes decisions should be scheduled when cognitive resources are fresh. Routinise low-stakes decisions to preserve decision capacity for important ones.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "decision_fatigue"
+      ]
+    },
+    {
+      "statement": "The speed-quality trade-off in decisions depends on reversibility and information availability. When a decision is reversible and more information will be available later, delay is valuable. When a decision is irreversible or time-sensitive, the cost of delay exceeds the value of additional information.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "speed_quality_tradeoff"
+      ]
+    },
+    {
+      "statement": "Analysis paralysis occurs when over-analysis delays a decision past its useful window. It often disguises fear of being wrong as thoroughness. Set an explicit decision deadline and identify the minimum information needed to make a good-enough decision.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "analysis_paralysis"
+      ]
+    },
+    {
+      "statement": "Structured analytic techniques (SATs) from intelligence analysis — including Analysis of Competing Hypotheses (ACH), devil's advocacy, and red teaming — are systematic methods to challenge assumptions and reduce analyst bias. They are applicable to business and operational decisions.",
+      "topics": [
+        "decision_making",
+        "tools"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "structured_analytic_techniques"
+      ]
+    },
+    {
+      "statement": "Post-decision review (outcome tracking) compares actual results against predicted results for past decisions. Without feedback loops, decision-makers cannot calibrate their judgment. Tracking predictions formally — even informally in a decision journal — is the most direct route to improving decision quality.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "decision_review"
+      ]
+    },
+    {
+      "statement": "Knight's distinction: risk is uncertainty where the probability distribution is known (a dice roll); uncertainty is where the probability distribution itself is unknown (a new market, a novel technology). Different tools apply: expected value for risk, scenario planning and robustness testing for uncertainty.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "risk_vs_uncertainty"
+      ]
+    },
+    {
+      "statement": "Black Swan events (Taleb) are rare, high-impact, and retrospectively predictable. Systems designed for normal operating ranges are fragile to Black Swans. Antifragile design builds systems that gain from volatility and disorder rather than merely surviving it.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "black_swan"
+      ]
+    },
+    {
+      "statement": "Fat tails describe probability distributions where extreme outcomes are far more likely than a normal distribution predicts. Financial returns, pandemic severity, and infrastructure failures all exhibit fat tails. Models assuming normality systematically underestimate catastrophic risk.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "fat_tails"
+      ]
+    },
+    {
+      "statement": "The precautionary principle recommends avoiding actions with potentially catastrophic and irreversible consequences even when the probability is uncertain. It applies asymmetrically: small-probability, civilisational-scale harms warrant extreme caution even if expected value calculations suggest otherwise.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "precautionary_principle"
+      ]
+    },
+    {
+      "statement": "Optionality preserves the right but not the obligation to take future action. Decisions that keep options open are more valuable under uncertainty than decisions that foreclose alternatives. The value of an option increases with uncertainty and the length of the decision horizon.",
+      "topics": [
+        "decision_making",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "optionality"
+      ]
+    },
+    {
+      "statement": "Delphi method aggregates expert judgment through multiple anonymous rounds of structured questionnaires, with feedback between rounds. It produces more calibrated estimates than open-panel discussions by preventing social influence from dominating individual expertise.",
+      "topics": [
+        "decision_making",
+        "group_dynamics"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "delphi_method"
+      ]
+    },
+    {
+      "statement": "Nominal Group Technique (NGT) structures group idea generation: individuals silently generate options, then present them round-robin, then discuss and vote. It produces more and better ideas than unstructured brainstorming by preventing dominant voices from suppressing minority views.",
+      "topics": [
+        "decision_making",
+        "group_dynamics"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "nominal_group_technique"
+      ]
+    },
+    {
+      "statement": "Veto rights and consent-based decision-making (sociocracy) lower the bar from unanimous approval to 'no paramount objection'. This unblocks decisions that unanimous consensus would stall while still protecting critical concerns.",
+      "topics": [
+        "decision_making",
+        "governance"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "consent_decision"
+      ]
+    },
+    {
+      "statement": "Decision debt accumulates when important decisions are deferred, made inconsistently, or made without documentation. Like technical debt, decision debt compounds: each deferred decision creates more ambiguity that makes future decisions harder.",
+      "topics": [
+        "decision_making",
+        "process"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "decision_debt"
+      ]
+    }
+  ]
+}

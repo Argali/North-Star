@@ -270,7 +270,61 @@ def _build_parser() -> argparse.ArgumentParser:
     st = sub.add_parser("stats", help="Show knowledge base statistics.")
     st.add_argument("--verbose", "-v", action="store_true", default=False)
 
+    # -- seed --
+    sd = sub.add_parser("seed", help="Load knowledge seed packs into the database.")
+    seed_group = sd.add_mutually_exclusive_group(required=True)
+    seed_group.add_argument(
+        "--pack",
+        metavar="NAME",
+        help="Load a single named pack (e.g. architecture, security).",
+    )
+    seed_group.add_argument(
+        "--all",
+        action="store_true",
+        help="Load all packs listed in the manifest.",
+    )
+    seed_group.add_argument(
+        "--list",
+        action="store_true",
+        help="List available packs and item counts (no DB required).",
+    )
+    sd.add_argument("--dry-run", action="store_true", default=False,
+                    help="Validate items without writing to DB.")
+    sd.add_argument("--verbose", "-v", action="store_true", default=False)
+    sd.add_argument("--no-backfill", action="store_true", default=False,
+                    help="Skip embedding backfill after loading.")
+
     return p
+
+
+
+# ---------------------------------------------------------------------------
+# seed command
+# ---------------------------------------------------------------------------
+
+def cmd_seed(args) -> None:
+    """Load seed packs via direct Python import (no HTTP endpoint needed)."""
+    import subprocess
+    import sys
+
+    cmd = [sys.executable, "-m", "src.tools.seed"]
+
+    if args.list:
+        cmd.append("--list")
+    elif args.all:
+        cmd.append("--all")
+    else:
+        cmd += ["--pack", args.pack]
+
+    if args.dry_run:
+        cmd.append("--dry-run")
+    if args.verbose:
+        cmd.append("--verbose")
+    if args.no_backfill:
+        cmd.append("--no-backfill")
+
+    result = subprocess.run(cmd)
+    sys.exit(result.returncode)
 
 
 # ---------------------------------------------------------------------------
@@ -296,6 +350,9 @@ def main() -> None:
 
     elif args.command == "stats":
         cmd_stats(args)
+
+    elif args.command == "seed":
+        cmd_seed(args)
 
 
 if __name__ == "__main__":

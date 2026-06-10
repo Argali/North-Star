@@ -1,0 +1,569 @@
+{
+  "pack": "investment_decision",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Investment decision-making evaluates whether to commit capital to an asset or project, weighing expected returns against risk, time horizon, and opportunity cost. The goal is not the highest-returning single investment but the best risk-adjusted return given available alternatives.",
+      "topics": [
+        "investment_decision"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "Net Present Value (NPV) discounts all future cash flows to their present value and subtracts the initial investment. A positive NPV means the investment creates value above the cost of capital. NPV is the gold standard for capital allocation decisions.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "npv"
+      ]
+    },
+    {
+      "statement": "Internal Rate of Return (IRR) is the discount rate at which NPV equals zero. If IRR exceeds the required rate of return (hurdle rate), the investment is acceptable. IRR can be misleading for comparing projects of different sizes or with non-conventional cash flows; use NPV for definitive ranking.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "irr"
+      ]
+    },
+    {
+      "statement": "Payback period is the time required for cumulative cash inflows to recover the initial investment. It is simple and intuitive but ignores the time value of money and cash flows after the payback period. Use discounted payback period for a more accurate view.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "payback_period"
+      ]
+    },
+    {
+      "statement": "Discounted Cash Flow (DCF) valuation estimates intrinsic value by projecting future free cash flows and discounting them at the Weighted Average Cost of Capital (WACC). DCF is highly sensitive to terminal value assumptions, which often represent 60–80% of total value.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "dcf"
+      ]
+    },
+    {
+      "statement": "WACC (Weighted Average Cost of Capital) is the blended cost of equity and debt capital, weighted by their proportions. It is the minimum required return an investment must generate to create value. Investments returning less than WACC destroy value.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "wacc"
+      ]
+    },
+    {
+      "statement": "Relative valuation compares a company's multiples (P/E, EV/EBITDA, P/S, EV/Revenue) to peers. It is faster than DCF but embeds the market's current pricing, including any systematic over- or under-valuation of the sector.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "relative_valuation"
+      ]
+    },
+    {
+      "statement": "EV/EBITDA is commonly used for operational business valuation because it is capital structure neutral (Enterprise Value removes debt) and excludes non-cash and financing costs. Typical ranges vary significantly by sector and growth profile.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "ev_ebitda"
+      ]
+    },
+    {
+      "statement": "Risk-adjusted return measures return relative to the risk taken to achieve it. Sharpe Ratio = (Return − Risk-free rate) / Standard deviation. It enables comparison of investments with different risk profiles. High absolute returns with high volatility may underperform lower-return, lower-risk alternatives on a risk-adjusted basis.",
+      "topics": [
+        "investment_decision",
+        "risk"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "sharpe_ratio"
+      ]
+    },
+    {
+      "statement": "Modern Portfolio Theory (MPT) shows that diversification reduces unsystematic (idiosyncratic) risk without proportionally reducing expected return. The efficient frontier represents portfolios offering the maximum return for a given level of risk. Correlation between assets determines diversification benefit.",
+      "topics": [
+        "investment_decision",
+        "portfolio_theory"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "mpt"
+      ]
+    },
+    {
+      "statement": "Systematic risk (market risk, beta) affects all investments and cannot be eliminated by diversification. Unsystematic risk (specific to a company or sector) can be diversified away. Investors are only compensated for bearing systematic risk.",
+      "topics": [
+        "investment_decision",
+        "risk"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "systematic_unsystematic_risk"
+      ]
+    },
+    {
+      "statement": "Due diligence for investments systematically verifies assumptions about the target's financials, business model, management, legal status, and risks before committing capital. Financial due diligence confirms the numbers; operational due diligence validates the business; legal due diligence identifies liabilities.",
+      "topics": [
+        "investment_decision",
+        "due_diligence"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "due_diligence"
+      ]
+    },
+    {
+      "statement": "The investment thesis is a concise statement of why an investment is expected to generate returns: what is mispriced, what catalyst will close the gap, and what is the time horizon. A clear thesis makes it easier to monitor progress and decide when to exit.",
+      "topics": [
+        "investment_decision",
+        "process"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "investment_thesis"
+      ]
+    },
+    {
+      "statement": "Margin of safety (Graham) means buying assets at a significant discount to intrinsic value to protect against estimation errors and unforeseen risks. The greater the uncertainty in the valuation, the larger the required margin of safety.",
+      "topics": [
+        "investment_decision",
+        "value_investing"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "margin_of_safety"
+      ]
+    },
+    {
+      "statement": "Behavioural finance identifies systematic cognitive errors in investment decisions: overconfidence leads to excessive trading; anchoring causes over-reliance on purchase price; herding creates bubbles; loss aversion causes holding losers too long and selling winners too early.",
+      "topics": [
+        "investment_decision",
+        "behavioural_finance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "behavioural_finance"
+      ]
+    },
+    {
+      "statement": "Capital allocation is management's most important responsibility. How a company reinvests its free cash flow — between organic growth, acquisitions, dividends, buybacks, and debt reduction — determines long-term shareholder value creation.",
+      "topics": [
+        "investment_decision",
+        "corporate_finance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "capital_allocation"
+      ]
+    },
+    {
+      "statement": "Return on Invested Capital (ROIC) measures how efficiently a company deploys capital. ROIC > WACC creates value; ROIC < WACC destroys it. Sustained high ROIC is the clearest signal of competitive advantage.",
+      "topics": [
+        "investment_decision",
+        "metrics"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "roic"
+      ]
+    },
+    {
+      "statement": "Exit strategy planning should occur before investment, not after. Common exits: trade sale (to a strategic buyer), secondary sale (to another financial investor), IPO, management buyout, or recapitalisation. Each has different timelines, valuations, and risk profiles.",
+      "topics": [
+        "investment_decision",
+        "exit"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "exit_strategy"
+      ]
+    },
+    {
+      "statement": "Sensitivity analysis tests how investment returns change when key assumptions vary. It identifies which assumptions have the greatest impact on NPV or IRR. Assumptions with high sensitivity deserve more rigorous validation.",
+      "topics": [
+        "investment_decision",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "sensitivity_analysis"
+      ]
+    },
+    {
+      "statement": "Liquidity risk is the risk of not being able to exit an investment quickly without a significant price concession. Private equity and real estate investments are highly illiquid; investors require an illiquidity premium above public market returns to compensate.",
+      "topics": [
+        "investment_decision",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "liquidity_risk"
+      ]
+    },
+    {
+      "statement": "Position sizing determines how much capital to allocate to each investment. Kelly Criterion maximises long-run wealth by sizing positions in proportion to edge and odds. Over-sizing concentrates risk; under-sizing reduces impact of good decisions.",
+      "topics": [
+        "investment_decision",
+        "portfolio_theory"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "position_sizing"
+      ]
+    },
+    {
+      "statement": "Free cash flow (FCF = Operating Cash Flow − Capital Expenditure) is the cash a business generates after maintaining and growing its asset base. It is the ultimate determinant of intrinsic value. Earnings can be manipulated; cash is harder to fake.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "free_cash_flow"
+      ]
+    },
+    {
+      "statement": "Quality of earnings analysis assesses whether reported earnings are sustainable, recurring, and backed by cash. Red flags: growing accounts receivable relative to revenue, channel stuffing, aggressive revenue recognition, high non-cash charges, and frequent extraordinary items.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "earnings_quality"
+      ]
+    },
+    {
+      "statement": "Hurdle rate is the minimum acceptable return for an investment, set above WACC to reflect project risk and strategic priorities. Projects below the hurdle rate should be declined or redesigned. Hurdle rates should vary by risk: higher for emerging markets, novel technologies, and concentrated positions.",
+      "topics": [
+        "investment_decision",
+        "corporate_finance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "hurdle_rate"
+      ]
+    },
+    {
+      "statement": "Vintage year diversification for private investments spreads commitments across multiple years to reduce the impact of deploying capital at market peaks. A single-vintage concentration creates systematic risk from one economic cycle.",
+      "topics": [
+        "investment_decision",
+        "portfolio_theory"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "vintage_diversification"
+      ]
+    },
+    {
+      "statement": "Capital allocation quality is the ultimate test of management. Companies that consistently invest in projects earning above WACC create value; those that invest below WACC destroy it regardless of revenue growth. Warren Buffett's central criterion for evaluating management is their track record of capital allocation decisions over a full business cycle.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "capital_allocation_quality"
+      ]
+    },
+    {
+      "statement": "Discounted Cash Flow (DCF) sensitivity analysis tests how the output valuation changes as key assumptions vary: revenue growth rate (±2%), operating margin (±2%), terminal growth rate (±0.5%), and WACC (±1%). If small changes in assumptions cause large swings in value, the investment thesis depends on precision in variables that are inherently uncertain.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "dcf_sensitivity"
+      ]
+    },
+    {
+      "statement": "Terminal value typically represents 60-80% of a DCF valuation. This means most of the value is in cash flows beyond the forecast horizon, which are the most uncertain. Sanity-check terminal value assumptions: a terminal growth rate above the long-term nominal GDP growth rate implies the company eventually exceeds the economy.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "terminal_value"
+      ]
+    },
+    {
+      "statement": "EV/EBITDA multiple varies significantly by sector, growth rate, and capital intensity. Capital-light, high-growth software trades at 20-40x; mature industrial businesses at 6-10x. Compare multiples within the same sector and cycle phase. Adjusting for capex intensity (EV/EBIT or EV/NOPAT) gives a more accurate cross-sector comparison.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ev_ebitda_depth"
+      ]
+    },
+    {
+      "statement": "Price-to-book (P/B) ratio is most meaningful for asset-heavy businesses and financial institutions where book value approximates replacement value. For asset-light businesses, intangible assets (brand, IP, software) are expensed rather than capitalised, making book value an unreliable proxy for economic value.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "price_to_book"
+      ]
+    },
+    {
+      "statement": "PEG ratio (P/E divided by earnings growth rate) adjusts for growth to make P/E comparisons more valid across companies with different growth profiles. A PEG below 1.0 is conventionally considered undervalued; above 2.0 as expensive. PEG is most useful for comparing companies within the same sector with similar capital structures.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "peg_ratio"
+      ]
+    },
+    {
+      "statement": "Gross profit margin reveals pricing power and the efficiency of the core value proposition. Operating margin reveals cost discipline across the full business. Net margin is most affected by capital structure and tax. Trend analysis across 5-10 years is more informative than any single year's margins.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "margin_analysis"
+      ]
+    },
+    {
+      "statement": "Cash conversion cycle (CCC) = Days Sales Outstanding + Days Inventory Outstanding - Days Payable Outstanding. A negative CCC (e.g. Amazon, Costco) means the business is funded by customers before it pays suppliers — a structural cash advantage. Rising CCC indicates deteriorating working capital management.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "cash_conversion_cycle"
+      ]
+    },
+    {
+      "statement": "Owner earnings (Buffett's concept) approximates true economic earnings: reported earnings + D&A - maintenance capex ± working capital changes. It strips out non-cash earnings and adjusts for the capex required to maintain the business at its current competitive position. Growth capex is excluded because it represents discretionary investment, not operating cost.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "owner_earnings"
+      ]
+    },
+    {
+      "statement": "Earnings per share (EPS) can be increased by share buybacks without any improvement in underlying business performance. Evaluate EPS alongside return on equity and economic value added. Buybacks at above-intrinsic-value prices destroy shareholder value; buybacks below intrinsic value create it.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "eps_quality"
+      ]
+    },
+    {
+      "statement": "Return on Invested Capital (ROIC) measures how efficiently a business converts invested capital into after-tax operating profit. ROIC > WACC = value creation; ROIC < WACC = value destruction regardless of growth. Sustainable competitive advantage is empirically measurable as persistently high ROIC over 5-10+ years.",
+      "topics": [
+        "investment_decision",
+        "valuation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "roic_depth"
+      ]
+    },
+    {
+      "statement": "Economic moat sources ranked by durability: (1) Network effects — value increases with each additional user; (2) Switching costs — cost to change supplier exceeds benefit; (3) Intangible assets — patents, licences, brand; (4) Cost advantage — structural lower cost (not just scale); (5) Efficient scale — market too small to support a second competitor. Moats erode; reassess every 2-3 years.",
+      "topics": [
+        "investment_decision",
+        "competitive_advantage"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "moat_sources"
+      ]
+    },
+    {
+      "statement": "Regulatory moat is a form of intangible asset: a business protected by licences, permits, or regulatory barriers that prevent or restrict competitor entry. Airlines (slots), utilities (network licences), financial services (regulatory capital and licencing requirements), and waste management (environmental permits) all benefit from regulatory moats.",
+      "topics": [
+        "investment_decision",
+        "competitive_advantage"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "regulatory_moat"
+      ]
+    },
+    {
+      "statement": "Management integrity checks in due diligence: review proxy statements for related-party transactions, compare CEO compensation to performance, assess whether guidance has historically been realistic or consistently bullish, check whether insider selling has preceded material bad news, and evaluate how management handled previous downturns.",
+      "topics": [
+        "investment_decision",
+        "due_diligence"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "management_integrity"
+      ]
+    },
+    {
+      "statement": "Red flags in financial statements: revenue growth far exceeding industry peers (potential aggressive recognition), DSO rising faster than revenue (booking revenue before cash collection), capex significantly below D&A over multiple years (underinvesting in the asset base), and large non-recurring charges that recur every year.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis",
+        "risk"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "financial_red_flags"
+      ]
+    },
+    {
+      "statement": "Debt capacity analysis compares a company's debt load to its sustainable earnings power. Net debt / EBITDA > 5x is generally considered high leverage in non-financial industries; > 7x is distressed territory. Debt maturity profile matters as much as total quantum — a company with 80% of debt maturing in 12 months faces refinancing risk regardless of leverage ratio.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis",
+        "risk"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "debt_capacity"
+      ]
+    },
+    {
+      "statement": "Interest coverage ratio = EBIT / interest expense. Below 1.5x is considered vulnerable to cash flow shortfalls. Below 1.0x means operating profit is insufficient to cover interest — the company is consuming capital. Fixed charge coverage ratio extends this to include lease payments, which are economically equivalent to debt service.",
+      "topics": [
+        "investment_decision",
+        "financial_analysis"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "interest_coverage"
+      ]
+    },
+    {
+      "statement": "Sector rotation follows the economic cycle: early recovery favours cyclicals (materials, industrials, consumer discretionary); mid-cycle favours technology and growth; late cycle favours energy and staples; recession favours defensives (healthcare, utilities, consumer staples). Rotation signals are leading indicators, not coincident: position for the next phase, not the current one.",
+      "topics": [
+        "investment_decision",
+        "macro"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "sector_rotation"
+      ]
+    },
+    {
+      "statement": "Country risk premium is added to the cost of equity for investments in emerging markets to reflect political risk, currency risk, economic volatility, and institutional quality. Damodaran's country default spread methodology is a standard approach. Country risk is often underestimated during benign periods and overestimated during crises.",
+      "topics": [
+        "investment_decision",
+        "international",
+        "valuation"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "country_risk_premium"
+      ]
+    },
+    {
+      "statement": "Rights issue (follow-on equity offering) dilutes existing shareholders. Evaluate whether the capital raised will be deployed at returns above the cost of equity. Frequent equity issuance at depressed prices signals management prioritising survival or empire-building over shareholder returns. Rights issues by high-quality businesses at cyclically depressed prices can be compelling buying opportunities.",
+      "topics": [
+        "investment_decision",
+        "corporate_actions"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "rights_issue"
+      ]
+    },
+    {
+      "statement": "Mergers and acquisitions (M&A) destroy value in the majority of cases for the acquirer. Common causes: overpayment (winner's curse in auctions), synergy overestimation, integration underestimation, cultural incompatibility, and management distraction. Value-creating acquisitions typically share: disciplined price, clear operational synergies, and acquirer cultural fit with target.",
+      "topics": [
+        "investment_decision",
+        "corporate_actions"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ma_value_destruction"
+      ]
+    },
+    {
+      "statement": "Spin-offs typically create value because the separated entity gains focus, management accountability, and a tailored capital structure. Subsidiaries receiving less internal capital than they could productively deploy are value-creation opportunities once separated. Spin-offs from conglomerates have historically outperformed the market in the 2-3 years post-separation.",
+      "topics": [
+        "investment_decision",
+        "corporate_actions"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "spinoffs"
+      ]
+    },
+    {
+      "statement": "Reversion to mean in financial performance means that extremely high returns on capital and margins tend to attract competition that erodes them over time, while extremely low returns attract restructuring, management change, or acquisition. Investment theses that assume persistence of extreme performance in either direction are statistically low-probability.",
+      "topics": [
+        "investment_decision",
+        "competitive_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "mean_reversion"
+      ]
+    },
+    {
+      "statement": "Position sizing in a portfolio should reflect conviction (how differentiated and well-tested is the thesis) and correlation (does adding this position increase or decrease portfolio diversification). Kelly criterion provides a mathematical upper bound: f* = (expected return - risk-free rate) / variance. Most practitioners use fractional Kelly (25-50%) to account for estimation error.",
+      "topics": [
+        "investment_decision",
+        "portfolio_management"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "position_sizing"
+      ]
+    },
+    {
+      "statement": "Investment checklist disciplines the decision process by requiring explicit answers to key questions before committing capital: What is the moat? What is the bear case? What is the downside scenario and can I sustain the loss? Is this inside my circle of competence? What would cause me to change my mind? A checklist reduces emotional and cognitive bias in high-stakes decisions.",
+      "topics": [
+        "investment_decision",
+        "process"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "investment_checklist"
+      ]
+    },
+    {
+      "statement": "Tax-efficient investment structures: long-term capital gains are taxed at lower rates than short-term in most jurisdictions, creating an incentive for holding periods above one year. Tax-loss harvesting crystallises losses to offset gains. Asset location (holding tax-inefficient assets in tax-sheltered accounts) reduces the portfolio's effective tax rate.",
+      "topics": [
+        "investment_decision",
+        "tax"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "tax_efficiency"
+      ]
+    }
+  ]
+}

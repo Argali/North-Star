@@ -1,0 +1,705 @@
+{
+  "pack": "business_analysis",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Business analysis bridges business needs and technical solutions by eliciting, documenting, and validating requirements. The BA role ensures the right problem is solved before resources are spent building the right solution.",
+      "topics": [
+        "business_analysis"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "statement": "Requirements elicitation is the process of drawing out stakeholder needs using interviews, workshops, observation, document analysis, and prototypes. Stakeholders often cannot articulate needs directly; structured facilitation surfaces implicit requirements.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "elicitation"
+      ]
+    },
+    {
+      "statement": "Business requirements describe what the organisation needs to achieve (objectives and outcomes). Functional requirements describe what the system must do. Non-functional requirements describe how well it must do it (performance, security, usability).",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "requirements_types"
+      ]
+    },
+    {
+      "statement": "SMART requirements are Specific, Measurable, Achievable, Relevant, and Time-bound. Vague requirements ('the system should be fast') cannot be tested. Every requirement should have a defined acceptance criterion.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "smart_requirements"
+      ]
+    },
+    {
+      "statement": "User stories (As a [role], I want [feature], so that [benefit]) capture requirements from the user's perspective. Acceptance criteria define when the story is done. Stories belong in the product backlog and are refined before development.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "agile"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "user_stories"
+      ]
+    },
+    {
+      "statement": "Stakeholder analysis identifies all parties affected by or affecting a project, their interests, influence, and level of support. A stakeholder matrix (power vs interest) prioritises engagement effort.",
+      "topics": [
+        "business_analysis",
+        "stakeholders"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "stakeholder_analysis"
+      ]
+    },
+    {
+      "statement": "The MoSCoW method prioritises requirements into Must have (critical), Should have (important), Could have (desirable), Won't have (explicitly excluded for this iteration). It forces explicit trade-off conversations.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "prioritisation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "moscow"
+      ]
+    },
+    {
+      "statement": "Gap analysis compares the current state (As-Is) to the desired future state (To-Be) and identifies the changes required to close the gap. It is the foundation of business case and project scope definition.",
+      "topics": [
+        "business_analysis",
+        "analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "gap_analysis"
+      ]
+    },
+    {
+      "statement": "Process mapping (BPMN, swimlane diagrams) visualises the sequence of activities, decision points, roles, and system interactions in a business process. It reveals handoffs, bottlenecks, and rework loops invisible in written documentation.",
+      "topics": [
+        "business_analysis",
+        "process_modelling"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "process_mapping"
+      ]
+    },
+    {
+      "statement": "SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) provides a structured framework for strategic situation assessment. Strengths and weaknesses are internal; opportunities and threats are external. It is an input to strategy, not a strategy itself.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "swot"
+      ]
+    },
+    {
+      "statement": "PESTLE analysis examines the macro-environment across Political, Economic, Social, Technological, Legal, and Environmental dimensions. It identifies external forces that will affect the business regardless of internal decisions.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "pestle"
+      ]
+    },
+    {
+      "statement": "Porter's Five Forces analyses industry competitive intensity: threat of new entrants, bargaining power of buyers, bargaining power of suppliers, threat of substitutes, and competitive rivalry. It determines an industry's structural profitability.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "porters_five_forces"
+      ]
+    },
+    {
+      "statement": "A business case justifies a proposed investment by documenting the problem, options considered, recommended solution, costs, benefits, risks, and success criteria. Benefits must be quantified and attributed to a responsible owner.",
+      "topics": [
+        "business_analysis",
+        "business_case"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "business_case"
+      ]
+    },
+    {
+      "statement": "Cost-benefit analysis quantifies all costs and benefits over a defined period and calculates ROI, payback period, NPV, and IRR. It provides the financial rationale for investment decisions. Benefits must be realistic and measurable.",
+      "topics": [
+        "business_analysis",
+        "financial_analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "cost_benefit"
+      ]
+    },
+    {
+      "statement": "KPIs (Key Performance Indicators) measure progress toward strategic objectives. Good KPIs are measurable, owned by a specific role, and tied to a specific target and timeframe. Too many KPIs dilute focus; typically 5–7 per business unit.",
+      "topics": [
+        "business_analysis",
+        "measurement"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "kpis"
+      ]
+    },
+    {
+      "statement": "The balanced scorecard measures organisational performance across four perspectives: Financial, Customer, Internal Business Processes, and Learning & Growth. It ensures financial results are balanced against the drivers that sustain them.",
+      "topics": [
+        "business_analysis",
+        "strategic_management"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "balanced_scorecard"
+      ]
+    },
+    {
+      "statement": "OKRs (Objectives and Key Results) link aspirational objectives to 3–5 measurable key results that define what achieving the objective looks like. They cascade from company to team to individual, aligning effort across the organisation.",
+      "topics": [
+        "business_analysis",
+        "strategic_management"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "okrs"
+      ]
+    },
+    {
+      "statement": "Root cause analysis (5 Whys, Fishbone/Ishikawa diagram) identifies the underlying cause of a problem, not just its symptoms. Treating symptoms without addressing root causes results in recurring problems.",
+      "topics": [
+        "business_analysis",
+        "problem_solving"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "root_cause_analysis"
+      ]
+    },
+    {
+      "statement": "The value chain (Porter) maps the sequence of activities that create and deliver a product or service. Primary activities (operations, logistics, sales, service) add direct value; support activities (HR, IT, procurement) enable them.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "value_chain"
+      ]
+    },
+    {
+      "statement": "Lean process improvement eliminates waste (muda): overproduction, waiting, transport, overprocessing, inventory, motion, and defects. Value stream mapping makes waste visible by tracing the flow of value from customer request to delivery.",
+      "topics": [
+        "business_analysis",
+        "process_improvement"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "lean"
+      ]
+    },
+    {
+      "statement": "Benchmarking compares performance metrics to industry best practices or competitors. Internal benchmarking compares business units; competitive benchmarking compares to peers; functional benchmarking looks outside the industry for best practices.",
+      "topics": [
+        "business_analysis",
+        "analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "benchmarking"
+      ]
+    },
+    {
+      "statement": "Change management (Kotter's 8 steps, Prosci ADKAR) addresses the human side of organisational change: creating urgency, building a coalition, communicating vision, removing obstacles, and reinforcing new behaviours. Technology projects fail more often from change resistance than technical failure.",
+      "topics": [
+        "business_analysis",
+        "change_management"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "change_management"
+      ]
+    },
+    {
+      "statement": "Requirements traceability links each requirement to its business objective, design, and test case. A traceability matrix ensures all requirements are tested and all tests are justified by a requirement. It prevents scope creep and orphaned test cases.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "traceability"
+      ]
+    },
+    {
+      "statement": "Business process re-engineering (BPR) redesigns processes from scratch to achieve step-change improvements rather than incremental optimisation. It is high risk, high reward, and requires strong executive sponsorship.",
+      "topics": [
+        "business_analysis",
+        "process_improvement"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "bpr"
+      ]
+    },
+    {
+      "statement": "Dependency mapping identifies the relationships and constraints between initiatives, systems, and teams. Hidden dependencies are a leading cause of project delays; surfacing them early enables realistic scheduling and risk management.",
+      "topics": [
+        "business_analysis",
+        "planning"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "dependency_mapping"
+      ]
+    },
+    {
+      "statement": "Prototyping (wireframes, mockups, proofs of concept) validates requirements and designs before full development begins. It reduces the cost of misunderstanding by making abstract requirements concrete and testable early.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "validation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "prototyping"
+      ]
+    },
+    {
+      "statement": "The business model canvas describes how an organisation creates, delivers, and captures value across nine building blocks: customer segments, value propositions, channels, customer relationships, revenue streams, key resources, key activities, key partnerships, and cost structure.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "business_model_canvas"
+      ]
+    },
+    {
+      "statement": "Functional decomposition breaks high-level business functions into progressively finer sub-functions until each is small enough to design and test. It produces the logical model of what a system must do, independent of how it will do it.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "functional_decomposition"
+      ]
+    },
+    {
+      "statement": "Non-functional requirements (NFRs) define quality attributes: performance (response time, throughput), reliability (uptime, MTTR), scalability, security, usability, and maintainability. NFRs are architecturally significant and must be specified before design, not retrofitted.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "non_functional_requirements"
+      ]
+    },
+    {
+      "statement": "Acceptance criteria are the conditions that must be met for a requirement or user story to be considered complete. They must be specific, testable, and agreed before development begins. Ambiguous acceptance criteria are the single largest cause of rework.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "acceptance_criteria"
+      ]
+    },
+    {
+      "statement": "Use cases describe interactions between an actor (user or system) and the system to achieve a goal. A use case includes the main success scenario, alternative flows, and exception flows. Use cases are more suitable than user stories for complex, multi-step workflows.",
+      "topics": [
+        "business_analysis",
+        "requirements"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "use_cases"
+      ]
+    },
+    {
+      "statement": "Context diagrams show the system boundary, all external entities that interact with it, and the data flows between them. They establish scope by making explicit what is inside the system and what is outside it.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "modelling"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "context_diagram"
+      ]
+    },
+    {
+      "statement": "Data flow diagrams (DFDs) show how data moves through a system: sources, processes, data stores, and destinations. Level 0 (context diagram) shows the whole system; Level 1 decomposes it into major processes; Level 2 decomposes each process further.",
+      "topics": [
+        "business_analysis",
+        "modelling"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "dfd"
+      ]
+    },
+    {
+      "statement": "Entity-relationship diagrams (ERDs) in business analysis model the business data entities, their attributes, and relationships before database design begins. They validate that the data model can support all required business processes.",
+      "topics": [
+        "business_analysis",
+        "modelling"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "business_erd"
+      ]
+    },
+    {
+      "statement": "Requirements workshops (Joint Application Design / JAD sessions) bring stakeholders and analysts together in facilitated sessions to elicit and validate requirements collaboratively. They produce higher-quality requirements faster than individual interviews by resolving conflicts in real time.",
+      "topics": [
+        "business_analysis",
+        "elicitation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "requirements_workshops"
+      ]
+    },
+    {
+      "statement": "Shadowing and observation elicits tacit requirements that users cannot articulate. Users often describe their ideal process rather than what they actually do. Watching real work reveals workarounds, unofficial data sources, and undocumented steps that written requirements miss.",
+      "topics": [
+        "business_analysis",
+        "elicitation"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "observation"
+      ]
+    },
+    {
+      "statement": "Document analysis reviews existing artefacts — policy documents, existing system documentation, contracts, screen captures, and error logs — to extract implicit requirements. It is particularly valuable when stakeholders are unavailable or when documenting as-is processes.",
+      "topics": [
+        "business_analysis",
+        "elicitation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "document_analysis"
+      ]
+    },
+    {
+      "statement": "The Value Stream Map (VSM) traces the end-to-end flow of value from customer request to delivery, marking every step with process time, wait time, and defect rate. It reveals where value is created and where waste accumulates, guiding improvement priorities.",
+      "topics": [
+        "business_analysis",
+        "process_improvement"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "value_stream_mapping"
+      ]
+    },
+    {
+      "statement": "Six Sigma uses DMAIC (Define, Measure, Analyse, Improve, Control) to reduce process variation and eliminate defects. A Six Sigma process has fewer than 3.4 defects per million opportunities. It is most applicable to high-volume, repetitive processes where variation is costly.",
+      "topics": [
+        "business_analysis",
+        "process_improvement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "six_sigma"
+      ]
+    },
+    {
+      "statement": "The Kano model classifies product features into three types: basic needs (expected, cause dissatisfaction if absent), performance needs (more is better, linearly linked to satisfaction), and delighters (unexpected, create strong positive reaction). It guides feature prioritisation by customer impact.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "prioritisation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "kano_model"
+      ]
+    },
+    {
+      "statement": "Impact mapping visualises the relationship between a business goal, actors who can achieve it, impacts those actors must produce, and deliverables (features) that create those impacts. It prevents building features with no clear path to the stated goal.",
+      "topics": [
+        "business_analysis",
+        "planning"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "impact_mapping"
+      ]
+    },
+    {
+      "statement": "Assumption mapping explicitly lists the assumptions underlying a business case or strategy, ranked by importance and uncertainty. Highly uncertain, highly important assumptions are the greatest risks. They should be tested first — before full investment.",
+      "topics": [
+        "business_analysis",
+        "risk"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "assumption_mapping"
+      ]
+    },
+    {
+      "statement": "Jobs-To-Be-Done (JTBD) theory frames customer needs as 'jobs' they are trying to accomplish in their lives. Products are hired to do jobs. Understanding the functional, emotional, and social dimensions of the job reveals opportunities that feature-centric analysis misses.",
+      "topics": [
+        "business_analysis",
+        "customer_insight"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "jtbd"
+      ]
+    },
+    {
+      "statement": "Customer journey mapping traces every touchpoint and emotion a customer experiences from initial awareness through purchase to post-sale. It identifies friction points, emotional lows, and unmet needs that quantitative data alone cannot reveal.",
+      "topics": [
+        "business_analysis",
+        "customer_insight"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "customer_journey_map"
+      ]
+    },
+    {
+      "statement": "Persona development creates semi-fictional representations of key user segments based on research. Personas make abstract user groups concrete and memorable during requirements and design discussions. They are most useful when based on real data, not assumptions.",
+      "topics": [
+        "business_analysis",
+        "customer_insight"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "personas"
+      ]
+    },
+    {
+      "statement": "Competitive analysis examines competitors' products, pricing, positioning, and capabilities. It identifies white space opportunities, table-stakes requirements (features you must have to compete), and areas where differentiation is achievable and valuable.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "competitive_analysis"
+      ]
+    },
+    {
+      "statement": "The Ansoff matrix maps growth strategies across two dimensions: existing vs new markets, and existing vs new products. Market penetration (existing/existing) is lowest risk; diversification (new/new) is highest. It frames strategic options before resource allocation.",
+      "topics": [
+        "business_analysis",
+        "strategic_analysis"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ansoff_matrix"
+      ]
+    },
+    {
+      "statement": "Leading indicators predict future performance (e.g. sales pipeline size predicts next quarter's revenue). Lagging indicators measure past results (e.g. revenue). Effective performance management requires both: lagging for accountability, leading for intervention while there is still time to act.",
+      "topics": [
+        "business_analysis",
+        "measurement"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "leading_lagging_indicators"
+      ]
+    },
+    {
+      "statement": "Vanity metrics look impressive but do not connect to business outcomes (e.g. total registered users, page views). Actionable metrics change behaviour and reflect real value creation (e.g. weekly active users, revenue per customer, churn rate). Replace vanity metrics with metrics tied to decisions.",
+      "topics": [
+        "business_analysis",
+        "measurement"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "vanity_metrics"
+      ]
+    },
+    {
+      "statement": "North Star Metric is the single metric that best captures core product value and aligns the whole team. It is not a financial metric (revenue is an output) but a value-delivery metric (e.g. for Spotify: time listening to music). Secondary metrics guard against gaming the North Star.",
+      "topics": [
+        "business_analysis",
+        "measurement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "north_star_metric"
+      ]
+    },
+    {
+      "statement": "Cohort analysis groups users by the time they started using a product and tracks their behaviour over time. It reveals whether retention is improving across new user cohorts and whether product changes are having the intended effect, unlike aggregate metrics which average across all cohorts.",
+      "topics": [
+        "business_analysis",
+        "measurement"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "cohort_analysis"
+      ]
+    },
+    {
+      "statement": "A Business Requirements Document (BRD) captures the business problem, objectives, scope, stakeholders, high-level requirements, and constraints. It is the agreement between business and IT on what will be built. Sign-off before design begins is essential.",
+      "topics": [
+        "business_analysis",
+        "documentation"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "brd"
+      ]
+    },
+    {
+      "statement": "A Functional Specification Document (FSD) / System Requirements Specification (SRS) translates business requirements into detailed system behaviour: data inputs/outputs, processing rules, error conditions, and interface specifications. It is the handover document from BA to development.",
+      "topics": [
+        "business_analysis",
+        "documentation"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "fsd_srs"
+      ]
+    },
+    {
+      "statement": "Feasibility study assesses whether a proposed solution is achievable across four dimensions: technical (can it be built?), financial (will the benefits justify the cost?), operational (can the organisation run it?), and schedule (can it be delivered on time?). A solution that fails any dimension should be redesigned.",
+      "topics": [
+        "business_analysis",
+        "planning"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "feasibility_study"
+      ]
+    },
+    {
+      "statement": "Benefits realisation management tracks whether the projected benefits of a project were actually delivered after go-live. Many organisations measure project delivery (on time, on budget) but not whether the business case was achieved. Benefits owners should be appointed before the project starts.",
+      "topics": [
+        "business_analysis",
+        "governance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "benefits_realisation"
+      ]
+    },
+    {
+      "statement": "The as-is / to-be gap provides the foundation for change impact assessment: identifying which roles, processes, systems, and data will change and what training, communication, and support each affected group needs.",
+      "topics": [
+        "business_analysis",
+        "change_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "change_impact_assessment"
+      ]
+    },
+    {
+      "statement": "BPMN (Business Process Model and Notation) is the international standard for process diagrams. It supports pools (organisations), lanes (roles), events (start/end/intermediate), activities, gateways (decisions), and sequence flows. It produces unambiguous process models that can be executed by BPMN engines.",
+      "topics": [
+        "business_analysis",
+        "process_modelling"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "bpmn"
+      ]
+    },
+    {
+      "statement": "Decision tables specify complex business rules as a grid of conditions and actions. They are more readable than nested if/else code, easier to validate with subject matter experts, and can be directly executed by business rules engines.",
+      "topics": [
+        "business_analysis",
+        "requirements",
+        "modelling"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "decision_tables"
+      ]
+    },
+    {
+      "statement": "Minimum Viable Product (MVP) is the smallest version of a product that delivers enough value to test core assumptions with real users. It is a learning tool, not a product strategy. MVPs that cannot answer a specific hypothesis are just incomplete products.",
+      "topics": [
+        "business_analysis",
+        "lean_startup"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "mvp"
+      ]
+    },
+    {
+      "statement": "Business agility is the organisational capability to sense and respond to market changes faster than competitors. It requires modular architecture, empowered teams, fast feedback loops, and tolerance for small failures. Business analysis in agile contexts focuses on just-in-time requirements refinement rather than upfront specification.",
+      "topics": [
+        "business_analysis",
+        "agile"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "business_agility"
+      ]
+    },
+    {
+      "statement": "Strategic alignment ensures that projects and initiatives directly support organisational strategy. A portfolio of projects that individually have positive ROI but collectively pull in different directions fragments resources and produces mediocre results across the board.",
+      "topics": [
+        "business_analysis",
+        "strategic_management"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "strategic_alignment"
+      ]
+    },
+    {
+      "statement": "The 80/20 rule (Pareto principle) states that 80% of effects come from 20% of causes. In business analysis: 80% of value typically comes from 20% of features; 80% of defects from 20% of modules; 80% of revenue from 20% of customers. Pareto analysis directs effort to the highest-impact targets.",
+      "topics": [
+        "business_analysis",
+        "analysis"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "pareto_principle"
+      ]
+    },
+    {
+      "statement": "Service blueprinting extends customer journey mapping to include the backstage processes, systems, and support that enable each customer touchpoint. It reveals the operational complexity behind a seamless customer experience and identifies systemic root causes of customer pain points.",
+      "topics": [
+        "business_analysis",
+        "customer_insight",
+        "process_modelling"
+      ],
+      "confidence": 0.93,
+      "tags": [
+        "service_blueprint"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,816 @@
+{
+  "pack": "human_ai_collaboration",
+  "version": "1.0.0",
+  "knowledge": [
+    {
+      "statement": "Large Language Models (LLMs) are probabilistic text predictors, not knowledge retrieval systems. They generate statistically plausible continuations, which can be factually wrong. Every LLM output that will be acted upon must be verified.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "llm_nature"
+      ]
+    },
+    {
+      "statement": "Hallucination is the tendency of LLMs to generate confident-sounding but factually incorrect statements. It occurs because the model optimises for plausible text, not accuracy. Citations, tool use, and retrieval augmentation reduce but do not eliminate hallucination.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_limitations"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "hallucination"
+      ]
+    },
+    {
+      "statement": "The context window is the maximum amount of text (tokens) an LLM can process at once. Content outside the context window is invisible to the model. For long documents, chunking and retrieval strategies determine what fits into context.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "context_window"
+      ]
+    },
+    {
+      "statement": "Prompt engineering is the practice of structuring inputs to elicit better LLM outputs. Key techniques: be specific about the desired format and length, provide examples (few-shot), assign a role, break complex tasks into steps, and explicitly state constraints.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "prompt_engineering"
+      ]
+    },
+    {
+      "statement": "Few-shot prompting provides 2–5 examples of input/output pairs before the actual request. It dramatically improves output quality for structured tasks (extraction, classification, reformatting) compared to zero-shot prompting.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "few_shot"
+      ]
+    },
+    {
+      "statement": "Chain-of-thought (CoT) prompting asks the model to reason step by step before giving a final answer. It improves accuracy on multi-step problems and makes the model's reasoning transparent and auditable.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "chain_of_thought"
+      ]
+    },
+    {
+      "statement": "System prompts set the model's persona, constraints, output format, and operating context. They are processed before the user turn and shape all subsequent behaviour. Clear, explicit system prompts reduce inconsistency.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "system_prompts"
+      ]
+    },
+    {
+      "statement": "Temperature controls LLM output randomness. Temperature 0 gives deterministic, conservative outputs (good for factual tasks). Higher values (0.7–1.0) increase creativity and variation (good for brainstorming). Default is task-dependent.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "temperature"
+      ]
+    },
+    {
+      "statement": "Retrieval-Augmented Generation (RAG) retrieves relevant documents from an external knowledge base and injects them into the prompt. It allows LLMs to answer questions about private, recent, or specialised knowledge not in their training data.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "rag"
+      ]
+    },
+    {
+      "statement": "Chunking strategy for RAG determines retrieval quality. Fixed-size chunks are simple; semantic chunking respects document structure. Chunk size controls the precision-recall trade-off: smaller chunks are more precise, larger chunks preserve more context.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "chunking"
+      ]
+    },
+    {
+      "statement": "Hybrid retrieval combines dense (vector similarity) and sparse (keyword/BM25) retrieval. Dense search captures semantic similarity; sparse search captures exact keyword matches. Combining both outperforms either alone for most real-world queries.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "hybrid_retrieval"
+      ]
+    },
+    {
+      "statement": "Tool use (function calling) allows LLMs to call external APIs, run code, or query databases and incorporate results into their response. It grounds outputs in real data and extends the model beyond its training knowledge.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "tool_use"
+      ]
+    },
+    {
+      "statement": "Agentic AI systems execute multi-step tasks autonomously using a loop of observation, reasoning, and action. The agent plans a sequence of tool calls, processes results, and adapts its plan. Risk: errors compound across steps.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "agentic_ai"
+      ]
+    },
+    {
+      "statement": "Human-in-the-loop (HITL) design requires human approval before AI takes irreversible actions (sending emails, writing files, executing code, making purchases). The higher the stakes, the tighter the human oversight required.",
+      "topics": [
+        "human_ai_collaboration",
+        "hitl"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "human_in_the_loop"
+      ]
+    },
+    {
+      "statement": "AI confidence is not a reliable proxy for accuracy. LLMs can be maximally confident when wrong. Always evaluate outputs by their content, not the model's expressed certainty. Ask the model to express uncertainty explicitly.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_limitations"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "confidence_calibration"
+      ]
+    },
+    {
+      "statement": "LLMs have a knowledge cutoff date — they do not know about events after training ended. For time-sensitive queries, always supplement with retrieved, dated sources.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_limitations"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "knowledge_cutoff"
+      ]
+    },
+    {
+      "statement": "Prompt injection attacks embed instructions in external content (emails, documents, web pages) that override the intended system prompt. AI systems that process untrusted input must treat all external content as data, never as instructions.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_security"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "prompt_injection"
+      ]
+    },
+    {
+      "statement": "Grounding AI outputs means anchoring them to verifiable, citable sources. Grounded systems retrieve from known corpora; ungrounded generation relies solely on parametric memory. Always prefer grounded AI for factual, high-stakes outputs.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "grounding"
+      ]
+    },
+    {
+      "statement": "LLM evaluation frameworks (LLM-as-judge, RAGAS, TruLens) assess output quality on dimensions like faithfulness, relevance, groundedness, and answer completeness. Automated evaluation enables systematic quality tracking over time.",
+      "topics": [
+        "human_ai_collaboration",
+        "evaluation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "llm_evaluation"
+      ]
+    },
+    {
+      "statement": "Faithfulness measures whether an LLM answer is supported by the retrieved context. An answer that contradicts or goes beyond the context is unfaithful. It is the primary metric for RAG system quality.",
+      "topics": [
+        "human_ai_collaboration",
+        "evaluation",
+        "rag"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "faithfulness"
+      ]
+    },
+    {
+      "statement": "Embedding models convert text into dense vector representations that capture semantic meaning. Similar texts have similar vectors. Embedding quality directly determines retrieval accuracy in RAG systems.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "embeddings"
+      ]
+    },
+    {
+      "statement": "Fine-tuning adjusts a pre-trained model's weights on domain-specific data. It improves tone, style, and format consistency but does not reliably inject new factual knowledge. Use RAG for knowledge; use fine-tuning for behaviour.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "fine_tuning"
+      ]
+    },
+    {
+      "statement": "AI task decomposition breaks complex requests into simpler subtasks processed in sequence or parallel. Smaller, focused prompts outperform large monolithic prompts for multi-step reasoning.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting",
+        "agentic_ai"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "task_decomposition"
+      ]
+    },
+    {
+      "statement": "Structured output (JSON mode, constrained decoding) forces the LLM to produce valid structured data. It dramatically reduces parsing failures and hallucinated fields compared to extracting structure from free-form text.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "structured_output"
+      ]
+    },
+    {
+      "statement": "AI-augmented workflows keep humans in the decision loop while AI handles volume and first-pass analysis. The human role shifts from doing the work to reviewing, correcting, and approving AI outputs.",
+      "topics": [
+        "human_ai_collaboration",
+        "workflows"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "augmented_workflows"
+      ]
+    },
+    {
+      "statement": "Cognitive load transfer to AI is only safe for tasks where errors are detectable and reversible. For tasks where errors are invisible or permanent (irreversible actions, safety-critical decisions), human judgment cannot be delegated.",
+      "topics": [
+        "human_ai_collaboration",
+        "hitl"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "task_delegation"
+      ]
+    },
+    {
+      "statement": "Context stuffing (filling the entire context window) degrades LLM performance. Models attend better to information at the start and end of the context (lost-in-the-middle effect). Prioritise the most relevant content for retrieval.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag",
+        "performance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "lost_in_middle"
+      ]
+    },
+    {
+      "statement": "Reranking is a second-pass step after initial vector retrieval that uses a more accurate (but slower) cross-encoder model to reorder results by relevance before passing them to the LLM. It significantly improves RAG accuracy.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "reranking"
+      ]
+    },
+    {
+      "statement": "AI output consistency requires deterministic settings (temperature=0, fixed seed) for repeatable tasks. Inconsistency in AI outputs is a product design issue, not an inherent limitation — it can be controlled.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "consistency"
+      ]
+    },
+    {
+      "statement": "Responsible AI deployment requires documenting intended use, known limitations, failure modes, and human oversight mechanisms. AI systems used in consequential decisions (hiring, lending, healthcare) require impact assessments and audit trails.",
+      "topics": [
+        "human_ai_collaboration",
+        "governance"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "responsible_ai"
+      ]
+    },
+    {
+      "statement": "AI agents should operate with least-privilege access: only the permissions required for the current task. An agent that can read email should not also have permission to delete files. Scope permissions per task, not per agent.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai",
+        "security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "agent_permissions"
+      ]
+    },
+    {
+      "statement": "Memory in AI systems can be in-context (within the prompt), external (vector stores, databases), or parametric (model weights). In-context memory is ephemeral; external memory persists across sessions and scales independently of the model.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ai_memory"
+      ]
+    },
+    {
+      "statement": "Streaming LLM responses (token-by-token output) reduces perceived latency in user-facing applications. It is essential for chat interfaces where waiting 10 seconds for a full response degrades experience.",
+      "topics": [
+        "human_ai_collaboration",
+        "performance"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "streaming"
+      ]
+    },
+    {
+      "statement": "Prompt caching reduces API costs by reusing computed key-value pairs for repeated prompt prefixes (e.g. system prompts and large context documents). Tools like Anthropic's cache_control enable prefix caching.",
+      "topics": [
+        "human_ai_collaboration",
+        "performance",
+        "cost"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "prompt_caching"
+      ]
+    },
+    {
+      "statement": "Token cost is proportional to input + output length. Output is more expensive than input per token. Concise prompts and structured short-answer formats reduce cost without reducing quality for most tasks.",
+      "topics": [
+        "human_ai_collaboration",
+        "cost"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "token_cost"
+      ]
+    },
+    {
+      "statement": "Multi-agent architectures assign specialised roles to different LLM instances (planner, executor, critic, summariser). They outperform single-agent systems on complex, long-horizon tasks but require careful orchestration and error handling.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "multi_agent"
+      ]
+    },
+    {
+      "statement": "AI-generated code must be reviewed before execution. LLMs produce syntactically correct but semantically wrong or insecure code. Treat AI code output as a draft from a junior developer, not a finished product.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_limitations"
+      ],
+      "confidence": 0.99,
+      "tags": [
+        "ai_code_review"
+      ]
+    },
+    {
+      "statement": "Explainability in AI-assisted decisions means being able to show why the system recommended a course of action. For high-stakes decisions, chain-of-thought and retrieved sources provide an audit trail that black-box outputs cannot.",
+      "topics": [
+        "human_ai_collaboration",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "explainability"
+      ]
+    },
+    {
+      "statement": "LLM latency is dominated by output token generation (autoregressive decoding). Reducing output length (asking for bullet points instead of paragraphs) reduces latency proportionally. Prefill (input processing) is fast and parallelisable.",
+      "topics": [
+        "human_ai_collaboration",
+        "performance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "llm_latency"
+      ]
+    },
+    {
+      "statement": "AI skill level assessment: LLMs are excellent at summarisation, translation, classification, and code generation. They are unreliable for precise arithmetic, real-time data, highly specialised niche knowledge, and tasks requiring physical world perception.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ai_skill_map"
+      ]
+    },
+    {
+      "statement": "Role prompting assigns the model a specific expert identity ('You are a senior security auditor'). It shifts the model's vocabulary, reasoning style, and level of assumed detail toward that domain, producing more technically precise outputs.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "role_prompting"
+      ]
+    },
+    {
+      "statement": "Self-consistency prompting generates multiple independent reasoning chains for the same question and selects the most frequent answer. It significantly improves accuracy on reasoning tasks by averaging out individual chain errors.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "self_consistency"
+      ]
+    },
+    {
+      "statement": "ReAct (Reason + Act) prompting interleaves reasoning steps with tool actions. The model thinks aloud, calls a tool, observes the result, then reasons about the next step. It produces more reliable agentic behaviour than pure action-only or pure reasoning-only approaches.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting",
+        "agentic_ai"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "react_prompting"
+      ]
+    },
+    {
+      "statement": "Negative constraints in prompts ('Do not include…', 'Never use…') are often more reliable than positive instructions for preventing unwanted output. LLMs sometimes ignore positive constraints under pressure but respond well to explicit exclusions.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "negative_constraints"
+      ]
+    },
+    {
+      "statement": "Output format specification in the prompt (JSON schema, markdown structure, numbered list with exact field names) reduces post-processing failure rates. The more precisely the format is described, the more reliably the model adheres to it.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "output_format"
+      ]
+    },
+    {
+      "statement": "Prompt versioning tracks changes to prompts alongside the code that uses them. A prompt is code: changes can break downstream systems, improve or degrade quality, and must be tested before deployment. Store prompts in version control.",
+      "topics": [
+        "human_ai_collaboration",
+        "prompting",
+        "engineering"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "prompt_versioning"
+      ]
+    },
+    {
+      "statement": "Sentence-window and parent-document retrieval strategies improve RAG coherence. Sentence-window retrieves a narrow chunk but expands to surrounding sentences before passing to the LLM. Parent-document retrieval indexes small chunks but returns the full parent document for context.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "retrieval_strategies"
+      ]
+    },
+    {
+      "statement": "HyDE (Hypothetical Document Embeddings) generates a hypothetical ideal answer to the query, embeds it, and retrieves documents similar to that hypothetical answer rather than the raw query. It significantly improves retrieval recall for vague or short queries.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "hyde"
+      ]
+    },
+    {
+      "statement": "Query expansion and rewriting reformulates the user's query into multiple alternative phrasings before retrieval. Retrieving against several query variations and merging results reduces the sensitivity to exact word choice.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "query_expansion"
+      ]
+    },
+    {
+      "statement": "Metadata filtering in RAG restricts retrieved chunks to those matching structured attributes (date range, document type, author, source system). It dramatically improves precision when the knowledge base spans multiple domains or time periods.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "metadata_filtering"
+      ]
+    },
+    {
+      "statement": "Answer relevance measures whether the LLM's response actually addresses the question asked, independent of whether it is grounded in the retrieved context. A response can be faithful but irrelevant, or relevant but unfaithful. Both dimensions must be evaluated.",
+      "topics": [
+        "human_ai_collaboration",
+        "evaluation",
+        "rag"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "answer_relevance"
+      ]
+    },
+    {
+      "statement": "Context precision measures what fraction of the retrieved context chunks are relevant to answering the query. High context precision means the retrieval step is targeted; low precision means the LLM must filter a large amount of noise.",
+      "topics": [
+        "human_ai_collaboration",
+        "evaluation",
+        "rag"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "context_precision"
+      ]
+    },
+    {
+      "statement": "Agentic loop reliability requires error handling at every step: tool call failures, malformed outputs, timeout handling, and retry logic with backoff. Agents that fail silently produce partial results that can be worse than no result at all.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai",
+        "reliability"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "agentic_reliability"
+      ]
+    },
+    {
+      "statement": "Agent state management persists task context between steps so the agent can recover from interruptions. Without persistent state, a long-running agent that fails mid-task must restart from the beginning, wasting time and cost.",
+      "topics": [
+        "human_ai_collaboration",
+        "agentic_ai"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "agent_state"
+      ]
+    },
+    {
+      "statement": "Guardrails are validation layers applied to LLM inputs and outputs. Input guardrails detect jailbreak attempts, PII, and off-topic queries. Output guardrails filter harmful content, hallucinated citations, and confidential data leaks before responses reach users.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_security",
+        "governance"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "guardrails"
+      ]
+    },
+    {
+      "statement": "AI red teaming deliberately tries to elicit harmful, biased, or incorrect outputs from an AI system before deployment. It is distinct from pen testing (which targets technical infrastructure) — it targets model behaviour under adversarial prompting.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_security",
+        "evaluation"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "ai_red_teaming"
+      ]
+    },
+    {
+      "statement": "Jailbreaking attempts to bypass an AI model's safety guidelines using prompt manipulation (role-play framing, hypothetical scenarios, instruction injection). Defence requires both training-time alignment and runtime guardrails; neither alone is sufficient.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_security"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "jailbreaking"
+      ]
+    },
+    {
+      "statement": "Model selection involves trading off capability, cost, latency, and context window size. Frontier models (GPT-4o, Claude Opus, Gemini Ultra) are most capable but most expensive. Smaller models (GPT-4o-mini, Claude Haiku) offer sufficient capability for many tasks at 10–50x lower cost.",
+      "topics": [
+        "human_ai_collaboration",
+        "engineering"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "model_selection"
+      ]
+    },
+    {
+      "statement": "Model routing sends simple queries to cheap, fast models and complex queries to powerful, expensive ones. Routing is determined by query classification. It reduces cost by 50–80% compared to always using a frontier model without measurable quality loss on the full query set.",
+      "topics": [
+        "human_ai_collaboration",
+        "engineering",
+        "cost"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "model_routing"
+      ]
+    },
+    {
+      "statement": "Multimodal LLMs process images, audio, video, and documents alongside text. Vision-language models can extract structured data from invoices, charts, and schematics. Multimodal inputs remove the need for pre-processing steps that convert non-text data to text.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "multimodal"
+      ]
+    },
+    {
+      "statement": "AI observability monitors production LLM applications with traces of every prompt, retrieved context, and response. It enables debugging, cost analysis, quality regression detection, and compliance auditing. Treat AI system calls like any other observable service.",
+      "topics": [
+        "human_ai_collaboration",
+        "engineering",
+        "observability"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "ai_observability"
+      ]
+    },
+    {
+      "statement": "Latency budget for AI features must account for all stages: query embedding (5–20ms), vector retrieval (10–50ms), reranking (20–100ms), LLM generation (500ms–10s). Each stage adds to end-to-end latency; budget accordingly or make stages asynchronous.",
+      "topics": [
+        "human_ai_collaboration",
+        "performance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "ai_latency_budget"
+      ]
+    },
+    {
+      "statement": "RLHF (Reinforcement Learning from Human Feedback) trains models to align with human preferences by having humans rank model outputs and using those rankings as a reward signal. It is the primary technique for making LLMs helpful, harmless, and honest.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "rlhf"
+      ]
+    },
+    {
+      "statement": "Constitutional AI (Anthropic) trains models to critique and revise their own outputs against a set of principles. It reduces harmful outputs without requiring human labelling of every harmful example, scaling alignment to larger models.",
+      "topics": [
+        "human_ai_collaboration",
+        "ai_fundamentals",
+        "governance"
+      ],
+      "confidence": 0.95,
+      "tags": [
+        "constitutional_ai"
+      ]
+    },
+    {
+      "statement": "AI integration failure modes to design against: silent hallucination (wrong answer accepted as correct), context window overflow (truncated input loses critical information), tool call failures silently skipped, and model version changes breaking prompt compatibility.",
+      "topics": [
+        "human_ai_collaboration",
+        "engineering"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "integration_failure_modes"
+      ]
+    },
+    {
+      "statement": "Data privacy in AI systems requires that personal data used in prompts is not logged, retained, or used for model training without consent. Review LLM API providers' data retention and training policies before sending sensitive data. Many enterprise plans offer zero data retention.",
+      "topics": [
+        "human_ai_collaboration",
+        "governance",
+        "privacy"
+      ],
+      "confidence": 0.98,
+      "tags": [
+        "ai_data_privacy"
+      ]
+    },
+    {
+      "statement": "AI cognitive offloading — using AI to handle routine cognitive tasks (summarising, drafting, classifying) — frees human attention for high-judgment work. The risk is skill atrophy: over-delegating tasks reduces the human's ability to detect AI errors in those areas.",
+      "topics": [
+        "human_ai_collaboration",
+        "workflows"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "cognitive_offloading"
+      ]
+    },
+    {
+      "statement": "Ambient AI integration embeds AI assistance into existing tools (IDE, email, document editor) rather than requiring users to switch context to a chat interface. Ambient AI achieves higher adoption and faster workflows than standalone AI tools.",
+      "topics": [
+        "human_ai_collaboration",
+        "workflows"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "ambient_ai"
+      ]
+    },
+    {
+      "statement": "AI benchmark results (MMLU, HumanEval, HELM) measure model capabilities on standardised tasks but do not reliably predict performance on your specific use case. Always evaluate models on your own task distribution with your own data before selecting a model for production.",
+      "topics": [
+        "human_ai_collaboration",
+        "evaluation"
+      ],
+      "confidence": 0.97,
+      "tags": [
+        "benchmark_limitations"
+      ]
+    },
+    {
+      "statement": "Semantic caching stores LLM responses keyed by embedding similarity rather than exact text match. Semantically similar queries return cached results, reducing API costs by 20–60% for applications with repetitive user queries.",
+      "topics": [
+        "human_ai_collaboration",
+        "performance",
+        "cost"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "semantic_caching"
+      ]
+    },
+    {
+      "statement": "Knowledge graph augmentation supplements vector retrieval with structured relationship traversal. It enables multi-hop reasoning ('find all projects connected to this person through their team') that pure semantic search cannot perform reliably.",
+      "topics": [
+        "human_ai_collaboration",
+        "rag"
+      ],
+      "confidence": 0.94,
+      "tags": [
+        "knowledge_graph_rag"
+      ]
+    },
+    {
+      "statement": "AI change management requires communicating to end users what the AI can and cannot do, when to trust its outputs, and how to escalate errors. Without this, users either over-trust AI (automation bias) or under-trust it (ignoring valuable outputs).",
+      "topics": [
+        "human_ai_collaboration",
+        "governance",
+        "workflows"
+      ],
+      "confidence": 0.96,
+      "tags": [
+        "ai_change_management"
+      ]
+    }
+  ]
+}
